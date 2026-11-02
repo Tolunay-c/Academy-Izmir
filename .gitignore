@@ -1,0 +1,5 @@
+# Ham medya (Drive'dan inen orijinaller, repoya girmez)
+**/assets/images/drive-download-*/
+
+# macOS
+.DS_Store

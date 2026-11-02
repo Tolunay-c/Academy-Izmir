@@ -1,0 +1,894 @@
+{
+  "site": {
+    "name": "Academy İzmir",
+    "description": "İzmir'de sanat eğitim kurumu",
+    "home_title": "ACADEMY İZMİR",
+    "tagline": "Sanatla Keşfet, Sahneyle Büyü",
+    "intro": "Çocuklardan gençlere, gençlerden yetişkinlere; yaratıcı dramadan tiyatroya, baleden dansa, oyunculuktan konservatuvar ve güzel sanatlar hazırlığına uzanan profesyonel sanat eğitimi.",
+    "founded": 2011,
+    "highlights": [
+      "2011'den beri sanat eğitimi",
+      "15 yılı aşkın süredir konservatuvar ve güzel sanatlar fakültelerine hazırlık",
+      "Yaklaşık %80 yerleşme başarısı"
+    ]
+  },
+  "contact": {
+    "phone": {
+      "display": "0 (232) 446 46 87",
+      "tel": "tel:02324464687",
+      "pending": true
+    },
+    "whatsapp": {
+      "value": null,
+      "pending": true
+    },
+    "email": {
+      "value": null,
+      "pending": true
+    },
+    "instagram": {
+      "value": null,
+      "pending": true
+    },
+    "address": {
+      "value": null,
+      "pending": true
+    }
+  },
+  "programs": [
+    {
+      "id": "theatre",
+      "title": "TİYATRO",
+      "main_text": "Tiyatro, insanın insana tanıklık ettiği; yaşamın çelişkileriyle yüzleşme cesaretini bulduğu, düşüncelerin, duyguların ve insanın bütün hâllerinin aynı anda nefes aldığı bir karşılaşmadır. Her hikâyede yaşam yeniden sorgulanır, her karşılaşmada insan kendinden ve dünyadan yeni bir iz bulur.",
+      "card_summary": null,
+      "detail": [],
+      "success_block": null,
+      "subprograms": [
+        {
+          "id": "high-school-theatre",
+          "title": "Lise Tiyatro Grubu",
+          "card_summary": "Doğaçlama, karakter yaratma, rol çalışmaları ve sahne uygulamalarıyla gençlerin yaratıcılıklarını, ifade becerilerini ve birlikte üretme deneyimlerini geliştiren tiyatro çalışmaları.",
+          "detail": [
+            "Giderek dijitalleşen ve bireyleri yalnızlaştıran bir dünyada tiyatro, gençlere yeniden bir arada olmanın, birbirini dinlemenin ve birlikte üretmenin gücünü hatırlatır. Oyunculuk, doğaçlama ve diksiyon çalışmalarıyla kendilerini daha etkili ifade etmeyi öğrenen gençler, kolektif bir sanat çalışmasının parçası olarak hazırladıkları tiyatro oyununu yıl sonunda seyirciyle buluştururlar."
+          ]
+        },
+        {
+          "id": "adult-theatre-acting",
+          "title": "Yetişkin Tiyatro ve Oyunculuk (18 yaş ve üzeri)",
+          "card_summary": "Sahneyle tanışmak veya oyunculuk becerilerini geliştirmek isteyen yetişkinlere yönelik doğaçlama, karakter yaratma ve sahne çalışmaları. 18 yaş ve üzerindeki tüm katılımcılar için uygundur.",
+          "detail": [
+            "Bazen yaşamın dışına bir anlığına çıkmak, başka bir karakterin dünyasına adım atmak, insanın kendine yeniden bakmasını sağlar. Tiyatro, 18 yaş ve üzerindeki herkes için yalnızca bir hobi değil; gündelik hayatı zenginleştiren, birlikte üretmenin ruhunu hissettiren ve insanın kendini ve başkalarını anlama yolculuğuna eşlik eden bir sahne deneyimidir."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "creative-drama",
+      "title": "YARATICI DRAMA",
+      "main_text": "Her derste psikolog destekli yaratıcı drama atölyeleri düzenlenmektedir. Çalışmalarımız tiyatro ve oyunculuk eğitimi almış eğitmenler ile psikoloğun birlikte yürüttüğü, çocukların gelişim özelliklerini gözeten sanatsal eğitimlerdir.",
+      "card_summary": null,
+      "detail": [],
+      "success_block": null,
+      "subprograms": [
+        {
+          "id": "preschool-creative-drama",
+          "title": "Okul Öncesi Yaratıcı Drama",
+          "card_summary": "Oyun ve hayal gücüyle kendini ifade etme, duyguları tanıma ve sosyal becerileri destekleme.",
+          "detail": [
+            "İlkokula adım atmaya hazırlanan çocukların sosyalleşme becerilerini, hayal güçlerini ve kendilerini ifade etme yetilerini oyun yoluyla geliştiriyoruz. Her derste sürdürülen psikolog desteğiyle çocukların bu önemli geçiş sürecini güvenle deneyimlemelerine katkı sağlıyoruz."
+          ]
+        },
+        {
+          "id": "primary-creative-drama",
+          "title": "İlkokul Yaratıcı Drama",
+          "card_summary": "Doğaçlama ve rol oyunlarıyla yaratıcılık, özgüven, empati ve birlikte üretme.",
+          "detail": [
+            "Aile ortamından okulun sosyal dünyasına adım atan, yeni ilişkiler kuran ve teknolojiyle giderek daha fazla karşılaşan çocuklar için yaratıcı drama; gerçek iletişimin, birlikte üretmenin ve hayal gücünün alanını açar. Her derste sunulan psikolog desteğiyle çocukların sosyal ve duygusal gelişimlerini destekliyoruz."
+          ]
+        },
+        {
+          "id": "middle-school-creative-drama",
+          "title": "Ortaokul Yaratıcı Drama",
+          "card_summary": "Kendini ifade etme, farklı bakış açıları geliştirme ve yaratıcı grup çalışmaları.",
+          "detail": [
+            "Ergenliğe geçişle birlikte yaşanan bedensel, duygusal ve sosyal değişimler, gençler için yeni bir kendini tanıma sürecidir. Psikolog desteğiyle yürütülen yaratıcı drama çalışmalarımız, gençlerin bu değişimleri anlamlandırmalarına, duygularını ifade etmelerine ve özgüvenlerini geliştirmelerine alan açar."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conservatory-preparation",
+      "title": "KONSERVATUVAR VE GÜZEL SANATLARA HAZIRLIK",
+      "main_text": null,
+      "card_summary": "15 yılı aşkın süredir öğrencilerimizi konservatuvar ve güzel sanatlar fakültelerinin yetenek sınavlarına hazırlıyoruz. Yaklaşık %80'lik yerleşme başarısı.",
+      "detail": [
+        "Geleceğin sanatçılarını yetiştirme hedefiyle oluşturduğumuz hazırlık programımız, bir konservatuvarın çalışma disipliniyle, yıl boyunca sürdürülen kapsamlı bir sanat eğitimidir.",
+        "Türkiye'nin farklı şehirlerindeki konservatuvar ve güzel sanatlar fakültelerinin çok aşamalı yetenek sınavlarına yönelik olarak; oyunculuk, sahne, doğaçlama, diksiyon, ses, dans, hareket ve genel kültür alanlarında bütüncül bir hazırlık sunuyoruz.",
+        "Alanında deneyimli sanatçı ve eğitmenlerimizle her öğrencinin gelişimini bireysel olarak takip ediyor, sınavlarda karşılaşabilecekleri farklı aşamaları uygulamalı çalışmalarla deneyimlemelerini sağlıyoruz. Eğitimimiz, sınavların son gününe kadar devam ederek öğrencilerimizin yalnızca sınava değil, gelecekteki sanat yaşamlarına da güçlü bir başlangıç yapmalarını amaçlıyor."
+      ],
+      "success_block": "15 yılı aşkın süredir öğrencilerimizi konservatuvar ve güzel sanatlar fakültelerinin yetenek sınavlarına hazırlıyoruz. Oyunculuk, doğaçlama, tirat, ses, hareket ve sahne çalışmalarını kapsayan eğitimlerimizle öğrencilerimizin Türkiye'nin önde gelen sanat eğitimi kurumlarına yerleşmesinden gurur duyuyoruz. Yaklaşık %80'lik yerleşme başarımız, bu çalışmalarımızın değerli bir sonucudur.",
+      "subprograms": []
+    },
+    {
+      "id": "ballet-dance",
+      "title": "BALE VE DANS",
+      "main_text": null,
+      "card_summary": "Klasik bale, modern dans, Latin ve salon dansları ile çocukları, gençleri ve yetişkinleri hareketin ve sanatın dünyasıyla buluşturuyoruz.",
+      "detail": [
+        "Dans, bedenin müzikle buluştuğu, duyguların harekete dönüştüğü evrensel bir ifade biçimidir.",
+        "Academy İzmir'de klasik bale, modern dans, Latin ve salon dansları eğitimlerimizle çocukları, gençleri ve yetişkinleri hareketin ve sanatın dünyasıyla buluşturuyoruz.",
+        "Çocuklar için bale ve dans; beden farkındalığını, duruşu, koordinasyonu, ritim duygusunu ve estetik algıyı geliştirirken disiplin, özgüven ve birlikte hareket etme becerilerini destekler.",
+        "Her çocuğun balerin, her gencin dansçı olması gerekmez; bazen dansın en güzel kazanımı, insanın kendi bedenini tanıması, müziği hissetmesi ve yaşam boyunca taşıyacağı bir sanat sevgisi edinmesidir.",
+        "Gençler ve yetişkinler içinse dans, gündelik yaşamın sınırlarından uzaklaşmanın, bedenini keşfetmenin, sosyalleşmenin ve kendini özgürce ifade etmenin keyifli bir yoludur.",
+        "Deneyimli eğitmenlerimiz eşliğinde, her yaş grubuna uygun çalışmalarla dansı yalnızca öğrenilen bir teknik değil, yaşamı zenginleştiren sanatsal bir deneyim olarak ele alıyoruz."
+      ],
+      "success_block": null,
+      "subprograms": [
+        {
+          "id": "ballet",
+          "title": "Bale",
+          "card_summary": "Duruş, koordinasyon, ritim ve klasik bale teknikleri.",
+          "detail": []
+        },
+        {
+          "id": "kids-modern-dance",
+          "title": "Çocuklar İçin Modern Dans",
+          "card_summary": "Hareket, müzik, yaratıcılık ve bedensel ifade.",
+          "detail": []
+        },
+        {
+          "id": "adult-latin-ballroom",
+          "title": "Yetişkin Latin ve Salon Dansları",
+          "card_summary": "Ritim, dans teknikleri ve müzikle uyum.",
+          "detail": []
+        }
+      ]
+    },
+    {
+      "id": "rhetoric-workshop",
+      "title": "RETORİKA ATÖLYESİ",
+      "main_text": null,
+      "card_summary": "Söyleyecek sözüm var ama nasıl söyleyeceğimi bilmiyorum diyorsanız, Retorika Atölyesinde buluşmalıyız.",
+      "detail": [
+        "Kusursuz konuşma yoktur ama sonuç veren her konuşma kusursuzdur…",
+        "Retorika, düşünmenin biçimiydi. Bugün, konuşma hâlâ var; fakat artık anlamı yok.",
+        "İster misiniz bu eksikliği birlikte tamamlayalım ve dünyayı konuşarak yeniden kuralım?",
+        "Söyleyecek sözüm var ama nasıl söyleyeceğimi bilmiyorum diyorsanız, Retorika Atölyesinde buluşmalıyız."
+      ],
+      "success_block": null,
+      "subprograms": []
+    }
+  ],
+  "faculty": [
+    {
+      "id": "ozlem-baskaya",
+      "order": 1,
+      "name": "Özlem Başkaya",
+      "titles": [
+        "Devlet Tiyatroları Sanatçısı",
+        "Tiyatro, Sinema ve Televizyon Oyuncusu",
+        "Oyunculuk Eğitmeni",
+        "Academy İzmir Kurucusu"
+      ],
+      "bio": "2002 yılından bu yana Devlet Tiyatroları bünyesinde sanat yaşamını sürdüren Özlem Başkaya, tiyatro sahnesinin yanı sıra sinema ve televizyon yapımlarında da rol almıştır. Sadri Alışık Anadolu Tiyatro Oyuncu Ödülleri başta olmak üzere birçok ödülün sahibi olan sanatçı, uzun yıllara dayanan sahne deneyimini tiyatro ve oyunculuk eğitimiyle buluşturmaktadır. Academy İzmir'in kurucusu olan Başkaya, sanatın dönüştürücü gücünü farklı yaş gruplarıyla paylaşmayı sürdürmektedir.",
+      "image": "assets/images/kadro/01-ozlem-baskaya.webp",
+      "alt": "Özlem Başkaya portresi"
+    },
+    {
+      "id": "ozgur-baskaya",
+      "order": 2,
+      "name": "Özgür Başkaya",
+      "titles": [
+        "Yönetmen",
+        "Oyuncu",
+        "Dramaturg",
+        "Drama ve Oyunculuk Eğitmeni",
+        "Academy İzmir Kurucusu"
+      ],
+      "bio": "Kırk yılı aşkın sanat yaşamı boyunca yönetmen, oyuncu ve dramaturg olarak çok sayıda tiyatro yapımında görev alan Özgür Başkaya, sanat eğitimi alanında yüksek lisans yapmıştır. Türkiye'de tiyatro topluluklarının kuruluşu ve örgütlenmesi alanında önemli çalışmalar yürütmüş, Özgür Tiyatro'nun kurucusu ve genel sanat yönetmeni olarak yurt içinde ve yurt dışında çok sayıda tiyatro projesinde yer almıştır. Uzun yıllardır yaratıcı drama, tiyatro ve oyunculuk alanlarında eğitim veren Başkaya, Academy İzmir'in kurucusu olarak sanat birikimini çocuklar, gençler ve yetişkinlerle paylaşmayı sürdürmektedir.",
+      "image": "assets/images/kadro/02-ozgur-baskaya.webp",
+      "alt": "Özgür Başkaya portresi"
+    },
+    {
+      "id": "hakan-ozgomec",
+      "order": 3,
+      "name": "Hakan Özgömeç",
+      "titles": [
+        "Devlet Tiyatroları Sanatçısı",
+        "Ödüllü Tiyatro Oyuncusu",
+        "Oyunculuk Eğitmeni"
+      ],
+      "bio": "Uzun yıllardır Devlet Tiyatroları bünyesinde sanat yaşamını sürdüren Hakan Özgömeç, klasik ve çağdaş tiyatro repertuvarında çok sayıda oyunda ve farklı karakterlerde sahne almıştır. Geniş bir repertuvara ve köklü bir sahne deneyimine sahip olan sanatçı, tiyatro alanındaki çalışmalarını oyunculuk eğitimiyle de sürdürmektedir. Academy İzmir'de gençler ve yetişkinlerle yürüttüğü çalışmalarda, yıllara dayanan sanat birikimini ve sahne deneyimini yeni kuşaklara aktarmaktadır.",
+      "image": "assets/images/kadro/03-hakan-ozgomec.webp",
+      "alt": "Hakan Özgömeç portresi"
+    },
+    {
+      "id": "hulya-savas",
+      "order": 4,
+      "name": "Hülya Savaş",
+      "titles": [
+        "Tiyatro Oyuncusu",
+        "Yönetmen",
+        "Oyunculuk Eğitmeni"
+      ],
+      "bio": "1985 yılında İzmir Devlet Tiyatrosu'nda başladığı sanat yaşamı boyunca çok sayıda tiyatro yapımında rol alan Hülya Savaş, İzmir Devlet Tiyatrosu Müdürlüğü görevini de üstlenmiş ve aynı kurumdan emekli olmuştur. Oyunculuk, yönetmenlik ve seslendirme alanlarında önemli çalışmalara imza atan sanatçı, İsmet Küntay, Bedia Muvahhit ve Direklerarası Seyirci Ödülleri başta olmak üzere birçok tiyatro ödülüne layık görülmüştür. Kırk yılı aşkın sanat birikimini ve sahne deneyimini yeni kuşaklarla paylaşmayı sürdürmektedir.",
+      "image": "assets/images/kadro/04-hulya-savas.webp",
+      "alt": "Hülya Savaş portresi"
+    },
+    {
+      "id": "nihat-demirkol",
+      "order": 5,
+      "name": "Nihat Demirkol",
+      "titles": [
+        "Yazar",
+        "Besteci",
+        "Retorika ve Etkili Konuşma Eğitmeni"
+      ],
+      "bio": "Yazarlık, müzik ve iletişim alanlarında çalışmalar yürüten Nihat Demirkol, sanatın farklı disiplinlerini bir araya getiren üretimleriyle tanınmaktadır. Tiyatro oyunları ve sahne müzikleri üzerine çalışmaları bulunan Demirkol, retorika, doğru ve etkili konuşma, ifade becerileri ve iletişim alanlarında eğitimler vermektedir. Academy İzmir'de konuşma ve ses eğitimi üzerine yürüttüğü çalışmalarla, katılımcıların seslerini doğru kullanmalarını ve kendilerini etkili biçimde ifade etmelerini desteklemektedir.",
+      "image": "assets/images/kadro/05-nihat-demirkol.webp",
+      "alt": "Nihat Demirkol portresi"
+    },
+    {
+      "id": "svetlana-hepark",
+      "order": 6,
+      "name": "Svetlana Hepark",
+      "titles": [
+        "Bale ve Dans Eğitmeni",
+        "Koreograf"
+      ],
+      "bio": "Rus bale ekolünde eğitim alan Svetlana Hepark, klasik balenin disiplinini ve güçlü teknik altyapısını köklü eğitmenlik deneyimiyle birleştirmektedir. İzmir Özel Türk Koleji'nde uzun yıllar bale ve dans çalışmaları yürütmüş ve aynı kurumdan emekli olmuştur. Academy İzmir'in deneyimli eğitmen kadrosunda uzun süredir yer alan Hepark, öğrencilerinin teknik gelişimlerinin yanı sıra beden farkındalıklarını, ritim duygularını ve sanatsal ifade becerilerini geliştirmeye yönelik çalışmalar yürütmektedir.",
+      "image": "assets/images/kadro/06-svetlana-hepark.webp",
+      "alt": "Svetlana Hepark portresi"
+    },
+    {
+      "id": "ulas-narli",
+      "order": 7,
+      "name": "Ulaş Narlı",
+      "titles": [
+        "Yönetmen",
+        "Tiyatro Oyuncusu",
+        "Oyunculuk ve Drama Eğitmeni"
+      ],
+      "bio": "Çok sayıda tiyatro oyununda rol alan ve yönetmenlik çalışmaları gerçekleştiren Ulaş Narlı, sahne sanatlarının farklı alanlarında üretimlerini sürdürmektedir. Oyunculuk ve yönetmenlik deneyimini tiyatro eğitimiyle birleştiren Narlı, çocuklar, gençler ve yetişkinlerle tiyatro ve drama çalışmaları yürütmektedir. Academy İzmir bünyesinde oyunculuk, beden dili, hareket ve sahne farkındalığı üzerine çalışmalar gerçekleştirerek katılımcıların yaratıcılıklarını ve sanatsal ifade becerilerini geliştirmelerine katkı sağlamaktadır.",
+      "image": "assets/images/kadro/07-ulas-narli.webp",
+      "alt": "Ulaş Narlı portresi"
+    },
+    {
+      "id": "eser-uygun",
+      "order": 8,
+      "name": "Eser Uygun",
+      "titles": [
+        "Psikolog",
+        "Yaratıcı Drama Eğitmeni"
+      ],
+      "bio": "Psikoloji alanındaki akademik birikimini yaratıcı drama ve sanatla buluşturan Eser Uygun, çocukların sosyal, duygusal ve bilişsel gelişimleri üzerine çalışmalar yürütmektedir. Çağdaş Drama Derneği bünyesinde yaratıcı drama liderlik eğitimi almış; oyun terapisi, çocuk değerlendirme ve gelişim alanlarında mesleki eğitimlerle çalışmalarını desteklemiştir. Çeşitli kurum ve sivil toplum kuruluşlarında çocuklarla yaratıcı drama atölyeleri gerçekleştiren Uygun, Academy İzmir'de psikoloji ve yaratıcı dramayı bir araya getiren çalışmalarıyla çocukların kendilerini ifade etme, iletişim kurma ve yaratıcılık becerilerini geliştirmeyi amaçlamaktadır.",
+      "image": "assets/images/kadro/08-eser-uygun.webp",
+      "alt": "Eser Uygun portresi"
+    },
+    {
+      "id": "meltem-yorulmaz",
+      "order": 9,
+      "name": "Meltem Yorulmaz",
+      "titles": [
+        "Bale Sanatçısı",
+        "Koreograf",
+        "Bale ve Dans Eğitmeni"
+      ],
+      "bio": "Sahne sanatları alanında uzun yıllara dayanan deneyime sahip olan Meltem Yorulmaz, İzmir Devlet Opera ve Balesi'nde bale sanatçısı ve koreograf olarak görev yapmış, çok sayıda sahne yapımında yer almıştır. Devlet Tiyatroları bünyesinde de koreograf olarak çalışmalarını sürdüren Yorulmaz, farklı tiyatro topluluklarının yapımlarında hareket tasarımı ve koreografi çalışmalarına imza atmıştır. Dansı, hareketi ve bedensel ifadeyi sahne sanatlarının ayrılmaz bir parçası olarak ele alan sanatçı, Academy İzmir bünyesinde de sanatsal birikimini ve deneyimini yeni kuşaklarla paylaşmaktadır.",
+      "image": "assets/images/kadro/09-meltem-yorulmaz.webp",
+      "alt": "Meltem Yorulmaz portresi"
+    },
+    {
+      "id": "ebru-parilti",
+      "order": 10,
+      "name": "Ebru Parıltı",
+      "titles": [
+        "Yönetici"
+      ],
+      "bio": null,
+      "image": "assets/images/kadro/10-ebru-parilti.webp",
+      "alt": "Ebru Parıltı portresi"
+    }
+  ],
+  "winners": [
+    {
+      "id": "efe-pak",
+      "name": "Efe Pak",
+      "year": 2026,
+      "category": "university",
+      "image": "assets/images/kazananlar/2026/efe-pak.webp",
+      "alt": "Efe Pak",
+      "placements": [
+        {
+          "university": "Dokuz Eylül Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        },
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ecrin-azra-keles",
+      "name": "Ecrin Azra Keleş",
+      "year": 2026,
+      "category": "university",
+      "image": "assets/images/kazananlar/2026/ecrin-azra-keles.webp",
+      "alt": "Ecrin Azra Keleş",
+      "placements": [
+        {
+          "university": "Dokuz Eylül Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        },
+        {
+          "university": "Haliç Üniversitesi",
+          "faculty": "Konservatuvar",
+          "program": "Oyunculuk",
+          "scholarship": "%50 burs"
+        }
+      ]
+    },
+    {
+      "id": "rasim-tuna-yilmaz",
+      "name": "Rasim Tuna Yılmaz",
+      "year": 2026,
+      "category": "university",
+      "image": "assets/images/kazananlar/2026/rasim-tuna-yilmaz.webp",
+      "alt": "Rasim Tuna Yılmaz",
+      "placements": [
+        {
+          "university": "Ankara Üniversitesi",
+          "faculty": "Dil ve Tarih-Coğrafya Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        },
+        {
+          "university": "Anadolu Üniversitesi",
+          "faculty": "Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "defne-yuksel",
+      "name": "Defne Yüksel",
+      "year": 2026,
+      "category": "university",
+      "image": "assets/images/kazananlar/2026/defne-yuksel.webp",
+      "alt": "Defne Yüksel",
+      "placements": [
+        {
+          "university": "Kadir Has Üniversitesi",
+          "faculty": "Sanat ve Tasarım Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": "%50 burs"
+        }
+      ]
+    },
+    {
+      "id": "zeynep-naz-gorken",
+      "name": "Zeynep Naz Görken",
+      "year": 2026,
+      "category": "university",
+      "image": "assets/images/kazananlar/2026/zeynep-naz-gorken.webp",
+      "alt": "Zeynep Naz Görken",
+      "placements": [
+        {
+          "university": "Haliç Üniversitesi",
+          "faculty": "Konservatuvar",
+          "program": "Oyunculuk",
+          "scholarship": "%100 burs"
+        }
+      ]
+    },
+    {
+      "id": "ilay-kingir",
+      "name": "İlay Kıngır",
+      "year": 2026,
+      "category": "university",
+      "image": "assets/images/kazananlar/2026/ilay-kingir.webp",
+      "alt": "İlay Kıngır",
+      "placements": [
+        {
+          "university": "Çanakkale Onsekiz Mart Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "eren-utku-yakar",
+      "name": "Eren Utku Yakar",
+      "year": 2026,
+      "category": "university",
+      "image": "assets/images/kazananlar/2026/eren-utku-yakar.webp",
+      "alt": "Eren Utku Yakar",
+      "placements": [
+        {
+          "university": "Süleyman Demirel Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        },
+        {
+          "university": "Kocaeli Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "kadir-kilic",
+      "name": "Kadir Kılıç",
+      "year": 2026,
+      "category": "university",
+      "image": "assets/images/kazananlar/2026/kadir-kilic.webp",
+      "alt": "Kadir Kılıç",
+      "placements": [
+        {
+          "university": "Süleyman Demirel Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "nazli-su-gedik",
+      "name": "Nazlı Su Gedik",
+      "year": 2026,
+      "category": "university",
+      "image": "assets/images/kazananlar/2026/nazli-su-gedik.webp",
+      "alt": "Nazlı Su Gedik",
+      "placements": [
+        {
+          "university": "Kocaeli Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "isil-dildar-karaman",
+      "name": "Işıl Dildar Karaman",
+      "year": 2026,
+      "category": "university",
+      "image": "assets/images/kazananlar/2026/isil-dildar-karaman.webp",
+      "alt": "Işıl Dildar Karaman",
+      "placements": [
+        {
+          "university": "Zonguldak Bülent Ecevit Üniversitesi",
+          "faculty": "Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "tolga-cakmak",
+      "name": "Tolga Çakmak",
+      "year": 2024,
+      "category": "university",
+      "image": "assets/images/kazananlar/2024/tolga-cakmak.webp",
+      "alt": "Tolga Çakmak",
+      "placements": [
+        {
+          "university": "İstanbul Nişantaşı Üniversitesi",
+          "faculty": "Konservatuvar",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "beyza-yontucu",
+      "name": "Beyza Yontucu",
+      "year": 2024,
+      "category": "university",
+      "image": "assets/images/kazananlar/2024/beyza-yontucu.webp",
+      "alt": "Beyza Yontucu",
+      "placements": [
+        {
+          "university": "Bursa Uludağ Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "beren-ozdemir",
+      "name": "Beren Özdemir",
+      "year": 2024,
+      "category": "university",
+      "image": "assets/images/kazananlar/2024/beren-ozdemir.webp",
+      "alt": "Beren Özdemir",
+      "placements": [
+        {
+          "university": "Süleyman Demirel Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "mehmet-kerem-can",
+      "name": "Mehmet Kerem Can",
+      "year": 2024,
+      "category": "university",
+      "image": "assets/images/kazananlar/2024/mehmet-kerem-can.webp",
+      "alt": "Mehmet Kerem Can",
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "viyan-alantas",
+      "name": "Viyan Alantaş",
+      "year": 2024,
+      "category": "university",
+      "image": "assets/images/kazananlar/2024/viyan-alantas.webp",
+      "alt": "Viyan Alantaş",
+      "placements": [
+        {
+          "university": "İstanbul Üniversitesi",
+          "faculty": "Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "cagla-karaegemen",
+      "name": "Çağla Karaeğemen",
+      "year": 2024,
+      "category": "university",
+      "image": "assets/images/kazananlar/2024/cagla-karaegemen.webp",
+      "alt": "Çağla Karaeğemen",
+      "placements": [
+        {
+          "university": "Çanakkale Onsekiz Mart Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "nazli-can",
+      "name": "Nazlı Can",
+      "year": 2024,
+      "category": "university",
+      "image": "assets/images/kazananlar/2024/nazli-can.webp",
+      "alt": "Nazlı Can",
+      "placements": [
+        {
+          "university": "Ankara Üniversitesi",
+          "faculty": "Dil ve Tarih-Coğrafya Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "yigit-kocak",
+      "name": "Yiğit Koçak",
+      "year": 2024,
+      "category": "university",
+      "image": "assets/images/kazananlar/2024/yigit-kocak.webp",
+      "alt": "Yiğit Koçak",
+      "placements": [
+        {
+          "university": "Dokuz Eylül Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    }
+  ],
+  "gallery": [
+    {
+      "id": "bvn00232",
+      "src_800": "assets/images/galeri/bvn00232-800.webp",
+      "src_1600": "assets/images/galeri/bvn00232-1600.webp",
+      "orientation": "portrait",
+      "alt": "Sahnede desenli kostümlü bir oyuncu öne eğilmiş, arkasında sahnede duran katılımcılar var.",
+      "category": null
+    },
+    {
+      "id": "bvn00962",
+      "src_800": "assets/images/galeri/bvn00962-800.webp",
+      "src_1600": "assets/images/galeri/bvn00962-1600.webp",
+      "orientation": "portrait",
+      "alt": "Sahnede beyaz üstlü ve siyah pantolonlu bir grup, içlerinden biri yukarı kaldırılmış.",
+      "category": null
+    },
+    {
+      "id": "bvn01064",
+      "src_800": "assets/images/galeri/bvn01064-800.webp",
+      "src_1600": "assets/images/galeri/bvn01064-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede beyaz üstlü bir grup, bir kısmı oturuyor, bir kısmı ayakta.",
+      "category": null
+    },
+    {
+      "id": "bvn01348",
+      "src_800": "assets/images/galeri/bvn01348-800.webp",
+      "src_1600": "assets/images/galeri/bvn01348-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede dizlerinin üstünde oturan bir grup, ellerinde belgeler var, arkada ayakta duranlar var.",
+      "category": null
+    },
+    {
+      "id": "bvn01366",
+      "src_800": "assets/images/galeri/bvn01366-800.webp",
+      "src_1600": "assets/images/galeri/bvn01366-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede kolları havada bir grup, renkli sahne ışığı altında.",
+      "category": null
+    },
+    {
+      "id": "bvn01409",
+      "src_800": "assets/images/galeri/bvn01409-800.webp",
+      "src_1600": "assets/images/galeri/bvn01409-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede desenli elbiseli bir oyuncu, çevresinde ayakta duran bir grup.",
+      "category": null
+    },
+    {
+      "id": "bvn01414",
+      "src_800": "assets/images/galeri/bvn01414-800.webp",
+      "src_1600": "assets/images/galeri/bvn01414-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede kostümlü oyunculardan oluşan geniş bir grup, loş ışıkta.",
+      "category": null
+    },
+    {
+      "id": "bvn01767",
+      "src_800": "assets/images/galeri/bvn01767-800.webp",
+      "src_1600": "assets/images/galeri/bvn01767-1600.webp",
+      "orientation": "portrait",
+      "alt": "Sahnede mavi gömlekli bir kişi kolunu yukarı kaldırmış, önünde koltuk sıraları görünüyor.",
+      "category": null
+    },
+    {
+      "id": "bvn02226",
+      "src_800": "assets/images/galeri/bvn02226-800.webp",
+      "src_1600": "assets/images/galeri/bvn02226-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede beyaz kostümlü bir grup yan yana duruyor.",
+      "category": null
+    },
+    {
+      "id": "bvn02449",
+      "src_800": "assets/images/galeri/bvn02449-800.webp",
+      "src_1600": "assets/images/galeri/bvn02449-1600.webp",
+      "orientation": "landscape",
+      "alt": "Spot ışığı altında beyaz kostümlü bir grup sahnede birbirine yakın duruyor.",
+      "category": null
+    },
+    {
+      "id": "bvn02453",
+      "src_800": "assets/images/galeri/bvn02453-800.webp",
+      "src_1600": "assets/images/galeri/bvn02453-1600.webp",
+      "orientation": "landscape",
+      "alt": "Spot ışığı altında beyaz kostümlü bir grup sahnede ayakta, geniş çekim.",
+      "category": null
+    },
+    {
+      "id": "bvn02458",
+      "src_800": "assets/images/galeri/bvn02458-800.webp",
+      "src_1600": "assets/images/galeri/bvn02458-1600.webp",
+      "orientation": "landscape",
+      "alt": "Beyaz kostümlü bir grup sahnede ışık altında, karanlık arka planda.",
+      "category": null
+    },
+    {
+      "id": "bvn02466",
+      "src_800": "assets/images/galeri/bvn02466-800.webp",
+      "src_1600": "assets/images/galeri/bvn02466-1600.webp",
+      "orientation": "portrait",
+      "alt": "Sahnede spot ışığında beyaz üstlü ve koyu pantolonlu bir oyuncu, arkasında bir grup.",
+      "category": null
+    },
+    {
+      "id": "bvn02468",
+      "src_800": "assets/images/galeri/bvn02468-800.webp",
+      "src_1600": "assets/images/galeri/bvn02468-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede spot ışığı altında dizlerinin üstünde bir oyuncu, çevresinde ayakta duran beyaz kostümlü bir grup.",
+      "category": null
+    },
+    {
+      "id": "bvn08998",
+      "src_800": "assets/images/galeri/bvn08998-800.webp",
+      "src_1600": "assets/images/galeri/bvn08998-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede bir masanın yanında sıralanmış bir grup, sağ kenarda bir kişi duruyor.",
+      "category": null
+    },
+    {
+      "id": "bvn09051",
+      "src_800": "assets/images/galeri/bvn09051-800.webp",
+      "src_1600": "assets/images/galeri/bvn09051-1600.webp",
+      "orientation": "landscape",
+      "alt": "Kırmızı ve yeşil ışıklarla aydınlatılmış sahnede dans eden bir kalabalık.",
+      "category": null
+    },
+    {
+      "id": "bvn09060",
+      "src_800": "assets/images/galeri/bvn09060-800.webp",
+      "src_1600": "assets/images/galeri/bvn09060-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede kolları havada dans eden bir grup, sahne ışıkları altında.",
+      "category": null
+    },
+    {
+      "id": "bvn09085",
+      "src_800": "assets/images/galeri/bvn09085-800.webp",
+      "src_1600": "assets/images/galeri/bvn09085-1600.webp",
+      "orientation": "landscape",
+      "alt": "Renkli ışıklarla aydınlatılmış sahnede dans eden bir grup.",
+      "category": null
+    },
+    {
+      "id": "bvn09090",
+      "src_800": "assets/images/galeri/bvn09090-800.webp",
+      "src_1600": "assets/images/galeri/bvn09090-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede toplu halde poz veren geniş bir grup.",
+      "category": null
+    },
+    {
+      "id": "bvn09235",
+      "src_800": "assets/images/galeri/bvn09235-800.webp",
+      "src_1600": "assets/images/galeri/bvn09235-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede ayakta duran bir grup, önlerinde dizlerinin üstünde bir kişi var.",
+      "category": null
+    },
+    {
+      "id": "bvn09326",
+      "src_800": "assets/images/galeri/bvn09326-800.webp",
+      "src_1600": "assets/images/galeri/bvn09326-1600.webp",
+      "orientation": "portrait",
+      "alt": "Sahnede bir kişi, belge tutan bir katılımcıya doğru eğilmiş, yanlarında başka katılımcılar var.",
+      "category": null
+    },
+    {
+      "id": "bvn09348",
+      "src_800": "assets/images/galeri/bvn09348-800.webp",
+      "src_1600": "assets/images/galeri/bvn09348-1600.webp",
+      "orientation": "portrait",
+      "alt": "Sahnede toplanmış bir grup, bir kişi önde diz çökmüş.",
+      "category": null
+    },
+    {
+      "id": "bvn09375",
+      "src_800": "assets/images/galeri/bvn09375-800.webp",
+      "src_1600": "assets/images/galeri/bvn09375-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede ellerinde belgeler tutan bir grup, sıralar hâlinde duruyor.",
+      "category": null
+    },
+    {
+      "id": "bvn09389",
+      "src_800": "assets/images/galeri/bvn09389-800.webp",
+      "src_1600": "assets/images/galeri/bvn09389-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede birbirine yakın duran bir grup, ellerini ortada birleştirmiş.",
+      "category": null
+    },
+    {
+      "id": "bvn09400",
+      "src_800": "assets/images/galeri/bvn09400-800.webp",
+      "src_1600": "assets/images/galeri/bvn09400-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede iki kişi kollarını kaldırmış, çevresinde bir grup yakın plan görünüyor.",
+      "category": null
+    },
+    {
+      "id": "bvn09463",
+      "src_800": "assets/images/galeri/bvn09463-800.webp",
+      "src_1600": "assets/images/galeri/bvn09463-1600.webp",
+      "orientation": "landscape",
+      "alt": "Karanlık bir sahnede ayakta duran bir kişi.",
+      "category": null
+    },
+    {
+      "id": "bvn09519",
+      "src_800": "assets/images/galeri/bvn09519-800.webp",
+      "src_1600": "assets/images/galeri/bvn09519-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede sıralanmış bale kostümlü bir grup, önde salondaki seyirciler görünüyor.",
+      "category": null
+    },
+    {
+      "id": "bvn09885",
+      "src_800": "assets/images/galeri/bvn09885-800.webp",
+      "src_1600": "assets/images/galeri/bvn09885-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede bale kostümlü bir grup, ön planda gölgede bir figür var.",
+      "category": null
+    },
+    {
+      "id": "bvn09905",
+      "src_800": "assets/images/galeri/bvn09905-800.webp",
+      "src_1600": "assets/images/galeri/bvn09905-1600.webp",
+      "orientation": "portrait",
+      "alt": "Sahnede bale kostümlü bir grup yerde yatıyor.",
+      "category": null
+    },
+    {
+      "id": "bvn09928",
+      "src_800": "assets/images/galeri/bvn09928-800.webp",
+      "src_1600": "assets/images/galeri/bvn09928-1600.webp",
+      "orientation": "landscape",
+      "alt": "Tütülü üç bale oyuncusu sahnede, ikisi bir bacağını yukarı kaldırmış.",
+      "category": null
+    },
+    {
+      "id": "bvn09977",
+      "src_800": "assets/images/galeri/bvn09977-800.webp",
+      "src_1600": "assets/images/galeri/bvn09977-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede ellerinde belgeler tutan bale kostümlü bir grup, yanlarında siyah giyimli bir kişi.",
+      "category": null
+    },
+    {
+      "id": "bvn09989",
+      "src_800": "assets/images/galeri/bvn09989-800.webp",
+      "src_1600": "assets/images/galeri/bvn09989-1600.webp",
+      "orientation": "landscape",
+      "alt": "Sahnede sıra olmuş bale kostümlü bir grup, salona doğru dönük.",
+      "category": null
+    },
+    {
+      "id": "bvn09998",
+      "src_800": "assets/images/galeri/bvn09998-800.webp",
+      "src_1600": "assets/images/galeri/bvn09998-1600.webp",
+      "orientation": "portrait",
+      "alt": "Bale kostümlü bir grup belge tutuyor, ortada çiçek buketi tutan bir kişi diz çökmüş.",
+      "category": null
+    }
+  ],
+  "videos": [
+    {
+      "id": "hero-reels",
+      "src": "assets/video/hero-reels.mp4",
+      "poster": "assets/video/hero-reels-poster.webp",
+      "orientation": "portrait"
+    },
+    {
+      "id": "kisa-3",
+      "src": "assets/video/kisa-3.mp4",
+      "poster": "assets/video/kisa-3-poster.webp",
+      "orientation": "landscape"
+    },
+    {
+      "id": "kisa-9",
+      "src": "assets/video/kisa-9.mp4",
+      "poster": "assets/video/kisa-9-poster.webp",
+      "orientation": "landscape"
+    }
+  ],
+  "announcements": []
+}

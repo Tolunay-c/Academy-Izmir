@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="tr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sanatsal Projelerimiz ve Galeri | Academy İzmir</title>
+  <meta name="description" content="Bizim için sanat eğitimi yalnızca sahneye hazırlanmak değil; düşünmek, hissetmek, sorgulamak ve birlikte üretmektir.">
+  <meta property="og:title" content="Sanatsal Projelerimiz ve Galeri | Academy İzmir">
+  <meta property="og:description" content="Bizim için sanat eğitimi yalnızca sahneye hazırlanmak değil; düşünmek, hissetmek, sorgulamak ve birlikte üretmektir.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <link rel="icon" href="data:,">
+
+  <!-- Fontlar: Cormorant (başlık) + Jost (metin). latin-ext alt kümesi otomatik yüklenir. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap"></noscript>
+
+  <!-- İkonlar: Material Symbols Outlined, yalnızca kullanılan ikonlar (icon_names alfabetik sıralı) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&icon_names=arrow_back,arrow_forward,call,close,edit_square,expand_more,menu,pause,play_arrow,volume_off,volume_up&display=block">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body class="site-body">
+  <!-- partial:header:start -->
+  <a class="skip-link" href="#main">İçeriğe atla</a>
+  <header class="site-header" data-site-header>
+    <div class="site-header-inner">
+      <!-- Logo tek bileşen: vektörel logo gelince .site-logo-text yerine <img> ya da <svg> konur -->
+      <a class="site-logo" href="index.html"><span class="site-logo-text">Academy <span class="site-logo-accent">İzmir</span></span></a>
+      <nav class="site-nav" aria-label="Ana menü">
+        <ul class="site-nav-list">
+          <li><a class="site-nav-link" href="programs.html">Eğitimler</a></li>
+          <li><a class="site-nav-link" href="about.html">Hakkımızda</a></li>
+          <li><a class="site-nav-link" href="faculty.html">Kadro</a></li>
+          <li><a class="site-nav-link" href="winners.html">Kazananlar</a></li>
+          <li><a class="site-nav-link" href="gallery.html" aria-current="page">Galeri</a></li>
+          <li><a class="site-nav-link" href="announcements.html">Duyurular</a></li>
+          <li><a class="site-nav-link" href="contact.html">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="site-header-actions">
+        <a class="button button-primary site-header-cta" href="contact.html#application-form" data-track="form">Başvur</a>
+        <a class="site-header-toggle-link" href="#footer-nav" aria-label="Menüye git"><span class="material-symbols-outlined" aria-hidden="true">menu</span></a>
+        <button class="site-header-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menüyü aç" data-menu-toggle>
+          <span class="material-symbols-outlined site-header-toggle-open" aria-hidden="true">menu</span>
+          <span class="material-symbols-outlined site-header-toggle-close" aria-hidden="true">close</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- partial:header:end -->
+
+  <!-- partial:mobile-menu:start -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobil menü" tabindex="-1" data-mobile-menu>
+    <div class="mobile-menu-inner">
+      <ul>
+          <li><a class="mobile-menu-link" href="index.html">Ana Sayfa</a></li>
+          <li><a class="mobile-menu-link" href="programs.html">Eğitimlerimiz</a></li>
+          <li><a class="mobile-menu-link" href="about.html">Hakkımızda</a></li>
+          <li><a class="mobile-menu-link" href="faculty.html">Eğitmen Kadromuz</a></li>
+          <li><a class="mobile-menu-link" href="winners.html">Kazananlarımız</a></li>
+          <li><a class="mobile-menu-link" href="gallery.html" aria-current="page">Sanatsal Projelerimiz ve Galeri</a></li>
+          <li><a class="mobile-menu-link" href="announcements.html">Güncel Kayıtlar ve Duyurular</a></li>
+          <li><a class="mobile-menu-link" href="contact.html">İletişim ve Başvuru</a></li>
+      </ul>
+      <div class="mobile-menu-actions">
+        <a class="button button-primary button-block" href="contact.html#application-form" data-track="form">Başvur</a>
+        <a class="button button-secondary button-block" href="tel:02324464687" data-track="phone">
+          <span class="material-symbols-outlined" aria-hidden="true">call</span>
+          0&nbsp;(232)&nbsp;446&nbsp;46&nbsp;87
+        </a>
+        <a class="button button-secondary button-block" href="#" data-track="whatsapp">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- partial:mobile-menu:end -->
+
+  <main class="site-main" id="main" tabindex="-1" data-menu-inert>
+    <header class="page-header">
+      <div class="container page-header-inner">
+        <p class="section-eyebrow">Academy İzmir</p>
+        <h1 class="page-header-title">Sanatsal Projelerimiz ve Galeri</h1>
+      </div>
+    </header>
+    <section class="section" aria-labelledby="gallery-projects-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="gallery-projects-title">Sanatsal <em>Projelerimiz</em></h2>
+        </header>
+        <div class="content-placeholder">
+          <p class="pending-note">[İÇERİK GELECEK]</p>
+          <p class="content-placeholder-text">Tiyatro yapımları, sahne çalışmaları ve Academy İzmir Trio</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="gallery-videos-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="gallery-videos-title">Videolar</h2>
+        </header>
+        <div class="video-pair">
+          <div class="video-player" data-video-player>
+          <video preload="none" poster="assets/video/kisa-9-poster.webp" width="1280" height="720" controls playsinline aria-label="Academy İzmir kısa video 1">
+            <source src="assets/video/kisa-9.mp4" type="video/mp4">
+          </video>
+          <button class="video-player-play" type="button" aria-label="Videoyu oynat" data-video-start><span class="material-symbols-outlined" aria-hidden="true">play_arrow</span></button>
+        </div>
+          <div class="video-player" data-video-player>
+          <video preload="none" poster="assets/video/kisa-3-poster.webp" width="1280" height="720" controls playsinline aria-label="Academy İzmir kısa video 2">
+            <source src="assets/video/kisa-3.mp4" type="video/mp4">
+          </video>
+          <button class="video-player-play" type="button" aria-label="Videoyu oynat" data-video-start><span class="material-symbols-outlined" aria-hidden="true">play_arrow</span></button>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="gallery-photos-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="gallery-photos-title">Galeri</h2>
+        </header>
+        <div class="mosaic gallery-mosaic" data-gallery>
+        <div class="mosaic-row">
+          <figure class="mosaic-item is-portrait">
+            <a class="gallery-tile" href="assets/images/galeri/bvn00232-1600.webp" data-lightbox-item data-index="0" data-w="1067" data-h="1600">
+              <img src="assets/images/galeri/bvn00232-800.webp" width="533" height="800" alt="Sahnede desenli kostümlü bir oyuncu öne eğilmiş, arkasında sahnede duran katılımcılar var.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-portrait">
+            <a class="gallery-tile" href="assets/images/galeri/bvn00962-1600.webp" data-lightbox-item data-index="1" data-w="1067" data-h="1600">
+              <img src="assets/images/galeri/bvn00962-800.webp" width="533" height="800" alt="Sahnede beyaz üstlü ve siyah pantolonlu bir grup, içlerinden biri yukarı kaldırılmış.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn01064-1600.webp" data-lightbox-item data-index="2" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn01064-800.webp" width="800" height="533" alt="Sahnede beyaz üstlü bir grup, bir kısmı oturuyor, bir kısmı ayakta.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn01348-1600.webp" data-lightbox-item data-index="3" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn01348-800.webp" width="800" height="533" alt="Sahnede dizlerinin üstünde oturan bir grup, ellerinde belgeler var, arkada ayakta duranlar var.">
+            </a>
+          </figure>
+        </div>
+        <div class="mosaic-row">
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn01366-1600.webp" data-lightbox-item data-index="4" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn01366-800.webp" width="800" height="533" loading="lazy" alt="Sahnede kolları havada bir grup, renkli sahne ışığı altında.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn01409-1600.webp" data-lightbox-item data-index="5" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn01409-800.webp" width="800" height="533" loading="lazy" alt="Sahnede desenli elbiseli bir oyuncu, çevresinde ayakta duran bir grup.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn01414-1600.webp" data-lightbox-item data-index="6" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn01414-800.webp" width="800" height="533" loading="lazy" alt="Sahnede kostümlü oyunculardan oluşan geniş bir grup, loş ışıkta.">
+            </a>
+          </figure>
+        </div>
+        <div class="mosaic-row">
+          <figure class="mosaic-item is-portrait">
+            <a class="gallery-tile" href="assets/images/galeri/bvn01767-1600.webp" data-lightbox-item data-index="7" data-w="1067" data-h="1600">
+              <img src="assets/images/galeri/bvn01767-800.webp" width="533" height="800" loading="lazy" alt="Sahnede mavi gömlekli bir kişi kolunu yukarı kaldırmış, önünde koltuk sıraları görünüyor.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn02226-1600.webp" data-lightbox-item data-index="8" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn02226-800.webp" width="800" height="533" loading="lazy" alt="Sahnede beyaz kostümlü bir grup yan yana duruyor.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn02449-1600.webp" data-lightbox-item data-index="9" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn02449-800.webp" width="800" height="533" loading="lazy" alt="Spot ışığı altında beyaz kostümlü bir grup sahnede birbirine yakın duruyor.">
+            </a>
+          </figure>
+        </div>
+        <div class="mosaic-row">
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn02453-1600.webp" data-lightbox-item data-index="10" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn02453-800.webp" width="800" height="533" loading="lazy" alt="Spot ışığı altında beyaz kostümlü bir grup sahnede ayakta, geniş çekim.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn02458-1600.webp" data-lightbox-item data-index="11" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn02458-800.webp" width="800" height="533" loading="lazy" alt="Beyaz kostümlü bir grup sahnede ışık altında, karanlık arka planda.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-portrait">
+            <a class="gallery-tile" href="assets/images/galeri/bvn02466-1600.webp" data-lightbox-item data-index="12" data-w="1067" data-h="1600">
+              <img src="assets/images/galeri/bvn02466-800.webp" width="533" height="800" loading="lazy" alt="Sahnede spot ışığında beyaz üstlü ve koyu pantolonlu bir oyuncu, arkasında bir grup.">
+            </a>
+          </figure>
+        </div>
+        <div class="mosaic-row">
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn02468-1600.webp" data-lightbox-item data-index="13" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn02468-800.webp" width="800" height="533" loading="lazy" alt="Sahnede spot ışığı altında dizlerinin üstünde bir oyuncu, çevresinde ayakta duran beyaz kostümlü bir grup.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn08998-1600.webp" data-lightbox-item data-index="14" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn08998-800.webp" width="800" height="533" loading="lazy" alt="Sahnede bir masanın yanında sıralanmış bir grup, sağ kenarda bir kişi duruyor.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09051-1600.webp" data-lightbox-item data-index="15" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09051-800.webp" width="800" height="533" loading="lazy" alt="Kırmızı ve yeşil ışıklarla aydınlatılmış sahnede dans eden bir kalabalık.">
+            </a>
+          </figure>
+        </div>
+        <div class="mosaic-row">
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09060-1600.webp" data-lightbox-item data-index="16" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09060-800.webp" width="800" height="533" loading="lazy" alt="Sahnede kolları havada dans eden bir grup, sahne ışıkları altında.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09085-1600.webp" data-lightbox-item data-index="17" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09085-800.webp" width="800" height="533" loading="lazy" alt="Renkli ışıklarla aydınlatılmış sahnede dans eden bir grup.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09090-1600.webp" data-lightbox-item data-index="18" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09090-800.webp" width="800" height="533" loading="lazy" alt="Sahnede toplu halde poz veren geniş bir grup.">
+            </a>
+          </figure>
+        </div>
+        <div class="mosaic-row">
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09235-1600.webp" data-lightbox-item data-index="19" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09235-800.webp" width="800" height="533" loading="lazy" alt="Sahnede ayakta duran bir grup, önlerinde dizlerinin üstünde bir kişi var.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-portrait">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09326-1600.webp" data-lightbox-item data-index="20" data-w="1067" data-h="1600">
+              <img src="assets/images/galeri/bvn09326-800.webp" width="533" height="800" loading="lazy" alt="Sahnede bir kişi, belge tutan bir katılımcıya doğru eğilmiş, yanlarında başka katılımcılar var.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-portrait">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09348-1600.webp" data-lightbox-item data-index="21" data-w="1067" data-h="1600">
+              <img src="assets/images/galeri/bvn09348-800.webp" width="533" height="800" loading="lazy" alt="Sahnede toplanmış bir grup, bir kişi önde diz çökmüş.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09375-1600.webp" data-lightbox-item data-index="22" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09375-800.webp" width="800" height="533" loading="lazy" alt="Sahnede ellerinde belgeler tutan bir grup, sıralar hâlinde duruyor.">
+            </a>
+          </figure>
+        </div>
+        <div class="mosaic-row">
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09389-1600.webp" data-lightbox-item data-index="23" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09389-800.webp" width="800" height="533" loading="lazy" alt="Sahnede birbirine yakın duran bir grup, ellerini ortada birleştirmiş.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09400-1600.webp" data-lightbox-item data-index="24" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09400-800.webp" width="800" height="533" loading="lazy" alt="Sahnede iki kişi kollarını kaldırmış, çevresinde bir grup yakın plan görünüyor.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09463-1600.webp" data-lightbox-item data-index="25" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09463-800.webp" width="800" height="533" loading="lazy" alt="Karanlık bir sahnede ayakta duran bir kişi.">
+            </a>
+          </figure>
+        </div>
+        <div class="mosaic-row">
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09519-1600.webp" data-lightbox-item data-index="26" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09519-800.webp" width="800" height="533" loading="lazy" alt="Sahnede sıralanmış bale kostümlü bir grup, önde salondaki seyirciler görünüyor.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09885-1600.webp" data-lightbox-item data-index="27" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09885-800.webp" width="800" height="533" loading="lazy" alt="Sahnede bale kostümlü bir grup, ön planda gölgede bir figür var.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-portrait">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09905-1600.webp" data-lightbox-item data-index="28" data-w="1067" data-h="1600">
+              <img src="assets/images/galeri/bvn09905-800.webp" width="533" height="800" loading="lazy" alt="Sahnede bale kostümlü bir grup yerde yatıyor.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09928-1600.webp" data-lightbox-item data-index="29" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09928-800.webp" width="800" height="533" loading="lazy" alt="Tütülü üç bale oyuncusu sahnede, ikisi bir bacağını yukarı kaldırmış.">
+            </a>
+          </figure>
+        </div>
+        <div class="mosaic-row">
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09977-1600.webp" data-lightbox-item data-index="30" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09977-800.webp" width="800" height="533" loading="lazy" alt="Sahnede ellerinde belgeler tutan bale kostümlü bir grup, yanlarında siyah giyimli bir kişi.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-landscape">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09989-1600.webp" data-lightbox-item data-index="31" data-w="1600" data-h="1067">
+              <img src="assets/images/galeri/bvn09989-800.webp" width="800" height="533" loading="lazy" alt="Sahnede sıra olmuş bale kostümlü bir grup, salona doğru dönük.">
+            </a>
+          </figure>
+          <figure class="mosaic-item is-portrait">
+            <a class="gallery-tile" href="assets/images/galeri/bvn09998-1600.webp" data-lightbox-item data-index="32" data-w="1067" data-h="1600">
+              <img src="assets/images/galeri/bvn09998-800.webp" width="533" height="800" loading="lazy" alt="Bale kostümlü bir grup belge tutuyor, ortada çiçek buketi tutan bir kişi diz çökmüş.">
+            </a>
+          </figure>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <dialog class="lightbox" aria-label="Büyük görüntü" data-lightbox>
+      <div class="lightbox-bar">
+        <button class="lightbox-button" type="button" aria-label="Büyük görüntüyü kapat" data-lightbox-close><span class="material-symbols-outlined" aria-hidden="true">close</span></button>
+      </div>
+      <div class="lightbox-stage" data-lightbox-stage>
+        <img class="lightbox-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width="1600" height="1067" data-lightbox-image>
+      </div>
+      <div class="lightbox-nav">
+        <button class="lightbox-button" type="button" aria-label="Önceki fotoğraf" data-lightbox-prev><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></button>
+        <p class="lightbox-counter" data-lightbox-counter>1 / 33</p>
+        <button class="lightbox-button" type="button" aria-label="Sonraki fotoğraf" data-lightbox-next><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+      </div>
+    </dialog>
+
+    <section class="cta-band" aria-labelledby="gallery-apply-title">
+      <div class="container cta-band-inner">
+        <h2 class="cta-band-title" id="gallery-apply-title">Academy İzmir'de sanatın içinde, hayatın tam <em>kalbinde</em> buluşalım!</h2>
+        <div class="cta-band-actions">
+          <a class="button button-primary" href="contact.html#application-form" data-track="form">Başvur</a>
+          <a class="button button-secondary" href="tel:02324464687" data-track="phone"><span class="material-symbols-outlined" aria-hidden="true">call</span> 0&nbsp;(232)&nbsp;446&nbsp;46&nbsp;87</a>
+          <a class="button button-secondary" href="#" data-track="whatsapp"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- partial:footer:start -->
+  <footer class="site-footer" data-menu-inert>
+    <div class="container">
+      <div class="site-footer-grid">
+        <div class="site-footer-brand">
+          <a class="site-logo" href="index.html"><span class="site-logo-text">Academy <span class="site-logo-accent">İzmir</span></span></a>
+          <p class="site-footer-slogan">Sanatla Keşfet, Sahneyle Büyü</p>
+        </div>
+        <nav id="footer-nav" aria-label="Alt menü">
+          <h2 class="site-footer-title">Menü</h2>
+          <ul>
+            <li><a class="site-footer-link" href="index.html">Ana Sayfa</a></li>
+            <li><a class="site-footer-link" href="programs.html">Eğitimlerimiz</a></li>
+            <li><a class="site-footer-link" href="about.html">Hakkımızda</a></li>
+            <li><a class="site-footer-link" href="faculty.html">Eğitmen Kadromuz</a></li>
+            <li><a class="site-footer-link" href="winners.html">Kazananlarımız</a></li>
+            <li><a class="site-footer-link" href="gallery.html" aria-current="page">Sanatsal Projelerimiz ve Galeri</a></li>
+            <li><a class="site-footer-link" href="announcements.html">Güncel Kayıtlar ve Duyurular</a></li>
+            <li><a class="site-footer-link" href="contact.html">İletişim ve Başvuru</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="site-footer-title">İletişim</h2>
+          <ul class="site-footer-contact">
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">Telefon</span><span><a class="site-footer-link" href="tel:02324464687" data-track="phone">0&nbsp;(232)&nbsp;446&nbsp;46&nbsp;87</a> <span class="pending-note">[TEYİT EDİLECEK]</span></span></li>
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">WhatsApp</span><span class="pending-note">[TEYİT EDİLECEK]</span></li>
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">E-posta</span><span class="pending-note">[TEYİT EDİLECEK]</span></li>
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">Instagram</span><span class="pending-note">[TEYİT EDİLECEK]</span></li>
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">Adres</span><span class="pending-note">[TEYİT EDİLECEK]</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="site-footer-bottom">© 2026 Academy İzmir</p>
+    </div>
+  </footer>
+  <!-- partial:footer:end -->
+
+  <!-- partial:contact-bar:start -->
+  <nav class="contact-bar" aria-label="Hızlı iletişim" data-menu-inert>
+    <a class="contact-bar-link" href="tel:02324464687" data-track="phone">
+      <span class="material-symbols-outlined" aria-hidden="true">call</span>
+      Ara
+    </a>
+    <a class="contact-bar-link" href="#" data-track="whatsapp">
+      <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp
+    </a>
+    <a class="contact-bar-link contact-bar-link-primary" href="contact.html#application-form" data-track="form">
+      <span class="material-symbols-outlined" aria-hidden="true">edit_square</span>
+      Başvur
+    </a>
+  </nav>
+  <!-- partial:contact-bar:end -->
+</body>
+</html>

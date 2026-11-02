@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="tr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eğitimlerimiz | Academy İzmir</title>
+  <meta name="description" content="Klasik bale, modern dans, Latin ve salon dansları ile çocukları, gençleri ve yetişkinleri hareketin ve sanatın dünyasıyla buluşturuyoruz.">
+  <meta property="og:title" content="Eğitimlerimiz | Academy İzmir">
+  <meta property="og:description" content="Klasik bale, modern dans, Latin ve salon dansları ile çocukları, gençleri ve yetişkinleri hareketin ve sanatın dünyasıyla buluşturuyoruz.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <link rel="icon" href="data:,">
+
+  <!-- Fontlar: Cormorant (başlık) + Jost (metin). latin-ext alt kümesi otomatik yüklenir. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap"></noscript>
+
+  <!-- İkonlar: Material Symbols Outlined, yalnızca kullanılan ikonlar (icon_names alfabetik sıralı) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&icon_names=arrow_back,arrow_forward,call,close,edit_square,expand_more,menu,pause,play_arrow,volume_off,volume_up&display=block">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body class="site-body">
+  <!-- partial:header:start -->
+  <a class="skip-link" href="#main">İçeriğe atla</a>
+  <header class="site-header" data-site-header>
+    <div class="site-header-inner">
+      <!-- Logo tek bileşen: vektörel logo gelince .site-logo-text yerine <img> ya da <svg> konur -->
+      <a class="site-logo" href="index.html"><span class="site-logo-text">Academy <span class="site-logo-accent">İzmir</span></span></a>
+      <nav class="site-nav" aria-label="Ana menü">
+        <ul class="site-nav-list">
+          <li><a class="site-nav-link" href="programs.html" aria-current="page">Eğitimler</a></li>
+          <li><a class="site-nav-link" href="about.html">Hakkımızda</a></li>
+          <li><a class="site-nav-link" href="faculty.html">Kadro</a></li>
+          <li><a class="site-nav-link" href="winners.html">Kazananlar</a></li>
+          <li><a class="site-nav-link" href="gallery.html">Galeri</a></li>
+          <li><a class="site-nav-link" href="announcements.html">Duyurular</a></li>
+          <li><a class="site-nav-link" href="contact.html">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="site-header-actions">
+        <a class="button button-primary site-header-cta" href="contact.html#application-form" data-track="form">Başvur</a>
+        <a class="site-header-toggle-link" href="#footer-nav" aria-label="Menüye git"><span class="material-symbols-outlined" aria-hidden="true">menu</span></a>
+        <button class="site-header-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menüyü aç" data-menu-toggle>
+          <span class="material-symbols-outlined site-header-toggle-open" aria-hidden="true">menu</span>
+          <span class="material-symbols-outlined site-header-toggle-close" aria-hidden="true">close</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- partial:header:end -->
+
+  <!-- partial:mobile-menu:start -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobil menü" tabindex="-1" data-mobile-menu>
+    <div class="mobile-menu-inner">
+      <ul>
+          <li><a class="mobile-menu-link" href="index.html">Ana Sayfa</a></li>
+          <li><a class="mobile-menu-link" href="programs.html" aria-current="page">Eğitimlerimiz</a></li>
+          <li><a class="mobile-menu-link" href="about.html">Hakkımızda</a></li>
+          <li><a class="mobile-menu-link" href="faculty.html">Eğitmen Kadromuz</a></li>
+          <li><a class="mobile-menu-link" href="winners.html">Kazananlarımız</a></li>
+          <li><a class="mobile-menu-link" href="gallery.html">Sanatsal Projelerimiz ve Galeri</a></li>
+          <li><a class="mobile-menu-link" href="announcements.html">Güncel Kayıtlar ve Duyurular</a></li>
+          <li><a class="mobile-menu-link" href="contact.html">İletişim ve Başvuru</a></li>
+      </ul>
+      <div class="mobile-menu-actions">
+        <a class="button button-primary button-block" href="contact.html#application-form" data-track="form">Başvur</a>
+        <a class="button button-secondary button-block" href="tel:02324464687" data-track="phone">
+          <span class="material-symbols-outlined" aria-hidden="true">call</span>
+          0&nbsp;(232)&nbsp;446&nbsp;46&nbsp;87
+        </a>
+        <a class="button button-secondary button-block" href="#" data-track="whatsapp">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- partial:mobile-menu:end -->
+
+  <main class="site-main" id="main" tabindex="-1" data-menu-inert>
+    <header class="page-header">
+      <div class="container page-header-inner">
+        <p class="section-eyebrow">Academy İzmir</p>
+        <h1 class="page-header-title">Eğitimlerimiz</h1>
+      </div>
+    </header>
+    <nav class="page-nav" aria-label="Eğitimlerimiz" data-page-nav>
+      <div class="page-nav-inner">
+        <ul class="page-nav-list" data-page-nav-list>
+          <li class="page-nav-item"><a class="page-nav-link" href="#theatre" data-page-nav-link>TİYATRO</a></li>
+          <li class="page-nav-item"><a class="page-nav-link" href="#creative-drama" data-page-nav-link>YARATICI DRAMA</a></li>
+          <li class="page-nav-item"><a class="page-nav-link" href="#conservatory-preparation" data-page-nav-link>KONSERVATUVAR VE GÜZEL SANATLARA HAZIRLIK</a></li>
+          <li class="page-nav-item"><a class="page-nav-link" href="#ballet-dance" data-page-nav-link>BALE VE DANS</a></li>
+          <li class="page-nav-item"><a class="page-nav-link" href="#rhetoric-workshop" data-page-nav-link>RETORİKA ATÖLYESİ</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="program-sections">
+    <section class="program-section" id="theatre" aria-labelledby="theatre-title">
+      <div class="container program-section-grid">
+        <header class="program-section-head">
+          <h2 class="program-section-title" id="theatre-title">TİYATRO</h2>
+        </header>
+        <div class="program-section-body">
+        <p class="program-intro">Tiyatro, insanın insana tanıklık ettiği; yaşamın çelişkileriyle yüzleşme cesaretini bulduğu, düşüncelerin, duyguların ve insanın bütün hâllerinin aynı anda nefes aldığı bir karşılaşmadır. Her hikâyede yaşam yeniden sorgulanır, her karşılaşmada insan kendinden ve dünyadan yeni bir iz bulur.</p>
+        <div class="program-sub">
+          <h3 class="program-sub-title">Lise Tiyatro Grubu</h3>
+          <p>Giderek dijitalleşen ve bireyleri yalnızlaştıran bir dünyada tiyatro, gençlere yeniden bir arada olmanın, birbirini dinlemenin ve birlikte üretmenin gücünü hatırlatır. Oyunculuk, doğaçlama ve diksiyon çalışmalarıyla kendilerini daha etkili ifade etmeyi öğrenen gençler, kolektif bir sanat çalışmasının parçası olarak hazırladıkları tiyatro oyununu yıl sonunda seyirciyle buluştururlar.</p>
+        </div>
+        <div class="program-sub">
+          <h3 class="program-sub-title">Yetişkin Tiyatro ve Oyunculuk (18 yaş ve üzeri)</h3>
+          <p>Bazen yaşamın dışına bir anlığına çıkmak, başka bir karakterin dünyasına adım atmak, insanın kendine yeniden bakmasını sağlar. Tiyatro, 18 yaş ve üzerindeki herkes için yalnızca bir hobi değil; gündelik hayatı zenginleştiren, birlikte üretmenin ruhunu hissettiren ve insanın kendini ve başkalarını anlama yolculuğuna eşlik eden bir sahne deneyimidir.</p>
+        </div>
+        <div class="video-player" data-video-player>
+          <video preload="none" poster="assets/video/kisa-9-poster.webp" width="1280" height="720" controls playsinline aria-label="Tiyatro eğitimi videosu">
+            <source src="assets/video/kisa-9.mp4" type="video/mp4">
+          </video>
+          <button class="video-player-play" type="button" aria-label="Videoyu oynat" data-video-start><span class="material-symbols-outlined" aria-hidden="true">play_arrow</span></button>
+        </div>
+        <div class="program-schedule">
+          <h3 class="program-schedule-title">Ders Programı</h3>
+          <p class="pending-note">[İÇERİK GELECEK]</p>
+        </div>
+        <div class="program-section-actions">
+          <a class="button button-primary" href="contact.html?program=theatre#application-form" data-track="form">Bu Eğitime Başvur</a>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="program-section" id="creative-drama" aria-labelledby="creative-drama-title">
+      <div class="container program-section-grid">
+        <header class="program-section-head">
+          <h2 class="program-section-title" id="creative-drama-title">YARATICI DRAMA</h2>
+        </header>
+        <div class="program-section-body">
+        <div class="program-statement">
+          <p><span class="program-statement-lead">Her derste psikolog destekli yaratıcı drama atölyeleri düzenlenmektedir.</span> <span class="program-statement-rest">Çalışmalarımız tiyatro ve oyunculuk eğitimi almış eğitmenler ile psikoloğun birlikte yürüttüğü, çocukların gelişim özelliklerini gözeten sanatsal eğitimlerdir.</span></p>
+        </div>
+        <div class="program-sub">
+          <h3 class="program-sub-title">Okul Öncesi Yaratıcı Drama</h3>
+          <p>İlkokula adım atmaya hazırlanan çocukların sosyalleşme becerilerini, hayal güçlerini ve kendilerini ifade etme yetilerini oyun yoluyla geliştiriyoruz. Her derste sürdürülen psikolog desteğiyle çocukların bu önemli geçiş sürecini güvenle deneyimlemelerine katkı sağlıyoruz.</p>
+        </div>
+        <div class="program-sub">
+          <h3 class="program-sub-title">İlkokul Yaratıcı Drama</h3>
+          <p>Aile ortamından okulun sosyal dünyasına adım atan, yeni ilişkiler kuran ve teknolojiyle giderek daha fazla karşılaşan çocuklar için yaratıcı drama; gerçek iletişimin, birlikte üretmenin ve hayal gücünün alanını açar. Her derste sunulan psikolog desteğiyle çocukların sosyal ve duygusal gelişimlerini destekliyoruz.</p>
+        </div>
+        <div class="program-sub">
+          <h3 class="program-sub-title">Ortaokul Yaratıcı Drama</h3>
+          <p>Ergenliğe geçişle birlikte yaşanan bedensel, duygusal ve sosyal değişimler, gençler için yeni bir kendini tanıma sürecidir. Psikolog desteğiyle yürütülen yaratıcı drama çalışmalarımız, gençlerin bu değişimleri anlamlandırmalarına, duygularını ifade etmelerine ve özgüvenlerini geliştirmelerine alan açar.</p>
+        </div>
+        <div class="program-schedule">
+          <h3 class="program-schedule-title">Ders Programı</h3>
+          <p class="pending-note">[İÇERİK GELECEK]</p>
+        </div>
+        <div class="program-section-actions">
+          <a class="button button-primary" href="contact.html?program=creative-drama#application-form" data-track="form">Bu Eğitime Başvur</a>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="program-section" id="conservatory-preparation" aria-labelledby="conservatory-preparation-title">
+      <div class="container program-section-grid">
+        <header class="program-section-head">
+          <h2 class="program-section-title" id="conservatory-preparation-title">KONSERVATUVAR VE GÜZEL SANATLARA HAZIRLIK</h2>
+        </header>
+        <div class="program-section-body">
+        <div class="program-prose">
+          <p>Geleceğin sanatçılarını yetiştirme hedefiyle oluşturduğumuz hazırlık programımız, bir konservatuvarın çalışma disipliniyle, yıl boyunca sürdürülen kapsamlı bir sanat eğitimidir.</p>
+          <p>Türkiye'nin farklı şehirlerindeki konservatuvar ve güzel sanatlar fakültelerinin çok aşamalı yetenek sınavlarına yönelik olarak; oyunculuk, sahne, doğaçlama, diksiyon, ses, dans, hareket ve genel kültür alanlarında bütüncül bir hazırlık sunuyoruz.</p>
+          <p>Alanında deneyimli sanatçı ve eğitmenlerimizle her öğrencinin gelişimini bireysel olarak takip ediyor, sınavlarda karşılaşabilecekleri farklı aşamaları uygulamalı çalışmalarla deneyimlemelerini sağlıyoruz. Eğitimimiz, sınavların son gününe kadar devam ederek öğrencilerimizin yalnızca sınava değil, gelecekteki sanat yaşamlarına da güçlü bir başlangıç yapmalarını amaçlıyor.</p>
+        </div>
+        <div class="program-statement">
+          <p><span class="program-statement-lead">15 yılı aşkın süredir öğrencilerimizi konservatuvar ve güzel sanatlar fakültelerinin yetenek sınavlarına hazırlıyoruz.</span> <span class="program-statement-rest">Oyunculuk, doğaçlama, tirat, ses, hareket ve sahne çalışmalarını kapsayan eğitimlerimizle öğrencilerimizin Türkiye'nin önde gelen sanat eğitimi kurumlarına yerleşmesinden gurur duyuyoruz. Yaklaşık %80'lik yerleşme başarımız, bu çalışmalarımızın değerli bir sonucudur.</span></p>
+        </div>
+        </div>
+        <div class="program-section-wide">
+          <header class="section-header-row">
+            <h3 class="program-sub-title">Kazananlarımız</h3>
+            <div class="strip-controls">
+              <button class="strip-control" type="button" aria-label="Önceki kazananlar" aria-controls="program-winner-strip" aria-disabled="true" data-strip-prev><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></button>
+              <button class="strip-control" type="button" aria-label="Sonraki kazananlar" aria-controls="program-winner-strip" aria-disabled="false" data-strip-next><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+            </div>
+          </header>
+          <section class="strip" id="program-winner-strip" aria-label="2026 kazanan öğrenciler" tabindex="0" data-strip>
+            <ul class="strip-list">
+          <li class="strip-item">
+            <article class="winner-card">
+              <div class="winner-card-media">
+                <img src="assets/images/kazananlar/2026/efe-pak.webp" width="340" height="340" loading="lazy" alt="Efe Pak">
+              </div>
+              <p class="winner-card-year">2026</p>
+              <h3 class="winner-card-name">Efe Pak</h3>
+              <ul class="winner-card-placements">
+              <li>
+                <p class="winner-card-school">Dokuz Eylül Üniversitesi</p>
+                <p class="winner-card-program"><span>Güzel Sanatlar Fakültesi</span> <span>Oyunculuk</span></p>
+              </li>
+              <li>
+                <p class="winner-card-school">Muğla Sıtkı Koçman Üniversitesi</p>
+                <p class="winner-card-program"><span>Güzel Sanatlar Fakültesi</span> <span>Oyunculuk</span></p>
+              </li>
+              </ul>
+            </article>
+          </li>
+          <li class="strip-item">
+            <article class="winner-card">
+              <div class="winner-card-media">
+                <img src="assets/images/kazananlar/2026/ecrin-azra-keles.webp" width="400" height="400" loading="lazy" alt="Ecrin Azra Keleş">
+              </div>
+              <p class="winner-card-year">2026</p>
+              <h3 class="winner-card-name">Ecrin Azra Keleş</h3>
+              <ul class="winner-card-placements">
+              <li>
+                <p class="winner-card-school">Dokuz Eylül Üniversitesi</p>
+                <p class="winner-card-program"><span>Güzel Sanatlar Fakültesi</span> <span>Oyunculuk</span></p>
+              </li>
+              <li>
+                <p class="winner-card-school">Haliç Üniversitesi</p>
+                <p class="winner-card-program"><span>Konservatuvar</span> <span>Oyunculuk</span></p>
+                <p class="winner-card-badge">%50 burs</p>
+              </li>
+              </ul>
+            </article>
+          </li>
+          <li class="strip-item">
+            <article class="winner-card">
+              <div class="winner-card-media">
+                <img src="assets/images/kazananlar/2026/rasim-tuna-yilmaz.webp" width="400" height="400" loading="lazy" alt="Rasim Tuna Yılmaz">
+              </div>
+              <p class="winner-card-year">2026</p>
+              <h3 class="winner-card-name">Rasim Tuna Yılmaz</h3>
+              <ul class="winner-card-placements">
+              <li>
+                <p class="winner-card-school">Ankara Üniversitesi</p>
+                <p class="winner-card-program"><span>Dil ve Tarih-Coğrafya Fakültesi</span> <span>Oyunculuk</span></p>
+              </li>
+              <li>
+                <p class="winner-card-school">Anadolu Üniversitesi</p>
+                <p class="winner-card-program"><span>Devlet Konservatuvarı</span> <span>Oyunculuk</span></p>
+              </li>
+              </ul>
+            </article>
+          </li>
+          <li class="strip-item">
+            <article class="winner-card">
+              <div class="winner-card-media">
+                <img src="assets/images/kazananlar/2026/defne-yuksel.webp" width="400" height="400" loading="lazy" alt="Defne Yüksel">
+              </div>
+              <p class="winner-card-year">2026</p>
+              <h3 class="winner-card-name">Defne Yüksel</h3>
+              <ul class="winner-card-placements">
+              <li>
+                <p class="winner-card-school">Kadir Has Üniversitesi</p>
+                <p class="winner-card-program"><span>Sanat ve Tasarım Fakültesi</span> <span>Oyunculuk</span></p>
+                <p class="winner-card-badge">%50 burs</p>
+              </li>
+              </ul>
+            </article>
+          </li>
+          <li class="strip-item">
+            <article class="winner-card">
+              <div class="winner-card-media">
+                <img src="assets/images/kazananlar/2026/zeynep-naz-gorken.webp" width="400" height="400" loading="lazy" alt="Zeynep Naz Görken">
+              </div>
+              <p class="winner-card-year">2026</p>
+              <h3 class="winner-card-name">Zeynep Naz Görken</h3>
+              <ul class="winner-card-placements">
+              <li>
+                <p class="winner-card-school">Haliç Üniversitesi</p>
+                <p class="winner-card-program"><span>Konservatuvar</span> <span>Oyunculuk</span></p>
+                <p class="winner-card-badge">%100 burs</p>
+              </li>
+              </ul>
+            </article>
+          </li>
+          <li class="strip-item">
+            <article class="winner-card">
+              <div class="winner-card-media">
+                <img src="assets/images/kazananlar/2026/ilay-kingir.webp" width="400" height="400" loading="lazy" alt="İlay Kıngır">
+              </div>
+              <p class="winner-card-year">2026</p>
+              <h3 class="winner-card-name">İlay Kıngır</h3>
+              <ul class="winner-card-placements">
+              <li>
+                <p class="winner-card-school">Çanakkale Onsekiz Mart Üniversitesi</p>
+                <p class="winner-card-program"><span>Güzel Sanatlar Fakültesi</span> <span>Oyunculuk</span></p>
+              </li>
+              </ul>
+            </article>
+          </li>
+          <li class="strip-item">
+            <article class="winner-card">
+              <div class="winner-card-media">
+                <img src="assets/images/kazananlar/2026/eren-utku-yakar.webp" width="400" height="400" loading="lazy" alt="Eren Utku Yakar">
+              </div>
+              <p class="winner-card-year">2026</p>
+              <h3 class="winner-card-name">Eren Utku Yakar</h3>
+              <ul class="winner-card-placements">
+              <li>
+                <p class="winner-card-school">Süleyman Demirel Üniversitesi</p>
+                <p class="winner-card-program"><span>Güzel Sanatlar Fakültesi</span> <span>Oyunculuk</span></p>
+              </li>
+              <li>
+                <p class="winner-card-school">Kocaeli Üniversitesi</p>
+                <p class="winner-card-program"><span>Güzel Sanatlar Fakültesi</span> <span>Oyunculuk</span></p>
+              </li>
+              </ul>
+            </article>
+          </li>
+          <li class="strip-item">
+            <article class="winner-card">
+              <div class="winner-card-media">
+                <img src="assets/images/kazananlar/2026/kadir-kilic.webp" width="400" height="400" loading="lazy" alt="Kadir Kılıç">
+              </div>
+              <p class="winner-card-year">2026</p>
+              <h3 class="winner-card-name">Kadir Kılıç</h3>
+              <ul class="winner-card-placements">
+              <li>
+                <p class="winner-card-school">Süleyman Demirel Üniversitesi</p>
+                <p class="winner-card-program"><span>Güzel Sanatlar Fakültesi</span> <span>Oyunculuk</span></p>
+              </li>
+              </ul>
+            </article>
+          </li>
+          <li class="strip-item">
+            <article class="winner-card">
+              <div class="winner-card-media">
+                <img src="assets/images/kazananlar/2026/nazli-su-gedik.webp" width="400" height="400" loading="lazy" alt="Nazlı Su Gedik">
+              </div>
+              <p class="winner-card-year">2026</p>
+              <h3 class="winner-card-name">Nazlı Su Gedik</h3>
+              <ul class="winner-card-placements">
+              <li>
+                <p class="winner-card-school">Kocaeli Üniversitesi</p>
+                <p class="winner-card-program"><span>Güzel Sanatlar Fakültesi</span> <span>Oyunculuk</span></p>
+              </li>
+              </ul>
+            </article>
+          </li>
+          <li class="strip-item">
+            <article class="winner-card">
+              <div class="winner-card-media">
+                <img src="assets/images/kazananlar/2026/isil-dildar-karaman.webp" width="400" height="400" loading="lazy" alt="Işıl Dildar Karaman">
+              </div>
+              <p class="winner-card-year">2026</p>
+              <h3 class="winner-card-name">Işıl Dildar Karaman</h3>
+              <ul class="winner-card-placements">
+              <li>
+                <p class="winner-card-school">Zonguldak Bülent Ecevit Üniversitesi</p>
+                <p class="winner-card-program"><span>Devlet Konservatuvarı</span> <span>Oyunculuk</span></p>
+              </li>
+              </ul>
+            </article>
+          </li>
+            </ul>
+          </section>
+          <a class="button button-text" href="winners.html">Tüm Kazananlar <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+        </div>
+        <div class="program-section-body program-section-tail">
+        <div class="program-schedule">
+          <h3 class="program-schedule-title">Ders Programı</h3>
+          <p class="pending-note">[İÇERİK GELECEK]</p>
+        </div>
+        <div class="program-section-actions">
+          <a class="button button-primary" href="contact.html?program=conservatory-preparation#application-form" data-track="form">Bu Eğitime Başvur</a>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="program-section" id="ballet-dance" aria-labelledby="ballet-dance-title">
+      <div class="container program-section-grid">
+        <header class="program-section-head">
+          <h2 class="program-section-title" id="ballet-dance-title">BALE VE DANS</h2>
+        </header>
+        <div class="program-section-body">
+        <div class="program-prose">
+          <p>Dans, bedenin müzikle buluştuğu, duyguların harekete dönüştüğü evrensel bir ifade biçimidir.</p>
+          <p>Academy İzmir'de klasik bale, modern dans, Latin ve salon dansları eğitimlerimizle çocukları, gençleri ve yetişkinleri hareketin ve sanatın dünyasıyla buluşturuyoruz.</p>
+          <p>Çocuklar için bale ve dans; beden farkındalığını, duruşu, koordinasyonu, ritim duygusunu ve estetik algıyı geliştirirken disiplin, özgüven ve birlikte hareket etme becerilerini destekler.</p>
+          <p>Her çocuğun balerin, her gencin dansçı olması gerekmez; bazen dansın en güzel kazanımı, insanın kendi bedenini tanıması, müziği hissetmesi ve yaşam boyunca taşıyacağı bir sanat sevgisi edinmesidir.</p>
+          <p>Gençler ve yetişkinler içinse dans, gündelik yaşamın sınırlarından uzaklaşmanın, bedenini keşfetmenin, sosyalleşmenin ve kendini özgürce ifade etmenin keyifli bir yoludur.</p>
+          <p>Deneyimli eğitmenlerimiz eşliğinde, her yaş grubuna uygun çalışmalarla dansı yalnızca öğrenilen bir teknik değil, yaşamı zenginleştiren sanatsal bir deneyim olarak ele alıyoruz.</p>
+        </div>
+        <div class="program-sub">
+          <h3 class="program-sub-title">Bale</h3>
+          <p>Duruş, koordinasyon, ritim ve klasik bale teknikleri.</p>
+        </div>
+        <div class="program-sub">
+          <h3 class="program-sub-title">Çocuklar İçin Modern Dans</h3>
+          <p>Hareket, müzik, yaratıcılık ve bedensel ifade.</p>
+        </div>
+        <div class="program-sub">
+          <h3 class="program-sub-title">Yetişkin Latin ve Salon Dansları</h3>
+          <p>Ritim, dans teknikleri ve müzikle uyum.</p>
+        </div>
+        <figure class="program-media">
+          <img src="assets/images/galeri/bvn09928-800.webp" srcset="assets/images/galeri/bvn09928-800.webp 800w, assets/images/galeri/bvn09928-1600.webp 1600w" sizes="(min-width: 48em) 60vw, 100vw" width="1600" height="1067" loading="lazy" alt="Tütülü üç bale oyuncusu sahnede, ikisi bir bacağını yukarı kaldırmış.">
+        </figure>
+        <div class="video-player" data-video-player>
+          <video preload="none" poster="assets/video/kisa-3-poster.webp" width="1280" height="720" controls playsinline aria-label="Bale ve dans eğitimi videosu">
+            <source src="assets/video/kisa-3.mp4" type="video/mp4">
+          </video>
+          <button class="video-player-play" type="button" aria-label="Videoyu oynat" data-video-start><span class="material-symbols-outlined" aria-hidden="true">play_arrow</span></button>
+        </div>
+        <div class="program-schedule">
+          <h3 class="program-schedule-title">Ders Programı</h3>
+          <p class="pending-note">[İÇERİK GELECEK]</p>
+        </div>
+        <div class="program-section-actions">
+          <a class="button button-primary" href="contact.html?program=ballet-dance#application-form" data-track="form">Bu Eğitime Başvur</a>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="program-section" id="rhetoric-workshop" aria-labelledby="rhetoric-workshop-title">
+      <div class="container program-section-grid">
+        <header class="program-section-head">
+          <h2 class="program-section-title" id="rhetoric-workshop-title">RETORİKA ATÖLYESİ</h2>
+        </header>
+        <div class="program-section-body">
+        <div class="poem">
+          <p class="poem-line">Kusursuz konuşma yoktur ama sonuç veren her konuşma kusursuzdur…</p>
+          <p class="poem-line">Retorika, düşünmenin biçimiydi. Bugün, konuşma hâlâ var; fakat artık anlamı yok.</p>
+          <p class="poem-line">İster misiniz bu eksikliği birlikte tamamlayalım ve dünyayı konuşarak yeniden kuralım?</p>
+          <p class="poem-line">Söyleyecek sözüm var ama nasıl söyleyeceğimi bilmiyorum diyorsanız, Retorika Atölyesinde buluşmalıyız.</p>
+        </div>
+        <div class="program-schedule">
+          <h3 class="program-schedule-title">Ders Programı</h3>
+          <p class="pending-note">[İÇERİK GELECEK]</p>
+        </div>
+        <div class="program-section-actions">
+          <a class="button button-primary" href="contact.html?program=rhetoric-workshop#application-form" data-track="form">Bu Eğitime Başvur</a>
+        </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <!-- partial:footer:start -->
+  <footer class="site-footer" data-menu-inert>
+    <div class="container">
+      <div class="site-footer-grid">
+        <div class="site-footer-brand">
+          <a class="site-logo" href="index.html"><span class="site-logo-text">Academy <span class="site-logo-accent">İzmir</span></span></a>
+          <p class="site-footer-slogan">Sanatla Keşfet, Sahneyle Büyü</p>
+        </div>
+        <nav id="footer-nav" aria-label="Alt menü">
+          <h2 class="site-footer-title">Menü</h2>
+          <ul>
+            <li><a class="site-footer-link" href="index.html">Ana Sayfa</a></li>
+            <li><a class="site-footer-link" href="programs.html" aria-current="page">Eğitimlerimiz</a></li>
+            <li><a class="site-footer-link" href="about.html">Hakkımızda</a></li>
+            <li><a class="site-footer-link" href="faculty.html">Eğitmen Kadromuz</a></li>
+            <li><a class="site-footer-link" href="winners.html">Kazananlarımız</a></li>
+            <li><a class="site-footer-link" href="gallery.html">Sanatsal Projelerimiz ve Galeri</a></li>
+            <li><a class="site-footer-link" href="announcements.html">Güncel Kayıtlar ve Duyurular</a></li>
+            <li><a class="site-footer-link" href="contact.html">İletişim ve Başvuru</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="site-footer-title">İletişim</h2>
+          <ul class="site-footer-contact">
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">Telefon</span><span><a class="site-footer-link" href="tel:02324464687" data-track="phone">0&nbsp;(232)&nbsp;446&nbsp;46&nbsp;87</a> <span class="pending-note">[TEYİT EDİLECEK]</span></span></li>
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">WhatsApp</span><span class="pending-note">[TEYİT EDİLECEK]</span></li>
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">E-posta</span><span class="pending-note">[TEYİT EDİLECEK]</span></li>
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">Instagram</span><span class="pending-note">[TEYİT EDİLECEK]</span></li>
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">Adres</span><span class="pending-note">[TEYİT EDİLECEK]</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="site-footer-bottom">© 2026 Academy İzmir</p>
+    </div>
+  </footer>
+  <!-- partial:footer:end -->
+
+  <!-- partial:contact-bar:start -->
+  <nav class="contact-bar" aria-label="Hızlı iletişim" data-menu-inert>
+    <a class="contact-bar-link" href="tel:02324464687" data-track="phone">
+      <span class="material-symbols-outlined" aria-hidden="true">call</span>
+      Ara
+    </a>
+    <a class="contact-bar-link" href="#" data-track="whatsapp">
+      <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp
+    </a>
+    <a class="contact-bar-link contact-bar-link-primary" href="contact.html#application-form" data-track="form">
+      <span class="material-symbols-outlined" aria-hidden="true">edit_square</span>
+      Başvur
+    </a>
+  </nav>
+  <!-- partial:contact-bar:end -->
+</body>
+</html>

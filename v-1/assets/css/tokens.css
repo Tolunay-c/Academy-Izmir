@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Academy İzmir — Tasarım token'ları (v-1)
+   Tek kaynak: sitedeki tüm renk, font, boyut, boşluk, hareket değerleri burada.
+   Diğer CSS dosyalarında sabit değer yazılmaz, yalnızca var(--...) kullanılır.
+   Ayrıntı ve gerekçeler: v-1/DESIGN.md
+   ========================================================================== */
+
+/* Yedek font yüzleri: web fontu yüklenene kadar kullanılan sistem fontunu web fontunun
+   genişliğine yaklaştırır, font değişiminde sayfa kaymasını (CLS) azaltır.
+   Oranlar tarayıcıda ölçüldü: Jost / Arial = %94,5, Cormorant / Georgia = %88,5. */
+@font-face {
+  font-family: "Jost Fallback";
+  src: local("Arial");
+  size-adjust: 94.5%;
+}
+
+@font-face {
+  font-family: "Cormorant Fallback";
+  src: local("Georgia");
+  size-adjust: 88.5%;
+}
+
+:root {
+  color-scheme: dark;
+
+  /* ---- Renk ------------------------------------------------------------ */
+  --color-bg: #0f0d0b;              /* sayfa zemini, sıcak siyah */
+  --color-surface: #1a1714;         /* kart ve form yüzeyi */
+  --color-surface-raised: #26211b;  /* öne çıkan yüzey, hover zemini */
+  --color-text: #f2ece1;            /* ana metin, fildişi */
+  --color-text-muted: #b5ab9c;      /* ikincil metin */
+  --color-accent: #c9a66b;          /* tek vurgu, mat pirinç altın */
+  --color-accent-hover: #ddbe8a;    /* vurgu hover, focus halkası */
+  --color-on-accent: #0f0d0b;       /* vurgu zemini üstündeki metin */
+  --color-line: #3a332b;            /* dekoratif ayırıcı çizgi */
+  --color-line-strong: #7a6f61;     /* form kenarlığı ve kontrol sınırı */
+  --color-success: #8cc09a;
+  --color-error: #e8907f;
+  --color-focus: var(--color-accent-hover);
+  --color-scrim: rgb(15 13 11 / 0.72);
+  --color-scrim-strong: rgb(15 13 11 / 0.92);
+  --gradient-scrim: linear-gradient(to top, var(--color-scrim-strong), transparent);
+
+  /* ---- Font aileleri --------------------------------------------------- */
+  --font-display: "Cormorant", "Cormorant Fallback", Georgia, "Times New Roman", serif;
+  --font-body: "Jost", "Jost Fallback", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --weight-display: 500;
+  --weight-display-strong: 600;
+  --weight-body: 400;
+  --weight-body-medium: 500;
+  --weight-body-strong: 600;
+
+  /* ---- Fluid font boyutu skalası (320 px - 1440 px arası akar) --------- */
+  --text-label: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);  /* yalnızca büyük harfli kısa etiketler */
+  --text-sm: clamp(1rem, 0.97rem + 0.12vw, 1.0625rem);        /* en küçük okunur metin, 16 px altına inmez */
+  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+  --text-xl: clamp(1.5rem, 1.3rem + 1vw, 2.125rem);
+  --text-2xl: clamp(1.875rem, 1.45rem + 2vw, 3rem);
+  --text-3xl: clamp(2.375rem, 1.65rem + 3.4vw, 4.25rem);
+  --text-4xl: clamp(2.875rem, 1.75rem + 5.4vw, 6.25rem);
+
+  /* ---- Satır yüksekliği ------------------------------------------------ */
+  --leading-display: 1.02;
+  --leading-heading: 1.15;
+  --leading-snug: 1.4;
+  --leading-body: 1.65;
+
+  /* ---- Letter-spacing -------------------------------------------------- */
+  --tracking-display: -0.015em;
+  --tracking-body: 0;
+  --tracking-label: 0.16em;
+
+  /* ---- Spacing skalası (4 px tabanlı) ---------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --space-section: clamp(4rem, 2.6rem + 6vw, 9rem);
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+
+  /* ---- Layout ---------------------------------------------------------- */
+  --container-narrow: 42rem;
+  --container: 72rem;
+  --container-wide: 90rem;
+  --measure: 65ch;
+  --card-min: 16rem;
+  --grid-columns: 12;
+
+  /* ---- En boy oranları ------------------------------------------------- */
+  --ratio-portrait: 4 / 5;
+  --ratio-portrait-tall: 2 / 3;
+  --ratio-landscape: 3 / 2;
+  --ratio-video: 16 / 9;
+  --ratio-reels: 9 / 16;
+  --ratio-square: 1 / 1;
+  --ratio-wide: 21 / 9;
+  --ratio-value-landscape: 1.5;
+  --ratio-value-portrait: 0.667;
+  --ratio-value-reels: 0.5625;
+
+  /* ---- Radius (en fazla 3 değer) --------------------------------------- */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-round: 999px;
+
+  /* ---- Çizgi kalınlığı ve focus ---------------------------------------- */
+  --line-width: 1px;
+  --line-width-strong: 2px;
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 3px;
+
+  /* ---- Gölge (yalnızca mobil iletişim çubuğunda) ----------------------- */
+  --shadow-none: none;
+  --shadow-bar: 0 -12px 32px rgb(0 0 0 / 0.45);
+
+  /* ---- Etkileşim boyutları --------------------------------------------- */
+  --touch-min: 2.75rem;
+  --header-height: 4.5rem;
+  --page-nav-height: calc(var(--touch-min) + var(--space-3));
+  --play-button-size: calc(var(--touch-min) * 1.5);
+  --fade-width: var(--space-7);
+  --contact-bar-height: calc(var(--touch-min) + var(--space-4) + var(--line-width));
+  --icon-size: 1.5rem;
+  --icon-size-sm: 1.25rem;
+  --swatch-size: 4.5rem;
+  --hero-video-width: clamp(14rem, 9rem + 25vw, 24rem);
+  --strip-item-width: clamp(15rem, 13rem + 8vw, 18rem);
+  --action-width: 16rem;
+  --hero-video-max-height: 75svh;
+  --mosaic-portrait-max-height: 60svh;
+  --profile-photo-max-height: 60svh;
+  --winner-avatar-compact: 5rem;
+  --object-position-faces: 50% 25%;
+  --opacity-disabled: 0.5;
+  --screen-min: 100vh;
+  --screen-min-dynamic: 100dvh;
+  --screen-small-height: 100svh;
+  --rotate-flip: 180deg;
+  --duration-none: 0s;
+  --space-none: 0px;
+
+  /* ---- Material Symbols (Outlined) ------------------------------------- */
+  --icon-fill: 0;
+  --icon-wght: 300;
+  --icon-grad: 0;
+  --icon-opsz: 24;
+
+  /* ---- Hareket --------------------------------------------------------- */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 500ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --zoom-hover: 1.03;
+
+  /* ---- Katman sırası --------------------------------------------------- */
+  --z-base: 0;
+  --z-raised: 1;
+  --z-subnav: 90;
+  --z-header: 100;
+  --z-bar: 110;
+  --z-menu: 120;
+
+  /* ---- Breakpoint'ler (mobile-first, minimum 320 px) -------------------
+     CSS @media sorgularında var() çalışmadığı için değerler sorguda yazılır
+     ve aşağıdaki listeyle birebir aynı olmak zorundadır (CLAUDE.md istisnası).
+       320 px  = 20em   desteklenen en küçük genişlik
+       480 px  = 30em   sm
+       768 px  = 48em   md
+       1024 px = 64em   lg
+       1280 px = 80em   xl
+       1600 px = 100em  2xl */
+}
+
+/* Hareketi azaltma tercihi: süreleri neredeyse sıfıra indirir. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0.01ms;
+    --duration-base: 0.01ms;
+    --duration-slow: 0.01ms;
+    --zoom-hover: 1;
+  }
+}

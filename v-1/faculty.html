@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="tr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eğitmen Kadromuz | Academy İzmir</title>
+  <meta name="description" content="Kırk yılı aşkın sanat birikimini ve sahne deneyimini yeni kuşaklarla paylaşmayı sürdürmektedir.">
+  <meta property="og:title" content="Eğitmen Kadromuz | Academy İzmir">
+  <meta property="og:description" content="Kırk yılı aşkın sanat birikimini ve sahne deneyimini yeni kuşaklarla paylaşmayı sürdürmektedir.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <link rel="icon" href="data:,">
+
+  <!-- Fontlar: Cormorant (başlık) + Jost (metin). latin-ext alt kümesi otomatik yüklenir. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap"></noscript>
+
+  <!-- İkonlar: Material Symbols Outlined, yalnızca kullanılan ikonlar (icon_names alfabetik sıralı) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&icon_names=arrow_back,arrow_forward,call,close,edit_square,expand_more,menu,pause,play_arrow,volume_off,volume_up&display=block">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body class="site-body">
+  <!-- partial:header:start -->
+  <a class="skip-link" href="#main">İçeriğe atla</a>
+  <header class="site-header" data-site-header>
+    <div class="site-header-inner">
+      <!-- Logo tek bileşen: vektörel logo gelince .site-logo-text yerine <img> ya da <svg> konur -->
+      <a class="site-logo" href="index.html"><span class="site-logo-text">Academy <span class="site-logo-accent">İzmir</span></span></a>
+      <nav class="site-nav" aria-label="Ana menü">
+        <ul class="site-nav-list">
+          <li><a class="site-nav-link" href="programs.html">Eğitimler</a></li>
+          <li><a class="site-nav-link" href="about.html">Hakkımızda</a></li>
+          <li><a class="site-nav-link" href="faculty.html" aria-current="page">Kadro</a></li>
+          <li><a class="site-nav-link" href="winners.html">Kazananlar</a></li>
+          <li><a class="site-nav-link" href="gallery.html">Galeri</a></li>
+          <li><a class="site-nav-link" href="announcements.html">Duyurular</a></li>
+          <li><a class="site-nav-link" href="contact.html">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="site-header-actions">
+        <a class="button button-primary site-header-cta" href="contact.html#application-form" data-track="form">Başvur</a>
+        <a class="site-header-toggle-link" href="#footer-nav" aria-label="Menüye git"><span class="material-symbols-outlined" aria-hidden="true">menu</span></a>
+        <button class="site-header-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menüyü aç" data-menu-toggle>
+          <span class="material-symbols-outlined site-header-toggle-open" aria-hidden="true">menu</span>
+          <span class="material-symbols-outlined site-header-toggle-close" aria-hidden="true">close</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- partial:header:end -->
+
+  <!-- partial:mobile-menu:start -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobil menü" tabindex="-1" data-mobile-menu>
+    <div class="mobile-menu-inner">
+      <ul>
+          <li><a class="mobile-menu-link" href="index.html">Ana Sayfa</a></li>
+          <li><a class="mobile-menu-link" href="programs.html">Eğitimlerimiz</a></li>
+          <li><a class="mobile-menu-link" href="about.html">Hakkımızda</a></li>
+          <li><a class="mobile-menu-link" href="faculty.html" aria-current="page">Eğitmen Kadromuz</a></li>
+          <li><a class="mobile-menu-link" href="winners.html">Kazananlarımız</a></li>
+          <li><a class="mobile-menu-link" href="gallery.html">Sanatsal Projelerimiz ve Galeri</a></li>
+          <li><a class="mobile-menu-link" href="announcements.html">Güncel Kayıtlar ve Duyurular</a></li>
+          <li><a class="mobile-menu-link" href="contact.html">İletişim ve Başvuru</a></li>
+      </ul>
+      <div class="mobile-menu-actions">
+        <a class="button button-primary button-block" href="contact.html#application-form" data-track="form">Başvur</a>
+        <a class="button button-secondary button-block" href="tel:02324464687" data-track="phone">
+          <span class="material-symbols-outlined" aria-hidden="true">call</span>
+          0&nbsp;(232)&nbsp;446&nbsp;46&nbsp;87
+        </a>
+        <a class="button button-secondary button-block" href="#" data-track="whatsapp">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- partial:mobile-menu:end -->
+
+  <main class="site-main" id="main" tabindex="-1" data-menu-inert>
+    <header class="page-header">
+      <div class="container page-header-inner">
+        <p class="section-eyebrow">Academy İzmir</p>
+        <h1 class="page-header-title">Eğitmen Kadromuz</h1>
+      </div>
+    </header>
+    <section class="section" aria-labelledby="faculty-index-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="faculty-index-title">Kadro <em>dizini</em></h2>
+        </header>
+        <ol class="faculty-index-list">
+          <li class="faculty-index-item"><a class="faculty-index-link" href="#ozlem-baskaya">Özlem Başkaya</a></li>
+          <li class="faculty-index-item"><a class="faculty-index-link" href="#ozgur-baskaya">Özgür Başkaya</a></li>
+          <li class="faculty-index-item"><a class="faculty-index-link" href="#hakan-ozgomec">Hakan Özgömeç</a></li>
+          <li class="faculty-index-item"><a class="faculty-index-link" href="#hulya-savas">Hülya Savaş</a></li>
+          <li class="faculty-index-item"><a class="faculty-index-link" href="#nihat-demirkol">Nihat Demirkol</a></li>
+          <li class="faculty-index-item"><a class="faculty-index-link" href="#svetlana-hepark">Svetlana Hepark</a></li>
+          <li class="faculty-index-item"><a class="faculty-index-link" href="#ulas-narli">Ulaş Narlı</a></li>
+          <li class="faculty-index-item"><a class="faculty-index-link" href="#eser-uygun">Eser Uygun</a></li>
+          <li class="faculty-index-item"><a class="faculty-index-link" href="#meltem-yorulmaz">Meltem Yorulmaz</a></li>
+          <li class="faculty-index-item"><a class="faculty-index-link" href="#ebru-parilti">Ebru Parıltı</a></li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="faculty-profiles">
+    <article class="profile" id="ozlem-baskaya" aria-labelledby="ozlem-baskaya-name">
+      <div class="container profile-grid">
+        <header class="profile-head">
+          <h2 class="profile-name" id="ozlem-baskaya-name">Özlem Başkaya</h2>
+          <ul class="instructor-card-roles">
+              <li>Devlet Tiyatroları Sanatçısı</li>
+              <li>Tiyatro, Sinema ve Televizyon Oyuncusu</li>
+              <li>Oyunculuk Eğitmeni</li>
+              <li>Academy İzmir Kurucusu</li>
+          </ul>
+        </header>
+        <div class="profile-media">
+          <img src="assets/images/kadro/01-ozlem-baskaya.webp" width="735" height="919" alt="Özlem Başkaya portresi">
+        </div>
+        <p class="profile-bio">2002 yılından bu yana Devlet Tiyatroları bünyesinde sanat yaşamını sürdüren Özlem Başkaya, tiyatro sahnesinin yanı sıra sinema ve televizyon yapımlarında da rol almıştır. Sadri Alışık Anadolu Tiyatro Oyuncu Ödülleri başta olmak üzere birçok ödülün sahibi olan sanatçı, uzun yıllara dayanan sahne deneyimini tiyatro ve oyunculuk eğitimiyle buluşturmaktadır. Academy İzmir'in kurucusu olan Başkaya, sanatın dönüştürücü gücünü farklı yaş gruplarıyla paylaşmayı sürdürmektedir.</p>
+      </div>
+    </article>
+    <article class="profile" id="ozgur-baskaya" aria-labelledby="ozgur-baskaya-name">
+      <div class="container profile-grid">
+        <header class="profile-head">
+          <h2 class="profile-name" id="ozgur-baskaya-name">Özgür Başkaya</h2>
+          <ul class="instructor-card-roles">
+              <li>Yönetmen</li>
+              <li>Oyuncu</li>
+              <li>Dramaturg</li>
+              <li>Drama ve Oyunculuk Eğitmeni</li>
+              <li>Academy İzmir Kurucusu</li>
+          </ul>
+        </header>
+        <div class="profile-media">
+          <img src="assets/images/kadro/02-ozgur-baskaya.webp" width="532" height="665" loading="lazy" alt="Özgür Başkaya portresi">
+        </div>
+        <p class="profile-bio">Kırk yılı aşkın sanat yaşamı boyunca yönetmen, oyuncu ve dramaturg olarak çok sayıda tiyatro yapımında görev alan Özgür Başkaya, sanat eğitimi alanında yüksek lisans yapmıştır. Türkiye'de tiyatro topluluklarının kuruluşu ve örgütlenmesi alanında önemli çalışmalar yürütmüş, Özgür Tiyatro'nun kurucusu ve genel sanat yönetmeni olarak yurt içinde ve yurt dışında çok sayıda tiyatro projesinde yer almıştır. Uzun yıllardır yaratıcı drama, tiyatro ve oyunculuk alanlarında eğitim veren Başkaya, Academy İzmir'in kurucusu olarak sanat birikimini çocuklar, gençler ve yetişkinlerle paylaşmayı sürdürmektedir.</p>
+      </div>
+    </article>
+    <article class="profile" id="hakan-ozgomec" aria-labelledby="hakan-ozgomec-name">
+      <div class="container profile-grid">
+        <header class="profile-head">
+          <h2 class="profile-name" id="hakan-ozgomec-name">Hakan Özgömeç</h2>
+          <ul class="instructor-card-roles">
+              <li>Devlet Tiyatroları Sanatçısı</li>
+              <li>Ödüllü Tiyatro Oyuncusu</li>
+              <li>Oyunculuk Eğitmeni</li>
+          </ul>
+        </header>
+        <div class="profile-media">
+          <img src="assets/images/kadro/03-hakan-ozgomec.webp" width="512" height="640" loading="lazy" alt="Hakan Özgömeç portresi">
+        </div>
+        <p class="profile-bio">Uzun yıllardır Devlet Tiyatroları bünyesinde sanat yaşamını sürdüren Hakan Özgömeç, klasik ve çağdaş tiyatro repertuvarında çok sayıda oyunda ve farklı karakterlerde sahne almıştır. Geniş bir repertuvara ve köklü bir sahne deneyimine sahip olan sanatçı, tiyatro alanındaki çalışmalarını oyunculuk eğitimiyle de sürdürmektedir. Academy İzmir'de gençler ve yetişkinlerle yürüttüğü çalışmalarda, yıllara dayanan sanat birikimini ve sahne deneyimini yeni kuşaklara aktarmaktadır.</p>
+      </div>
+    </article>
+    <article class="profile" id="hulya-savas" aria-labelledby="hulya-savas-name">
+      <div class="container profile-grid">
+        <header class="profile-head">
+          <h2 class="profile-name" id="hulya-savas-name">Hülya Savaş</h2>
+          <ul class="instructor-card-roles">
+              <li>Tiyatro Oyuncusu</li>
+              <li>Yönetmen</li>
+              <li>Oyunculuk Eğitmeni</li>
+          </ul>
+        </header>
+        <div class="profile-media">
+          <img src="assets/images/kadro/04-hulya-savas.webp" width="560" height="700" loading="lazy" alt="Hülya Savaş portresi">
+        </div>
+        <p class="profile-bio">1985 yılında İzmir Devlet Tiyatrosu'nda başladığı sanat yaşamı boyunca çok sayıda tiyatro yapımında rol alan Hülya Savaş, İzmir Devlet Tiyatrosu Müdürlüğü görevini de üstlenmiş ve aynı kurumdan emekli olmuştur. Oyunculuk, yönetmenlik ve seslendirme alanlarında önemli çalışmalara imza atan sanatçı, İsmet Küntay, Bedia Muvahhit ve Direklerarası Seyirci Ödülleri başta olmak üzere birçok tiyatro ödülüne layık görülmüştür. Kırk yılı aşkın sanat birikimini ve sahne deneyimini yeni kuşaklarla paylaşmayı sürdürmektedir.</p>
+      </div>
+    </article>
+    <article class="profile" id="nihat-demirkol" aria-labelledby="nihat-demirkol-name">
+      <div class="container profile-grid">
+        <header class="profile-head">
+          <h2 class="profile-name" id="nihat-demirkol-name">Nihat Demirkol</h2>
+          <ul class="instructor-card-roles">
+              <li>Yazar</li>
+              <li>Besteci</li>
+              <li>Retorika ve Etkili Konuşma Eğitmeni</li>
+          </ul>
+        </header>
+        <div class="profile-media">
+          <img src="assets/images/kadro/05-nihat-demirkol.webp" width="514" height="642" loading="lazy" alt="Nihat Demirkol portresi">
+        </div>
+        <p class="profile-bio">Yazarlık, müzik ve iletişim alanlarında çalışmalar yürüten Nihat Demirkol, sanatın farklı disiplinlerini bir araya getiren üretimleriyle tanınmaktadır. Tiyatro oyunları ve sahne müzikleri üzerine çalışmaları bulunan Demirkol, retorika, doğru ve etkili konuşma, ifade becerileri ve iletişim alanlarında eğitimler vermektedir. Academy İzmir'de konuşma ve ses eğitimi üzerine yürüttüğü çalışmalarla, katılımcıların seslerini doğru kullanmalarını ve kendilerini etkili biçimde ifade etmelerini desteklemektedir.</p>
+      </div>
+    </article>
+    <article class="profile" id="svetlana-hepark" aria-labelledby="svetlana-hepark-name">
+      <div class="container profile-grid">
+        <header class="profile-head">
+          <h2 class="profile-name" id="svetlana-hepark-name">Svetlana Hepark</h2>
+          <ul class="instructor-card-roles">
+              <li>Bale ve Dans Eğitmeni</li>
+              <li>Koreograf</li>
+          </ul>
+        </header>
+        <div class="profile-media">
+          <img src="assets/images/kadro/06-svetlana-hepark.webp" width="581" height="726" loading="lazy" alt="Svetlana Hepark portresi">
+        </div>
+        <p class="profile-bio">Rus bale ekolünde eğitim alan Svetlana Hepark, klasik balenin disiplinini ve güçlü teknik altyapısını köklü eğitmenlik deneyimiyle birleştirmektedir. İzmir Özel Türk Koleji'nde uzun yıllar bale ve dans çalışmaları yürütmüş ve aynı kurumdan emekli olmuştur. Academy İzmir'in deneyimli eğitmen kadrosunda uzun süredir yer alan Hepark, öğrencilerinin teknik gelişimlerinin yanı sıra beden farkındalıklarını, ritim duygularını ve sanatsal ifade becerilerini geliştirmeye yönelik çalışmalar yürütmektedir.</p>
+      </div>
+    </article>
+    <article class="profile" id="ulas-narli" aria-labelledby="ulas-narli-name">
+      <div class="container profile-grid">
+        <header class="profile-head">
+          <h2 class="profile-name" id="ulas-narli-name">Ulaş Narlı</h2>
+          <ul class="instructor-card-roles">
+              <li>Yönetmen</li>
+              <li>Tiyatro Oyuncusu</li>
+              <li>Oyunculuk ve Drama Eğitmeni</li>
+          </ul>
+        </header>
+        <div class="profile-media">
+          <img src="assets/images/kadro/07-ulas-narli.webp" width="610" height="762" loading="lazy" alt="Ulaş Narlı portresi">
+        </div>
+        <p class="profile-bio">Çok sayıda tiyatro oyununda rol alan ve yönetmenlik çalışmaları gerçekleştiren Ulaş Narlı, sahne sanatlarının farklı alanlarında üretimlerini sürdürmektedir. Oyunculuk ve yönetmenlik deneyimini tiyatro eğitimiyle birleştiren Narlı, çocuklar, gençler ve yetişkinlerle tiyatro ve drama çalışmaları yürütmektedir. Academy İzmir bünyesinde oyunculuk, beden dili, hareket ve sahne farkındalığı üzerine çalışmalar gerçekleştirerek katılımcıların yaratıcılıklarını ve sanatsal ifade becerilerini geliştirmelerine katkı sağlamaktadır.</p>
+      </div>
+    </article>
+    <article class="profile" id="eser-uygun" aria-labelledby="eser-uygun-name">
+      <div class="container profile-grid">
+        <header class="profile-head">
+          <h2 class="profile-name" id="eser-uygun-name">Eser Uygun</h2>
+          <ul class="instructor-card-roles">
+              <li>Psikolog</li>
+              <li>Yaratıcı Drama Eğitmeni</li>
+          </ul>
+        </header>
+        <div class="profile-media">
+          <img src="assets/images/kadro/08-eser-uygun.webp" width="549" height="686" loading="lazy" alt="Eser Uygun portresi">
+        </div>
+        <p class="profile-bio">Psikoloji alanındaki akademik birikimini yaratıcı drama ve sanatla buluşturan Eser Uygun, çocukların sosyal, duygusal ve bilişsel gelişimleri üzerine çalışmalar yürütmektedir. Çağdaş Drama Derneği bünyesinde yaratıcı drama liderlik eğitimi almış; oyun terapisi, çocuk değerlendirme ve gelişim alanlarında mesleki eğitimlerle çalışmalarını desteklemiştir. Çeşitli kurum ve sivil toplum kuruluşlarında çocuklarla yaratıcı drama atölyeleri gerçekleştiren Uygun, Academy İzmir'de psikoloji ve yaratıcı dramayı bir araya getiren çalışmalarıyla çocukların kendilerini ifade etme, iletişim kurma ve yaratıcılık becerilerini geliştirmeyi amaçlamaktadır.</p>
+      </div>
+    </article>
+    <article class="profile" id="meltem-yorulmaz" aria-labelledby="meltem-yorulmaz-name">
+      <div class="container profile-grid">
+        <header class="profile-head">
+          <h2 class="profile-name" id="meltem-yorulmaz-name">Meltem Yorulmaz</h2>
+          <ul class="instructor-card-roles">
+              <li>Bale Sanatçısı</li>
+              <li>Koreograf</li>
+              <li>Bale ve Dans Eğitmeni</li>
+          </ul>
+        </header>
+        <div class="profile-media">
+          <img src="assets/images/kadro/09-meltem-yorulmaz.webp" width="640" height="800" loading="lazy" alt="Meltem Yorulmaz portresi">
+        </div>
+        <p class="profile-bio">Sahne sanatları alanında uzun yıllara dayanan deneyime sahip olan Meltem Yorulmaz, İzmir Devlet Opera ve Balesi'nde bale sanatçısı ve koreograf olarak görev yapmış, çok sayıda sahne yapımında yer almıştır. Devlet Tiyatroları bünyesinde de koreograf olarak çalışmalarını sürdüren Yorulmaz, farklı tiyatro topluluklarının yapımlarında hareket tasarımı ve koreografi çalışmalarına imza atmıştır. Dansı, hareketi ve bedensel ifadeyi sahne sanatlarının ayrılmaz bir parçası olarak ele alan sanatçı, Academy İzmir bünyesinde de sanatsal birikimini ve deneyimini yeni kuşaklarla paylaşmaktadır.</p>
+      </div>
+    </article>
+    <article class="profile" id="ebru-parilti" aria-labelledby="ebru-parilti-name">
+      <div class="container profile-grid">
+        <header class="profile-head">
+          <h2 class="profile-name" id="ebru-parilti-name">Ebru Parıltı</h2>
+          <ul class="instructor-card-roles">
+              <li>Yönetici</li>
+          </ul>
+        </header>
+        <div class="profile-media">
+          <img src="assets/images/kadro/10-ebru-parilti.webp" width="460" height="575" loading="lazy" alt="Ebru Parıltı portresi">
+        </div>
+      </div>
+    </article>
+    </div>
+
+    <section class="cta-band" aria-labelledby="faculty-apply-title">
+      <div class="container cta-band-inner">
+        <h2 class="cta-band-title" id="faculty-apply-title">Academy İzmir'de sanatın içinde, hayatın tam <em>kalbinde</em> buluşalım!</h2>
+        <div class="cta-band-actions">
+          <a class="button button-primary" href="contact.html#application-form" data-track="form">Başvur</a>
+          <a class="button button-secondary" href="tel:02324464687" data-track="phone"><span class="material-symbols-outlined" aria-hidden="true">call</span> 0&nbsp;(232)&nbsp;446&nbsp;46&nbsp;87</a>
+          <a class="button button-secondary" href="#" data-track="whatsapp"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- partial:footer:start -->
+  <footer class="site-footer" data-menu-inert>
+    <div class="container">
+      <div class="site-footer-grid">
+        <div class="site-footer-brand">
+          <a class="site-logo" href="index.html"><span class="site-logo-text">Academy <span class="site-logo-accent">İzmir</span></span></a>
+          <p class="site-footer-slogan">Sanatla Keşfet, Sahneyle Büyü</p>
+        </div>
+        <nav id="footer-nav" aria-label="Alt menü">
+          <h2 class="site-footer-title">Menü</h2>
+          <ul>
+            <li><a class="site-footer-link" href="index.html">Ana Sayfa</a></li>
+            <li><a class="site-footer-link" href="programs.html">Eğitimlerimiz</a></li>
+            <li><a class="site-footer-link" href="about.html">Hakkımızda</a></li>
+            <li><a class="site-footer-link" href="faculty.html" aria-current="page">Eğitmen Kadromuz</a></li>
+            <li><a class="site-footer-link" href="winners.html">Kazananlarımız</a></li>
+            <li><a class="site-footer-link" href="gallery.html">Sanatsal Projelerimiz ve Galeri</a></li>
+            <li><a class="site-footer-link" href="announcements.html">Güncel Kayıtlar ve Duyurular</a></li>
+            <li><a class="site-footer-link" href="contact.html">İletişim ve Başvuru</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="site-footer-title">İletişim</h2>
+          <ul class="site-footer-contact">
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">Telefon</span><span><a class="site-footer-link" href="tel:02324464687" data-track="phone">0&nbsp;(232)&nbsp;446&nbsp;46&nbsp;87</a> <span class="pending-note">[TEYİT EDİLECEK]</span></span></li>
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">WhatsApp</span><span class="pending-note">[TEYİT EDİLECEK]</span></li>
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">E-posta</span><span class="pending-note">[TEYİT EDİLECEK]</span></li>
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">Instagram</span><span class="pending-note">[TEYİT EDİLECEK]</span></li>
+            <li class="site-footer-contact-item"><span class="site-footer-contact-label">Adres</span><span class="pending-note">[TEYİT EDİLECEK]</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="site-footer-bottom">© 2026 Academy İzmir</p>
+    </div>
+  </footer>
+  <!-- partial:footer:end -->
+
+  <!-- partial:contact-bar:start -->
+  <nav class="contact-bar" aria-label="Hızlı iletişim" data-menu-inert>
+    <a class="contact-bar-link" href="tel:02324464687" data-track="phone">
+      <span class="material-symbols-outlined" aria-hidden="true">call</span>
+      Ara
+    </a>
+    <a class="contact-bar-link" href="#" data-track="whatsapp">
+      <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp
+    </a>
+    <a class="contact-bar-link contact-bar-link-primary" href="contact.html#application-form" data-track="form">
+      <span class="material-symbols-outlined" aria-hidden="true">edit_square</span>
+      Başvur
+    </a>
+  </nav>
+  <!-- partial:contact-bar:end -->
+</body>
+</html>
