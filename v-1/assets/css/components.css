@@ -14,14 +14,6 @@
   padding-inline: var(--gutter);
 }
 
-.container-narrow {
-  max-width: calc(var(--container-narrow) + var(--gutter) * 2);
-}
-
-.container-wide {
-  max-width: calc(var(--container-wide) + var(--gutter) * 2);
-}
-
 .section {
   padding-block: var(--space-section);
 }
@@ -1727,15 +1719,6 @@ textarea.form-control {
   font-size: var(--text-base);
 }
 
-.program-callout {
-  max-width: var(--container-narrow);
-  padding-top: var(--space-5);
-  border-top: var(--line-width-strong) solid var(--color-accent);
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  line-height: var(--leading-snug);
-}
-
 /* Psikolog desteği vurgusu: ilk cümle büyük italik, kalanı gövde metni (aynı paragraf). */
 .program-statement {
   padding-top: var(--space-5);
@@ -2677,8 +2660,9 @@ textarea.form-control {
   grid-area: list;
 }
 
-.contact-layout > .map-placeholder {
+.contact-layout > .contact-map {
   grid-area: map;
+  align-self: start;
 }
 
 .contact-list {
@@ -2857,8 +2841,37 @@ textarea.form-control {
       "form map";
     gap: var(--space-6) var(--gutter);
   }
+}
 
-  .contact-layout > .map-placeholder {
-    min-height: calc(var(--touch-min) * 4);
+.contact-list-value address {
+  font-style: normal;
+}
+
+.site-footer-address {
+  font-style: normal;
+}
+
+/* Çizgi stilli marka simgesi (Instagram): tek renk, .icon-svg ile aynı boyut token'ları. */
+.icon-svg-outline {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--line-width-strong);
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--touch-min);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.contact-link .icon-svg {
+  color: var(--color-accent);
+}
+
+@media (hover: hover) {
+  .contact-link:hover {
+    color: var(--color-accent-hover);
   }
 }

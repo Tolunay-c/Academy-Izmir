@@ -235,7 +235,7 @@ Yeni token: `--winner-avatar-compact`. Yeni ikon yok (`close`, `arrow_back`, `ar
 | `program_id` | string \| null | `programs[].id` değerlerinden biri (ilgili program etiketi için), yoksa `null`. |
 | `link` | object \| null | `{ "url": string, "label": string }`, ayrıntı bağlantısı yoksa `null`. |
 
-**İletişim (contact.html):** Üstte telefon ve WhatsApp eşit genişlikte ikincil butonlar (mobilde tam genişlik, alt alta), altında iletişim listesi (`contact-list`, teyit bekleyenler `[TEYİT EDİLECEK]`), yanda harita yer tutucusu (adres teyit edilmediği için harita yok). Kapanış bandı yok (sayfa zaten başvuru sayfası). Tüm "Başvur" bağlantıları `contact.html#application-form` adresine gider (`?program=<id>` olanlarda `contact.html?program=<id>#application-form`).
+**İletişim (contact.html):** Üstte telefon ve WhatsApp eşit genişlikte ikincil butonlar (mobilde tam genişlik, alt alta), altında iletişim listesi (`contact-list`, teyit bekleyenler `[TEYİT EDİLECEK]`), yanda adres ve harita butonları (bölüm 21). Kapanış bandı yok (sayfa zaten başvuru sayfası). Tüm "Başvur" bağlantıları `contact.html#application-form` adresine gider (`?program=<id>` olanlarda `contact.html?program=<id>#application-form`).
 
 **Form (`form#application-form`):** başlık formun içindedir (bağlantıyla gelince başlık görünür). Alanlar: Ad Soyad, Telefon (10-11 rakam, boşluk/parantez/tire, başta isteğe bağlı +90), E-posta (isteğe bağlı), İlgilendiğiniz Eğitim (optgroup'lu select, alt programı olmayanlar tek seçenek, "Henüz karar vermedim"), Mesaj (isteğe bağlı), KVKK onayı. Görünür etiketler, isteğe bağlı alanlarda "isteğe bağlı" işareti. JS varken `noValidate`, doğrulama blur ve gönderimde, hata `aria-invalid` + `aria-describedby`, hatada özet (`role="alert"`) ve ilk hatalı alana odak. JS yokken HTML5 doğrulaması. Geçerli gönderimde form yerinde prototip mesajı (`data-prototype`) görünür, yayın aşamasında kaldırılır. `?program=<program-id>` alt programı varsa ilkini, yoksa programın kendisini seçer, geçersiz id'de seçim yapmaz (seçeneklerde `data-program`).
 
@@ -252,3 +252,9 @@ Yeni ikon: `expand_more` (site sayfalarının `icon_names` listesine eklendi).
 **Landmark:** mobil menü kapsayıcısı `nav` (aria-label "Mobil menü"), içindeki bağlantılar ve eylem butonları aynı landmark içindedir. Kaydırma şeritleri `<section aria-label>`, hero videosu `<figure aria-label>` olarak işaretlidir.
 
 **Open Graph:** `og:title`, `og:description`, `og:type` (`website`), `og:locale` (`tr_TR`) 8 sayfada var. `og:image` paylaşım görseli gelince eklenecek.
+
+## 21. Adres ve harita
+
+Adres teyitlidir (`site.json` `contact.address`: `value`, `pending: false`, `map_url`, `directions_url`). Footer'da adres `<address>` içinde `map_url` bağlantısıdır (`target="_blank"`, `rel="noopener"`, `data-track="map"`). İletişim sayfasında adres listede `<address>` olarak durur, harita yer tutucusu yerine iki ikincil buton vardır: "Haritada Gör" (`map_url`, `data-track="map"`, ikon `location_on`) ve "Yol Tarifi Al" (`directions_url`, `data-track="directions"`, ikon `directions`). Mobilde tam genişlik alt alta. Yeni sekmede açılan bağlantılar görsel olarak gizli "(yeni sekmede açılır)" metni taşır. Google Maps iframe gömülmez. Yeni ikonlar: `directions`, `location_on` (8 sayfada `icon_names` senkron). `address` öğesi `base.css`'te italik değildir.
+
+**Instagram:** `site.json` `contact.instagram {handle, url, pending: false}`. Footer'da "@academyizmirr" bağlantısı (`data-track="instagram"`, yeni sekmede, gizli "(yeni sekmede açılır)" metni), iletişim listesinde aynı bağlantı + sade tek renkli inline SVG simge (`icon-svg icon-svg-outline`, `aria-hidden`, WhatsApp SVG'siyle aynı boyut token'ları). Footer'da simge yok.

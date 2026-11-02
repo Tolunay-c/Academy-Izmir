@@ -27,12 +27,15 @@
       "pending": true
     },
     "instagram": {
-      "value": null,
-      "pending": true
+      "handle": "academyizmirr",
+      "url": "https://www.instagram.com/academyizmirr/",
+      "pending": false
     },
     "address": {
-      "value": null,
-      "pending": true
+      "value": "Mithatpaşa Caddesi, Yeşim Apt. No: 132/A, 35280 Konak/İzmir",
+      "pending": false,
+      "map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x14bbd921bd36ecf9:0x1535a88be7b2b641",
+      "directions_url": "https://www.google.com/maps/dir/?api=1&destination=Mithatpa%C5%9Fa%20Caddesi%2C%20Ye%C5%9Fim%20Apt.%20No%3A%20132%2FA%2C%2035280%20Konak%2F%C4%B0zmir"
     }
   },
   "programs": [

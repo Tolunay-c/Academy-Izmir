@@ -295,8 +295,9 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 - Telefon: 0 (232) 446 46 87 — TEYİT EDİLECEK
 - WhatsApp numarası: `[TEYİT EDİLECEK]`
 - E-posta: `[TEYİT EDİLECEK]` (maillerde hem academyizmir.com hem academyizmir.net geçiyor)
-- Instagram: `[TEYİT EDİLECEK]` (mevcut sitede "academyizmirr", posterde "academyizmir")
-- Adres ve harita: `[TEYİT EDİLECEK]`
+- Instagram: @academyizmirr (https://www.instagram.com/academyizmirr/)
+- Adres: Mithatpaşa Caddesi, Yeşim Apt. No: 132/A, 35280 Konak/İzmir
+- Google Maps: https://www.google.com/maps/place//data=!4m2!3m1!1s0x14bbd921bd36ecf9:0x1535a88be7b2b641
 
 ---
 
@@ -314,8 +315,8 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 
 1. Güzel Sanatlar Lisesine Hazırlık sitede alt program olarak yer alacak mı?
 2. Yazısız kadro portreleri var mı?
-3. Kullanılacak e-posta adresi ve Instagram hesabı hangisi?
-4. WhatsApp numarası ve adres teyidi.
+3. Kullanılacak e-posta adresi hangisi?
+4. WhatsApp numarası teyidi.
 5. Duyurular, kazananlar ve galeri için yönetim paneli istenecek mi? (Mevcut kapsam: sadece tasarım yenileme.)
 6. Efe Pak'ın Muğla Sıtkı Koçman Üniversitesi yerleşmesi posterde var, liste görselinde yok. Doğru mu?
 7. kisa-10 videosunda kulis çekimleri ve üstü çıplak kişiler var. Sitede kullanılsın mı, yoksa bu kısımlar kesilsin mi?

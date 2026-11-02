@@ -29,7 +29,7 @@ v-1/
 | `winners.html` | Kazananlarımız | Başarı bloğu, yıl ve kategori filtresi (URL parametreli), yıllara göre kazanan kartları |
 | `gallery.html` | Sanatsal Projelerimiz ve Galeri | Proje yer tutucusu, 2 video, 33 fotoğraflık mozaik, lightbox |
 | `announcements.html` | Güncel Kayıtlar ve Duyurular | Boş durum (duyuru yok), Başvur ve telefon eylemleri |
-| `contact.html` | İletişim ve Başvuru | Başvuru formu, telefon/WhatsApp, iletişim listesi, harita yer tutucusu |
+| `contact.html` | İletişim ve Başvuru | Başvuru formu, telefon/WhatsApp, iletişim listesi, harita bağlantıları |
 
 Sayfalar elle düzenlenir. Metinler `site.json` ve `icerik.md` ile birebir aynı tutulur, HTML'e statik yazılmıştır (arama motorları görsün, PHP'de sunucuda üretilecek).
 
@@ -47,7 +47,7 @@ Sayfalar elle düzenlenir. Metinler `site.json` ve `icerik.md` ile birebir aynı
 | Alan | İçerik |
 |---|---|
 | `site` | `name`, `description`, `home_title`, `tagline`, `intro`, `founded`, `highlights[]` |
-| `contact` | `phone {display, tel, pending}`, `whatsapp`, `email`, `instagram`, `address` (hepsi `{value, pending}`; teyit bekleyenlerde `value: null`, `pending: true`) |
+| `contact` | `phone {display, tel, pending}`, `whatsapp`, `email` (`{value, pending}`; teyit bekleyenlerde `value: null`, `pending: true`), `address {value, pending, map_url, directions_url}` ve `instagram {handle, url, pending}` (teyitli) |
 | `programs[]` | `id`, `title`, `main_text`, `card_summary`, `detail[]` (paragraflar), `success_block`, `subprograms[] {id, title, card_summary, detail[]}` |
 | `faculty[]` | `id`, `order` (1-10, sıra zorunlu), `name`, `titles[]`, `bio` (Ebru Parıltı için `null`), `image` (kırpılmış 4:5 webp), `alt` |
 | `winners[]` | `id`, `name`, `year`, `category` (`university` / `art-high-school`), `image`, `alt`, `placements[] {university, faculty, program, scholarship}` |
@@ -101,7 +101,7 @@ Sonra `http://localhost:8000/index.html` adresini açın. `file://` ile açmayı
 1. **Prototip kodunu kaldır:** `contact.html` içindeki `data-prototype` bloğu ve `main.js`'teki ilgili kod (form şu an sunucuya bağlı değil).
 2. **Form gönderimini bağla:** başvuruların gideceği e-posta (icerik.md Bölüm 11, madde 13), sunucu tarafı doğrulama, spam koruması.
 3. **KVKK:** aydınlatma ve açık rıza metinleri (madde 12), formdaki `href="#"` bağlantısı.
-4. **Teyit bekleyen iletişim bilgileri:** telefon, WhatsApp numarası, e-posta, Instagram, adres (icerik.md Bölüm 11, madde 3-4). Harita yer tutucusunu gerçek haritayla değiştir.
+4. **Teyit bekleyen iletişim bilgileri:** telefon, WhatsApp numarası, e-posta (icerik.md Bölüm 11, madde 3-4). Adres ve Instagram teyitlidir (`site.json` `contact.address` ve `contact.instagram`, footer ve iletişim sayfasında). Harita gömülmedi (iframe yok), "Haritada Gör" ve "Yol Tarifi Al" bağlantıları `map_url` ve `directions_url` ile çalışır.
 5. **Logo:** vektörel logo (madde 9). Şu an yazı logosu, `site-logo` tek bileşen.
 6. **Favicon:** şu an `<link rel="icon" href="data:,">`.
 7. **Paylaşım görseli:** `og:image` henüz yok (görsel gelince 8 sayfaya eklenecek). `og:title`, `og:description`, `og:type`, `og:locale` mevcut.
@@ -119,7 +119,8 @@ Sonra `http://localhost:8000/index.html` adresini açın. `file://` ile açmayı
 
 - 1: Güzel Sanatlar Lisesine Hazırlık alt program olacak mı?
 - 2: Yazısız kadro portreleri
-- 3-4: E-posta, Instagram, WhatsApp numarası ve adres teyidi
+- 3: E-posta adresi
+- 4: WhatsApp numarası teyidi
 - 5: Yönetim paneli ihtiyacı
 - 6: Efe Pak'ın ikinci yerleşmesi
 - 7: kisa-10 videosu

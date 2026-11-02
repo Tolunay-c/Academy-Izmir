@@ -85,6 +85,10 @@ small {
   font-size: var(--text-sm);
 }
 
+address {
+  font-style: normal;
+}
+
 hr {
   height: 0;
   border: 0;
