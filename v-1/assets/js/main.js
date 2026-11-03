@@ -551,21 +551,159 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
     phone: 'Lütfen geçerli bir telefon numarası yazın.',
     email: 'Lütfen geçerli bir e-posta adresi yazın.',
     program: 'Lütfen bir eğitim seçin.',
-    consent: 'Devam etmek için aydınlatma metnini onaylamanız gerekiyor.'
+    consent: 'Devam etmek için aydınlatma metnini okuduğunuzu onaylayın.'
   };
 
-  /* Türkiye telefon numarası: yalnızca rakam, boşluk, parantez ve tire (başta isteğe bağlı +90);
-     0 ile başlamayan 10 rakam ya da 0 ile başlayan 11 rakam. */
-  function isPhone(value) {
-    var raw = value.trim();
-    if (!raw || !/^[0-9+()\s\-]+$/.test(raw)) { return false; }
-    if (raw.lastIndexOf('+') > 0 || (raw.match(/\+/g) || []).length > 1) { return false; }
+  /* ---- Alan maskeleri ----------------------------------------------------------------------------
+     Telefon: yalnızca rakam, "0 (XXX) XXX XX XX" biçimi, en fazla 11 rakam. Başa 0 eklenir, 12 rakamlı
+     90 ile başlayan (+90) numaralarda 90 atılır. Biçim karakterleri yalnızca bir sonraki rakam
+     geldiğinde eklenir (Backspace takılmaz). value biçimli kalır, ek aria gerekmez.
+     Engellenen karakterler sessizce yok sayılır. */
+  function phoneDigits(raw) {
     var digits = raw.replace(/\D/g, '');
-    if (raw.charAt(0) === '+') {
-      if (digits.indexOf('90') !== 0) { return false; }
-      digits = digits.slice(2);
+    var shift = 0;
+    if (digits.length >= 12 && digits.indexOf('90') === 0) {
+      digits = '0' + digits.slice(2);
+      shift = -1;
+    } else if (digits !== '' && digits.charAt(0) !== '0') {
+      digits = '0' + digits;
+      shift = 1;
     }
-    return (digits.length === 10 && digits.charAt(0) !== '0') || (digits.length === 11 && digits.charAt(0) === '0');
+    return { digits: digits.slice(0, 11), shift: shift };
+  }
+
+  function formatPhone(digits) {
+    var out = digits.slice(0, 1);
+    if (digits.length > 1) { out += ' (' + digits.slice(1, 4); }
+    if (digits.length > 4) { out += ') ' + digits.slice(4, 7); }
+    if (digits.length > 7) { out += ' ' + digits.slice(7, 9); }
+    if (digits.length > 9) { out += ' ' + digits.slice(9, 11); }
+    return out;
+  }
+
+  /* n. rakamdan hemen sonraki konum (n = 0: başa). */
+  function caretAfterDigit(formatted, n) {
+    if (n <= 0) { return 0; }
+    var seen = 0;
+    for (var i = 0; i < formatted.length; i += 1) {
+      if (/\d/.test(formatted.charAt(i))) {
+        seen += 1;
+        if (seen === n) { return i + 1; }
+      }
+    }
+    return formatted.length;
+  }
+
+  function applyPhone(input, caretDigits) {
+    var result = phoneDigits(input.value);
+    var formatted = formatPhone(result.digits);
+    if (formatted === input.value) { return; }
+    input.value = formatted;
+    var n = Math.min(Math.max(caretDigits + result.shift, 0), result.digits.length);
+    var pos = caretAfterDigit(formatted, n);
+    /* Rakamdan sonra yalnızca biçim karakterleri varsa ve ardından rakam geliyorsa onların ötesine geç
+       (silme sonrası imleç eski yerinde, bir sonraki rakamın önünde kalır). İlk rakamda (0) geçilmez. */
+    if (n > 1) {
+      while (pos < formatted.length && !/\d/.test(formatted.charAt(pos)) && /\d/.test(formatted.slice(pos))) { pos += 1; }
+    }
+    input.setSelectionRange(pos, pos);
+  }
+
+  function digitsBefore(input) {
+    var pos = input.selectionStart === null ? input.value.length : input.selectionStart;
+    return (input.value.slice(0, pos).match(/\d/g) || []).length;
+  }
+
+  var phoneInput = form.querySelector('[data-validate="phone"]');
+  if (phoneInput) {
+    /* Alan doluyken (11 rakam) seçim yoksa yazılan ya da yapıştırılan rakamlar yok sayılır, son hane
+       dışarı itilmez. Seçim varsa seçimin yerine geçer. beforeinput anındaki değer ve seçim saklanır. */
+    var phoneBefore = null;
+    phoneInput.addEventListener('beforeinput', function () {
+      phoneBefore = { value: phoneInput.value, start: phoneInput.selectionStart, end: phoneInput.selectionEnd };
+    });
+    phoneInput.addEventListener('input', function (event) {
+      var before = phoneBefore;
+      phoneBefore = null;
+      if (before && before.start === before.end && before.value.replace(/\D/g, '').length >= 11 &&
+          (event.inputType === 'insertText' || event.inputType === 'insertFromPaste' || event.inputType === 'insertFromDrop')) {
+        phoneInput.value = before.value;
+        phoneInput.setSelectionRange(before.start, before.start);
+        return;
+      }
+      applyPhone(phoneInput, digitsBefore(phoneInput));
+    });
+    phoneInput.addEventListener('change', function () { tidy(phoneInput); });
+
+    /* Backspace/Delete biçim karakterine (boşluk, parantez) denk gelirse en yakın rakamı siler. */
+    phoneInput.addEventListener('keydown', function (event) {
+      if ((event.key !== 'Backspace' && event.key !== 'Delete') || event.ctrlKey || event.metaKey || event.altKey) { return; }
+      var start = phoneInput.selectionStart;
+      if (start === null || start !== phoneInput.selectionEnd) { return; }
+      var value = phoneInput.value;
+      var back = event.key === 'Backspace';
+      var neighbour = back ? value.charAt(start - 1) : value.charAt(start);
+      if (neighbour === '' || /\d/.test(neighbour)) { return; }
+      event.preventDefault();
+      var index = -1;
+      var i;
+      if (back) {
+        for (i = start - 1; i >= 0; i -= 1) { if (/\d/.test(value.charAt(i))) { index = i; break; } }
+      } else {
+        for (i = start; i < value.length; i += 1) { if (/\d/.test(value.charAt(i))) { index = i; break; } }
+      }
+      if (index < 0) { return; }
+      if (index === 0) { return; } /* zorunlu baştaki 0 silinmez, imleç yerinde kalır */
+      var before = (value.slice(0, index).match(/\d/g) || []).length;
+      var digits = value.replace(/\D/g, '');
+      digits = phoneDigits(digits.slice(0, before) + digits.slice(before + 1)).digits;
+      var formatted = formatPhone(digits);
+      phoneInput.value = formatted;
+      var pos = caretAfterDigit(formatted, before);
+      phoneInput.setSelectionRange(pos, pos);
+      phoneInput.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+  }
+
+  /* Ad Soyad: harf (Unicode, Türkçe dahil), birleştirici işaret, boşluk, kesme işareti (' ve ’), tire.
+     Filtre input olayında çalışır, IME yazımı (compositionstart-compositionend) sırasında araya girmez. */
+  var NAME_DISALLOWED = /[^\p{L}\p{M} '\u2019\-]/gu;
+  var nameInput = form.querySelector('[data-validate="name"]');
+  var composing = false;
+
+  function filterName() {
+    var value = nameInput.value;
+    var filtered = value.replace(NAME_DISALLOWED, '');
+    if (filtered === value) { return; }
+    var pos = nameInput.selectionStart === null ? value.length : nameInput.selectionStart;
+    var caret = value.slice(0, pos).replace(NAME_DISALLOWED, '').length;
+    nameInput.value = filtered;
+    nameInput.setSelectionRange(caret, caret);
+  }
+
+  if (nameInput) {
+    nameInput.addEventListener('compositionstart', function () { composing = true; });
+    nameInput.addEventListener('compositionend', function () { composing = false; filterName(); });
+    nameInput.addEventListener('input', function (event) {
+      if (composing || event.isComposing) { return; }
+      filterName();
+    });
+  }
+
+  /* Alandan çıkınca ve gönderimde: ad soyadda baş/son boşluk atılır, ardışık boşluklar teke iner;
+     telefon biçimlenir (otomatik doldurma input olayı vermese de). */
+  function tidy(field) {
+    var key = field.getAttribute('data-validate');
+    if (key === 'name') {
+      field.value = field.value.replace(NAME_DISALLOWED, '').replace(/ {2,}/g, ' ').trim();
+    } else if (key === 'phone') {
+      field.value = formatPhone(phoneDigits(field.value).digits);
+    }
+  }
+
+  /* Telefon: maske sonrası 0 ile başlayan 11 rakam geçerlidir. */
+  function isPhone(value) {
+    return /^0\d{10}$/.test(phoneDigits(value).digits);
   }
 
   var VALIDATORS = {
@@ -599,7 +737,7 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
   }
 
   fields.forEach(function (field) {
-    field.addEventListener('blur', function () { check(field); });
+    field.addEventListener('blur', function () { tidy(field); check(field); });
     var revalidate = function () { if (field.getAttribute('aria-invalid') === 'true') { check(field); } };
     field.addEventListener('input', revalidate);
     field.addEventListener('change', revalidate);
@@ -621,6 +759,7 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
+    fields.forEach(tidy);
     var invalid = fields.filter(function (field) { return !check(field); });
     if (invalid.length) {
       showSummary(invalid);

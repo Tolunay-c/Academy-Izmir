@@ -7,6 +7,7 @@ Academy İzmir sitesinin yeniden tasarımı. Saf HTML, CSS ve vanilla JS; framew
 ```
 v-1/
   index.html ... contact.html     8 sayfa (statik HTML)
+  privacy-notice.html             KVKK Aydınlatma Metni (menüde yok, footer alt satırından ve form onay kutusundan bağlanır)
   styleguide.html                 Bileşen rehberi (noindex, sitedeki hiçbir sayfadan bağlanmaz)
   DESIGN.md                       Tasarım sistemi ve bileşen listesi
   README.md                       Bu dosya
@@ -30,6 +31,7 @@ v-1/
 | `gallery.html` | Sanatsal Projelerimiz ve Galeri | Proje yer tutucusu, 2 video, 33 fotoğraflık mozaik, lightbox |
 | `announcements.html` | Güncel Kayıtlar ve Duyurular | Boş durum (duyuru yok), Başvur ve telefon eylemleri |
 | `contact.html` | İletişim ve Başvuru | Başvuru formu, telefon/WhatsApp, iletişim listesi, harita bağlantıları |
+| `privacy-notice.html` | (menüde yok) | KVKK Aydınlatma Metni (`../brief/kvkk.md`, 8 bölüm, içindekiler listesi). Footer alt satırında ve form onay kutusunda bağlantı |
 
 Sayfalar elle düzenlenir. Metinler `site.json` ve `icerik.md` ile birebir aynı tutulur, HTML'e statik yazılmıştır (arama motorları görsün, PHP'de sunucuda üretilecek).
 
@@ -47,7 +49,7 @@ Sayfalar elle düzenlenir. Metinler `site.json` ve `icerik.md` ile birebir aynı
 | Alan | İçerik |
 |---|---|
 | `site` | `name`, `description`, `home_title`, `tagline`, `intro`, `founded`, `highlights[]` |
-| `contact` | `phone {display, tel, pending}`, `whatsapp`, `email` (`{value, pending}`; teyit bekleyenlerde `value: null`, `pending: true`), `address {value, pending, map_url, directions_url}` ve `instagram {handle, url, pending}` (teyitli) |
+| `contact` | `phone {display, tel, pending}`, `whatsapp {display, url, pending}`, `email {value, url, pending}` (hepsi teyitli, `pending: false`), `address {value, pending, map_url, directions_url}` ve `instagram {handle, url, pending}` (teyitli) |
 | `programs[]` | `id`, `title`, `main_text`, `card_summary`, `detail[]` (paragraflar), `success_block`, `subprograms[] {id, title, card_summary, detail[]}` |
 | `faculty[]` | `id`, `order` (1-10, sıra zorunlu), `name`, `titles[]`, `bio` (Ebru Parıltı için `null`), `image` (kırpılmış 4:5 webp), `alt` |
 | `winners[]` | `id`, `name`, `year`, `category` (`university` / `art-high-school`), `image`, `alt`, `placements[] {university, faculty, program, scholarship}` |
@@ -85,7 +87,7 @@ Her sayfada birebir aynı olan dört blok HTML yorumlarıyla işaretlidir (yaln�
 <!-- partial:contact-bar:start --> ... <!-- partial:contact-bar:end -->  (mobil alt iletişim çubuğu)
 ```
 
-PHP'de her blok ayrı dosyaya (`partials/header.php`, `mobile-menu.php`, `footer.php`, `contact-bar.php`) taşınır, `aria-current` mevcut sayfaya göre üretilir. `<head>` içindeki ortak bağlantılar (font, ikon, CSS, JS) ve `icon_names` listesi 8 sayfada aynıdır, tek bir `head.php`'de toplanabilir. Menü eşiği ve CSS breakpoint'leri `tokens.css` yorum listesiyle birebir aynıdır.
+PHP'de her blok ayrı dosyaya (`partials/header.php`, `mobile-menu.php`, `footer.php`, `contact-bar.php`) taşınır, `aria-current` mevcut sayfaya göre üretilir. `<head>` içindeki ortak bağlantılar (font, ikon, CSS, JS) ve `icon_names` listesi 9 sayfada aynıdır, tek bir `head.php`'de toplanabilir. Menü eşiği ve CSS breakpoint'leri `tokens.css` yorum listesiyle birebir aynıdır.
 
 ## Yerelde çalıştırma
 
@@ -100,18 +102,17 @@ Sonra `http://localhost:8000/index.html` adresini açın. `file://` ile açmayı
 
 1. **Prototip kodunu kaldır:** `contact.html` içindeki `data-prototype` bloğu ve `main.js`'teki ilgili kod (form şu an sunucuya bağlı değil).
 2. **Form gönderimini bağla:** başvuruların gideceği e-posta (icerik.md Bölüm 11, madde 13), sunucu tarafı doğrulama, spam koruması.
-3. **KVKK:** aydınlatma ve açık rıza metinleri (madde 12), formdaki `href="#"` bağlantısı.
-4. **Teyit bekleyen iletişim bilgileri:** telefon, WhatsApp numarası, e-posta (icerik.md Bölüm 11, madde 3-4). Adres ve Instagram teyitlidir (`site.json` `contact.address` ve `contact.instagram`, footer ve iletişim sayfasında). Harita gömülmedi (iframe yok), "Haritada Gör" ve "Yol Tarifi Al" bağlantıları `map_url` ve `directions_url` ile çalışır.
-5. **Logo:** vektörel logo (madde 9). Şu an yazı logosu, `site-logo` tek bileşen.
-6. **Favicon:** şu an `<link rel="icon" href="data:,">`.
-7. **Paylaşım görseli:** `og:image` henüz yok (görsel gelince 8 sayfaya eklenecek). `og:title`, `og:description`, `og:type`, `og:locale` mevcut.
-8. **Google etiketleri ve dönüşüm takibi:** `data-track="phone"`, `"whatsapp"`, `"form"` işaretleri hazır, etiket bilgileri bekleniyor.
-9. **Eski URL'lerden 301 yönlendirmeleri** yeni sayfalara. Sayfa dosya adları İngilizce, URL'lerin Türkçe olup olmayacağı PHP aşamasında kararlaştırılacak.
-10. **Sunucuda sıkıştırma ve önbellek:** gzip/brotli, görsel/CSS/JS/font için uzun ömürlü `Cache-Control`.
-11. **Lighthouse'u yayında yeniden ölç:** yerel ölçümlerde Performance sıkıştırmasız dosyalar yüzünden düşük çıkıyor.
-12. **Yayına alınmayacak dosyalar:** `assets/images/Fwd__*` ve `drive-download-*` orijinal klasörleri (yaklaşık 900 MB), `kazananlar/*/*.jpg` kaynak posterleri, kullanılmayan `kisa-10.mp4` (onay yok, `icerik.md` Bölüm 7 ve Bölüm 11 madde 7), `styleguide.html` ve `styleguide.css`.
-13. **Yer tutucuları temizle:** sitede görünen `[İÇERİK GELECEK]` ve `[TEYİT EDİLECEK]` yazılarının hiçbiri yayında kalmamalı.
-14. **Kullanılmayan CSS'i gözden geçir** (sadece styleguide'da kullanılan bileşenler dahil).
+3. **KVKK:** aydınlatma metni eklendi (`privacy-notice.html`, kaynak `../brief/kvkk.md`). Yayından önce müşteri ya da hukukçu onayı önerilir. Açık rıza metni ayrıca gerekiyorsa (reklam, kampanya, ticari ileti) eklenecek.
+4. **Logo:** vektörel logo (madde 9). Şu an yazı logosu, `site-logo` tek bileşen.
+5. **Favicon:** şu an `<link rel="icon" href="data:,">`.
+6. **Paylaşım görseli:** `og:image` henüz yok (görsel gelince 9 sayfaya eklenecek). `og:title`, `og:description`, `og:type`, `og:locale` mevcut.
+7. **Google etiketleri ve dönüşüm takibi:** `data-track="phone"`, `"whatsapp"`, `"form"`, `"email"` işaretleri hazır (ayrıca `"instagram"`, `"map"`, `"directions"`), etiket bilgileri bekleniyor.
+8. **Eski URL'lerden 301 yönlendirmeleri** yeni sayfalara. Sayfa dosya adları İngilizce, URL'lerin Türkçe olup olmayacağı PHP aşamasında kararlaştırılacak.
+9. **Sunucuda sıkıştırma ve önbellek:** gzip/brotli, görsel/CSS/JS/font için uzun ömürlü `Cache-Control`.
+10. **Lighthouse'u yayında yeniden ölç:** yerel ölçümlerde Performance sıkıştırmasız dosyalar yüzünden düşük çıkıyor.
+11. **Yayına alınmayacak dosyalar:** `assets/images/Fwd__*` ve `drive-download-*` orijinal klasörleri (yaklaşık 900 MB), `kazananlar/*/*.jpg` kaynak posterleri, kullanılmayan `kisa-10.mp4` (onay yok, `icerik.md` Bölüm 7 ve Bölüm 11 madde 7), `styleguide.html` ve `styleguide.css`.
+12. **Yer tutucuları temizle:** sitede görünen `[İÇERİK GELECEK]` ve `[TEYİT EDİLECEK]` yazılarının hiçbiri yayında kalmamalı.
+13. **Kullanılmayan CSS'i gözden geçir** (sadece styleguide'da kullanılan bileşenler dahil).
 
 ## Müşteriden beklenen içerikler
 
@@ -119,8 +120,8 @@ Sonra `http://localhost:8000/index.html` adresini açın. `file://` ile açmayı
 
 - 1: Güzel Sanatlar Lisesine Hazırlık alt program olacak mı?
 - 2: Yazısız kadro portreleri
-- 3: E-posta adresi
-- 4: WhatsApp numarası teyidi
+- 3: (yanıtlandı)
+- 4: (yanıtlandı)
 - 5: Yönetim paneli ihtiyacı
 - 6: Efe Pak'ın ikinci yerleşmesi
 - 7: kisa-10 videosu
@@ -128,7 +129,7 @@ Sonra `http://localhost:8000/index.html` adresini açın. `file://` ile açmayı
 - 9: Logonun vektörel dosyaları
 - 10: Çocuk fotoğrafları için veli izinleri
 - 11: Galeri kategorileri ve fotoğrafların hangi etkinliğe ait olduğu
-- 12: KVKK aydınlatma ve açık rıza metinleri
+- 12: (yanıtlandı)
 - 13: Başvuruların gideceği e-posta adresi
 
 Ayrıca bekleyenler: ders programları, 2025 kazananları, Güzel Sanatlar Lisesi kazananları, Sanatsal Projelerimiz kapsamı (Academy İzmir Trio dahil), kurucuların güncel birlikte fotoğrafı, duyurular, sayfa paylaşım görseli.

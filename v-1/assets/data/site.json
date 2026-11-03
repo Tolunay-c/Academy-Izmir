@@ -16,15 +16,17 @@
     "phone": {
       "display": "0 (232) 446 46 87",
       "tel": "tel:02324464687",
-      "pending": true
+      "pending": false
     },
     "whatsapp": {
-      "value": null,
-      "pending": true
+      "display": "0 (541) 446 47 87",
+      "url": "https://wa.me/905414464787",
+      "pending": false
     },
     "email": {
-      "value": null,
-      "pending": true
+      "value": "info@academyizmir.com",
+      "url": "mailto:info@academyizmir.com",
+      "pending": false
     },
     "instagram": {
       "handle": "academyizmirr",

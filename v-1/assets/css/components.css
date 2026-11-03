@@ -1006,6 +1006,11 @@ textarea.form-control {
   border-top: var(--line-width) solid var(--color-line);
   color: var(--color-text-muted);
   font-size: var(--text-sm);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-6);
 }
 
 @media (hover: hover) {
@@ -2656,7 +2661,7 @@ textarea.form-control {
   min-width: 0;
 }
 
-.contact-layout > .contact-list {
+.contact-layout > .contact-details {
   grid-area: list;
 }
 
@@ -2722,11 +2727,6 @@ textarea.form-control {
 
 .form-check input[aria-invalid="true"] {
   box-shadow: 0 0 0 var(--line-width-strong) var(--color-error);
-}
-
-.form-consent-link {
-  max-width: none;
-  font-size: var(--text-sm);
 }
 
 .form-actions {
@@ -2873,5 +2873,92 @@ textarea.form-control {
 @media (hover: hover) {
   .contact-link:hover {
     color: var(--color-accent-hover);
+  }
+}
+
+/* ==========================================================================
+   Hukuki metin (privacy-notice.html)
+   ========================================================================== */
+
+.legal-layout {
+  display: grid;
+  gap: var(--space-8);
+}
+
+/* ---- İçindekiler --------------------------------------------------------- */
+.legal-toc {
+  display: grid;
+  gap: var(--space-3);
+  padding-bottom: var(--space-6);
+  border-bottom: var(--line-width) solid var(--color-line);
+}
+
+.legal-toc-title {
+  color: var(--color-accent);
+  font-size: var(--text-label);
+  font-weight: var(--weight-body-medium);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.legal-toc-list {
+  display: grid;
+  gap: var(--space-1) var(--space-6);
+}
+
+/* ---- Metin ----------------------------------------------------------------- */
+.legal-body {
+  display: grid;
+  gap: var(--space-8);
+  max-width: var(--measure);
+  font-size: var(--text-base);
+  overflow-wrap: break-word;
+}
+
+.legal-section {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+  padding-top: var(--space-6);
+  border-top: var(--line-width) solid var(--color-line);
+}
+
+.legal-section:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.legal-section-title {
+  margin-bottom: var(--space-2);
+}
+
+.legal-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.legal-list li {
+  position: relative;
+  padding-left: var(--space-5);
+}
+
+.legal-list li::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--text-base) * var(--leading-body) / 2);
+  left: 0;
+  width: var(--space-3);
+  height: var(--line-width);
+  background-color: var(--color-accent);
+}
+
+.legal-field address {
+  display: inline;
+}
+
+@media (min-width: 48em) {
+  .legal-toc-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

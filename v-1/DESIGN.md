@@ -117,7 +117,7 @@ Eleman eşlemesi: Bölüm üst etiketi, buton, form etiketi, kart kategorisi, y�
 | Galeri öğesi | `gallery-item` | Oranlı görsel, hover'da hafif yakınlaşma, büyük sürüme bağlanır. |
 | Form alanları | `form` (en fazla `--container-narrow`, bölüm hizasında sola dayalı), `form-field`, `form-label`, `form-control`, `form-select`, `form-hint`, `form-error` | Görünür etiket, ipucu, hata `role="alert"`, 44 px alan, odakta vurgu kenarlığı. |
 | Sayfa başlığı alanı | `page-header`, `page-header-title` | Üst etiket + `--text-3xl` başlık, altında ince çizgi. |
-| Footer | `site-footer` | `--color-surface` zemin, üç sütun: yazı logosu + slogan, menü, iletişim. Teyit bekleyen alanlar `pending-note` ile "[TEYİT EDİLECEK]". Altta telif satırı. Mobilde alt çubuğun altında kalmaması için alt boşluğu `--contact-bar-height` kadar artar. |
+| Footer | `site-footer` | `--color-surface` zemin, üç sütun: yazı logosu + slogan, menü, iletişim. Teyit bekleyen alan kalmadı (`pending-note` yalnızca `[İÇERİK GELECEK]` için). Altta tek satırda telif ve "KVKK Aydınlatma Metni" bağlantısı (`site-footer-bottom`, flex; menüde değil, `privacy-notice.html`'de `aria-current="page"`). Mobilde alt çubuğun altında kalmaması için alt boşluğu `--contact-bar-height` kadar artar. |
 
 ## 11. Erişilebilirlik özeti
 
@@ -235,9 +235,9 @@ Yeni token: `--winner-avatar-compact`. Yeni ikon yok (`close`, `arrow_back`, `ar
 | `program_id` | string \| null | `programs[].id` değerlerinden biri (ilgili program etiketi için), yoksa `null`. |
 | `link` | object \| null | `{ "url": string, "label": string }`, ayrıntı bağlantısı yoksa `null`. |
 
-**İletişim (contact.html):** Üstte telefon ve WhatsApp eşit genişlikte ikincil butonlar (mobilde tam genişlik, alt alta), altında iletişim listesi (`contact-list`, teyit bekleyenler `[TEYİT EDİLECEK]`), yanda adres ve harita butonları (bölüm 21). Kapanış bandı yok (sayfa zaten başvuru sayfası). Tüm "Başvur" bağlantıları `contact.html#application-form` adresine gider (`?program=<id>` olanlarda `contact.html?program=<id>#application-form`).
+**İletişim (contact.html):** Üstte telefon ve WhatsApp eşit genişlikte ikincil butonlar (mobilde tam genişlik, alt alta), altında iletişim listesi (`contact-list`, `<section class="contact-details" aria-labelledby="contact-info-title">` içinde; telefon, WhatsApp, e-posta, Instagram, adres), yanda adres ve harita butonları (bölüm 21). Kapanış bandı yok (sayfa zaten başvuru sayfası). Tüm "Başvur" bağlantıları `contact.html#application-form` adresine gider (`?program=<id>` olanlarda `contact.html?program=<id>#application-form`).
 
-**Form (`form#application-form`):** başlık formun içindedir (bağlantıyla gelince başlık görünür). Alanlar: Ad Soyad, Telefon (10-11 rakam, boşluk/parantez/tire, başta isteğe bağlı +90), E-posta (isteğe bağlı), İlgilendiğiniz Eğitim (optgroup'lu select, alt programı olmayanlar tek seçenek, "Henüz karar vermedim"), Mesaj (isteğe bağlı), KVKK onayı. Görünür etiketler, isteğe bağlı alanlarda "isteğe bağlı" işareti. JS varken `noValidate`, doğrulama blur ve gönderimde, hata `aria-invalid` + `aria-describedby`, hatada özet (`role="alert"`) ve ilk hatalı alana odak. JS yokken HTML5 doğrulaması. Geçerli gönderimde form yerinde prototip mesajı (`data-prototype`) görünür, yayın aşamasında kaldırılır. `?program=<program-id>` alt programı varsa ilkini, yoksa programın kendisini seçer, geçersiz id'de seçim yapmaz (seçeneklerde `data-program`).
+**Form (`form#application-form`):** başlık formun içindedir (bağlantıyla gelince başlık görünür). Alanlar: Ad Soyad, Telefon (JS varken maskeli: yalnızca rakam, "0 (XXX) XXX XX XX", 11 rakam; yapıştırmada +90/90 öneki atılır; JS yokken `pattern` ile esnek yedek doğrulama), Ad Soyad (yalnızca harf, boşluk, kesme işareti ve tire), E-posta (isteğe bağlı), İlgilendiğiniz Eğitim (optgroup'lu select, alt programı olmayanlar tek seçenek, "Henüz karar vermedim"), Mesaj (isteğe bağlı), KVKK onayı (etiketteki "KVKK Aydınlatma Metni" `privacy-notice.html`'e yeni sekmede açılan bağlantıdır, onay kutusunu işaretlemez; hata: "Devam etmek için aydınlatma metnini okuduğunuzu onaylayın."). Görünür etiketler, isteğe bağlı alanlarda "isteğe bağlı" işareti. JS varken `noValidate`, doğrulama blur ve gönderimde, hata `aria-invalid` + `aria-describedby`, hatada özet (`role="alert"`) ve ilk hatalı alana odak. JS yokken HTML5 doğrulaması. Geçerli gönderimde form yerinde prototip mesajı (`data-prototype`) görünür, yayın aşamasında kaldırılır. `?program=<program-id>` alt programı varsa ilkini, yoksa programın kendisini seçer, geçersiz id'de seçim yapmaz (seçeneklerde `data-program`).
 
 Yeni ikon: `expand_more` (site sayfalarının `icon_names` listesine eklendi).
 
@@ -251,10 +251,19 @@ Yeni ikon: `expand_more` (site sayfalarının `icon_names` listesine eklendi).
 
 **Landmark:** mobil menü kapsayıcısı `nav` (aria-label "Mobil menü"), içindeki bağlantılar ve eylem butonları aynı landmark içindedir. Kaydırma şeritleri `<section aria-label>`, hero videosu `<figure aria-label>` olarak işaretlidir.
 
-**Open Graph:** `og:title`, `og:description`, `og:type` (`website`), `og:locale` (`tr_TR`) 8 sayfada var. `og:image` paylaşım görseli gelince eklenecek.
+**Open Graph:** `og:title`, `og:description`, `og:type` (`website`), `og:locale` (`tr_TR`) 9 sayfada var. `og:image` paylaşım görseli gelince eklenecek.
 
 ## 21. Adres ve harita
 
 Adres teyitlidir (`site.json` `contact.address`: `value`, `pending: false`, `map_url`, `directions_url`). Footer'da adres `<address>` içinde `map_url` bağlantısıdır (`target="_blank"`, `rel="noopener"`, `data-track="map"`). İletişim sayfasında adres listede `<address>` olarak durur, harita yer tutucusu yerine iki ikincil buton vardır: "Haritada Gör" (`map_url`, `data-track="map"`, ikon `location_on`) ve "Yol Tarifi Al" (`directions_url`, `data-track="directions"`, ikon `directions`). Mobilde tam genişlik alt alta. Yeni sekmede açılan bağlantılar görsel olarak gizli "(yeni sekmede açılır)" metni taşır. Google Maps iframe gömülmez. Yeni ikonlar: `directions`, `location_on` (8 sayfada `icon_names` senkron). `address` öğesi `base.css`'te italik değildir.
 
 **Instagram:** `site.json` `contact.instagram {handle, url, pending: false}`. Footer'da "@academyizmirr" bağlantısı (`data-track="instagram"`, yeni sekmede, gizli "(yeni sekmede açılır)" metni), iletişim listesinde aynı bağlantı + sade tek renkli inline SVG simge (`icon-svg icon-svg-outline`, `aria-hidden`, WhatsApp SVG'siyle aynı boyut token'ları). Footer'da simge yok.
+
+## 22. KVKK Aydınlatma Metni ve dönüşüm takibi
+
+**privacy-notice.html:** `../brief/kvkk.md` metni kelimesi kelimesine. Ana menüde ve header'da aktif öğe yok, kapanış bandı yok. Sayfa başlığı alanı (`page-header`, üst etiket "Academy İzmir", h1 "KVKK Aydınlatma Metni"), altında `legal-toc` (8 bölüme bağlantılar, `text-link`, 48em üstünde iki sütun), ardından `legal-body` (`--measure` genişlik, bölümler `legal-section`: üstte ince çizgi, `--space-8` aralık, h2 varsayılan `--text-2xl`, bağlantılar h2 id'lerine gider; başlık header altında kalmaz, `base.css` `scroll-padding-top`). Listeler `legal-list` (ince altın çizgi işareti), iletişim satırları `legal-field` (e-posta `mailto`, telefon `tel`, adres `<address>`). Bağlantılar: footer alt satırı ve contact.html onay kutusu.
+
+**data-track değerleri:** `phone`, `whatsapp`, `email`, `form`, `instagram`, `map`, `directions`.
+
+**İletişim bilgileri:** telefon, WhatsApp ve e-posta (`info@academyizmir.com`, `mailto:`) teyitlidir (`site.json` `contact`, `pending: false`). Footer, iletişim listesi ve KVKK sayfasında e-posta bağlantısı `data-track="email"` taşır.
+
