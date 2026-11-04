@@ -481,6 +481,105 @@
       ]
     },
     {
+      "id": "ada-zenginoglu",
+      "name": "Ada Zenginoğlu",
+      "year": 2025,
+      "category": "university",
+      "image": "assets/images/kazananlar/2025/ada-zenginoglu.webp",
+      "alt": "Ada Zenginoğlu",
+      "placements": []
+    },
+    {
+      "id": "arda-kumkale",
+      "name": "Arda Kumkale",
+      "year": 2025,
+      "category": "university",
+      "image": "assets/images/kazananlar/2025/arda-kumkale.webp",
+      "alt": "Arda Kumkale",
+      "placements": []
+    },
+    {
+      "id": "beren-ozdemir-2025",
+      "name": "Beren Özdemir",
+      "year": 2025,
+      "category": "university",
+      "image": "assets/images/kazananlar/2025/beren-ozdemir.webp",
+      "alt": "Beren Özdemir",
+      "placements": []
+    },
+    {
+      "id": "cansin-akbalik",
+      "name": "Cansın Akbalık",
+      "year": 2025,
+      "category": "university",
+      "image": "assets/images/kazananlar/2025/cansin-akbalik.webp",
+      "alt": "Cansın Akbalık",
+      "placements": []
+    },
+    {
+      "id": "deniz-melek-bel",
+      "name": "Deniz Melek Bel",
+      "year": 2025,
+      "category": "university",
+      "image": "assets/images/kazananlar/2025/deniz-melek-bel.webp",
+      "alt": "Deniz Melek Bel",
+      "placements": []
+    },
+    {
+      "id": "ilay-kingir-2025",
+      "name": "İlay Kıngır",
+      "year": 2025,
+      "category": "university",
+      "image": "assets/images/kazananlar/2025/ilay-kingir.webp",
+      "alt": "İlay Kıngır",
+      "placements": []
+    },
+    {
+      "id": "oguz-atay",
+      "name": "Oğuz Atay",
+      "year": 2025,
+      "category": "university",
+      "image": "assets/images/kazananlar/2025/oguz-atay.webp",
+      "alt": "Oğuz Atay",
+      "placements": []
+    },
+    {
+      "id": "rasim-tuna-yilmaz-2025",
+      "name": "Rasim Tuna Yılmaz",
+      "year": 2025,
+      "category": "university",
+      "image": "assets/images/kazananlar/2025/rasim-tuna-yilmaz.webp",
+      "alt": "Rasim Tuna Yılmaz",
+      "placements": []
+    },
+    {
+      "id": "sude-nur-gul",
+      "name": "Sude Nur Gül",
+      "year": 2025,
+      "category": "university",
+      "image": "assets/images/kazananlar/2025/sude-nur-gul.webp",
+      "alt": "Sude Nur Gül",
+      "placements": []
+    },
+    {
+      "id": "toprak-aydin",
+      "name": "Toprak Aydın",
+      "year": 2025,
+      "category": "university",
+      "image": "assets/images/kazananlar/2025/toprak-aydin.webp",
+      "alt": "Toprak Aydın",
+      "placements": []
+    },
+    {
+      "id": "zeynep-tuana-tulu",
+      "name": "Zeynep Tuana Tülü",
+      "year": 2025,
+      "category": "university",
+      "image": "assets/images/kazananlar/2025/zeynep-tuana-tulu.webp",
+      "alt": "Zeynep Tuana Tülü",
+      "placements": []
+    },
+    {
       "id": "tolga-cakmak",
       "name": "Tolga Çakmak",
       "year": 2024,

@@ -116,7 +116,7 @@ Sonra `http://localhost:8000/index.html` adresini açın. `file://` ile açmayı
 
 ## Müşteriden beklenen içerikler
 
-`../brief/icerik.md` Bölüm 11 "Açık Sorular" (13 madde):
+`../brief/icerik.md` Bölüm 11 "Açık Sorular" (14 madde):
 
 - 1: Güzel Sanatlar Lisesine Hazırlık alt program olacak mı?
 - 2: Yazısız kadro portreleri
@@ -131,5 +131,6 @@ Sonra `http://localhost:8000/index.html` adresini açın. `file://` ile açmayı
 - 11: Galeri kategorileri ve fotoğrafların hangi etkinliğe ait olduğu
 - 12: (yanıtlandı)
 - 13: Başvuruların gideceği e-posta adresi
+- 14: 2025 kazananlarının üniversite, fakülte ve bölüm bilgileri; Beren Özdemir, İlay Kıngır ve Rasim Tuna Yılmaz'ın 2025'te de kazanıp kazanmadığı
 
-Ayrıca bekleyenler: ders programları, 2025 kazananları, Güzel Sanatlar Lisesi kazananları, Sanatsal Projelerimiz kapsamı (Academy İzmir Trio dahil), kurucuların güncel birlikte fotoğrafı, duyurular, sayfa paylaşım görseli.
+Ayrıca bekleyenler: ders programları, 2025 kazananlarının yerleşme bilgileri (kartlarda `[İÇERİK GELECEK]`), Güzel Sanatlar Lisesi kazananları, Sanatsal Projelerimiz kapsamı (Academy İzmir Trio dahil), kurucuların güncel birlikte fotoğrafı, duyurular, sayfa paylaşım görseli.

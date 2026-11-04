@@ -197,7 +197,7 @@ Yeni token: `--profile-photo-max-height`. Ana sayfadaki eğitmen kartları da `i
 | Filtre | `filters`, `filter-group`, `filter-label`, `filter-button` | Yıl (Tümü, 2026, 2025, 2024) ve Kategori (Tümü, Üniversite ve Konservatuvar, Güzel Sanatlar Lisesi) grupları (`role="group"`, görünür etiket). Düğmeler `aria-pressed`, seçili olan vurgu rengi dolgulu. Her satır `fade-scroll` içinde: dar ekranda yatay kaydırılır, kenar gradyanı (`has-fade-start/end`) ipucu verir, sayfa kaymaz. 64em altında iki grup alt alta, üstünde yan yana. Filtreler yalnızca `.js` varken görünür. |
 | Sayaç | `filter-status` | `role="status"` + `aria-live="polite"`, "N öğrenci gösteriliyor". |
 | Liste | `winners-year`, `winners-year-title`, `winner-grid`, `winner-grid-item` | Yıllara göre gruplu (en yeni üstte), her yıl h2 + `auto-fill` kart ızgarası (`winner-card` bileşeni, site.json sırası). Kartlar `data-year`/`data-category` taşır, gizleme `is-hidden` ile. Boş yıl grubu gizlenir. |
-| Boş durum | `empty-state` | "Bu liste yakında eklenecek." (2025 ve Güzel Sanatlar Lisesi). |
+| Boş durum | `empty-state` | "Bu liste yakında eklenecek." (Güzel Sanatlar Lisesi). 2025 grubunda 11 kart var, yerleşmesi olmayan kartlarda yerleşme listesi yerine `winner-card-pending` (`pending-note`, `[İÇERİK GELECEK]`, üstte ince çizgi) görünür; kompakt mobil düzende `places` alanına oturur. |
 
 **Adres:** `?year=2026&category=university` biçimi (`all` olan parametre yazılmaz), `history.replaceState` ile güncellenir, parametreli adres filtreyi açık getirir, geçersiz değerler `all` sayılır. Gradyan kuralı sayfa içi navigasyonla ortaktır (`.fade-scroll` ve `.page-nav-inner` aynı kurallar).
 

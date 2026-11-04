@@ -253,6 +253,22 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 | Nazlı Su Gedik | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
 | Işıl Dildar Karaman | Zonguldak Bülent Ecevit Üniversitesi, Devlet Konservatuvarı, Oyunculuk |
 
+### 2025 — Üniversite ve Konservatuvar (11 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Ada Zenginoğlu | `[İÇERİK GELECEK]` |
+| Arda Kumkale | `[İÇERİK GELECEK]` |
+| Beren Özdemir | `[İÇERİK GELECEK]` |
+| Cansın Akbalık | `[İÇERİK GELECEK]` |
+| Deniz Melek Bel | `[İÇERİK GELECEK]` |
+| İlay Kıngır | `[İÇERİK GELECEK]` |
+| Oğuz Atay | `[İÇERİK GELECEK]` |
+| Rasim Tuna Yılmaz | `[İÇERİK GELECEK]` |
+| Sude Nur Gül | `[İÇERİK GELECEK]` |
+| Toprak Aydın | `[İÇERİK GELECEK]` |
+| Zeynep Tuana Tülü | `[İÇERİK GELECEK]` |
+
 ### 2024 — Üniversite ve Konservatuvar
 | Öğrenci | Yerleşmeler |
 |---|---|
@@ -266,7 +282,6 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 | Yiğit Koçak | Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
 
 ### Gelecek olanlar
-- 2025 Üniversite ve Konservatuvar: `[İÇERİK GELECEK]`
 - Güzel Sanatlar Lisesi kazananları (tüm yıllar): `[İÇERİK GELECEK]`
 
 ---
@@ -326,6 +341,7 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 11. Galeri için hangi kategoriler kullanılsın (örneğin Tiyatro, Bale ve Dans, Yaratıcı Drama, Gösteriler)? Gönderilen fotoğrafların hangi etkinliğe ya da programa ait olduğunu belirtebilir misiniz?
 12. (yanıtlandı)
 13. Başvuru formu gönderildiğinde başvurular hangi e-posta adresine gitsin?
+14. 2025 kazananlarının kazandıkları üniversite, fakülte ve bölüm bilgileri. Ayrıca Beren Özdemir 2024, İlay Kıngır ve Rasim Tuna Yılmaz 2026 listelerinde de var. Bu öğrenciler 2025'te de mi kazandı?
 
 ---
 

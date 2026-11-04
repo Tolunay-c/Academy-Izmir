@@ -457,6 +457,11 @@
   line-height: var(--leading-snug);
 }
 
+.winner-card-pending {
+  padding-top: var(--space-3);
+  border-top: var(--line-width) solid var(--color-line);
+}
+
 .winner-card-badge {
   justify-self: start;
   padding: var(--space-1) var(--space-3);
@@ -2431,7 +2436,8 @@ textarea.form-control {
   font-size: var(--text-lg);
 }
 
-.winner-card.is-grouped .winner-card-placements {
+.winner-card.is-grouped .winner-card-placements,
+.winner-card.is-grouped .winner-card-pending {
   grid-area: places;
 }
 
@@ -2454,7 +2460,8 @@ textarea.form-control {
     font-size: var(--text-xl);
   }
 
-  .winner-card.is-grouped .winner-card-placements {
+  .winner-card.is-grouped .winner-card-placements,
+  .winner-card.is-grouped .winner-card-pending {
     grid-area: auto;
   }
 }
