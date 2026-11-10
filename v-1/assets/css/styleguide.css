@@ -147,3 +147,11 @@
 .sg-device {
   max-width: var(--container-narrow);
 }
+
+.sg-logo-accent {
+  color: var(--color-accent);
+}
+
+.sg-logo-text {
+  color: var(--color-text);
+}

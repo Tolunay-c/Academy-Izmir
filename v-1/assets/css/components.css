@@ -847,26 +847,26 @@ textarea.form-control {
   overflow: hidden;
 }
 
-/* ---- Yazı logosu (tek bileşen) -------------------------------------------------
-   Vektörel logo gelince .site-logo içindeki .site-logo-text yerine <img> ya da
-   <svg> konur, başka bir yerde değişiklik gerekmez. */
+/* ---- Logo (tek bileşen) ---------------------------------------------------------
+   Inline SVG (assets/images/logo/academy-izmir-logo.svg), tek renk: fill currentColor, renk bağlantıdan gelir.
+   Boyut yükseklikle verilir (--logo-height), genişlik viewBox oranından (en-boy sabit) türer. */
 .site-logo {
   display: inline-flex;
   align-items: center;
   min-height: var(--touch-min);
-  color: var(--color-text);
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  font-weight: var(--weight-display-strong);
-  letter-spacing: var(--tracking-display);
-  line-height: var(--leading-display);
-  white-space: nowrap;
+  color: var(--color-accent);
   transition: color var(--duration-fast) var(--ease-out);
 }
 
-.site-logo-accent {
-  color: var(--color-accent);
-  font-style: italic;
+.site-logo-mark {
+  display: block;
+  flex: none;
+  width: auto;
+  height: var(--logo-height);
+}
+
+.site-footer .site-logo-mark {
+  height: var(--logo-height-footer);
 }
 
 @media (hover: hover) {

@@ -16,7 +16,7 @@ v-1/
     css/        tokens.css, base.css, components.css, styleguide.css
     js/         main.js
     data/       site.json (içerik verisi)
-    images/     kadro/, kazananlar/2024/, kazananlar/2026/, galeri/ (+ orijinal kaynak klasörleri, aşağıya bak)
+    images/     logo/, og-image.jpg, kadro/, kazananlar/2024/, kazananlar/2026/, galeri/ (+ orijinal kaynak klasörleri, aşağıya bak)
     video/      hero-reels, kisa-3, kisa-9, kisa-10 (+ poster .webp dosyaları)
 ```
 
@@ -106,9 +106,9 @@ Sonra `http://localhost:8000/index.html` adresini açın. `file://` ile açmayı
 1. **Prototip kodunu kaldır:** `application.html` içindeki `data-prototype` bloğu ve `main.js`'teki ilgili kod (form şu an sunucuya bağlı değil).
 2. **Form gönderimini bağla:** başvuruların gideceği e-posta (icerik.md Bölüm 11, madde 13), sunucu tarafı doğrulama, spam koruması.
 3. **KVKK:** aydınlatma metni eklendi (`privacy-notice.html`, kaynak `../brief/kvkk.md`). Yayından önce müşteri ya da hukukçu onayı önerilir. Açık rıza metni ayrıca gerekiyorsa (reklam, kampanya, ticari ileti) eklenecek.
-4. **Logo:** vektörel logo (madde 9). Şu an yazı logosu, `site-logo` tek bileşen.
+4. **Logo:** geçici olarak mevcut görselden hazırlandı (270 px'lik `academy-izmir-logo-Photoroom.png` kaynaklı potrace vektörü, `assets/images/logo/academy-izmir-logo.svg`, DESIGN.md bölüm 24). Orijinal vektör dosyası (SVG, AI, PDF ya da EPS) gelince bu dosya değiştirilecek, header ve footer'daki inline SVG'ler de güncellenecek (10 sayfa).
 5. **Favicon:** şu an `<link rel="icon" href="data:,">`.
-6. **Paylaşım görseli:** `og:image` henüz yok (görsel gelince 10 sayfaya eklenecek). `og:title`, `og:description`, `og:type`, `og:locale` mevcut.
+6. **Paylaşım görseli:** eklendi (`assets/images/og-image.jpg`, 1200×630). 10 sayfada `og:image` göreli yoldur, yayında tam URL'ye (`https://alanadi/assets/images/og-image.jpg`) çevrilecek. `og:title`, `og:description`, `og:type`, `og:locale`, `og:image:width`, `og:image:height`, `og:image:alt` mevcut.
 7. **Google etiketleri ve dönüşüm takibi:** `data-track="phone"`, `"whatsapp"`, `"form"`, `"email"` işaretleri hazır (ayrıca `"instagram"`, `"map"`, `"directions"`), etiket bilgileri bekleniyor.
 8. **Eski URL'lerden 301 yönlendirmeleri** yeni sayfalara. Sayfa dosya adları İngilizce, URL'lerin Türkçe olup olmayacağı PHP aşamasında kararlaştırılacak.
 9. **Sunucuda sıkıştırma ve önbellek:** gzip/brotli, görsel/CSS/JS/font için uzun ömürlü `Cache-Control`.
