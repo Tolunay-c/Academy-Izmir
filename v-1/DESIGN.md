@@ -280,9 +280,9 @@ Adres teyitlidir (`site.json` `contact.address`: `value`, `pending: false`, `map
 | Bileşen | Class | Tanım |
 |---|---|---|
 | Tarih alanı | `form-control form-control-date` | Native `<input type="date">`, koyu tema `:root { color-scheme: dark }` ile (takvim simgesi ve seçici koyu). `min="1930-01-01"` HTML'de, `max` JS ile bugünün yerel tarihi. |
-| Radyo grubu | `form-fieldset`, `radio-group`, `radio-option`, `radio-option-input`, `radio-option-text` | `fieldset` + `legend` (etiket stili). İki seçenek eşit sütunlarda, her biri 44 px yüksekliğinde çerçeveli kutu ve solda `--radio-size` daire göstergesi. Gerçek radyo girdisi kutunun üstünde saydam durur, ok tuşlarıyla seçim tarayıcı davranışıdır. Seçili: vurgu kenarlığı ve dolgulu gösterge (`--radio-dot-inset`). Focus halkası kutuda. Varsayılan "Yok". Gerekçe (ui-ux-pro-max, form/touch kuralları): küçük yerel radyo noktası yerine büyük dokunma alanı, durum yalnızca renkle değil dolgu şekliyle de verilir. |
+| Radyo grubu | `form-fieldset`, `radio-group`, `radio-option`, `radio-option-input`, `radio-option-text` | `fieldset` + `legend` (etiket stili). İki seçenek eşit sütunlarda, her biri 44 px yüksekliğinde çerçeveli kutu ve solda `--check-size` daire göstergesi. Gerçek radyo girdisi kutunun üstünde saydam durur, ok tuşlarıyla seçim tarayıcı davranışıdır. Seçili: vurgu kenarlığı ve dolgulu gösterge (`--radio-dot-inset`). Focus halkası kutuda. Varsayılan "Yok". Gerekçe (ui-ux-pro-max, form/touch kuralları): küçük yerel radyo noktası yerine büyük dokunma alanı, durum yalnızca renkle değil dolgu şekliyle de verilir. |
 
-Yeni token'lar: `--radio-size`, `--radio-dot-inset`.
+Yeni token'lar: `--check-size`, `--radio-dot-inset`.
 
 **Doğrulama:** mevcut yapı aynen (blur ve gönderim, `aria-invalid`, `aria-describedby`, hata özeti, ilk hatalı alana odak). Yeni mesajlar: "Lütfen doğum tarihinizi seçin." (boş), "Lütfen geçerli bir doğum tarihi seçin." (bugünden ileri, 1930'dan eski ya da yarım yazılmış), "Lütfen bir yaş grubu seçin.", "Lütfen eğitim durumunuzu seçin.". `?program=<id>` ana programı seçer, geçersiz id'de seçim yok. JS yokken HTML5 doğrulaması (`required`, `min`, `pattern`). Geçerli gönderimde `data-prototype` mesajı.
 

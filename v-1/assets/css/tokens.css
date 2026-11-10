@@ -130,7 +130,12 @@
   --contact-bar-height: calc(var(--touch-min) + var(--space-4) + var(--line-width));
   --icon-size: 1.5rem;
   --icon-size-sm: 1.25rem;
-  --radio-size: 1.5rem;
+  --check-size: 1.5rem;
+  --check-mark: polygon(14% 52%, 0 66%, 38% 100%, 100% 22%, 86% 8%, 38% 72%);
+  --check-mark-size: 70%;
+  --icon-size-lg: 1.75rem;
+  --float-size: 3.5rem;
+  --float-offset: var(--space-5);
   --radio-dot-inset: 0.3125rem;
   --swatch-size: 4.5rem;
   --hero-video-width: clamp(14rem, 9rem + 25vw, 24rem);
@@ -166,6 +171,7 @@
   /* ---- Katman sırası --------------------------------------------------- */
   --z-base: 0;
   --z-raised: 1;
+  --z-float: 80;
   --z-subnav: 90;
   --z-header: 100;
   --z-bar: 110;

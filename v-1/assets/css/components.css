@@ -661,8 +661,8 @@ textarea.form-control {
   content: "";
   flex: none;
   box-sizing: border-box;
-  width: var(--radio-size);
-  height: var(--radio-size);
+  width: var(--check-size);
+  height: var(--check-size);
   border: var(--line-width) solid var(--color-line-strong);
   border-radius: var(--radius-round);
   transition: border-color var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out);
@@ -1200,7 +1200,8 @@ textarea.form-control {
 
 @media (min-width: 48em) {
   .site-footer {
-    padding-bottom: var(--space-6);
+    /* Sabit WhatsApp ikonu sayfa sonunda footer içeriğini örtmesin: altında ikon kadar boşluk kalır. */
+    padding-bottom: calc(var(--float-size) + var(--float-offset) + env(safe-area-inset-bottom, var(--space-none)) + var(--space-4));
   }
 }
 
@@ -2904,17 +2905,55 @@ textarea.form-control {
   cursor: pointer;
 }
 
+/* Onay kutusu: gerçek checkbox girdisinin kendisi özel çizilir (appearance: none), radyo grubuyla aynı kenarlık,
+   boyut ve renk dili. Seçili: vurgu dolgusu ve koyu işaret. Kutu etiketin ilk satırıyla dikey ortalıdır. */
 .form-check input {
+  appearance: none;
+  display: grid;
   flex: none;
-  width: var(--icon-size);
-  height: var(--icon-size);
-  margin: 0;
-  accent-color: var(--color-accent);
+  place-content: center;
+  box-sizing: border-box;
+  width: var(--check-size);
+  height: var(--check-size);
+  margin: calc((var(--text-base) * var(--leading-snug) - var(--check-size)) / 2) var(--space-none) var(--space-none);
+  background-color: var(--color-surface);
+  border: var(--line-width) solid var(--color-line-strong);
+  border-radius: var(--radius-none);
   cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out);
+}
+
+.form-check input::before {
+  content: "";
+  width: var(--check-mark-size);
+  height: var(--check-mark-size);
+  background-color: var(--color-on-accent);
+  clip-path: var(--check-mark);
+  opacity: 0;
+}
+
+.form-check input:checked {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.form-check input:checked::before {
+  opacity: 1;
+}
+
+.form-check input:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
 }
 
 .form-check input[aria-invalid="true"] {
-  box-shadow: 0 0 0 var(--line-width-strong) var(--color-error);
+  border-color: var(--color-error);
+}
+
+@media (hover: hover) {
+  .form-check input:not(:checked):not([aria-invalid="true"]):hover {
+    border-color: var(--color-accent-hover);
+  }
 }
 
 .form-actions {
@@ -3159,5 +3198,53 @@ textarea.form-control {
 @media (min-width: 48em) {
   .legal-toc-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---- Sabit WhatsApp ikonu -------------------------------------------------------------
+   Yalnızca 48em ve üstünde (altında mobil alt çubukta WhatsApp var). Header ve menünün altında, içeriğin
+   üstünde. Mobil menü ve lightbox açıkken gizli. Hover'da yalnızca renk değişir, hareket yok. */
+.whatsapp-float {
+  position: fixed;
+  right: calc(var(--float-offset) + env(safe-area-inset-right, var(--space-none)));
+  bottom: calc(var(--float-offset) + env(safe-area-inset-bottom, var(--space-none)));
+  z-index: var(--z-float);
+  display: none;
+}
+
+.whatsapp-float-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--float-size);
+  height: var(--float-size);
+  background-color: var(--color-surface);
+  border: var(--line-width-strong) solid var(--color-accent);
+  border-radius: var(--radius-round);
+  color: var(--color-accent);
+  transition: color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out);
+}
+
+.whatsapp-float-link .icon-svg {
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
+}
+
+@media (hover: hover) {
+  .whatsapp-float-link:hover {
+    background-color: var(--color-surface-raised);
+    border-color: var(--color-accent-hover);
+    color: var(--color-accent-hover);
+  }
+}
+
+@media (min-width: 48em) {
+  .whatsapp-float {
+    display: block;
+  }
+
+  .site-body.is-menu-open .whatsapp-float,
+  .site-body.is-lightbox-open .whatsapp-float {
+    display: none;
   }
 }
