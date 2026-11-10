@@ -148,10 +148,14 @@
   max-width: var(--container-narrow);
 }
 
-.sg-logo-accent {
+.sg-logo {
   color: var(--color-accent);
 }
 
-.sg-logo-text {
-  color: var(--color-text);
+.sg-logo.is-hover {
+  color: var(--color-accent-hover);
+}
+
+.sg-logo.is-hover .logo-city {
+  fill: var(--color-text);
 }

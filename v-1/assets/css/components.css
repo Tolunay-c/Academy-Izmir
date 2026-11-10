@@ -848,7 +848,7 @@ textarea.form-control {
 }
 
 /* ---- Logo (tek bileşen) ---------------------------------------------------------
-   Inline SVG (assets/images/logo/academy-izmir-logo.svg), tek renk: fill currentColor, renk bağlantıdan gelir.
+   Inline SVG (assets/images/logo/academy-izmir-logo.svg), iki renkli: ACADEMY currentColor (bağlantı rengi), İZMİR ayrı token.
    Boyut yükseklikle verilir (--logo-height), genişlik viewBox oranından (en-boy sabit) türer. */
 .site-logo {
   display: inline-flex;
@@ -865,6 +865,12 @@ textarea.form-control {
   height: var(--logo-height);
 }
 
+/* İki renkli logo: ACADEMY bağlantı rengini (currentColor) alır, İZMİR ikincil metin rengini. */
+.logo-city {
+  fill: var(--color-text-muted);
+  transition: fill var(--duration-fast) var(--ease-out);
+}
+
 .site-footer .site-logo-mark {
   height: var(--logo-height-footer);
 }
@@ -872,6 +878,10 @@ textarea.form-control {
 @media (hover: hover) {
   .site-logo:hover {
     color: var(--color-accent-hover);
+  }
+
+  .site-logo:hover .logo-city {
+    fill: var(--color-text);
   }
 }
 
