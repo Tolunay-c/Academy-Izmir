@@ -595,6 +595,154 @@ textarea.form-control {
   line-height: var(--leading-snug);
 }
 
+/* Tarih alanı: koyu tema (color-scheme: dark, tokens.css :root), tarayıcı takvim simgesi dokunma alanı içinde. */
+.form-control-date {
+  min-width: 0;
+  text-align: start;
+}
+
+.form-control-date::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+/* Radyo grubu (fieldset + legend): özel görünüm, gerçek radyo girdisi etiketin üstünde saydam durur,
+   fare/dokunma ve klavye (ok tuşları) tarayıcı davranışıyla çalışır. */
+.form-fieldset {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.form-fieldset legend {
+  margin-bottom: var(--space-2);
+  padding: 0;
+}
+
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.radio-option {
+  position: relative;
+  display: block;
+}
+
+.radio-option-input {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-raised);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-option-text {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--touch-min);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-surface);
+  border: var(--line-width) solid var(--color-line-strong);
+  border-radius: var(--radius-none);
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.radio-option-text::before {
+  content: "";
+  flex: none;
+  box-sizing: border-box;
+  width: var(--radio-size);
+  height: var(--radio-size);
+  border: var(--line-width) solid var(--color-line-strong);
+  border-radius: var(--radius-round);
+  transition: border-color var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out);
+}
+
+.radio-option-input:checked + .radio-option-text {
+  border-color: var(--color-accent);
+}
+
+.radio-option-input:checked + .radio-option-text::before {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: inset 0 0 0 var(--radio-dot-inset) var(--color-surface);
+}
+
+.radio-option-input:focus-visible + .radio-option-text {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
+}
+
+@media (hover: hover) {
+  .radio-option-input:not(:checked):hover + .radio-option-text {
+    border-color: var(--color-accent-hover);
+  }
+}
+
+/* Ön başvuru sayfası: form okunabilir genişlikte, yan sütun (iletişim) 64em ve üstünde formun yanında,
+   altında formun altında. */
+.application-section {
+  padding-top: var(--space-7);
+}
+
+.application-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+}
+
+.application-form-area {
+  min-width: 0;
+}
+
+.form-header {
+  display: grid;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.form-title {
+  font-size: var(--text-2xl);
+  line-height: var(--leading-heading);
+}
+
+.form-title em {
+  color: var(--color-accent);
+}
+
+.application-aside {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+}
+
+.application-aside .hero-actions {
+  margin-top: var(--space-none);
+}
+
+@media (min-width: 64em) {
+  .application-layout {
+    grid-template-columns: minmax(0, var(--container-narrow)) minmax(0, var(--action-width));
+    gap: var(--space-7);
+    justify-content: space-between;
+  }
+
+  .application-aside {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-5));
+  }
+}
+
 /* ---- Mobil alt iletişim çubuğu ----------------------------------------------
    Mobilde ekranın altına sabitlenir, 48em (--bp-md) ve üstünde gizlenir.
    is-static: yalnızca styleguide gösterimi için normal akışta. */
@@ -763,6 +911,13 @@ textarea.form-control {
 }
 
 .site-header-cta {
+  display: none;
+  white-space: nowrap;
+}
+
+/* Kısa metin (1024-1279 px) ve tam metin (1280 px ve üstü): görünmeyen span erişilebilir ağaçtan da çıkar,
+   erişilebilir ad görünen metinle aynı kalır. */
+.site-header-cta-full {
   display: none;
 }
 
@@ -1046,6 +1201,17 @@ textarea.form-control {
 @media (min-width: 48em) {
   .site-footer {
     padding-bottom: var(--space-6);
+  }
+}
+
+/* 1280 px ve üstü: header butonu tam metni gösterir. */
+@media (min-width: 80em) {
+  .site-header-cta-short {
+    display: none;
+  }
+
+  .site-header-cta-full {
+    display: inline;
   }
 }
 
@@ -2644,28 +2810,43 @@ textarea.form-control {
 /* ==========================================================================
    İletişim sayfası ve form bileşenleri
    ========================================================================== */
-/* İletişim sayfası yerleşimi: mobil/tablet sırası HTML sırasıdır (butonlar, form, liste, harita);
-   64em ve üstünde grid alanlarıyla form solda ana sütun, diğerleri sağda yan sütundur. */
+/* İletişim sayfası yerleşimi: mobil/tablet sırası HTML sırasıdır (ön başvuru bloğu, iletişim butonları,
+   liste, harita). 64em ve üstünde grid alanlarıyla: üstte tam genişlikte ön başvuru bloğu, altında solda
+   butonlar + harita, sağda iletişim listesi. Boş sütun kalmaz. */
 .contact-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
+    "callout"
     "actions"
-    "form"
     "list"
     "map";
   gap: var(--space-7);
+}
+
+.contact-callout {
+  grid-area: callout;
+  display: grid;
+  gap: var(--space-5);
+  align-content: start;
+  padding: var(--space-6);
+  background-color: var(--color-surface);
+  border-top: var(--line-width-strong) solid var(--color-accent);
+}
+
+.contact-callout-text {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.contact-callout .button {
+  justify-self: start;
 }
 
 .contact-actions {
   grid-area: actions;
   display: grid;
   gap: var(--space-5);
-}
-
-.contact-form-area {
-  grid-area: form;
-  min-width: 0;
 }
 
 .contact-layout > .contact-details {
@@ -2840,13 +3021,24 @@ textarea.form-control {
 
 @media (min-width: 64em) {
   .contact-layout {
-    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
     grid-template-rows: auto auto 1fr;
     grid-template-areas:
-      "form actions"
-      "form list"
-      "form map";
-    gap: var(--space-6) var(--gutter);
+      "callout callout"
+      "actions list"
+      "map list";
+    gap: var(--space-7) var(--gutter);
+  }
+
+  .contact-callout {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--gutter);
+    padding: var(--space-7);
+  }
+
+  .contact-callout .button {
+    justify-self: end;
   }
 }
 

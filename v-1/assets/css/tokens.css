@@ -130,6 +130,8 @@
   --contact-bar-height: calc(var(--touch-min) + var(--space-4) + var(--line-width));
   --icon-size: 1.5rem;
   --icon-size-sm: 1.25rem;
+  --radio-size: 1.5rem;
+  --radio-dot-inset: 0.3125rem;
   --swatch-size: 4.5rem;
   --hero-video-width: clamp(14rem, 9rem + 25vw, 24rem);
   --strip-item-width: clamp(15rem, 13rem + 8vw, 18rem);

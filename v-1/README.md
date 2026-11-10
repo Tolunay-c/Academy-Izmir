@@ -7,6 +7,7 @@ Academy İzmir sitesinin yeniden tasarımı. Saf HTML, CSS ve vanilla JS; framew
 ```
 v-1/
   index.html ... contact.html     8 sayfa (statik HTML)
+  application.html                Eğitim Ön Başvuru Formu (menüde yok, header butonu, mobil menü ve footer menüsünden bağlanır)
   privacy-notice.html             KVKK Aydınlatma Metni (menüde yok, footer alt satırından ve form onay kutusundan bağlanır)
   styleguide.html                 Bileşen rehberi (noindex, sitedeki hiçbir sayfadan bağlanmaz)
   DESIGN.md                       Tasarım sistemi ve bileşen listesi
@@ -30,7 +31,8 @@ v-1/
 | `winners.html` | Kazananlarımız | Başarı bloğu, yıl ve kategori filtresi (URL parametreli), yıllara göre kazanan kartları |
 | `gallery.html` | Sanatsal Projelerimiz ve Galeri | Proje yer tutucusu, 2 video, 33 fotoğraflık mozaik, lightbox |
 | `announcements.html` | Güncel Kayıtlar ve Duyurular | Boş durum (duyuru yok), Başvur ve telefon eylemleri |
-| `contact.html` | İletişim ve Başvuru | Başvuru formu, telefon/WhatsApp, iletişim listesi, harita bağlantıları |
+| `application.html` | Eğitim Ön Başvuru Formu | Ön başvuru formu (`form#application-form`), yanda telefon/WhatsApp. Kapanış bandı yok. `?program=<id>` ile ana program seçili gelir |
+| `contact.html` | İletişim ve Başvuru | "Eğitim Ön Başvuru Formu" bloğu (`application.html`'e gider), telefon/WhatsApp, iletişim listesi, harita bağlantıları. Form bu sayfada yok |
 | `privacy-notice.html` | (menüde yok) | KVKK Aydınlatma Metni (`../brief/kvkk.md`, 8 bölüm, içindekiler listesi). Footer alt satırında ve form onay kutusunda bağlantı |
 
 Sayfalar elle düzenlenir. Metinler `site.json` ve `icerik.md` ile birebir aynı tutulur, HTML'e statik yazılmıştır (arama motorları görsün, PHP'de sunucuda üretilecek).
@@ -55,6 +57,7 @@ Sayfalar elle düzenlenir. Metinler `site.json` ve `icerik.md` ile birebir aynı
 | `winners[]` | `id`, `name`, `year`, `category` (`university` / `art-high-school`), `image`, `alt`, `placements[] {university, faculty, program, scholarship}` |
 | `gallery[]` | `id`, `src_800`, `src_1600`, `orientation`, `alt`, `category` (şimdilik `null`, ileride filtre için) |
 | `videos[]` | `id`, `src`, `poster`, `orientation` (`kisa-10` bilerek yok) |
+| `application` | Başvuru formu seçenekleri, her biri `{id, label}`: `age_groups[]` (5), `education_levels[]` (8, müşteri onayı bekliyor: icerik.md Bölüm 11 madde 15), `art_experience[]` (Var/Yok). Form HTML'i bu veriden statik üretilir. Program seçenekleri `programs[]` başlıklarından gelir |
 | `announcements[]` | Şimdilik boş. Öğe yapısı: `id`, `date` (ISO), `title`, `description`, `program_id` veya `null`, `link {url, label}` veya `null` (ayrıntı DESIGN.md bölüm 19) |
 
 Not: `site.json` şu an çalışma zamanında okunmuyor, sayfalar statik. PHP aşamasında şablonlar bu veriyi okuyacak.
@@ -74,11 +77,11 @@ Tek dosya, her blok kendi `data-` attribute'larını arar ve ilgili öğe yoksa 
 | Kenar gradyanlı kaydırma (`data-fade-scroll`) | winners | Filtre satırları ipucu |
 | Kazananlar filtresi | winners | Yıl/kategori filtresi, `aria-live` sayaç, `replaceState` URL |
 | Lightbox | gallery | Native `<dialog>`, ok tuşları, kaydırma, sayaç |
-| Başvuru formu | contact | Doğrulama, hata özeti, `?program=`, **prototip gönderim mesajı (`data-prototype`)** |
+| Ön başvuru formu (`data-application-form`) | application | Telefon maskesi, ad filtresi, doğrulama (doğum tarihi `max` = bugün dahil), hata özeti, `?program=`, **prototip gönderim mesajı (`data-prototype`)** |
 
 ## Partial blokları (PHP'ye geçiş)
 
-Her sayfada birebir aynı olan dört blok HTML yorumlarıyla işaretlidir (yalnızca `aria-current="page"` sayfaya göre değişir):
+10 sayfada (9 sayfa + `application.html`) birebir aynı olan dört blok HTML yorumlarıyla işaretlidir (yalnızca `aria-current="page"` sayfaya göre değişir):
 
 ```
 <!-- partial:header:start -->      ... <!-- partial:header:end -->       (skip link + site-header)
@@ -87,7 +90,7 @@ Her sayfada birebir aynı olan dört blok HTML yorumlarıyla işaretlidir (yaln�
 <!-- partial:contact-bar:start --> ... <!-- partial:contact-bar:end -->  (mobil alt iletişim çubuğu)
 ```
 
-PHP'de her blok ayrı dosyaya (`partials/header.php`, `mobile-menu.php`, `footer.php`, `contact-bar.php`) taşınır, `aria-current` mevcut sayfaya göre üretilir. `<head>` içindeki ortak bağlantılar (font, ikon, CSS, JS) ve `icon_names` listesi 9 sayfada aynıdır, tek bir `head.php`'de toplanabilir. Menü eşiği ve CSS breakpoint'leri `tokens.css` yorum listesiyle birebir aynıdır.
+PHP'de her blok ayrı dosyaya (`partials/header.php`, `mobile-menu.php`, `footer.php`, `contact-bar.php`) taşınır, `aria-current` mevcut sayfaya göre üretilir. `<head>` içindeki ortak bağlantılar (font, ikon, CSS, JS) ve `icon_names` listesi 10 sayfada aynıdır, tek bir `head.php`'de toplanabilir. Menü eşiği ve CSS breakpoint'leri `tokens.css` yorum listesiyle birebir aynıdır.
 
 ## Yerelde çalıştırma
 
@@ -100,12 +103,12 @@ Sonra `http://localhost:8000/index.html` adresini açın. `file://` ile açmayı
 
 ## Yayın öncesi yapılacaklar
 
-1. **Prototip kodunu kaldır:** `contact.html` içindeki `data-prototype` bloğu ve `main.js`'teki ilgili kod (form şu an sunucuya bağlı değil).
+1. **Prototip kodunu kaldır:** `application.html` içindeki `data-prototype` bloğu ve `main.js`'teki ilgili kod (form şu an sunucuya bağlı değil).
 2. **Form gönderimini bağla:** başvuruların gideceği e-posta (icerik.md Bölüm 11, madde 13), sunucu tarafı doğrulama, spam koruması.
 3. **KVKK:** aydınlatma metni eklendi (`privacy-notice.html`, kaynak `../brief/kvkk.md`). Yayından önce müşteri ya da hukukçu onayı önerilir. Açık rıza metni ayrıca gerekiyorsa (reklam, kampanya, ticari ileti) eklenecek.
 4. **Logo:** vektörel logo (madde 9). Şu an yazı logosu, `site-logo` tek bileşen.
 5. **Favicon:** şu an `<link rel="icon" href="data:,">`.
-6. **Paylaşım görseli:** `og:image` henüz yok (görsel gelince 9 sayfaya eklenecek). `og:title`, `og:description`, `og:type`, `og:locale` mevcut.
+6. **Paylaşım görseli:** `og:image` henüz yok (görsel gelince 10 sayfaya eklenecek). `og:title`, `og:description`, `og:type`, `og:locale` mevcut.
 7. **Google etiketleri ve dönüşüm takibi:** `data-track="phone"`, `"whatsapp"`, `"form"`, `"email"` işaretleri hazır (ayrıca `"instagram"`, `"map"`, `"directions"`), etiket bilgileri bekleniyor.
 8. **Eski URL'lerden 301 yönlendirmeleri** yeni sayfalara. Sayfa dosya adları İngilizce, URL'lerin Türkçe olup olmayacağı PHP aşamasında kararlaştırılacak.
 9. **Sunucuda sıkıştırma ve önbellek:** gzip/brotli, görsel/CSS/JS/font için uzun ömürlü `Cache-Control`.
@@ -116,7 +119,7 @@ Sonra `http://localhost:8000/index.html` adresini açın. `file://` ile açmayı
 
 ## Müşteriden beklenen içerikler
 
-`../brief/icerik.md` Bölüm 11 "Açık Sorular" (14 madde):
+`../brief/icerik.md` Bölüm 11 "Açık Sorular" (15 madde):
 
 - 1: Güzel Sanatlar Lisesine Hazırlık alt program olacak mı?
 - 2: Yazısız kadro portreleri
@@ -131,6 +134,7 @@ Sonra `http://localhost:8000/index.html` adresini açın. `file://` ile açmayı
 - 11: Galeri kategorileri ve fotoğrafların hangi etkinliğe ait olduğu
 - 12: (yanıtlandı)
 - 13: Başvuruların gideceği e-posta adresi
+- 15: Başvuru formundaki Eğitim Durumu seçeneklerinin onayı
 - 14: 2025 kazananlarının üniversite, fakülte ve bölüm bilgileri; Beren Özdemir, İlay Kıngır ve Rasim Tuna Yılmaz'ın 2025'te de kazanıp kazanmadığı
 
 Ayrıca bekleyenler: ders programları, 2025 kazananlarının yerleşme bilgileri (kartlarda `[İÇERİK GELECEK]`), Güzel Sanatlar Lisesi kazananları, Sanatsal Projelerimiz kapsamı (Academy İzmir Trio dahil), kurucuların güncel birlikte fotoğrafı, duyurular, sayfa paylaşım görseli.

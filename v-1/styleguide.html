@@ -310,6 +310,23 @@
           </span>
         </div>
         <div class="form-field">
+          <label class="form-label" for="sg-birthdate">Tarih alanı</label>
+          <input class="form-control form-control-date" type="date" id="sg-birthdate" name="birthdate" min="1930-01-01" value="2012-05-14">
+        </div>
+        <fieldset class="form-fieldset">
+          <legend class="form-label">Radyo grubu <span class="form-optional">isteğe bağlı</span></legend>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input class="radio-option-input" type="radio" name="sg-experience" value="yes">
+              <span class="radio-option-text">Var</span>
+            </label>
+            <label class="radio-option">
+              <input class="radio-option-input" type="radio" name="sg-experience" value="no" checked>
+              <span class="radio-option-text">Yok</span>
+            </label>
+          </div>
+        </fieldset>
+        <div class="form-field">
           <label class="form-label" for="sg-message">Mesaj</label>
           <textarea class="form-control" id="sg-message" name="message" rows="4"></textarea>
         </div>

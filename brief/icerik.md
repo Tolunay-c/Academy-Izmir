@@ -342,9 +342,30 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 12. (yanıtlandı)
 13. Başvuru formu gönderildiğinde başvurular hangi e-posta adresine gitsin?
 14. 2025 kazananlarının kazandıkları üniversite, fakülte ve bölüm bilgileri. Ayrıca Beren Özdemir 2024, İlay Kıngır ve Rasim Tuna Yılmaz 2026 listelerinde de var. Bu öğrenciler 2025'te de mi kazandı?
+15. Başvuru formundaki Eğitim Durumu seçenekleri onaylanmalı (şu anki liste: Okul öncesi, İlkokul öğrencisi, Ortaokul öğrencisi, Lise öğrencisi, Lise mezunu, Üniversite öğrencisi, Üniversite mezunu, Diğer).
 
 ---
 
 ## 12. KVKK Aydınlatma Metni
 
 Metnin tamamı brief/kvkk.md dosyasındadır. Veri sorumlusu: Mayra Sanat Reklam Tanıtım Film Eğitim Organizasyon Sanayi ve Ticaret Limited Şirketi.
+
+---
+
+## 13. Eğitim Ön Başvuru Formu
+
+- Sayfa başlığı: "Eğitim Ön Başvuru Formu"
+- Form başlığı: "Sanat Yolculuğuna İlk Adımı At!"
+- Açıklama: "Eğitim programlarımız hakkında bilgi almak ve ön başvurunuzu oluşturmak için aşağıdaki alanları doldurabilirsiniz."
+- Alanlar (bu sırayla):
+  1. Ad Soyad (zorunlu)
+  2. Doğum Tarihi (zorunlu)
+  3. Yaş Grubu (zorunlu): Okul öncesi, İlkokul, Ortaokul, Lise, 18 yaş ve üzeri
+  4. Eğitim Durumu (zorunlu): Okul öncesi, İlkokul öğrencisi, Ortaokul öğrencisi, Lise öğrencisi, Lise mezunu, Üniversite öğrencisi, Üniversite mezunu, Diğer (liste onay bekliyor, bölüm 11, madde 15)
+  5. Başvurmak İstediğiniz Eğitim (zorunlu): Tiyatro, Yaratıcı Drama, Konservatuvar ve Güzel Sanatlara Hazırlık, Bale ve Dans, Retorika Atölyesi
+  6. Telefon Numarası (zorunlu)
+  7. E-posta Adresi (isteğe bağlı)
+  8. Sanat Eğitimi Deneyiminiz (isteğe bağlı): Var, Yok (varsayılan: Yok)
+  9. Eklemek İstedikleriniz (isteğe bağlı)
+  10. KVKK Aydınlatma Metni onayı
+- Gönder butonu: "Ön Başvurumu Gönder"

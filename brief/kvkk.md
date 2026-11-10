@@ -15,6 +15,10 @@
 İnternet sitemizde bulunan iletişim ve başvuru formu aracılığıyla aşağıdaki kişisel verileriniz işlenebilmektedir:
 
 - Adınız ve soyadınız
+- Doğum tarihiniz
+- Yaş grubunuz
+- Eğitim durumunuz
+- Sanat eğitimi deneyiminiz
 - Telefon numaranız
 - E-posta adresiniz (paylaşmanız hâlinde)
 - İlgilendiğiniz eğitim programı

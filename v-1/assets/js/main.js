@@ -531,14 +531,14 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
   stage.addEventListener('pointercancel', function () { startX = null; });
 })();
 
-/* ---- Başvuru formu (yalnızca contact.html) ---------------------------------------------------------
+/* ---- Eğitim ön başvuru formu (yalnızca application.html) ---------------------------------------------------------
    JS varken tarayıcı doğrulaması kapatılır (noValidate), kendi mesajlarımız gösterilir. JS yokken
    required/type/pattern ile HTML5 doğrulaması çalışır. Doğrulama: alandan çıkınca (blur) ve gönderimde.
    Hatalı gönderimde hata özeti (role="alert") ve ilk hatalı alana odak. */
 (function () {
   'use strict';
 
-  var form = document.querySelector('[data-contact-form]');
+  var form = document.querySelector('[data-application-form]');
   if (!form) { return; }
   form.noValidate = true;
 
@@ -546,13 +546,30 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
   var summaryList = form.querySelector('[data-form-summary-list]');
   var fields = Array.prototype.slice.call(form.querySelectorAll('[data-validate]'));
 
+  var MIN_BIRTHDATE = '1930-01-01';
+
   var MESSAGES = {
     name: 'Lütfen adınızı yazın.',
+    birthdate: 'Lütfen doğum tarihinizi seçin.',
+    'age-group': 'Lütfen bir yaş grubu seçin.',
+    education: 'Lütfen eğitim durumunuzu seçin.',
     phone: 'Lütfen geçerli bir telefon numarası yazın.',
     email: 'Lütfen geçerli bir e-posta adresi yazın.',
     program: 'Lütfen bir eğitim seçin.',
     consent: 'Devam etmek için aydınlatma metnini okuduğunuzu onaylayın.'
   };
+  var BIRTHDATE_INVALID = 'Lütfen geçerli bir doğum tarihi seçin.';
+
+  /* Doğum tarihi: max bugünün (yerel) tarihi. Native date girdisinin değeri her zaman YYYY-MM-DD'dir,
+     bu yüzden metin karşılaştırması tarih sırasını verir. */
+  function todayIso() {
+    var now = new Date();
+    var month = String(now.getMonth() + 1);
+    var day = String(now.getDate());
+    return now.getFullYear() + '-' + (month.length < 2 ? '0' : '') + month + '-' + (day.length < 2 ? '0' : '') + day;
+  }
+  var birthInput = form.querySelector('[data-validate="birthdate"]');
+  if (birthInput) { birthInput.max = todayIso(); }
 
   /* ---- Alan maskeleri ----------------------------------------------------------------------------
      Telefon: yalnızca rakam, "0 (XXX) XXX XX XX" biçimi, en fazla 11 rakam. Başa 0 eklenir, 12 rakamlı
@@ -711,8 +728,26 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
     name: function (value) { return (value.match(/\p{L}/gu) || []).length >= 2; },
     phone: isPhone,
     email: function (value) { var v = value.trim(); return v === '' || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); },
+    'age-group': function (value) { return value !== ''; },
+    education: function (value) { return value !== ''; },
     program: function (value) { return value !== ''; }
   };
+
+  /* Doğum tarihi: boşsa "seçin" mesajı; yarım yazılmış (badInput), bugünden ileri ya da min'den eski
+     tarih "geçerli tarih" mesajı verir. */
+  function birthdateError(field) {
+    if (field.validity && field.validity.badInput) { return BIRTHDATE_INVALID; }
+    var value = field.value;
+    if (value === '') { return MESSAGES.birthdate; }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(value) || value < MIN_BIRTHDATE || value > todayIso()) { return BIRTHDATE_INVALID; }
+    return '';
+  }
+
+  function errorFor(field) {
+    var key = field.getAttribute('data-validate');
+    if (key === 'birthdate') { return birthdateError(field); }
+    return isValid(field) ? '' : MESSAGES[key];
+  }
 
   function isValid(field) {
     var key = field.getAttribute('data-validate');
@@ -721,16 +756,16 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
   }
 
   function check(field) {
-    var key = field.getAttribute('data-validate');
     var error = document.getElementById(field.id + '-error');
-    var ok = isValid(field);
+    var message = errorFor(field);
+    var ok = message === '';
     if (ok) {
       field.removeAttribute('aria-invalid');
       error.textContent = '';
       error.hidden = true;
     } else {
       field.setAttribute('aria-invalid', 'true');
-      error.textContent = MESSAGES[key];
+      error.textContent = message;
       error.hidden = false;
     }
     return ok;
@@ -749,7 +784,7 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
       var item = document.createElement('li');
       var link = document.createElement('a');
       link.href = '#' + field.id;
-      link.textContent = MESSAGES[field.getAttribute('data-validate')];
+      link.textContent = errorFor(field);
       link.addEventListener('click', function (event) { event.preventDefault(); field.focus(); });
       item.appendChild(link);
       summaryList.appendChild(item);
@@ -777,13 +812,12 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
     }
   });
 
-  /* contact.html?program=<program-id>: ilgili program seçili gelir (alt programı varsa ilki).
-     Geçersiz id'de seçim yapılmaz. */
+  /* application.html?program=<program-id>: ilgili ana program seçili gelir. Geçersiz id'de seçim yapılmaz. */
   var programId = new URLSearchParams(window.location.search).get('program');
   var select = form.querySelector('select[data-validate="program"]');
   if (programId && select && !select.value) {
     var match = Array.prototype.slice.call(select.options).filter(function (option) {
-      return option.getAttribute('data-program') === programId;
+      return option.value !== '' && option.value === programId;
     })[0];
     if (match) { select.value = match.value; }
   }

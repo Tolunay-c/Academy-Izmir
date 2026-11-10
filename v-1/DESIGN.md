@@ -85,7 +85,7 @@ Eleman eşlemesi: Bölüm üst etiketi, buton, form etiketi, kart kategorisi, y�
 
 - **Material Symbols Outlined.** İnce çizgili stil, editoryal serif ile uyumlu.
 - Ayarlar: `--icon-wght` 300, `--icon-fill` 0, `--icon-grad` 0, `--icon-opsz` 24. Boyut `--icon-size` 1.5rem, küçük `--icon-size-sm` 1.25rem.
-- Yalnızca kullanılan ikonlar yüklenir (`icon_names`, alfabetik). Site sayfaları: `arrow_back`, `arrow_forward`, `call`, `close`, `edit_square`, `menu`, `pause`, `play_arrow`, `volume_off`, `volume_up`. Styleguide: `arrow_forward`, `call`, `edit_square`, `expand_more`. Yeni ikon eklenince 8 sayfadaki link birlikte güncellenir.
+- Yalnızca kullanılan ikonlar yüklenir (`icon_names`, alfabetik). Site sayfaları: `arrow_back`, `arrow_forward`, `call`, `close`, `edit_square`, `menu`, `pause`, `play_arrow`, `volume_off`, `volume_up`. Styleguide: `arrow_forward`, `call`, `edit_square`, `expand_more`. Yeni ikon eklenince 10 sayfadaki link birlikte güncellenir.
 - WhatsApp için resmi logonun tek renkli inline SVG hâli (`currentColor`), `--icon-size` ölçüsünde.
 - Dekoratif ikon `aria-hidden="true"` alır. Tek başına anlam taşıyan ikon butonu `aria-label` zorunlu.
 
@@ -125,7 +125,7 @@ Metin kontrastı en az 4.5:1, ikincil metin 7:1 üstü. Her etkileşimli öğede
 
 ## 12. Menü etiketleri notu
 
-Masaüstü header menüsü yer kazanmak için kısa etiket kullanır: Eğitimler, Hakkımızda, Kadro, Kazananlar, Galeri, Duyurular, İletişim (sıra icerik.md bölüm 1 ile aynı). Mobil menü, footer menüsü, sayfa başlıkları (`h1`) ve `<title>` etiketleri icerik.md bölüm 1'deki tam adları kullanır. Kısa etiketli bağlantılara `aria-label` eklenmez: görünen metin erişilebilir addır, ekran okuyucu ile görünen metin çelişmez.
+Masaüstü header menüsü yer kazanmak için kısa etiket kullanır: Eğitimler, Hakkımızda, Kadro, Kazananlar, Galeri, Duyurular, İletişim (sıra icerik.md bölüm 1 ile aynı). Header butonu "Eğitim Ön Başvuru Formu" (`application.html`): tam metinli menü 1024 px'te sığmadığı için (ölçüm: gereken 1051 px, kullanılabilir 942 px) 64em-80em arasında `site-header-cta-short` ("Ön Başvuru", gereken 923 px), 80em ve üstünde `site-header-cta-full` görünür. Görünmeyen span `display: none` olduğundan erişilebilir ad görünen metinle aynıdır. Menü öğeleri arası boşluk her genişlikte 16 px. Mobil menü, footer menüsü, sayfa başlıkları (`h1`) ve `<title>` etiketleri icerik.md bölüm 1'deki tam adları kullanır. Kısa etiketli bağlantılara `aria-label` eklenmez: görünen metin erişilebilir addır, ekran okuyucu ile görünen metin çelişmez.
 
 ## 13. Ana sayfa bileşenleri
 
@@ -235,9 +235,9 @@ Yeni token: `--winner-avatar-compact`. Yeni ikon yok (`close`, `arrow_back`, `ar
 | `program_id` | string \| null | `programs[].id` değerlerinden biri (ilgili program etiketi için), yoksa `null`. |
 | `link` | object \| null | `{ "url": string, "label": string }`, ayrıntı bağlantısı yoksa `null`. |
 
-**İletişim (contact.html):** Üstte telefon ve WhatsApp eşit genişlikte ikincil butonlar (mobilde tam genişlik, alt alta), altında iletişim listesi (`contact-list`, `<section class="contact-details" aria-labelledby="contact-info-title">` içinde; telefon, WhatsApp, e-posta, Instagram, adres), yanda adres ve harita butonları (bölüm 21). Kapanış bandı yok (sayfa zaten başvuru sayfası). Tüm "Başvur" bağlantıları `contact.html#application-form` adresine gider (`?program=<id>` olanlarda `contact.html?program=<id>#application-form`).
+**İletişim (contact.html):** Üstte telefon ve WhatsApp eşit genişlikte ikincil butonlar (mobilde tam genişlik, alt alta), altında iletişim listesi (`contact-list`, `<section class="contact-details" aria-labelledby="contact-info-title">` içinde; telefon, WhatsApp, e-posta, Instagram, adres), yanda adres ve harita butonları (bölüm 21). Kapanış bandı yok (sayfa zaten başvuru sayfası). Başvuru formu `application.html`'e taşındı (bölüm 23). Tüm "Başvur" bağlantıları (kapanış bandı, announcements, mobil alt çubuk, hero) `application.html`'e, programs.html'deki "Bu Eğitime Başvur" `application.html?program=<id>` adresine gider. İletişim sayfasının düzeni bölüm 23'te.
 
-**Form (`form#application-form`):** başlık formun içindedir (bağlantıyla gelince başlık görünür). Alanlar: Ad Soyad, Telefon (JS varken maskeli: yalnızca rakam, "0 (XXX) XXX XX XX", 11 rakam; yapıştırmada +90/90 öneki atılır; JS yokken `pattern` ile esnek yedek doğrulama), Ad Soyad (yalnızca harf, boşluk, kesme işareti ve tire), E-posta (isteğe bağlı), İlgilendiğiniz Eğitim (optgroup'lu select, alt programı olmayanlar tek seçenek, "Henüz karar vermedim"), Mesaj (isteğe bağlı), KVKK onayı (etiketteki "KVKK Aydınlatma Metni" `privacy-notice.html`'e yeni sekmede açılan bağlantıdır, onay kutusunu işaretlemez; hata: "Devam etmek için aydınlatma metnini okuduğunuzu onaylayın."). Görünür etiketler, isteğe bağlı alanlarda "isteğe bağlı" işareti. JS varken `noValidate`, doğrulama blur ve gönderimde, hata `aria-invalid` + `aria-describedby`, hatada özet (`role="alert"`) ve ilk hatalı alana odak. JS yokken HTML5 doğrulaması. Geçerli gönderimde form yerinde prototip mesajı (`data-prototype`) görünür, yayın aşamasında kaldırılır. `?program=<program-id>` alt programı varsa ilkini, yoksa programın kendisini seçer, geçersiz id'de seçim yapmaz (seçeneklerde `data-program`).
+**Eski contact formu (artık `application.html`'de, alanlar bölüm 23):** başlık formun içindedir (bağlantıyla gelince başlık görünür). Alanlar: Ad Soyad, Telefon (JS varken maskeli: yalnızca rakam, "0 (XXX) XXX XX XX", 11 rakam; yapıştırmada +90/90 öneki atılır; JS yokken `pattern` ile esnek yedek doğrulama), Ad Soyad (yalnızca harf, boşluk, kesme işareti ve tire), E-posta (isteğe bağlı), İlgilendiğiniz Eğitim (optgroup'lu select, alt programı olmayanlar tek seçenek, "Henüz karar vermedim"), Mesaj (isteğe bağlı), KVKK onayı (etiketteki "KVKK Aydınlatma Metni" `privacy-notice.html`'e yeni sekmede açılan bağlantıdır, onay kutusunu işaretlemez; hata: "Devam etmek için aydınlatma metnini okuduğunuzu onaylayın."). Görünür etiketler, isteğe bağlı alanlarda "isteğe bağlı" işareti. JS varken `noValidate`, doğrulama blur ve gönderimde, hata `aria-invalid` + `aria-describedby`, hatada özet (`role="alert"`) ve ilk hatalı alana odak. JS yokken HTML5 doğrulaması. Geçerli gönderimde form yerinde prototip mesajı (`data-prototype`) görünür, yayın aşamasında kaldırılır. `?program=<program-id>` alt programı varsa ilkini, yoksa programın kendisini seçer, geçersiz id'de seçim yapmaz (seçeneklerde `data-program`).
 
 Yeni ikon: `expand_more` (site sayfalarının `icon_names` listesine eklendi).
 
@@ -251,19 +251,40 @@ Yeni ikon: `expand_more` (site sayfalarının `icon_names` listesine eklendi).
 
 **Landmark:** mobil menü kapsayıcısı `nav` (aria-label "Mobil menü"), içindeki bağlantılar ve eylem butonları aynı landmark içindedir. Kaydırma şeritleri `<section aria-label>`, hero videosu `<figure aria-label>` olarak işaretlidir.
 
-**Open Graph:** `og:title`, `og:description`, `og:type` (`website`), `og:locale` (`tr_TR`) 9 sayfada var. `og:image` paylaşım görseli gelince eklenecek.
+**Open Graph:** `og:title`, `og:description`, `og:type` (`website`), `og:locale` (`tr_TR`) 10 sayfada var. `og:image` paylaşım görseli gelince eklenecek.
 
 ## 21. Adres ve harita
 
-Adres teyitlidir (`site.json` `contact.address`: `value`, `pending: false`, `map_url`, `directions_url`). Footer'da adres `<address>` içinde `map_url` bağlantısıdır (`target="_blank"`, `rel="noopener"`, `data-track="map"`). İletişim sayfasında adres listede `<address>` olarak durur, harita yer tutucusu yerine iki ikincil buton vardır: "Haritada Gör" (`map_url`, `data-track="map"`, ikon `location_on`) ve "Yol Tarifi Al" (`directions_url`, `data-track="directions"`, ikon `directions`). Mobilde tam genişlik alt alta. Yeni sekmede açılan bağlantılar görsel olarak gizli "(yeni sekmede açılır)" metni taşır. Google Maps iframe gömülmez. Yeni ikonlar: `directions`, `location_on` (8 sayfada `icon_names` senkron). `address` öğesi `base.css`'te italik değildir.
+Adres teyitlidir (`site.json` `contact.address`: `value`, `pending: false`, `map_url`, `directions_url`). Footer'da adres `<address>` içinde `map_url` bağlantısıdır (`target="_blank"`, `rel="noopener"`, `data-track="map"`). İletişim sayfasında adres listede `<address>` olarak durur, harita yer tutucusu yerine iki ikincil buton vardır: "Haritada Gör" (`map_url`, `data-track="map"`, ikon `location_on`) ve "Yol Tarifi Al" (`directions_url`, `data-track="directions"`, ikon `directions`). Mobilde tam genişlik alt alta. Yeni sekmede açılan bağlantılar görsel olarak gizli "(yeni sekmede açılır)" metni taşır. Google Maps iframe gömülmez. Yeni ikonlar: `directions`, `location_on` (10 sayfada `icon_names` senkron). `address` öğesi `base.css`'te italik değildir.
 
 **Instagram:** `site.json` `contact.instagram {handle, url, pending: false}`. Footer'da "@academyizmirr" bağlantısı (`data-track="instagram"`, yeni sekmede, gizli "(yeni sekmede açılır)" metni), iletişim listesinde aynı bağlantı + sade tek renkli inline SVG simge (`icon-svg icon-svg-outline`, `aria-hidden`, WhatsApp SVG'siyle aynı boyut token'ları). Footer'da simge yok.
 
 ## 22. KVKK Aydınlatma Metni ve dönüşüm takibi
 
-**privacy-notice.html:** `../brief/kvkk.md` metni kelimesi kelimesine. Ana menüde ve header'da aktif öğe yok, kapanış bandı yok. Sayfa başlığı alanı (`page-header`, üst etiket "Academy İzmir", h1 "KVKK Aydınlatma Metni"), altında `legal-toc` (8 bölüme bağlantılar, `text-link`, 48em üstünde iki sütun), ardından `legal-body` (`--measure` genişlik, bölümler `legal-section`: üstte ince çizgi, `--space-8` aralık, h2 varsayılan `--text-2xl`, bağlantılar h2 id'lerine gider; başlık header altında kalmaz, `base.css` `scroll-padding-top`). Listeler `legal-list` (ince altın çizgi işareti), iletişim satırları `legal-field` (e-posta `mailto`, telefon `tel`, adres `<address>`). Bağlantılar: footer alt satırı ve contact.html onay kutusu.
+**privacy-notice.html:** `../brief/kvkk.md` metni kelimesi kelimesine. Ana menüde ve header'da aktif öğe yok, kapanış bandı yok. Sayfa başlığı alanı (`page-header`, üst etiket "Academy İzmir", h1 "KVKK Aydınlatma Metni"), altında `legal-toc` (8 bölüme bağlantılar, `text-link`, 48em üstünde iki sütun), ardından `legal-body` (`--measure` genişlik, bölümler `legal-section`: üstte ince çizgi, `--space-8` aralık, h2 varsayılan `--text-2xl`, bağlantılar h2 id'lerine gider; başlık header altında kalmaz, `base.css` `scroll-padding-top`). Listeler `legal-list` (ince altın çizgi işareti), iletişim satırları `legal-field` (e-posta `mailto`, telefon `tel`, adres `<address>`). Bağlantılar: footer alt satırı ve application.html onay kutusu.
 
 **data-track değerleri:** `phone`, `whatsapp`, `email`, `form`, `instagram`, `map`, `directions`.
 
 **İletişim bilgileri:** telefon, WhatsApp ve e-posta (`info@academyizmir.com`, `mailto:`) teyitlidir (`site.json` `contact`, `pending: false`). Footer, iletişim listesi ve KVKK sayfasında e-posta bağlantısı `data-track="email"` taşır.
+
+## 23. Eğitim Ön Başvuru Formu (application.html) ve İletişim sayfası
+
+**Sayfa:** `application.html`, partial'lar 10 sayfada senkron. Header butonu ve footer "Eğitim Ön Başvuru Formu" bağlantısı `aria-current="page"` alır. Sayfa başlığı alanı (üst etiket "Academy İzmir", h1 "Eğitim Ön Başvuru Formu"), ardından form hemen başlar (`application-section` üst boşluğu `--space-7`). Kapanış bandı yok. İçerik kaynağı icerik.md bölüm 13.
+
+**Yerleşim (`application-layout`):** mobilde tek sütun, form sonra "İletişim" yan sütunu altta. 64em ve üstünde iki sütun: `minmax(0, --container-narrow)` form ve `--action-width` yan sütun (`application-aside`, sticky, yalnızca bölüm etiketi h2 "İletişim" + telefon ve WhatsApp butonları, ek metin yok). Form okunabilir 42rem genişlikte kalır, yan sütun konteynerin sağ kenarına hizalıdır. Form başlığı `form-title` (`--text-2xl`, son kelime italik vurgu), altında `section-lead` açıklama.
+
+**Alanlar (sıra):** Ad Soyad (placeholder, ad filtresi), Doğum Tarihi + Yaş Grubu (`form-grid`: 48em+ yan yana, dar ekranda alt alta), Eğitim Durumu, Başvurmak İstediğiniz Eğitim (5 ana program, optgroup yok), Telefon Numarası + E-posta Adresi, Sanat Eğitimi Deneyiminiz (radyo grubu), Eklemek İstedikleriniz, KVKK onayı, "Ön Başvurumu Gönder" (`data-track="form"`). Seçenekler `site.json` `application` nesnesinden statik üretilir. Placeholder'lar `--color-text-muted`, her alanın görünür etiketi var, telefon altındaki "Örnek" ipucu kaldırıldı.
+
+**Yeni bileşenler:**
+
+| Bileşen | Class | Tanım |
+|---|---|---|
+| Tarih alanı | `form-control form-control-date` | Native `<input type="date">`, koyu tema `:root { color-scheme: dark }` ile (takvim simgesi ve seçici koyu). `min="1930-01-01"` HTML'de, `max` JS ile bugünün yerel tarihi. |
+| Radyo grubu | `form-fieldset`, `radio-group`, `radio-option`, `radio-option-input`, `radio-option-text` | `fieldset` + `legend` (etiket stili). İki seçenek eşit sütunlarda, her biri 44 px yüksekliğinde çerçeveli kutu ve solda `--radio-size` daire göstergesi. Gerçek radyo girdisi kutunun üstünde saydam durur, ok tuşlarıyla seçim tarayıcı davranışıdır. Seçili: vurgu kenarlığı ve dolgulu gösterge (`--radio-dot-inset`). Focus halkası kutuda. Varsayılan "Yok". Gerekçe (ui-ux-pro-max, form/touch kuralları): küçük yerel radyo noktası yerine büyük dokunma alanı, durum yalnızca renkle değil dolgu şekliyle de verilir. |
+
+Yeni token'lar: `--radio-size`, `--radio-dot-inset`.
+
+**Doğrulama:** mevcut yapı aynen (blur ve gönderim, `aria-invalid`, `aria-describedby`, hata özeti, ilk hatalı alana odak). Yeni mesajlar: "Lütfen doğum tarihinizi seçin." (boş), "Lütfen geçerli bir doğum tarihi seçin." (bugünden ileri, 1930'dan eski ya da yarım yazılmış), "Lütfen bir yaş grubu seçin.", "Lütfen eğitim durumunuzu seçin.". `?program=<id>` ana programı seçer, geçersiz id'de seçim yok. JS yokken HTML5 doğrulaması (`required`, `min`, `pattern`). Geçerli gönderimde `data-prototype` mesajı.
+
+**contact.html düzeni:** form kaldırıldı. Sırayla: `contact-callout` (yüzey zeminli, üstte 2 px vurgu çizgisi, h2 "Eğitim Ön Başvuru Formu", icerik.md bölüm 13 açıklaması, "Ön Başvuru Formuna Git" birincil butonu, `data-track="form"`), "İletişim bilgileri" başlığı + telefon/WhatsApp, iletişim listesi, harita butonları. 64em ve üstünde: üstte tam genişlikte callout (metin solda, buton sağda), altında 5/7 iki sütun: solda başlık + butonlar + harita butonları, sağda iletişim listesi. Form kalktığı için boş sütun kalmadı. Mobilde HTML sırası.
 

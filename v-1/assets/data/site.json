@@ -994,5 +994,73 @@
       "orientation": "landscape"
     }
   ],
-  "announcements": []
+  "announcements": [],
+  "application": {
+    "age_groups": [
+      {
+        "id": "preschool",
+        "label": "Okul öncesi"
+      },
+      {
+        "id": "primary",
+        "label": "İlkokul"
+      },
+      {
+        "id": "middle-school",
+        "label": "Ortaokul"
+      },
+      {
+        "id": "high-school",
+        "label": "Lise"
+      },
+      {
+        "id": "adult",
+        "label": "18 yaş ve üzeri"
+      }
+    ],
+    "education_levels": [
+      {
+        "id": "preschool",
+        "label": "Okul öncesi"
+      },
+      {
+        "id": "primary-student",
+        "label": "İlkokul öğrencisi"
+      },
+      {
+        "id": "middle-school-student",
+        "label": "Ortaokul öğrencisi"
+      },
+      {
+        "id": "high-school-student",
+        "label": "Lise öğrencisi"
+      },
+      {
+        "id": "high-school-graduate",
+        "label": "Lise mezunu"
+      },
+      {
+        "id": "university-student",
+        "label": "Üniversite öğrencisi"
+      },
+      {
+        "id": "university-graduate",
+        "label": "Üniversite mezunu"
+      },
+      {
+        "id": "other",
+        "label": "Diğer"
+      }
+    ],
+    "art_experience": [
+      {
+        "id": "yes",
+        "label": "Var"
+      },
+      {
+        "id": "no",
+        "label": "Yok"
+      }
+    ]
+  }
 }
