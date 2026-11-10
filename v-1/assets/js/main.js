@@ -771,8 +771,26 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
     return ok;
   }
 
+  /* Gönder butonuna basılırken ya da Tab ile geçilirken alanın blur doğrulaması atlanır: hata satırı
+     butonu aşağı iterek tıklamayı kaçırırdı, gönderim zaten tüm alanları doğrular. Safari'de tıklama
+     odak vermediğinden relatedTarget'a güvenilmez: fare/dokunma için pointerdown bayrağı tutulur,
+     bayrak pointerup/pointercancel/click ile sıfırlanır. Klavyede Tab ile geçişte relatedTarget kullanılır. */
+  var submitButton = form.querySelector('button[type="submit"]');
+  var submitPressed = false;
+  if (submitButton) {
+    submitButton.addEventListener('pointerdown', function () { submitPressed = true; });
+    ['pointerup', 'pointercancel', 'click'].forEach(function (type) {
+      submitButton.addEventListener(type, function () { submitPressed = false; });
+    });
+    document.addEventListener('pointerup', function () { submitPressed = false; });
+  }
+
   fields.forEach(function (field) {
-    field.addEventListener('blur', function () { tidy(field); check(field); });
+    field.addEventListener('blur', function (event) {
+      if (submitPressed || (submitButton && event.relatedTarget === submitButton)) { return; }
+      tidy(field);
+      check(field);
+    });
     var revalidate = function () { if (field.getAttribute('aria-invalid') === 'true') { check(field); } };
     field.addEventListener('input', revalidate);
     field.addEventListener('change', revalidate);
