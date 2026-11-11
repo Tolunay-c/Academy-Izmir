@@ -6,3 +6,6 @@
 
 # Playwright MCP çıktıları
 .playwright-mcp/
+
+# Sunucu ayarları (gerçek şifreler, repoya girmez)
+site/private/config.php
