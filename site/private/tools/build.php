@@ -92,7 +92,7 @@ $sections['httpErrors'] = '    <httpErrors>
       <remove statusCode="404" subStatusCode="-1" />
       <error statusCode="404" path="/404.php" responseMode="ExecuteURL" />
     </httpErrors>';
-$mime = ['.webp' => 'image/webp', '.svg' => 'image/svg+xml', '.mp4' => 'video/mp4'];
+$mime = ['.webp' => 'image/webp', '.svg' => 'image/svg+xml', '.mp4' => 'video/mp4', '.webmanifest' => 'application/manifest+json'];
 $mimeLines = '';
 foreach ($mime as $ext => $type) {
     $mimeLines .= '      <remove fileExtension="' . $ext . '" />' . "\n" . '      <mimeMap fileExtension="' . $ext . '" mimeType="' . $type . '" />' . "\n";

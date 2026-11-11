@@ -551,6 +551,9 @@
 
 textarea.form-control {
   min-height: calc(var(--touch-min) * 3);
+  max-height: var(--textarea-max-height);
+  resize: vertical;
+  overflow-y: auto;
 }
 
 .form-select {
@@ -2905,9 +2908,10 @@ textarea.form-control {
 }
 
 .form-check {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  column-gap: var(--space-3);
   min-height: var(--touch-min);
   padding-block: var(--space-2);
   font-size: var(--text-base);
@@ -2915,17 +2919,26 @@ textarea.form-control {
   cursor: pointer;
 }
 
+/* Etiket içindeki bağlantı satır içi kalır: 44 px'lik inline-flex kutu ilk satırı yükseltip metni kutudan aşağı iter.
+   Dokunma hedefi etiketin kendisidir (satır en az 44 px). */
+.form-check .text-link {
+  display: inline;
+  min-height: var(--space-none);
+}
+
 /* Onay kutusu: gerçek checkbox girdisinin kendisi özel çizilir (appearance: none), radyo grubuyla aynı kenarlık,
-   boyut ve renk dili. Seçili: vurgu dolgusu ve koyu işaret. Kutu etiketin ilk satırıyla dikey ortalıdır. */
+   boyut ve renk dili. Seçili: vurgu dolgusu ve koyu işaret. Kutu, etiketin ilk satırının (1lh) dikey merkezine hizalanır;
+   font ve satır yüksekliği etiketten devralınır, bu yüzden sabit kaydırma gerekmez. */
 .form-check input {
   appearance: none;
   display: grid;
-  flex: none;
   place-content: center;
   box-sizing: border-box;
   width: var(--check-size);
   height: var(--check-size);
-  margin: calc((var(--text-base) * var(--leading-snug) - var(--check-size)) / 2) var(--space-none) var(--space-none);
+  margin: calc((1lh - var(--check-size)) / 2) var(--space-none) var(--space-none);
+  font: inherit;
+  line-height: inherit;
   background-color: var(--color-surface);
   border: var(--line-width) solid var(--color-line-strong);
   border-radius: var(--radius-none);
