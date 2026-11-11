@@ -10,3 +10,6 @@
 # Sunucu ayarları (gerçek şifreler, repoya girmez)
 site/private/config.php
 site/private/storage/
+
+# Yayın paketleri
+deploy/

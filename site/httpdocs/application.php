@@ -59,8 +59,8 @@ partial('mobile-menu');
             <input type="hidden" name="csrf" value="<?= e(csrf_token()) ?>">
             <input type="hidden" name="ts" value="<?= e(form_timestamp()) ?>">
             <div class="visually-hidden" aria-hidden="true">
-              <label for="app-website">Web sitesi (boş bırakın)</label>
-              <input type="text" id="app-website" name="website" tabindex="-1" autocomplete="off" value="">
+              <label for="app-extra-ref">Bu alanı boş bırakın</label>
+              <input type="text" id="app-extra-ref" name="a_extra_ref" tabindex="-1" autocomplete="off" value="">
             </div>
 
             <div class="form-field">

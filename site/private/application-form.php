@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 date_default_timezone_set('Europe/Istanbul');
 
+const APP_SESSION_LIFETIME = 1800;
 const APP_MIN_SECONDS = 3;          // bundan hızlı gönderimler sessizce yok sayılır
 const APP_RATE_LIMIT = 5;           // aynı IP'den saatte en fazla başvuru
 const APP_MESSAGE_MAX = 2000;
@@ -92,7 +93,7 @@ function app_start_session(): bool
         || strtolower((string) ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')) === 'https';
     session_name('academy_sid');
     session_set_cookie_params([
-        'lifetime' => 0,
+        'lifetime' => APP_SESSION_LIFETIME,
         'path' => '/',
         'secure' => $https,
         'httponly' => true,
@@ -104,7 +105,20 @@ function app_start_session(): bool
     }
     ini_set('session.use_strict_mode', '1');
     ini_set('session.use_only_cookies', '1');
-    return @session_start();
+    // Ömür 30 dk. Temizlik (gc) her isteğin %5'inde çalışır; Windows'ta da geçerlidir.
+    ini_set('session.gc_maxlifetime', (string) APP_SESSION_LIFETIME);
+    ini_set('session.gc_probability', '1');
+    ini_set('session.gc_divisor', '20');
+    $started = @session_start();
+    if ($started && $sessions !== null && random_int(1, 20) === 1) {
+        // Ana makine gc'yi kapatmış olsa bile eski oturum dosyalarını kendimiz sileriz.
+        foreach (glob($sessions . DIRECTORY_SEPARATOR . 'sess_*') ?: [] as $file) {
+            if (is_file($file) && filemtime($file) < time() - APP_SESSION_LIFETIME) {
+                @unlink($file);
+            }
+        }
+    }
+    return $started;
 }
 
 function csrf_token(): string
@@ -353,8 +367,8 @@ function application_handle(): array
 
         // Bal tuzağı ve zaman tuzağı: sessizce yok sayılır, kullanıcıya başarı gösterilir.
         $ts = verify_timestamp(isset($post['ts']) && is_string($post['ts']) ? $post['ts'] : '');
-        if ((isset($post['website']) && is_string($post['website']) && trim($post['website']) !== '')
-            || (isset($post['website']) && !is_string($post['website']))
+        if ((isset($post['a_extra_ref']) && is_string($post['a_extra_ref']) && trim($post['a_extra_ref']) !== '')
+            || (isset($post['a_extra_ref']) && !is_string($post['a_extra_ref']))
             || $ts === null || time() - $ts < APP_MIN_SECONDS) {
             unset($_SESSION['csrf']);
             $_SESSION['flash'] = ['status' => 'basarili'];
