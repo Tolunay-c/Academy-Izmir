@@ -56,85 +56,110 @@ foreach ($routes as $id => $r) {
     $add('Adres -> ' . $r['file'], $match, $rewrite('/' . $r['file']));
 }
 
-$config = '<?xml version="1.0" encoding="UTF-8"?>
-<!-- OTOMATIK ÜRETİLDİ: php site/private/tools/build.php (kaynak: routes.php, redirects.php). Elle düzenlemeyin. -->
-<configuration>
-  <system.webServer>
-
-    <defaultDocument enabled="true">
+// web.config bölümleri. Paylaşımlı Plesk/IIS'te 500.19 vermemesi için: kilitli olabilecek öznitelikler kullanılmaz,
+// sunucuda zaten tanımlı olabilecek her öğeden önce <remove> yazılır.
+$sections = [];
+$sections['defaultDocument'] = '    <defaultDocument enabled="true">
       <files>
-        <clear />
+        <remove value="index.php" />
         <add value="index.php" />
       </files>
-    </defaultDocument>
-
-    <rewrite>
+    </defaultDocument>';
+$sections['rewrite'] = '    <rewrite>
       <rules>
 ' . implode("\n", $rules) . '
       </rules>
-    </rewrite>
-
-    <!-- 404: sitenin tasarımında 404.php, durum kodu gerçekten 404 kalır (ExecuteURL) -->
-    <httpErrors errorMode="Custom" existingResponse="Replace">
+    </rewrite>';
+$headers = [
+    'X-Content-Type-Options' => 'nosniff',
+    'Referrer-Policy' => 'strict-origin-when-cross-origin',
+    'X-Frame-Options' => 'SAMEORIGIN',
+    'Permissions-Policy' => 'camera=(), microphone=(), geolocation=()',
+];
+$headerLines = '        <remove name="X-Powered-By" />' . "\n";
+foreach ($headers as $name => $value) {
+    $headerLines .= '        <remove name="' . $x($name) . '" />' . "\n"
+        . '        <add name="' . $x($name) . '" value="' . $x($value) . '" />' . "\n";
+}
+// Content-Security-Policy bilerek yok: Google kodları gelince ele alınacak.
+$sections['customHeaders'] = '    <httpProtocol>
+      <customHeaders>
+' . rtrim($headerLines) . '
+      </customHeaders>
+    </httpProtocol>';
+// 404: sitenin tasarımında 404.php, durum kodu gerçekten 404 kalır (ExecuteURL)
+$sections['httpErrors'] = '    <httpErrors>
       <remove statusCode="404" subStatusCode="-1" />
       <error statusCode="404" path="/404.php" responseMode="ExecuteURL" />
-    </httpErrors>
-
-    <!-- Güvenlik başlıkları (Content-Security-Policy bilerek yok: Google kodları gelince ele alınacak) -->
-    <httpProtocol>
-      <customHeaders>
-        <remove name="X-Powered-By" />
-        <add name="X-Content-Type-Options" value="nosniff" />
-        <add name="Referrer-Policy" value="strict-origin-when-cross-origin" />
-        <add name="X-Frame-Options" value="SAMEORIGIN" />
-        <add name="Permissions-Policy" value="camera=(), microphone=(), geolocation=()" />
-      </customHeaders>
-    </httpProtocol>
-
-    <!-- Sıkıştırma -->
-    <urlCompression doStaticCompression="true" doDynamicCompression="true" />
-
-    <!-- Gizli dosyalar ve uzantılar -->
-    <security>
+    </httpErrors>';
+$mime = ['.webp' => 'image/webp', '.svg' => 'image/svg+xml', '.mp4' => 'video/mp4'];
+$mimeLines = '';
+foreach ($mime as $ext => $type) {
+    $mimeLines .= '      <remove fileExtension="' . $ext . '" />' . "\n" . '      <mimeMap fileExtension="' . $ext . '" mimeType="' . $type . '" />' . "\n";
+}
+$sections['staticContent'] = '    <staticContent>
+' . rtrim($mimeLines) . '
+    </staticContent>';
+$sections['urlCompression'] = '    <urlCompression doStaticCompression="true" />';
+$hidden = ['private', '.git'];
+$denied = ['.json', '.md', '.example', '.log', '.bak', '.sql', '.ini'];
+$hl = '';
+foreach ($hidden as $seg) {
+    $hl .= '          <remove segment="' . $seg . '" />' . "\n" . '          <add segment="' . $seg . '" />' . "\n";
+}
+$fl = '';
+foreach ($denied as $ext) {
+    $fl .= '          <remove fileExtension="' . $ext . '" />' . "\n" . '          <add fileExtension="' . $ext . '" allowed="false" />' . "\n";
+}
+$sections['requestFiltering'] = '    <security>
       <requestFiltering>
         <hiddenSegments>
-          <add segment="private" />
-          <add segment=".git" />
+' . rtrim($hl) . '
         </hiddenSegments>
         <fileExtensions>
-          <add fileExtension=".json" allowed="false" />
-          <add fileExtension=".md" allowed="false" />
-          <add fileExtension=".example" allowed="false" />
-          <add fileExtension=".log" allowed="false" />
-          <add fileExtension=".bak" allowed="false" />
-          <add fileExtension=".sql" allowed="false" />
-          <add fileExtension=".ini" allowed="false" />
+' . rtrim($fl) . '
         </fileExtensions>
       </requestFiltering>
-    </security>
-
-    <!-- Bazı IIS sürümlerinde eksik olan dosya türleri -->
-    <staticContent>
-      <remove fileExtension=".webp" />
-      <mimeMap fileExtension=".webp" mimeType="image/webp" />
-      <remove fileExtension=".svg" />
-      <mimeMap fileExtension=".svg" mimeType="image/svg+xml" />
-      <remove fileExtension=".mp4" />
-      <mimeMap fileExtension=".mp4" mimeType="video/mp4" />
-    </staticContent>
-
-  </system.webServer>
-
-  <!-- assets: uzun süreli önbellek (30 gün). Dosya değişince adı ya da ?v= parametresi değiştirilmelidir. -->
-  <location path="assets">
+    </security>';
+// assets: uzun süreli önbellek (30 gün). Dosya değişince adı ya da ?v= parametresi değiştirilmelidir.
+$location = '  <location path="assets">
     <system.webServer>
       <staticContent>
         <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="30.00:00:00" />
       </staticContent>
     </system.webServer>
-  </location>
-</configuration>
-';
+  </location>';
+
+$buildConfig = static function (array $keys, bool $withLocation, string $note) use ($sections, $location): string {
+    $body = [];
+    foreach ($keys as $k) {
+        $body[] = $sections[$k];
+    }
+    return '<?xml version="1.0" encoding="UTF-8"?>' . "\n"
+        . '<!-- ' . $note . ' -->' . "\n"
+        . "<configuration>\n  <system.webServer>\n\n"
+        . implode("\n\n", $body) . "\n\n  </system.webServer>\n"
+        . ($withLocation ? "\n" . $location . "\n" : '')
+        . "</configuration>\n";
+};
+$full = ['defaultDocument', 'rewrite', 'customHeaders', 'httpErrors', 'staticContent', 'urlCompression', 'requestFiltering'];
+$config = $buildConfig($full, true, 'OTOMATIK ÜRETİLDİ: php site/private/tools/build.php (kaynak: routes.php, redirects.php). Elle düzenlemeyin.');
+
+// Hata ayıklama: bölümleri sırayla ekleyen 5 ayrı web.config (repo dışı deploy/webconfig-test/)
+$testDir = dirname(PUBLIC_DIR, 2) . '/deploy/webconfig-test';
+if (!is_dir($testDir)) {
+    mkdir($testDir, 0775, true);
+}
+$steps = [
+    1 => [['defaultDocument'], false],
+    2 => [['defaultDocument', 'rewrite'], false],
+    3 => [['defaultDocument', 'rewrite', 'customHeaders'], false],
+    4 => [['defaultDocument', 'rewrite', 'customHeaders', 'httpErrors'], false],
+    5 => [$full, true],
+];
+foreach ($steps as $n => [$keys, $loc]) {
+    file_put_contents($testDir . '/' . $n . '-web.config', $buildConfig($keys, $loc, 'TEST ' . $n . '/5: ' . implode(', ', $keys) . ($loc ? ', clientCache (assets)' : '')));
+}
 file_put_contents(PUBLIC_DIR . '/web.config', $config);
 
 // sitemap.xml: gizli olmayan sayfalar, lastmod = üretim günü
