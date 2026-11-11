@@ -2996,18 +2996,36 @@ textarea.form-control {
   text-underline-offset: var(--space-1);
 }
 
-.form-prototype {
+/* Gönderim sonucu: başarı ekranı (form yerine) ve hata bildirimi (formun üstünde). */
+.form-result,
+.form-notice {
+  display: grid;
+  gap: var(--space-4);
   max-width: var(--container-narrow);
   padding: var(--space-6);
   background-color: var(--color-surface);
   border: var(--line-width) solid var(--color-line-strong);
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
+}
+
+.form-result .form-title {
+  margin: var(--space-none);
+}
+
+.form-notice {
+  margin-bottom: var(--space-6);
+  border-color: var(--color-error);
+  font-size: var(--text-base);
   line-height: var(--leading-snug);
 }
 
-.form-prototype p {
+.form-result p,
+.form-notice p {
   max-width: none;
+}
+
+.form-result .hero-actions,
+.form-notice .hero-actions {
+  margin-top: var(--space-none);
 }
 
 /* ---- Duyuru kartı (duyurular geldiğinde kullanılır, şimdilik yalnızca styleguide'da) --------------- */

@@ -231,11 +231,11 @@ function gallery_mosaic(): void
 }
 
 /** Başvuru formundaki seçenekler (site.json "application" nesnesi). */
-function select_options(array $options, string $placeholder): void
+function select_options(array $options, string $placeholder, string $selected = ''): void
 {
-    echo '<option value="">' . e($placeholder) . '</option>' . "\n";
+    echo '<option value=""' . ($selected === '' ? ' selected' : '') . '>' . e($placeholder) . '</option>' . "\n";
     foreach ($options as $o) {
-        echo '<option value="' . e($o['id']) . '">' . e($o['label']) . '</option>' . "\n";
+        echo '<option value="' . e($o['id']) . '"' . ($o['id'] === $selected ? ' selected' : '') . '>' . e($o['label']) . '</option>' . "\n";
     }
 }
 
@@ -465,4 +465,47 @@ function program_section(array $p): void
     echo '</div>
       </div>
     </section>' . "\n";
+}
+
+/** ISO tarihi (YYYY-MM-DD) Türkçe okunur biçime çevirir: 2026-11-10 => 10 Kasım 2026. */
+function format_date_tr(string $iso): string
+{
+    $months = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+    $d = DateTimeImmutable::createFromFormat('!Y-m-d', $iso);
+    if ($d === false) {
+        return $iso;
+    }
+    return (int) $d->format('j') . ' ' . $months[(int) $d->format('n') - 1] . ' ' . $d->format('Y');
+}
+
+/** Duyurular, en yeni tarih üstte. */
+function announcements_sorted(): array
+{
+    $items = site()['announcements'];
+    usort($items, static fn (array $a, array $b): int => strcmp((string) $b['date'], (string) $a['date']));
+    return $items;
+}
+
+/** Duyuru kartları (announcement-card bileşeni, DESIGN.md bölüm 19 veri yapısı). */
+function announcement_cards(array $items): void
+{
+    foreach ($items as $a) {
+        $tag = '';
+        if (!empty($a['program_id'])) {
+            try {
+                $tag = '<span class="announcement-card-tag">' . e(program_by_id((string) $a['program_id'])['title']) . '</span>';
+            } catch (InvalidArgumentException $ex) {
+                $tag = '';
+            }
+        }
+        echo '<article class="announcement-card">
+          <div class="announcement-card-meta">
+            <time class="announcement-card-date" datetime="' . e($a['date']) . '">' . e(format_date_tr((string) $a['date'])) . '</time>' . $tag . '
+          </div>
+          <h3 class="announcement-card-title">' . e($a['title']) . '</h3>
+          <p class="announcement-card-text">' . e($a['description']) . '</p>'
+            . (!empty($a['link']) ? '
+          <a class="button button-text announcement-card-link" href="' . e($a['link']['url']) . '">' . e($a['link']['label']) . ' <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>' : '') . '
+        </article>' . "\n";
+    }
 }

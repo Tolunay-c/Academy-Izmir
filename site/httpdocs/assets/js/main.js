@@ -531,7 +531,7 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
   stage.addEventListener('pointercancel', function () { startX = null; });
 })();
 
-/* ---- Eğitim ön başvuru formu (yalnızca application.html) ---------------------------------------------------------
+/* ---- Eğitim ön başvuru formu (yalnızca application.php) ---------------------------------------------------------
    JS varken tarayıcı doğrulaması kapatılır (noValidate), kendi mesajlarımız gösterilir. JS yokken
    required/type/pattern ile HTML5 doğrulaması çalışır. Doğrulama: alandan çıkınca (blur) ve gönderimde.
    Hatalı gönderimde hata özeti (role="alert") ve ilk hatalı alana odak. */
@@ -810,27 +810,45 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
     summary.hidden = false;
   }
 
+  /* Gönderim: doğrulama geçerse form normal şekilde sunucuya (POST) gider. Çift gönderimi önlemek için buton pasif,
+     metin "Gönderiliyor..." ve aria-busy olur. Sayfaya geri dönülürse (bfcache) eski hâli geri yüklenir. */
+  var submitting = false;
+  var submitLabel = form.querySelector('[data-submit-label]');
+  var submitLabelText = submitLabel ? submitLabel.textContent : '';
+
+  function resetSubmitState() {
+    submitting = false;
+    form.removeAttribute('aria-busy');
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.removeAttribute('aria-busy');
+    }
+    if (submitLabel) { submitLabel.textContent = submitLabelText; }
+  }
+
+  window.addEventListener('pageshow', function (event) { if (event.persisted) { resetSubmitState(); } });
+
   form.addEventListener('submit', function (event) {
-    event.preventDefault();
+    if (submitting) { event.preventDefault(); return; }
     fields.forEach(tidy);
     var invalid = fields.filter(function (field) { return !check(field); });
     if (invalid.length) {
+      event.preventDefault();
       showSummary(invalid);
       invalid[0].focus();
       return;
     }
     summary.hidden = true;
-    /* data-prototype: form henüz bir sunucuya bağlı değil. Yayın aşamasında bu blok kaldırılır,
-       form gerçek gönderime bağlanır. */
-    var prototype = document.querySelector('[data-prototype]');
-    if (prototype) {
-      form.hidden = true;
-      prototype.hidden = false;
-      prototype.focus();
+    submitting = true;
+    form.setAttribute('aria-busy', 'true');
+    if (submitButton) {
+      submitButton.setAttribute('aria-busy', 'true');
+      submitButton.disabled = true;
     }
+    if (submitLabel) { submitLabel.textContent = 'Gönderiliyor...'; }
   });
 
-  /* application.html?program=<program-id>: ilgili ana program seçili gelir. Geçersiz id'de seçim yapılmaz. */
+  /* /on-basvuru?program=<program-id>: ilgili ana program seçili gelir. Geçersiz id'de seçim yapılmaz. */
   var programId = new URLSearchParams(window.location.search).get('program');
   var select = form.querySelector('select[data-validate="program"]');
   if (programId && select && !select.value) {
@@ -838,5 +856,32 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
       return option.value !== '' && option.value === programId;
     })[0];
     if (match) { select.value = match.value; }
+  }
+})();
+
+/* ---- Başvuru sonucu (yalnızca application.php) -----------------------------------------------------
+   Başarı: mesaj alanına odak, window.dataLayer varsa dönüşüm olayı (Google kodu gelince ölçüm için).
+   Hata bildirimi: bildirime odak. Sunucu doğrulama hatası: ilk hatalı alana odak. */
+(function () {
+  'use strict';
+
+  var success = document.querySelector('[data-application-success]');
+  var failure = document.querySelector('[data-application-failure]');
+  var summary = document.querySelector('[data-form-summary]');
+
+  if (success) {
+    if (window.dataLayer && typeof window.dataLayer.push === 'function') {
+      window.dataLayer.push({ event: 'application_submit' });
+    }
+    success.focus();
+    return;
+  }
+  if (failure) {
+    failure.focus();
+    return;
+  }
+  if (summary && !summary.hidden) {
+    var first = document.querySelector('[data-application-form] [aria-invalid="true"]');
+    (first || summary).focus();
   }
 })();

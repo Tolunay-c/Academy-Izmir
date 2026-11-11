@@ -32,9 +32,9 @@ return [
     '/resim-kurslari.html' => '/egitimler',
     '/jimnastik.html' => '/egitimler',
 
-    // Eğitmen sayfaları (kadro sayfasında yalnızca güncel kadro var)
-    '/ozlem-baskaya.html' => '/egitmen-kadromuz',
-    '/ozgur-baskaya.html' => '/egitmen-kadromuz',
+    // Eğitmen sayfaları: kurucular kendi bölümlerine (tarayıcı #'yi Location başlığından uygular), diğerleri kadro sayfasına
+    '/ozlem-baskaya.html' => '/egitmen-kadromuz#ozlem-baskaya',
+    '/ozgur-baskaya.html' => '/egitmen-kadromuz#ozgur-baskaya',
     '/tamer-yilmaz.html' => '/egitmen-kadromuz',
     '/asli-sinke.html' => '/egitmen-kadromuz',
     '/selda-uzunkaya.html' => '/egitmen-kadromuz',

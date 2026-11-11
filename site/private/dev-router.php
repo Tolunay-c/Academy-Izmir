@@ -13,7 +13,7 @@ $path = rawurldecode($uri);
 $query = isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] !== '' ? '?' . $_SERVER['QUERY_STRING'] : '';
 
 $redirect = static function (string $to, string $query): void {
-    header('Location: ' . $to . $query, true, 301);
+    header('Location: ' . $to . (strpos($to, '#') === false ? $query : ''), true, 301);
     exit;
 };
 

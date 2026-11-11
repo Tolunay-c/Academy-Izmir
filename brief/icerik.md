@@ -340,7 +340,7 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 10. Sitede kullanılan çocuk fotoğrafları için veli izinleri alınmış mı?
 11. Galeri için hangi kategoriler kullanılsın (örneğin Tiyatro, Bale ve Dans, Yaratıcı Drama, Gösteriler)? Gönderilen fotoğrafların hangi etkinliğe ya da programa ait olduğunu belirtebilir misiniz?
 12. (yanıtlandı)
-13. Başvuru formu gönderildiğinde başvurular hangi e-posta adresine gitsin?
+13. Başvuru formu gönderildiğinde başvurular hangi e-posta adresine gitsin? (yanıtlandı: info@academyizmir.com ve ocicaney@gmail.com)
 14. 2025 kazananlarının kazandıkları üniversite, fakülte ve bölüm bilgileri. Ayrıca Beren Özdemir 2024, İlay Kıngır ve Rasim Tuna Yılmaz 2026 listelerinde de var. Bu öğrenciler 2025'te de mi kazandı?
 15. Başvuru formundaki Eğitim Durumu seçenekleri onaylanmalı (şu anki liste: Okul öncesi, İlkokul öğrencisi, Ortaokul öğrencisi, Lise öğrencisi, Lise mezunu, Üniversite öğrencisi, Üniversite mezunu, Diğer).
 

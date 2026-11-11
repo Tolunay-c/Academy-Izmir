@@ -25,7 +25,7 @@ $add = static function (string $name, string $match, string $action, string $con
         . '          ' . $action . "\n"
         . '        </rule>';
 };
-$redirect = static fn (string $to): string => '<action type="Redirect" url="' . htmlspecialchars($to, ENT_QUOTES | ENT_XML1) . '" redirectType="Permanent" appendQueryString="true" />';
+$redirect = static fn (string $to): string => '<action type="Redirect" url="' . htmlspecialchars($to, ENT_QUOTES | ENT_XML1) . '" redirectType="Permanent" appendQueryString="' . (strpos($to, '#') === false ? 'true' : 'false') . '" />';
 $rewrite = static fn (string $to): string => '<action type="Rewrite" url="' . htmlspecialchars($to, ENT_QUOTES | ENT_XML1) . '" appendQueryString="true" />';
 $cond = static fn (string $input, string $pattern, bool $negate = false): string => '            <add input="' . htmlspecialchars($input, ENT_QUOTES | ENT_XML1) . '" pattern="' . htmlspecialchars($pattern, ENT_QUOTES | ENT_XML1) . '"' . ($negate ? ' negate="true"' : '') . ' />' . "\n";
 

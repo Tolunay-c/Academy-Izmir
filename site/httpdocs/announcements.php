@@ -15,7 +15,13 @@ partial('mobile-menu');
     </header>
     <section class="section" aria-label="Duyurular">
       <div class="container">
+<?php $announcements = announcements_sorted(); if (count($announcements) === 0): ?>
         <p class="empty-state">Güncel duyurularımız yakında burada olacak.</p>
+<?php else: ?>
+        <div class="announcement-list">
+<?php announcement_cards($announcements); ?>
+        </div>
+<?php endif; ?>
         <div class="hero-actions">
           <a class="button button-primary" href="<?= e(url('application')) ?>" data-track="form">Başvur</a>
           <?= phone_link('button button-secondary') ?>
