@@ -108,7 +108,7 @@ function gallery_srcset_img(string $id, string $sizes, bool $lazy = true): strin
     return '<img src="' . e(asset($g['src_800'])) . '" srcset="' . e(asset($g['src_800'])) . ' 800w, ' . e(asset($g['src_1600'])) . ' 1600w" sizes="' . e($sizes) . '" width="' . $w . '" height="' . $h . '"' . ($lazy ? ' loading="lazy"' : '') . ' alt="' . e($g['alt']) . '">';
 }
 
-/** Eğitmen kartı (ana sayfa şeridi ve Kurucularımız). */
+/** Sanatçı kartı (ana sayfa şeridi ve Kurucularımız). */
 function instructor_card(array $f): string
 {
     $roles = '';
@@ -126,7 +126,7 @@ function instructor_card(array $f): string
             </article>';
 }
 
-/** order alanına göre sıralı eğitmenler. */
+/** order alanına göre sıralı sanatçılar. */
 function faculty_sorted(): array
 {
     $faculty = site()['faculty'];
@@ -245,7 +245,7 @@ function current_attr(string $id): string
     return page()['id'] === $id ? ' aria-current="page"' : '';
 }
 
-/** Başvuru formundaki eğitim seçenekleri: 5 ana program (site.json başlıkları ve sırasıyla). */
+/** Başvuru formundaki atölye seçenekleri: 5 ana program (site.json başlıkları ve sırasıyla). */
 function program_options(): array
 {
     return array_map(static fn (array $p): array => ['id' => $p['id'], 'label' => $p['title']], site()['programs']);
@@ -277,7 +277,7 @@ function winners_groups(): void
     }
 }
 
-/** Eğitmen profili (kadro sayfası). Özgeçmişi olmayan kişide özgeçmiş alanı hiç çıkmaz. */
+/** Sanatçı profili (kadro sayfası). Özgeçmişi olmayan kişide özgeçmiş alanı hiç çıkmaz. */
 function faculty_profile(array $f, bool $first): void
 {
     $roles = '';
@@ -299,7 +299,7 @@ function faculty_profile(array $f, bool $first): void
     </article>' . "\n";
 }
 
-/** Ana sayfa "Eğitimlerimiz" listesi: özet, alt programlar ve (varsa) fotoğraf site.json'dan. */
+/** Ana sayfa "Atölyeler ve Sanat Grupları" listesi: özet, alt programlar ve (varsa) fotoğraf site.json'dan. */
 function home_programs(): void
 {
     $media = ['ballet-dance' => 'bvn09928']; // satır fotoğrafı: galeri öğesi
@@ -359,22 +359,34 @@ function home_mosaic(): void
     }
 }
 
-/** Ders programı ve başvuru bölümü (her programın sonunda). */
-function program_tail(string $id): string
+/** Program bölümündeki yeni atölye metni: alt başlıklı (h3) bloklar. Son blokta, çağrı cümlesinin hemen altına iletişim ve form düğmeleri gelir. */
+function program_blocks(array $sections, string $id, bool $withActions): string
 {
-    return '<div class="program-schedule">
-          <h3 class="program-schedule-title">Ders Programı</h3>
-          <p class="pending-note">[İÇERİK GELECEK]</p>
-        </div>
-        <div class="program-section-actions">
-          <a class="button button-primary" href="' . e(url('application', '?program=' . $id)) . '" data-track="form">Bu Eğitime Başvur</a>
-        </div>';
+    $out = '';
+    $last = count($sections) - 1;
+    foreach ($sections as $i => $section) {
+        $out .= '<div class="program-block">
+          <h3 class="program-block-title">' . e($section['title']) . '</h3>' . "\n";
+        foreach ($section['paragraphs'] as $para) {
+            $out .= '<p>' . e($para) . '</p>' . "\n";
+        }
+        if ($withActions && $i === $last) {
+            $out .= '<div class="program-section-actions">
+          ' . phone_link() . '
+          ' . whatsapp_link() . '
+          <a class="button button-primary" href="' . e(url('application', '?program=' . $id)) . '" data-track="form">Katılım ve Bilgi Formu</a>
+        </div>' . "\n";
+        }
+        $out .= '</div>' . "\n";
+    }
+    return $out;
 }
 
-/** Eğitimler sayfasındaki tek program bölümü. Metinler site.json'dan, yerleşim programa göre. */
+/** Atölyeler sayfasındaki tek program bölümü. Metinler site.json'dan (workshop_text), yerleşim programa göre. */
 function program_section(array $p): void
 {
     $id = $p['id'];
+    $sections = $p['workshop_text']['sections'];
     echo '<section class="program-section" id="' . e($id) . '" aria-labelledby="' . e($id) . '-title">
       <div class="container program-section-grid">
         <header class="program-section-head">
@@ -401,26 +413,25 @@ function program_section(array $p): void
     };
     $prose = static function (array $p): string {
         $out = '<div class="program-prose">' . "\n";
-        foreach ($p['detail'] as $para) {
+        foreach ($p['workshop_text']['intro'] as $para) {
             $out .= '<p>' . e($para) . '</p>' . "\n";
         }
         return $out . '</div>' . "\n";
     };
 
+    echo $prose($p);
     switch ($id) {
         case 'theatre':
-            echo '<p class="program-intro">' . e($p['main_text']) . '</p>' . "\n";
             echo $subs($p, 'detail');
-            echo video_player('kisa-9', 'Tiyatro eğitimi videosu') . "\n";
-            echo program_tail($id) . "\n";
+            echo video_player('kisa-9', 'Tiyatro atölyesi videosu') . "\n";
+            echo program_blocks($sections, $id, true);
             break;
         case 'creative-drama':
-            echo $statement($p['main_text']);
             echo $subs($p, 'detail');
-            echo program_tail($id) . "\n";
+            echo program_blocks($sections, $id, true);
             break;
         case 'conservatory-preparation':
-            echo $prose($p);
+            echo program_blocks(array_slice($sections, 0, 1), $id, false);
             echo $statement($p['success_block']);
             echo '</div>
         <div class="program-section-wide">
@@ -439,27 +450,18 @@ function program_section(array $p): void
           <a class="button button-text" href="' . e(url('winners')) . '">Tüm Kazananlar <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
         </div>
         <div class="program-section-body program-section-tail">' . "\n";
-            echo program_tail($id) . "\n";
+            echo program_blocks(array_slice($sections, 1), $id, true);
             break;
         case 'ballet-dance':
-            echo $prose($p);
             echo $subs($p, 'summary');
             echo '<figure class="program-media">
           ' . gallery_srcset_img('bvn09928', '(min-width: 48em) 60vw, 100vw') . '
         </figure>' . "\n";
-            echo video_player('kisa-3', 'Bale ve dans eğitimi videosu') . "\n";
-            echo program_tail($id) . "\n";
-            break;
-        case 'rhetoric-workshop':
-            echo '<div class="poem">' . "\n";
-            foreach ($p['detail'] as $line) {
-                echo '<p class="poem-line">' . e($line) . '</p>' . "\n";
-            }
-            echo '</div>' . "\n";
-            echo program_tail($id) . "\n";
+            echo video_player('kisa-3', 'Bale ve dans atölyesi videosu') . "\n";
+            echo program_blocks($sections, $id, true);
             break;
         default:
-            echo program_tail($id) . "\n";
+            echo program_blocks($sections, $id, true);
     }
 
     echo '</div>

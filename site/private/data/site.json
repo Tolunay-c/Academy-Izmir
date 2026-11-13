@@ -1,13 +1,13 @@
 {
   "site": {
     "name": "Academy İzmir",
-    "description": "İzmir'de sanat eğitim kurumu",
+    "description": "İzmir'de Sanat Atölyeleri ve Sahne Çalışmaları",
     "home_title": "ACADEMY İZMİR",
     "tagline": "Sanatla Keşfet, Sahneyle Büyü",
-    "intro": "Çocuklardan gençlere, gençlerden yetişkinlere; yaratıcı dramadan tiyatroya, baleden dansa, oyunculuktan konservatuvar ve güzel sanatlar hazırlığına uzanan profesyonel sanat eğitimi.",
+    "intro": "Çocuklardan gençlere, gençlerden yetişkinlere; yaratıcı dramadan tiyatroya, baleden dansa, oyunculuktan konservatuvar ve güzel sanatlar hazırlığına uzanan tiyatro, dans ve yaratıcı sanat çalışmaları.",
     "founded": 2011,
     "highlights": [
-      "2011'den beri sanat eğitimi",
+      "2011'den Beri Sanatın ve Sahnenin İçinde",
       "15 yılı aşkın süredir konservatuvar ve güzel sanatlar fakültelerine hazırlık",
       "Yaklaşık %80 yerleşme başarısı"
     ]
@@ -43,8 +43,8 @@
   "programs": [
     {
       "id": "theatre",
-      "title": "TİYATRO",
-      "main_text": "Tiyatro, insanın insana tanıklık ettiği; yaşamın çelişkileriyle yüzleşme cesaretini bulduğu, düşüncelerin, duyguların ve insanın bütün hâllerinin aynı anda nefes aldığı bir karşılaşmadır. Her hikâyede yaşam yeniden sorgulanır, her karşılaşmada insan kendinden ve dünyadan yeni bir iz bulur.",
+      "title": "Tiyatro Atölyeleri",
+      "main_text": null,
       "card_summary": null,
       "detail": [],
       "success_block": null,
@@ -65,12 +65,27 @@
             "Bazen yaşamın dışına bir anlığına çıkmak, başka bir karakterin dünyasına adım atmak, insanın kendine yeniden bakmasını sağlar. Tiyatro, 18 yaş ve üzerindeki herkes için yalnızca bir hobi değil; gündelik hayatı zenginleştiren, birlikte üretmenin ruhunu hissettiren ve insanın kendini ve başkalarını anlama yolculuğuna eşlik eden bir sahne deneyimidir."
           ]
         }
-      ]
+      ],
+      "workshop_text": {
+        "intro": [
+          "Sahneyle ilk kez tanışanlar ve tiyatro deneyimini derinleştirmek isteyenler için atölyelerimiz, farklı deneyim düzeylerine uygun gruplarla gerçekleştiriliyor.",
+          "Her hafta düzenli olarak sürdürülen çalışmalarda temel oyunculuk, doğaçlama, diksiyon, beden dili, sahnede ifade ve tiyatro kültürü ele alınıyor. Katılımcılar, birlikte bir anlatı oluştururken kendilerini ve birbirlerini tanıma, gözlemleme ve anlama süreçlerinden geçiyor; bu deneyimler aracılığıyla insan davranışlarını, ilişkileri ve sahnede canlandırdıkları karakterlerin dünyasını keşfediyor."
+        ],
+        "sections": [
+          {
+            "title": "Atölye Günleri ve Saatleri",
+            "paragraphs": [
+              "Tiyatro atölyelerimiz, öğrencilerin okul, yetişkinlerin ise iş yaşamları göz önünde bulundurularak planlanıyor. Hafta içi akşam saatleri ve hafta sonu seçenekleriyle farklı yaş ve deneyim gruplarına uygun çalışma takvimleri oluşturuluyor.",
+              "Güncel atölye takvimi, grup saatleri ve katılım koşulları hakkında ayrıntılı bilgi almak için bizimle telefonla iletişime geçebilirsiniz"
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "creative-drama",
-      "title": "YARATICI DRAMA",
-      "main_text": "Her derste psikolog destekli yaratıcı drama atölyeleri düzenlenmektedir. Çalışmalarımız tiyatro ve oyunculuk eğitimi almış eğitmenler ile psikoloğun birlikte yürüttüğü, çocukların gelişim özelliklerini gözeten sanatsal eğitimlerdir.",
+      "title": "Yaratıcı Drama Atölyeleri",
+      "main_text": null,
       "card_summary": null,
       "detail": [],
       "success_block": null,
@@ -99,34 +114,63 @@
             "Ergenliğe geçişle birlikte yaşanan bedensel, duygusal ve sosyal değişimler, gençler için yeni bir kendini tanıma sürecidir. Psikolog desteğiyle yürütülen yaratıcı drama çalışmalarımız, gençlerin bu değişimleri anlamlandırmalarına, duygularını ifade etmelerine ve özgüvenlerini geliştirmelerine alan açar."
           ]
         }
-      ]
+      ],
+      "workshop_text": {
+        "intro": [
+          "Okul öncesi, ilkokul ve ortaokul yaş gruplarına yönelik yaratıcı drama atölyelerimiz, çocukların yaşlarına ve gelişim özelliklerine göre oluşturulan gruplarla gerçekleştiriliyor.",
+          "Oyun, doğaçlama, rol oynama ve grup çalışmaları aracılığıyla çocuklar; kendilerini ifade etme, başkalarını anlama, farklı bakış açılarını değerlendirme ve birlikte hareket etme deneyimi kazanıyor. Her hafta düzenli olarak sürdürülen atölyelerde hayal gücü, gözlem, iletişim ve yaratıcı düşünme süreçleri ön plana çıkıyor."
+        ],
+        "sections": [
+          {
+            "title": "Atölye Günleri ve Saatleri",
+            "paragraphs": [
+              "Yaratıcı drama atölyelerimiz, çocukların okul saatleri göz önünde bulundurularak ağırlıklı olarak hafta sonları, farklı yaş gruplarına uygun saatlerde gerçekleştiriliyor.",
+              "Güncel atölye takvimi, yaş grupları ve katılım detayları hakkında bilgi almak için bizimle telefonla iletişime geçebilirsiniz"
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "conservatory-preparation",
-      "title": "KONSERVATUVAR VE GÜZEL SANATLARA HAZIRLIK",
+      "title": "Konservatuvar ve Güzel Sanatlara Hazırlık",
       "main_text": null,
       "card_summary": "15 yılı aşkın süredir öğrencilerimizi konservatuvar ve güzel sanatlar fakültelerinin yetenek sınavlarına hazırlıyoruz. Yaklaşık %80'lik yerleşme başarısı.",
-      "detail": [
-        "Geleceğin sanatçılarını yetiştirme hedefiyle oluşturduğumuz hazırlık programımız, bir konservatuvarın çalışma disipliniyle, yıl boyunca sürdürülen kapsamlı bir sanat eğitimidir.",
-        "Türkiye'nin farklı şehirlerindeki konservatuvar ve güzel sanatlar fakültelerinin çok aşamalı yetenek sınavlarına yönelik olarak; oyunculuk, sahne, doğaçlama, diksiyon, ses, dans, hareket ve genel kültür alanlarında bütüncül bir hazırlık sunuyoruz.",
-        "Alanında deneyimli sanatçı ve eğitmenlerimizle her öğrencinin gelişimini bireysel olarak takip ediyor, sınavlarda karşılaşabilecekleri farklı aşamaları uygulamalı çalışmalarla deneyimlemelerini sağlıyoruz. Eğitimimiz, sınavların son gününe kadar devam ederek öğrencilerimizin yalnızca sınava değil, gelecekteki sanat yaşamlarına da güçlü bir başlangıç yapmalarını amaçlıyor."
-      ],
+      "detail": [],
       "success_block": "15 yılı aşkın süredir öğrencilerimizi konservatuvar ve güzel sanatlar fakültelerinin yetenek sınavlarına hazırlıyoruz. Oyunculuk, doğaçlama, tirat, ses, hareket ve sahne çalışmalarını kapsayan eğitimlerimizle öğrencilerimizin Türkiye'nin önde gelen sanat eğitimi kurumlarına yerleşmesinden gurur duyuyoruz. Yaklaşık %80'lik yerleşme başarımız, bu çalışmalarımızın değerli bir sonucudur.",
-      "subprograms": []
+      "subprograms": [],
+      "workshop_text": {
+        "intro": [
+          "Konservatuvar sınavlarına hazırlıkta uzun yıllardır benzer yöntemler uygulanıyor. Oyunculukla henüz yeni tanışan gençler, çoğu zaman kendilerine özgü ifade biçimlerini keşfetmeden başkalarının yorumlarını ve oyunculuk tercihlerini taklit ederek sınavlara hazırlanıyor. Oysa bir oyuncunun gelişimi, başkasının nasıl oynadığını öğrenmekten önce kendi olanaklarını tanımasıyla başlıyor.",
+          "Academy İzmir’de hazırlık sürecimizi bu anlayış üzerine kuruyoruz. Adayın sesini, bedenini, duygularını ve düşünme biçimini tanımasını; bir metni ezberlenmiş yorumlarla değil, kendi gözlemleri ve çözümlemeleriyle ele almasını önemsiyoruz.",
+          "Amacımız, bütün adaylara aynı tiradı aynı biçimde oynatmak değil; her adayın kendisine uygun metni bulmasını, karakterin dünyasını anlamasını ve sahnede kendi yorumunu oluşturmasını sağlamak."
+        ],
+        "sections": [
+          {
+            "title": "Çalışma İçeriği",
+            "paragraphs": [
+              "Hazırlık programımız; oyunculuk, tirat, doğaçlama, metin ve karakter çözümlemesinin yanı sıra ses, nefes, diksiyon, hareket, dans, ritim ve beden farkındalığı çalışmalarını bir araya getiriyor.",
+              "Bu disiplinleri birbirinden bağımsız dersler olarak değil, oyuncunun sahnedeki varlığını tamamlayan bir bütün olarak ele alıyoruz.",
+              "Grup çalışmalarında sahne ilişkileri, doğaçlama ve ortak üretim üzerinde dururken birebir çalışmalarda adayın metin seçimine, karakter yorumuna, ses ve beden kullanımına özel olarak odaklanıyoruz. Böylece her aday aynı programın içinde kendi gelişim yolunu izliyor."
+            ]
+          },
+          {
+            "title": "Ders Programı ve Katılım",
+            "paragraphs": [
+              "Öğrenimine devam eden öğrenciler ve mezun adaylar için farklı gün ve saatlerde çalışma programları oluşturuyoruz. Okula devam eden adayların ders saatlerini, mezun adayların ise gün içindeki çalışma olanaklarını dikkate alıyoruz.",
+              "Programa kabul öncesinde her adayla mutlaka yüz yüze bireysel görüşme gerçekleştiriyoruz. Bu görüşmede adayın hedeflerini, mevcut birikimini ve gelişime açık yönlerini değerlendiriyor; grup ve özel birebir çalışmaların birlikte yer aldığı hazırlık sürecini buna göre planlıyoruz.",
+              "Güncel program ve yüz yüze görüşme için bizimle telefonla iletişime geçebilirsiniz"
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "ballet-dance",
-      "title": "BALE VE DANS",
+      "title": "Bale ve Dans Atölyeleri",
       "main_text": null,
       "card_summary": "Klasik bale, modern dans, Latin ve salon dansları ile çocukları, gençleri ve yetişkinleri hareketin ve sanatın dünyasıyla buluşturuyoruz.",
-      "detail": [
-        "Dans, bedenin müzikle buluştuğu, duyguların harekete dönüştüğü evrensel bir ifade biçimidir.",
-        "Academy İzmir'de klasik bale, modern dans, Latin ve salon dansları eğitimlerimizle çocukları, gençleri ve yetişkinleri hareketin ve sanatın dünyasıyla buluşturuyoruz.",
-        "Çocuklar için bale ve dans; beden farkındalığını, duruşu, koordinasyonu, ritim duygusunu ve estetik algıyı geliştirirken disiplin, özgüven ve birlikte hareket etme becerilerini destekler.",
-        "Her çocuğun balerin, her gencin dansçı olması gerekmez; bazen dansın en güzel kazanımı, insanın kendi bedenini tanıması, müziği hissetmesi ve yaşam boyunca taşıyacağı bir sanat sevgisi edinmesidir.",
-        "Gençler ve yetişkinler içinse dans, gündelik yaşamın sınırlarından uzaklaşmanın, bedenini keşfetmenin, sosyalleşmenin ve kendini özgürce ifade etmenin keyifli bir yoludur.",
-        "Deneyimli eğitmenlerimiz eşliğinde, her yaş grubuna uygun çalışmalarla dansı yalnızca öğrenilen bir teknik değil, yaşamı zenginleştiren sanatsal bir deneyim olarak ele alıyoruz."
-      ],
+      "detail": [],
       "success_block": null,
       "subprograms": [
         {
@@ -147,21 +191,49 @@
           "card_summary": "Ritim, dans teknikleri ve müzikle uyum.",
           "detail": []
         }
-      ]
+      ],
+      "workshop_text": {
+        "intro": [
+          "Bale ve dans atölyelerimiz, çocuklar ve yetişkinler için farklı yaş ve deneyim düzeylerine uygun olarak planlanıyor. Daha önce hiç dans etmemiş katılımcılar da çalışmalarımıza başlangıç seviyesinden katılabiliyor.",
+          "Çocuklar için müzik, ritim, koordinasyon, beden farkındalığı ve disiplinli hareket alışkanlığını geliştiren; yetişkinler için ise bedenini tanımaya, hareket özgürlüğü kazanmaya ve dansın ifade olanaklarını keşfetmeye odaklanan çalışmalar gerçekleştiriyoruz.",
+          "Her yaşta dansa başlamanın mümkün olduğuna inanıyor, sağlam bir temel oluşturmayı ve gelişimi kişinin kendi ritminde sürdürmesini önemsiyoruz."
+        ],
+        "sections": [
+          {
+            "title": "Atölye Günleri ve Saatleri",
+            "paragraphs": [
+              "Çocukların okul, yetişkinlerin ise iş ve günlük yaşam programlarına uygun farklı gün ve saatlerde çalışmalar düzenleniyor.",
+              "Güncel grup saatleri, seviyeler ve katılım detayları hakkında bilgi almak için bizimle telefonla iletişime geçebilirsiniz."
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "rhetoric-workshop",
-      "title": "RETORİKA ATÖLYESİ",
+      "title": "Retorika Atölyesi",
       "main_text": null,
       "card_summary": "Söyleyecek sözüm var ama nasıl söyleyeceğimi bilmiyorum diyorsanız, Retorika Atölyesinde buluşmalıyız.",
-      "detail": [
-        "Kusursuz konuşma yoktur ama sonuç veren her konuşma kusursuzdur…",
-        "Retorika, düşünmenin biçimiydi. Bugün, konuşma hâlâ var; fakat artık anlamı yok.",
-        "İster misiniz bu eksikliği birlikte tamamlayalım ve dünyayı konuşarak yeniden kuralım?",
-        "Söyleyecek sözüm var ama nasıl söyleyeceğimi bilmiyorum diyorsanız, Retorika Atölyesinde buluşmalıyız."
-      ],
+      "detail": [],
       "success_block": null,
-      "subprograms": []
+      "subprograms": [],
+      "workshop_text": {
+        "intro": [
+          "Aristoteles’in retorik anlayışında temel mesele, her durumda ikna etmeye elverişli olanakları görebilmektir. Çünkü etkili konuşma, yalnızca güzel sözcükler seçmek değil; düşünce, duygu ve anlatım arasında güçlü bir bütünlük kurabilmektir.",
+          "Retorika atölyemizde farklı konuşma üsluplarını, anlatım biçimlerini ve ikna yöntemlerini ele alıyoruz. Düşünceyi doğru yapılandırma, sözcükleri yerinde kullanma, güçlü bir anlatım oluşturma ve dinleyiciyle etkili bir ilişki kurma üzerine çalışıyoruz.",
+          "Ses, nefes, vurgu, tonlama ve beden dilini bu bütünlüğün ayrılmaz parçaları olarak değerlendiriyoruz. Amacımız, katılımcılara tek bir konuşma biçimi kazandırmak değil; farklı durumlara ve dinleyicilere uygun, kendilerine özgü, etkili ve ikna edici bir ifade gücü geliştirmelerini sağlamak."
+        ],
+        "sections": [
+          {
+            "title": "Atölye Günleri ve Saatleri",
+            "paragraphs": [
+              "Retorika çalışmalarımız, katılımcıların beklentileri, kişisel hedefleri ve günlük yaşamları göz önünde bulundurularak bireysel veya grup çalışmaları şeklinde planlanıyor.",
+              "Hafta içi akşam saatlerinin yanı sıra, hafta içi gündüz ve hafta sonu seçenekleriyle esnek çalışma programları oluşturuluyor. Böylece her katılımcının kendi ihtiyaçlarına ve zamanına uygun bir çalışma sürecine katılması hedefleniyor.",
+              "Kendinizi daha güçlü ve etkili ifade etmek için bizimle iletişime geçin. Size uygun çalışma biçimini, güncel atölye saatlerini ve katılım seçeneklerini birlikte belirlemek için bizi telefonla arayın."
+            ]
+          }
+        ]
+      }
     }
   ],
   "faculty": [

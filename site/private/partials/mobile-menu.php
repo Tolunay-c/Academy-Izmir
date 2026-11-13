@@ -7,7 +7,7 @@
 <?php endforeach; ?>
       </ul>
       <div class="mobile-menu-actions">
-        <a class="button button-primary button-block" href="<?= e(url('application')) ?>" data-track="form">Eğitim Ön Başvuru Formu</a>
+        <a class="button button-primary button-block" href="<?= e(url('application')) ?>" data-track="form">Katılım ve Bilgi Formu</a>
         <?= phone_link('button button-secondary button-block') ?>
 
         <?= whatsapp_link('button button-secondary button-block') ?>

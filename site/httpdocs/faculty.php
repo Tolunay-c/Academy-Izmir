@@ -10,7 +10,7 @@ partial('mobile-menu');
     <header class="page-header">
       <div class="container page-header-inner">
         <p class="section-eyebrow">Academy İzmir</p>
-        <h1 class="page-header-title">Eğitmen Kadromuz</h1>
+        <h1 class="page-header-title">Sanatçı Kadromuz</h1>
       </div>
     </header>
     <section class="section" aria-labelledby="faculty-index-title">

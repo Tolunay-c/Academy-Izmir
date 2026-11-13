@@ -61,7 +61,7 @@ function base_url(): string
     return rtrim($base !== '' ? $base : 'https://www.academyizmir.com', '/');
 }
 
-/** Sayfa adresi: url('programs') => /egitimler, url('programs', '#theatre') => /egitimler#theatre. */
+/** Sayfa adresi: url('programs') => /atolyeler, url('programs', '#theatre') => /atolyeler#theatre. */
 function url(string $id, string $suffix = ''): string
 {
     $routes = routes();

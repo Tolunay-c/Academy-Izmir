@@ -1,6 +1,6 @@
 <?php
 /**
- * Ön başvuru formu back-end'i: oturum, CSRF, bal tuzağı, zaman tuzağı, hız sınırı, sunucu tarafı doğrulama,
+ * Katılım ve bilgi formu back-end'i: oturum, CSRF, bal tuzağı, zaman tuzağı, hız sınırı, sunucu tarafı doğrulama,
  * PRG (Post/Redirect/Get) ve e-posta gönderimi. Yalnızca application.php kullanır.
  * Başvurular sunucuda KAYDEDİLMEZ (yalnızca e-posta). Loga kişisel veri yazılmaz.
  * PHP 8.2 uyumlu.
@@ -24,7 +24,7 @@ function app_messages(): array
         'birthdate_invalid' => 'Lütfen geçerli bir doğum tarihi seçin.',
         'age-group' => 'Lütfen bir yaş grubu seçin.',
         'education' => 'Lütfen eğitim durumunuzu seçin.',
-        'program' => 'Lütfen bir eğitim seçin.',
+        'program' => 'Lütfen bir atölye seçin.',
         'phone' => 'Lütfen geçerli bir telefon numarası yazın.',
         'email' => 'Lütfen geçerli bir e-posta adresi yazın.',
         'art-experience' => 'Lütfen listedeki seçeneklerden birini seçin.',

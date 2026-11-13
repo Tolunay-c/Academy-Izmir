@@ -37,14 +37,15 @@ $add('http -> https', '(.*)', $redirect($canonical),
     $cond('{HTTPS}', 'off') . $cond('{HTTP_HOST}', $hostRegex));
 // 3. /index.php ve /index.html -> /
 $add('index.php ve index.html -> /', '^index\.(php|html)$', $redirect('/'));
-// 4. Sondaki eğik çizgi: /egitimler/ -> /egitimler
+// 4. Eski adresler (eski site .html/.aspx ve yeni sitenin eski adları, ör. /egitimler): 301, tek adım, sorgu dizesi korunur.
+// Sondaki eğik çizgiyle gelen istek (/egitimler/) de doğrudan güncel adrese gider (önce eğik çizgi kuralı çalışırsa zincir olurdu).
+foreach ($old as $from => $to) {
+    $add('Eski adres: ' . $from, '^' . preg_quote(ltrim($from, '/'), '/') . '/?$', $redirect($to));
+}
+// 5. Sondaki eğik çizgi: /atolyeler/ -> /atolyeler
 $add('Sondaki egik cizgiyi kaldir', '^(.+)/$', $redirect('/{R:1}'),
     '            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />' . "\n"
     . '            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />' . "\n");
-// 5. Eski site adresleri (301)
-foreach ($old as $from => $to) {
-    $add('Eski site: ' . $from, $pat($from), $redirect($to));
-}
 // 6. Doğrudan .php erişimi -> Türkçe adres (yalnızca dışarıdan gelen istek, iç yeniden yazmayı etkilemez)
 foreach ($routes as $id => $r) {
     $add('PHP dosyasi -> adres: ' . $r['file'], $pat($r['file']), $redirect($r['path']),

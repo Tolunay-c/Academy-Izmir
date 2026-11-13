@@ -45,18 +45,19 @@ foreach ($routes as $id => $r) {
 if ($path === '/index.php' || $path === '/index.html') {
     $redirect('/', $query);
 }
-// 2. Sondaki eğik çizgi tek tip: /egitimler/ -> /egitimler
+// 2. Eski adresler (eski site ve yeni sitenin eski adları) -> güncel adres, tek adım (eğik çizgili hâli de)
+$old = require PRIVATE_DIR . '/redirects.php';
+$trimmed = $path === '/' ? $path : rtrim($path, '/');
+if (isset($old[$trimmed])) {
+    $redirect($old[$trimmed], $query);
+}
+// 3. Sondaki eğik çizgi tek tip: /atolyeler/ -> /atolyeler
 if ($path !== '/' && substr($path, -1) === '/') {
     $redirect(rtrim($path, '/'), $query);
 }
-// 3. Doğrudan .php erişimi -> Türkçe adres
+// 4. Doğrudan .php erişimi -> Türkçe adres
 if (isset($byFile[$path])) {
     $redirect($byFile[$path], $query);
-}
-// 4. Eski site adresleri -> yeni adresler
-$old = require PRIVATE_DIR . '/redirects.php';
-if (isset($old[$path])) {
-    $redirect($old[$path], $query);
 }
 // 5. Sayfalar
 if (isset($byPath[$path])) {

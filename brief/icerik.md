@@ -19,9 +19,9 @@ Bu dosya müşterinin (Özlem Başkaya) maillerinden derlenmiştir. Çelişkiler
 ## 1. Menü (Sayfa Yapısı)
 
 1. Ana Sayfa
-2. Eğitimlerimiz
+2. Atölyeler ve Sanat Grupları (menüde kısa: Atölyeler)
 3. Hakkımızda
-4. Eğitmen Kadromuz
+4. Sanatçı Kadromuz (menüde kısa: Kadro)
 5. Kazananlarımız
 6. Sanatsal Projelerimiz ve Galeri
 7. Güncel Kayıtlar ve Duyurular
@@ -38,7 +38,7 @@ Bu dosya müşterinin (Özlem Başkaya) maillerinden derlenmiştir. Çelişkiler
 
 **Hero videosu:** `ACADEMYİZMİR_REELS.mp4` (dikey Reels videosu). Sessiz otomatik oynar, "sesi aç" butonu olur, poster görseli olur, sıkıştırılmış hâli kullanılır.
 
-**Ana sayfa yönlendirmeleri:** Eğitimlerimiz · Neden Academy İzmir? · Eğitmen Kadromuz · Güncel Kayıtlar · Başvuru · İletişim
+**Ana sayfa yönlendirmeleri:** Atölyeler ve Sanat Grupları · Neden Academy İzmir? · Sanatçı Kadromuz · Güncel Kayıtlar · Başvuru · İletişim
 
 **Öne çıkan bilgiler:**
 - 2011'den beri sanat eğitimi
@@ -76,11 +76,14 @@ Academy İzmir'de sanatın içinde, hayatın tam kalbinde buluşalım!
 
 ---
 
-## 4. Eğitimlerimiz
+## 4. Atölyeler ve Sanat Grupları
+
+**Kasım 2026 güncellemesi:** Program başlıkları aşağıdaki gibi değişti. Her programın yeni atölye metni (alt başlıklarıyla) `brief/atolye-metinleri.md` bölüm 3'tedir ve sitede o metinle yayınlanır. Aşağıdaki "Ana metin" ve "Detay metni" alanları programların KENDİ bölümü için artık kullanılmaz; alt programların metinleri ve kart özetleri geçerlidir.
+
 
 Sıralama zorunlu. Her programda "kart özeti" (liste/kart görünümü için kısa metin) ve "detay metni" (eğitim sayfası için) var.
 
-### 4.1 TİYATRO
+### 4.1 Tiyatro Atölyeleri
 
 **Ana metin:**
 Tiyatro, insanın insana tanıklık ettiği; yaşamın çelişkileriyle yüzleşme cesaretini bulduğu, düşüncelerin, duyguların ve insanın bütün hâllerinin aynı anda nefes aldığı bir karşılaşmadır. Her hikâyede yaşam yeniden sorgulanır, her karşılaşmada insan kendinden ve dünyadan yeni bir iz bulur.
@@ -93,7 +96,7 @@ Tiyatro, insanın insana tanıklık ettiği; yaşamın çelişkileriyle yüzleş
 - **Kart özeti:** Sahneyle tanışmak veya oyunculuk becerilerini geliştirmek isteyen yetişkinlere yönelik doğaçlama, karakter yaratma ve sahne çalışmaları. 18 yaş ve üzerindeki tüm katılımcılar için uygundur.
 - **Detay metni:** Bazen yaşamın dışına bir anlığına çıkmak, başka bir karakterin dünyasına adım atmak, insanın kendine yeniden bakmasını sağlar. Tiyatro, 18 yaş ve üzerindeki herkes için yalnızca bir hobi değil; gündelik hayatı zenginleştiren, birlikte üretmenin ruhunu hissettiren ve insanın kendini ve başkalarını anlama yolculuğuna eşlik eden bir sahne deneyimidir.
 
-### 4.2 YARATICI DRAMA
+### 4.2 Yaratıcı Drama Atölyeleri
 
 **Ana metin:**
 Her derste psikolog destekli yaratıcı drama atölyeleri düzenlenmektedir. Çalışmalarımız tiyatro ve oyunculuk eğitimi almış eğitmenler ile psikoloğun birlikte yürüttüğü, çocukların gelişim özelliklerini gözeten sanatsal eğitimlerdir.
@@ -110,7 +113,7 @@ Her derste psikolog destekli yaratıcı drama atölyeleri düzenlenmektedir. Ça
 - **Kart özeti:** Kendini ifade etme, farklı bakış açıları geliştirme ve yaratıcı grup çalışmaları.
 - **Detay metni:** Ergenliğe geçişle birlikte yaşanan bedensel, duygusal ve sosyal değişimler, gençler için yeni bir kendini tanıma sürecidir. Psikolog desteğiyle yürütülen yaratıcı drama çalışmalarımız, gençlerin bu değişimleri anlamlandırmalarına, duygularını ifade etmelerine ve özgüvenlerini geliştirmelerine alan açar.
 
-### 4.3 KONSERVATUVAR VE GÜZEL SANATLARA HAZIRLIK
+### 4.3 Konservatuvar ve Güzel Sanatlara Hazırlık
 
 - **Kart özeti:** 15 yılı aşkın süredir öğrencilerimizi konservatuvar ve güzel sanatlar fakültelerinin yetenek sınavlarına hazırlıyoruz. Yaklaşık %80'lik yerleşme başarısı.
 - **Detay metni:**
@@ -125,7 +128,7 @@ Alanında deneyimli sanatçı ve eğitmenlerimizle her öğrencinin gelişimini 
 - Bu sayfada kısa bir kazananlar vitrini olacak (Kazananlarımız verisinden).
 - **AÇIK SORU:** "Güzel Sanatlar Lisesine Hazırlık" ilk mailde vardı, son eğitim mailinde yok. Müşteri GSL tiyatro bölümü kazananlarını da göndereceğini söyledi. Onay gelene kadar ayrı alt program olarak EKLENMEZ.
 
-### 4.4 BALE VE DANS
+### 4.4 Bale ve Dans Atölyeleri
 
 - **Kart özeti:** Klasik bale, modern dans, Latin ve salon dansları ile çocukları, gençleri ve yetişkinleri hareketin ve sanatın dünyasıyla buluşturuyoruz.
 - **Alt programlar:**
@@ -146,7 +149,7 @@ Gençler ve yetişkinler içinse dans, gündelik yaşamın sınırlarından uzak
 
 Deneyimli eğitmenlerimiz eşliğinde, her yaş grubuna uygun çalışmalarla dansı yalnızca öğrenilen bir teknik değil, yaşamı zenginleştiren sanatsal bir deneyim olarak ele alıyoruz.
 
-### 4.5 RETORİKA ATÖLYESİ
+### 4.5 Retorika Atölyesi
 
 - **Kart özeti:** Söyleyecek sözüm var ama nasıl söyleyeceğimi bilmiyorum diyorsanız, Retorika Atölyesinde buluşmalıyız.
 - **Detay metni:**
@@ -167,7 +170,7 @@ Söyleyecek sözüm var ama nasıl söyleyeceğimi bilmiyorum diyorsanız, Retor
 
 ---
 
-## 5. Eğitmen Kadromuz
+## 5. Sanatçı Kadromuz
 
 Sıralama 1'den 10'a ZORUNLU. Fotoğraf, isim, unvan ve özgeçmiş bu sıraya göre eşleşir. Tüm kartlar aynı görsel düzende, sade, okunaklı, profesyonel.
 
@@ -343,6 +346,8 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 13. Başvuru formu gönderildiğinde başvurular hangi e-posta adresine gitsin? (yanıtlandı: info@academyizmir.com ve ocicaney@gmail.com)
 14. 2025 kazananlarının kazandıkları üniversite, fakülte ve bölüm bilgileri. Ayrıca Beren Özdemir 2024, İlay Kıngır ve Rasim Tuna Yılmaz 2026 listelerinde de var. Bu öğrenciler 2025'te de mi kazandı?
 15. Başvuru formundaki Eğitim Durumu seçenekleri onaylanmalı (şu anki liste: Okul öncesi, İlkokul öğrencisi, Ortaokul öğrencisi, Lise öğrencisi, Lise mezunu, Üniversite öğrencisi, Üniversite mezunu, Diğer).
+16. Eski sitedeki 2023 ve önceki yılların kazanan listesi eklenecek.
+17. Müşterinin bahsettiği kuruluş amacıyla ilgili metin bekleniyor.
 
 ---
 
@@ -352,9 +357,9 @@ Metnin tamamı brief/kvkk.md dosyasındadır. Veri sorumlusu: Mayra Sanat Reklam
 
 ---
 
-## 13. Eğitim Ön Başvuru Formu
+## 13. Katılım ve Bilgi Formu
 
-- Sayfa başlığı: "Eğitim Ön Başvuru Formu"
+- Sayfa başlığı: "Katılım ve Bilgi Formu" (adres: /katilim-formu)
 - Form başlığı: "Sanat Yolculuğuna İlk Adımı At!"
 - Açıklama: "Eğitim programlarımız hakkında bilgi almak ve ön başvurunuzu oluşturmak için aşağıdaki alanları doldurabilirsiniz."
 - Alanlar (bu sırayla):
@@ -362,7 +367,7 @@ Metnin tamamı brief/kvkk.md dosyasındadır. Veri sorumlusu: Mayra Sanat Reklam
   2. Doğum Tarihi (zorunlu)
   3. Yaş Grubu (zorunlu): Okul öncesi, İlkokul, Ortaokul, Lise, 18 yaş ve üzeri
   4. Eğitim Durumu (zorunlu): Okul öncesi, İlkokul öğrencisi, Ortaokul öğrencisi, Lise öğrencisi, Lise mezunu, Üniversite öğrencisi, Üniversite mezunu, Diğer (liste onay bekliyor, bölüm 11, madde 15)
-  5. Başvurmak İstediğiniz Eğitim (zorunlu): Tiyatro, Yaratıcı Drama, Konservatuvar ve Güzel Sanatlara Hazırlık, Bale ve Dans, Retorika Atölyesi
+  5. Katılmak İstediğiniz Atölye (zorunlu): Tiyatro Atölyeleri, Yaratıcı Drama Atölyeleri, Konservatuvar ve Güzel Sanatlara Hazırlık, Bale ve Dans Atölyeleri, Retorika Atölyesi
   6. Telefon Numarası (zorunlu)
   7. E-posta Adresi (isteğe bağlı)
   8. Sanat Eğitimi Deneyiminiz (isteğe bağlı): Var, Yok (varsayılan: Yok)

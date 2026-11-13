@@ -14,10 +14,10 @@ partial('mobile-menu');
     <header class="page-header">
       <div class="container page-header-inner">
         <p class="section-eyebrow">Academy İzmir</p>
-        <h1 class="page-header-title">Eğitim Ön Başvuru Formu</h1>
+        <h1 class="page-header-title">Katılım ve Bilgi Formu</h1>
       </div>
     </header>
-    <section class="section application-section" aria-label="Eğitim ön başvurusu">
+    <section class="section application-section" aria-label="Katılım ve bilgi formu">
       <div class="container application-layout">
         <div class="application-form-area">
 <?php if ($form['view'] === 'success'): ?>
@@ -26,7 +26,7 @@ partial('mobile-menu');
             <p class="section-lead">Teşekkür ederiz.</p>
             <div class="hero-actions">
               <a class="button button-primary" href="<?= e(url('home')) ?>">Ana Sayfa</a>
-              <a class="button button-secondary" href="<?= e(url('programs')) ?>">Eğitimlerimiz</a>
+              <a class="button button-secondary" href="<?= e(url('programs')) ?>">Atölyeler</a>
             </div>
           </div>
 <?php else: ?>
@@ -103,10 +103,10 @@ partial('mobile-menu');
             </div>
 
             <div class="form-field">
-              <label class="form-label" for="app-program">Başvurmak İstediğiniz Eğitim</label>
+              <label class="form-label" for="app-program">Katılmak İstediğiniz Atölye</label>
               <span class="form-select">
                 <select class="form-control" id="app-program" name="program" required<?= f_invalid('program') ?> aria-describedby="app-program-error" data-validate="program">
-<?php select_options(program_options(), 'Eğitim seçin', (string) $form['values']['program']); ?>
+<?php select_options(program_options(), 'Atölye seçin', (string) $form['values']['program']); ?>
                 </select>
                 <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
               </span>

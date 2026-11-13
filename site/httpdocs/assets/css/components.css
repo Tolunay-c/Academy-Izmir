@@ -306,7 +306,7 @@
   }
 }
 
-/* ---- Eğitmen kartı -------------------------------------------------------- */
+/* ---- Sanatçı kartı -------------------------------------------------------- */
 .instructor-card {
   display: grid;
   align-content: start;
@@ -1385,7 +1385,7 @@ textarea.form-control {
   color: var(--color-accent);
 }
 
-/* ---- Eğitimler (numaralı editoryal liste) -------------------------------------------------- */
+/* ---- Atölyeler (numaralı editoryal liste) -------------------------------------------------- */
 .program-list {
   counter-reset: program;
   border-bottom: var(--line-width) solid var(--color-line);
@@ -1522,7 +1522,7 @@ textarea.form-control {
   line-height: var(--leading-body);
 }
 
-/* ---- Yatay şerit (kazananlar, eğitmenler) --------------------------------------------------------------- */
+/* ---- Yatay şerit (kazananlar, sanatçılar) --------------------------------------------------------------- */
 .strip {
   overflow-x: auto;
   overscroll-behavior-x: contain;
@@ -1708,7 +1708,7 @@ textarea.form-control {
     aspect-ratio: auto;
   }
 
-  /* Eğitmen şeridi masaüstünde ızgaraya döner. */
+  /* Sanatçı şeridi masaüstünde ızgaraya döner. */
   .strip-collapse {
     overflow: visible;
     padding-bottom: 0;
@@ -1736,7 +1736,7 @@ textarea.form-control {
 }
 
 /* ==========================================================================
-   Eğitimlerimiz sayfası
+   Atölyeler sayfası
    ========================================================================== */
 
 /* ---- Sayfa içi navigasyon (sticky, header'ın altında) -------------------------------------- */
@@ -1949,39 +1949,29 @@ textarea.form-control {
   object-fit: cover;
 }
 
-/* Retorika: şiirsel, satır satır, başlık fontunda. */
-.poem {
+/* Atölye metni blokları: alt başlık (h3) ve paragraflar. Son blokta çağrı cümlesinin altında düğmeler. */
+.program-block {
   display: grid;
-  gap: var(--space-5);
-}
-
-.poem-line {
-  max-width: var(--container-narrow);
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  line-height: var(--leading-heading);
-  letter-spacing: var(--tracking-display);
-  text-wrap: balance;
-}
-
-.poem-line:last-child {
-  color: var(--color-accent);
-  font-style: italic;
-}
-
-.program-schedule {
-  display: grid;
-  gap: var(--space-3);
+  gap: var(--space-4);
   padding-top: var(--space-5);
   border-top: var(--line-width) solid var(--color-line);
 }
 
-.program-schedule-title {
-  font-size: var(--text-lg);
+.program-block-title {
+  font-size: var(--text-xl);
+}
+
+.program-block p {
+  max-width: var(--measure);
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
 }
 
 .program-section-actions {
   display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
 }
 
 /* ---- Video oynatıcı (otomatik oynatma yok) ------------------------------------------------------- */
@@ -2176,35 +2166,10 @@ textarea.form-control {
 }
 
 /* Kurucular */
-.founders-grid {
-  display: grid;
-  gap: var(--space-6);
-}
-
 .founders-cards {
   display: grid;
   gap: var(--space-6) var(--gutter);
   grid-template-columns: repeat(auto-fit, minmax(min(var(--card-min), 100%), 1fr));
-}
-
-.photo-placeholder {
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  gap: var(--space-2);
-  min-height: calc(var(--touch-min) * 4);
-  aspect-ratio: var(--ratio-landscape);
-  padding: var(--space-5);
-  background-color: var(--color-surface);
-  border: var(--line-width) solid var(--color-line-strong);
-  text-align: center;
-}
-
-.photo-placeholder-text {
-  color: var(--color-text);
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  line-height: var(--leading-snug);
 }
 
 .instructor-card.is-linked {
@@ -2285,24 +2250,13 @@ textarea.form-control {
     max-height: none;
   }
 
-  .founders-grid {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-    gap: var(--gutter);
-    align-items: stretch;
-  }
-
-  .photo-placeholder {
-    aspect-ratio: auto;
-    min-height: 100%;
-  }
-
   .program-section-tail {
     grid-column: 2;
   }
 }
 
 /* ==========================================================================
-   Eğitmen Kadromuz sayfası
+   Sanatçı Kadromuz sayfası
    ========================================================================== */
 .faculty-index-list {
   counter-reset: faculty-index;

@@ -53,20 +53,14 @@ partial('mobile-menu');
         <header class="section-header">
           <h2 class="section-title" id="about-founders-title">Kurucularımız</h2>
         </header>
-        <div class="founders-grid">
-          <div class="photo-placeholder">
-            <p class="pending-note">[İÇERİK GELECEK]</p>
-            <p class="photo-placeholder-text">Kurucuların güncel fotoğrafı</p>
-          </div>
-          <ul class="founders-cards">
+        <ul class="founders-cards">
 <?php foreach (faculty_sorted() as $f): if (!in_array($f['id'], ['ozlem-baskaya', 'ozgur-baskaya'], true)) { continue; } ?>
           <li>
             <?= instructor_card($f) ?>
 
           </li>
 <?php endforeach; ?>
-          </ul>
-        </div>
+        </ul>
       </div>
     </section>
 

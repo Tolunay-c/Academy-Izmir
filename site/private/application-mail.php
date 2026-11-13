@@ -1,6 +1,6 @@
 <?php
 /**
- * Ön başvuru e-postası (PHPMailer, SMTP). Yalnızca formdaki alanlar gönderilir: IP adresi, tarayıcı bilgisi gibi
+ * Katılım formu e-postası (PHPMailer, SMTP). Yalnızca formdaki alanlar gönderilir: IP adresi, tarayıcı bilgisi gibi
  * KVKK metninde olmayan veriler e-postaya eklenmez. Başvurular sunucuda saklanmaz.
  */
 declare(strict_types=1);
@@ -20,7 +20,7 @@ function application_mail_rows(array $v): array
         ['Doğum Tarihi', $birth !== false ? $birth->format('d.m.Y') : $v['birthdate']],
         ['Yaş Grubu', (string) option_label($app['age_groups'], $v['age-group'])],
         ['Eğitim Durumu', (string) option_label($app['education_levels'], $v['education'])],
-        ['Başvurmak İstediği Eğitim', (string) option_label(program_options(), $v['program'])],
+        ['Katılmak İstediği Atölye', (string) option_label(program_options(), $v['program'])],
         ['Telefon', $v['phone']],
         ['E-posta', $v['email'] !== '' ? $v['email'] : '-'],
         ['Sanat Eğitimi Deneyimi', (string) option_label($app['art_experience'], $v['art-experience'])],
@@ -83,7 +83,7 @@ function send_application_mail(array $v): bool
         if ($v['email'] !== '') {
             $mail->addReplyTo($v['email'], $v['name']);
         }
-        $mail->Subject = 'Yeni Ön Başvuru: ' . $v['name'] . ' - ' . $program;
+        $mail->Subject = 'Yeni Katılım Formu: ' . $v['name'] . ' - ' . $program;
         $mail->isHTML(true);
         $mail->Body = $html;
         $mail->AltBody = $plain;

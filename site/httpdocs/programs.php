@@ -10,10 +10,10 @@ partial('mobile-menu');
     <header class="page-header">
       <div class="container page-header-inner">
         <p class="section-eyebrow">Academy İzmir</p>
-        <h1 class="page-header-title">Eğitimlerimiz</h1>
+        <h1 class="page-header-title">Atölyeler ve Sanat Grupları</h1>
       </div>
     </header>
-    <nav class="page-nav" aria-label="Eğitimlerimiz" data-page-nav>
+    <nav class="page-nav" aria-label="Atölyeler ve Sanat Grupları" data-page-nav>
       <div class="page-nav-inner">
         <ul class="page-nav-list" data-page-nav-list>
 <?php foreach (site()['programs'] as $program): ?>

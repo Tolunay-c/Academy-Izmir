@@ -67,7 +67,7 @@ Sunucuda `private/config.php` dosyasını oluşturup aşağıdaki değerleri dol
 
 `config.php` yoksa ya da mail ayarları boşsa form hata vermez, "Başvurunuz şu anda gönderilemedi" ekranını gösterir ve nedeni loglar (`mail_not_configured`).
 
-## Ön başvuru formu (/on-basvuru)
+## Katılım ve bilgi formu (/katilim-formu)
 
 Form aynı adrese POST eder (`application.php`), JS kapalıyken de sunucu tarafı doğrulamayla çalışır. Kurallar `main.js` ile aynıdır (ad harf filtresi ve en az 2 harf, doğum tarihi 1930-01-01 ile bugün arası, seçenekler `site.json` `application` ve `programs` kayıtlarından, telefon 0 ile başlayan 11 rakam, e-posta isteğe bağlı, mesaj en fazla 2000 karakter, KVKK onayı zorunlu).
 
@@ -93,8 +93,8 @@ Form aynı adrese POST eder (`application.php`), JS kapalıyken de sunucu taraf�
 ### Formu canlıda test etme
 
 1. `config.php` dolduruldu, `private/storage` yazılabilir.
-2. https://www.academyizmir.com/on-basvuru adresinde formu gerçek bilgilerle (kendi e-postanızı yazarak) doldurup gönderin. En az 3 saniye bekleyin, daha hızlı gönderimler sessizce yok sayılır.
-3. Başarı ekranı ("Ön başvurunuz bize ulaştı.") görünmeli, `info@academyizmir.com` ve `ocicaney@gmail.com` kutularına tek bir e-posta gelmeli. Konu: `Yeni Ön Başvuru: <Ad Soyad> - <Eğitim>`, Reply-To: yazdığınız e-posta.
+2. https://www.academyizmir.com/katilim-formu adresinde formu gerçek bilgilerle (kendi e-postanızı yazarak) doldurup gönderin. En az 3 saniye bekleyin, daha hızlı gönderimler sessizce yok sayılır.
+3. Başarı ekranı ("Ön başvurunuz bize ulaştı.") görünmeli, `info@academyizmir.com` ve `ocicaney@gmail.com` kutularına tek bir e-posta gelmeli. Konu: `Yeni Katılım Formu: <Ad Soyad> - <Atölye>`, Reply-To: yazdığınız e-posta.
 4. Gmail'e gelen test e-postasında **"Orijinali göster"** ile **SPF, DKIM ve DMARC** sonuçlarının **PASS** olduğunu kontrol edin. PASS değilse alan adının DNS kayıtlarını (SPF, DKIM, DMARC) düzeltin, yoksa başvurular spam'e düşer.
 5. E-posta gelmediyse önce spam klasörüne, sonra `private/storage/logs` dosyasına bakın.
 6. Hata ekranını denemek için geçici olarak `smtp_pass` değerini bozun, gönderin, sonra düzeltin: "Başvurunuz şu anda gönderilemedi" bildirimi ve dolu form görünmeli.
@@ -113,14 +113,14 @@ php -S localhost:8000 -t site/httpdocs site/private/dev-router.php
 | Adres | Dosya |
 |---|---|
 | `/` | `index.php` |
-| `/egitimler` | `programs.php` |
+| `/atolyeler` | `programs.php` |
 | `/hakkimizda` | `about.php` |
-| `/egitmen-kadromuz` | `faculty.php` |
+| `/sanatci-kadromuz` | `faculty.php` |
 | `/kazananlarimiz` | `winners.php` |
 | `/galeri` | `gallery.php` |
 | `/duyurular` | `announcements.php` |
 | `/iletisim` | `contact.php` |
-| `/on-basvuru` | `application.php` |
+| `/katilim-formu` | `application.php` |
 | `/kvkk-aydinlatma-metni` | `privacy-notice.php` |
 
 Sayfa içi bağlantılar `url('programs', '#theatre')` gibi çağrılarla `routes.php`'den gelir. `?program=` ve `#anchor` korunur.
@@ -143,20 +143,20 @@ php site/private/tools/build.php
 
 ## Eski site yönlendirme tablosu
 
-Canlı site (https://www.academyizmir.com, 2016'dan kalma) taranarak bulunan 40 adres (.html ve .aspx), hepsi 301. `#` sunucuya gitmediği için bölüm bağlantıları kullanılmaz. Karşılığı olmayan eski branşlar (resim, fotoğrafçılık, jimnastik, sinema-tv, müzik) `/egitimler`'e gider. Kaynak: `private/redirects.php`.
+Canlı site (https://www.academyizmir.com, 2016'dan kalma) taranarak bulunan 39 adres (.html ve .aspx) ve yeni sitenin 3 eski adı, hepsi 301. `#` sunucuya gitmediği için bölüm bağlantıları kullanılmaz. Karşılığı olmayan eski branşlar (resim, fotoğrafçılık, jimnastik, sinema-tv, müzik) `/atolyeler`'e gider. Yeni sitenin ilk günlerindeki adresler (`/egitimler`, `/egitmen-kadromuz`, `/on-basvuru`) da aynı tabloda, tek adımda güncel adrese yönlenir (`?program=` korunur). Kaynak: `private/redirects.php`.
 
 | Eski adres | Yeni adres |
 |---|---|
-| `/asli-sinke.html` | `/egitmen-kadromuz` |
-| `/bolumler.html` | `/egitimler` |
-| `/cocuklar-icin-bale.html` | `/egitimler` |
-| `/cocuklar-icin-drama.html` | `/egitimler` |
-| `/dans.html` | `/egitimler` |
-| `/derya-tiryaki.html` | `/egitmen-kadromuz` |
-| `/dilek-kutsav.html` | `/egitmen-kadromuz` |
+| `/asli-sinke.html` | `/sanatci-kadromuz` |
+| `/bolumler.html` | `/atolyeler` |
+| `/cocuklar-icin-bale.html` | `/atolyeler` |
+| `/cocuklar-icin-drama.html` | `/atolyeler` |
+| `/dans.html` | `/atolyeler` |
+| `/derya-tiryaki.html` | `/sanatci-kadromuz` |
+| `/dilek-kutsav.html` | `/sanatci-kadromuz` |
 | `/etkinlikler.html` | `/duyurular` |
-| `/firat-halavut.html` | `/egitmen-kadromuz` |
-| `/fotografcilik.html` | `/egitimler` |
+| `/firat-halavut.html` | `/sanatci-kadromuz` |
+| `/fotografcilik.html` | `/atolyeler` |
 | `/galeri.html` | `/galeri` |
 | `/galeri_bale.html` | `/galeri` |
 | `/galeri_etkinlikler.html` | `/galeri` |
@@ -169,24 +169,27 @@ Canlı site (https://www.academyizmir.com, 2016'dan kalma) taranarak bulunan 40 
 | `/hakkimizda.html` | `/hakkimizda` |
 | `/iletisim.aspx` | `/iletisim` |
 | `/index.html` | `/` |
-| `/jimnastik.html` | `/egitimler` |
-| `/kadromuz.html` | `/egitmen-kadromuz` |
+| `/jimnastik.html` | `/atolyeler` |
+| `/kadromuz.html` | `/sanatci-kadromuz` |
 | `/kazanan-listesi.html` | `/kazananlarimiz` |
 | `/kazananlar.html` | `/kazananlarimiz` |
-| `/konusma-egitimi.html` | `/egitimler` |
-| `/muzik-egitimi.html` | `/egitimler` |
-| `/ozel-yetenek-sinavi.html` | `/egitimler` |
-| `/ozgur-baskaya.html` | `/egitmen-kadromuz#ozgur-baskaya` |
-| `/ozlem-baskaya.html` | `/egitmen-kadromuz#ozlem-baskaya` |
-| `/ozlem-gur.html` | `/egitmen-kadromuz` |
-| `/resim-kurslari.html` | `/egitimler` |
-| `/selda-uzunkaya.html` | `/egitmen-kadromuz` |
-| `/sinema-televizyon.html` | `/egitimler` |
-| `/sinema-ve-dizi-oyunculugu.html` | `/egitimler` |
-| `/tamer-yilmaz.html` | `/egitmen-kadromuz` |
-| `/tiyatro.html` | `/egitimler` |
-| `/yaratici-drama.html` | `/egitimler` |
-| `/yesim-turgut.html` | `/egitmen-kadromuz` |
+| `/konusma-egitimi.html` | `/atolyeler` |
+| `/muzik-egitimi.html` | `/atolyeler` |
+| `/ozel-yetenek-sinavi.html` | `/atolyeler` |
+| `/ozgur-baskaya.html` | `/sanatci-kadromuz#ozgur-baskaya` |
+| `/ozlem-baskaya.html` | `/sanatci-kadromuz#ozlem-baskaya` |
+| `/ozlem-gur.html` | `/sanatci-kadromuz` |
+| `/resim-kurslari.html` | `/atolyeler` |
+| `/selda-uzunkaya.html` | `/sanatci-kadromuz` |
+| `/sinema-televizyon.html` | `/atolyeler` |
+| `/sinema-ve-dizi-oyunculugu.html` | `/atolyeler` |
+| `/tamer-yilmaz.html` | `/sanatci-kadromuz` |
+| `/tiyatro.html` | `/atolyeler` |
+| `/yaratici-drama.html` | `/atolyeler` |
+| `/yesim-turgut.html` | `/sanatci-kadromuz` |
+| `/egitimler` | `/atolyeler` |
+| `/egitmen-kadromuz` | `/sanatci-kadromuz` |
+| `/on-basvuru` | `/katilim-formu` |
 
 ## Yayın öncesi kontrol listesi
 
@@ -194,7 +197,7 @@ Canlı site (https://www.academyizmir.com, 2016'dan kalma) taranarak bulunan 40 
 2. `php site/private/tools/build.php` çalıştırıldı, `web.config` ve `sitemap.xml` güncel.
 3. Plesk'te PHP 8.2 (FastCGI) seçili. IIS'te URL Rewrite modülü kurulu.
 4. `httpdocs/` ve `private/` doğru yere yüklendi. `https://www.academyizmir.com/private/config.example.php` ve `/assets/data/site.json` 404 vermeli.
-5. 10 sayfa 200, bilinmeyen adres 404 (HTTP durum kodu gerçekten 404), `http://`, `academyizmir.com`, `/index.php`, `/egitimler/`, `/programs.php`, eski site adresleri 301 versin (hedef tek adımda).
+5. 10 sayfa 200, bilinmeyen adres 404 (HTTP durum kodu gerçekten 404), `http://`, `academyizmir.com`, `/index.php`, `/atolyeler/`, `/programs.php`, eski site adresleri 301 versin (hedef tek adımda).
 6. Yanıt başlıklarında `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, `Permissions-Policy` görünmeli, `X-Powered-By` olmamalı.
 7. Search Console'a `https://www.academyizmir.com/sitemap.xml` gönderilir, eski site için adres değişikliği izlenir.
 8. `[İÇERİK GELECEK]` ve `[TEYİT EDİLECEK]` yazıları temizlendi (README.md ve brief/icerik.md'ye bakın). Ön başvuru formu canlıda test edildi (yukarıdaki "Formu canlıda test etme" adımları, Gmail'de SPF/DKIM/DMARC PASS).
@@ -203,7 +206,7 @@ Canlı site (https://www.academyizmir.com, 2016'dan kalma) taranarak bulunan 40 
 
 ## v-1 ile bilinçli farklar
 
-- Bağlantı adresleri Türkçe temiz adreslerdir (`/egitimler`, `/on-basvuru?program=theatre` vb.), varlıklar kök göreli (`/assets/...`).
+- Bağlantı adresleri Türkçe temiz adreslerdir (`/atolyeler`, `/katilim-formu?program=theatre` vb.), varlıklar kök göreli (`/assets/...`).
 - Görsellerin `width`/`height` değerleri gerçek dosyadan okunur: 2024 kazananlarının görselleri 278×278'dir (v-1'de 400 yazıyordu, oran aynı).
 - Kazananlar sayfasında 2025 grubu görselleri `loading="lazy"` alır (v-1'de eksikti), yalnızca ilk 3 görsel hemen yüklenir.
 - `head`: canonical, `og:url` ve `og:image` tam adreslerle. 404 sayfası `noindex`.

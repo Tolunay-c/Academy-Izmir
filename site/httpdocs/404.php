@@ -18,7 +18,7 @@ partial('mobile-menu');
       <div class="container">
         <div class="hero-actions">
           <a class="button button-primary" href="<?= e(url('home')) ?>">Ana Sayfa</a>
-          <a class="button button-secondary" href="<?= e(url('programs')) ?>">Eğitimlerimiz</a>
+          <a class="button button-secondary" href="<?= e(url('programs')) ?>">Atölyeler</a>
         </div>
       </div>
     </section>

@@ -12,12 +12,12 @@ partial('mobile-menu');
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="section-eyebrow">İzmir'de sanat eğitim kurumu</p>
+          <p class="section-eyebrow">İzmir'de Sanat Atölyeleri ve Sahne Çalışmaları</p>
           <h1 class="hero-title">ACADEMY <em>İZMİR</em></h1>
           <p class="hero-slogan">Sanatla Keşfet, Sahneyle Büyü</p>
-          <p class="hero-intro">Çocuklardan gençlere, gençlerden yetişkinlere; yaratıcı dramadan tiyatroya, baleden dansa, oyunculuktan konservatuvar ve güzel sanatlar hazırlığına uzanan profesyonel sanat eğitimi.</p>
+          <p class="hero-intro">Çocuklardan gençlere, gençlerden yetişkinlere; yaratıcı dramadan tiyatroya, baleden dansa, oyunculuktan konservatuvar ve güzel sanatlar hazırlığına uzanan tiyatro, dans ve yaratıcı sanat çalışmaları.</p>
           <div class="hero-actions">
-            <a class="button button-secondary" href="<?= e(url('programs')) ?>">Eğitimleri İncele</a>
+            <a class="button button-secondary" href="<?= e(url('programs')) ?>">Atölyeleri Keşfet</a>
             <a class="button button-primary" href="<?= e(url('application')) ?>" data-track="form">Başvur</a>
           </div>
         </div>
@@ -37,19 +37,19 @@ partial('mobile-menu');
     <section class="section highlights" aria-label="Öne çıkan bilgiler">
       <div class="container">
         <ol class="highlights-list">
-          <li class="highlights-item"><p class="highlights-text"><em>2011'den</em> beri sanat eğitimi</p></li>
+          <li class="highlights-item"><p class="highlights-text"><em>2011'den</em> Beri Sanatın ve Sahnenin İçinde</p></li>
           <li class="highlights-item"><p class="highlights-text"><em>15 yılı aşkın</em> süredir konservatuvar ve güzel sanatlar fakültelerine hazırlık</p></li>
           <li class="highlights-item"><p class="highlights-text">Yaklaşık <em>%80</em> yerleşme başarısı</p></li>
         </ol>
       </div>
     </section>
 
-    <!-- 3. Eğitimlerimiz -->
+    <!-- 3. Atölyeler ve Sanat Grupları -->
     <section class="section" aria-labelledby="home-programs-title">
       <div class="container">
         <header class="section-header section-header-row">
-          <h2 class="section-title" id="home-programs-title">Eğitimlerimiz</h2>
-          <a class="button button-text" href="<?= e(url('programs')) ?>">Tüm Eğitimler <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+          <h2 class="section-title" id="home-programs-title">Atölyeler ve Sanat Grupları</h2>
+          <a class="button button-text" href="<?= e(url('programs')) ?>">Tüm Çalışmalar <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
         </header>
         <ol class="program-list">
 <?php home_programs(); ?>
@@ -75,24 +75,24 @@ partial('mobile-menu');
       </div>
     </section>
 
-    <!-- 5. Eğitmen Kadromuz -->
+    <!-- 5. Sanatçı Kadromuz -->
     <section class="section" aria-labelledby="home-faculty-title">
       <div class="container">
         <header class="section-header section-header-row">
-          <h2 class="section-title" id="home-faculty-title">Eğitmen <em>Kadromuz</em></h2>
+          <h2 class="section-title" id="home-faculty-title">Sanatçı <em>Kadromuz</em></h2>
           <div class="strip-controls strip-controls-compact">
-            <button class="strip-control" type="button" aria-label="Önceki eğitmenler" aria-controls="faculty-strip" aria-disabled="true" data-strip-prev><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></button>
-            <button class="strip-control" type="button" aria-label="Sonraki eğitmenler" aria-controls="faculty-strip" aria-disabled="false" data-strip-next><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+            <button class="strip-control" type="button" aria-label="Önceki sanatçılar" aria-controls="faculty-strip" aria-disabled="true" data-strip-prev><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></button>
+            <button class="strip-control" type="button" aria-label="Sonraki sanatçılar" aria-controls="faculty-strip" aria-disabled="false" data-strip-next><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
           </div>
         </header>
-        <section class="strip strip-collapse" id="faculty-strip" aria-label="Eğitmen kadrosu" tabindex="0" data-strip>
+        <section class="strip strip-collapse" id="faculty-strip" aria-label="Sanatçı kadrosu" tabindex="0" data-strip>
           <ul class="strip-list">
 <?php foreach (array_slice(faculty_sorted(), 0, 4) as $f): ?>
         <li class="strip-item"><?= instructor_card($f) ?></li>
 <?php endforeach; ?>
           </ul>
         </section>
-        <a class="button button-text" href="<?= e(url('faculty')) ?>">Tüm Kadro <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+        <a class="button button-text" href="<?= e(url('faculty')) ?>">Sanatçılarımız <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
       </div>
     </section>
 

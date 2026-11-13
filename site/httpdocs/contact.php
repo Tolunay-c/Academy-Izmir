@@ -17,7 +17,7 @@ partial('mobile-menu');
       <div class="container contact-layout">
         <section class="contact-callout" aria-labelledby="contact-callout-title">
           <div class="contact-callout-text">
-            <h2 class="section-title" id="contact-callout-title">Eğitim Ön Başvuru <em>Formu</em></h2>
+            <h2 class="section-title" id="contact-callout-title">Katılım ve Bilgi <em>Formu</em></h2>
             <p class="section-lead">Eğitim programlarımız hakkında bilgi almak ve ön başvurunuzu oluşturmak için formu doldurabilirsiniz.</p>
           </div>
           <a class="button button-primary" href="<?= e(url('application')) ?>" data-track="form">Ön Başvuru Formuna Git <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>

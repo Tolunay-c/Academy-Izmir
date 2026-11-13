@@ -12,7 +12,7 @@
         </ul>
       </nav>
       <div class="site-header-actions">
-        <a class="button button-primary site-header-cta" href="<?= e(url('application')) ?>"<?= current_attr('application') ?> data-track="form"><span class="site-header-cta-short">Ön Başvuru</span><span class="site-header-cta-full">Eğitim Ön Başvuru Formu</span></a>
+        <a class="button button-primary site-header-cta" href="<?= e(url('application')) ?>"<?= current_attr('application') ?> data-track="form"><span class="site-header-cta-short">Katılım Formu</span><span class="site-header-cta-full">Katılım ve Bilgi Formu</span></a>
         <a class="site-header-toggle-link" href="#footer-nav" aria-label="Menüye git"><span class="material-symbols-outlined" aria-hidden="true">menu</span></a>
         <button class="site-header-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menüyü aç" data-menu-toggle>
           <span class="material-symbols-outlined site-header-toggle-open" aria-hidden="true">menu</span>

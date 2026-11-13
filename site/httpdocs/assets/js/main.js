@@ -199,7 +199,7 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
   if (autoplayAllowed) { startPlayback(); }
 })();
 
-/* ---- Yatay şeritler (kazananlar, mobilde eğitmenler) -----------------------------------------
+/* ---- Yatay şeritler (kazananlar, mobilde sanatçılar) -----------------------------------------
    Önceki/sonraki butonları ilgili şeridi kaydırır. Şerit yalnızca kaydırılabiliyorsa klavye
    odağı alır (tabindex="0"), masaüstünde ızgaraya dönen şeritte gereksiz Tab durağı olmaz. */
 (function () {
@@ -239,7 +239,7 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
   });
 })();
 
-/* ---- Sayfa içi navigasyon (Eğitimlerimiz) ---------------------------------------------------
+/* ---- Sayfa içi navigasyon (Atölyeler) ---------------------------------------------------
    Kaydırmaya göre etkin bölümü belirler (aria-current="true"), dar ekranda etkin bağlantıyı
    yatay listede görünür tutar. Tıklayınca bölüme gitme tarayıcı bağlantısıyla (scroll-margin) olur. */
 (function () {
@@ -531,7 +531,7 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
   stage.addEventListener('pointercancel', function () { startX = null; });
 })();
 
-/* ---- Eğitim ön başvuru formu (yalnızca application.php) ---------------------------------------------------------
+/* ---- Katılım ve bilgi formu (yalnızca application.php) ---------------------------------------------------------
    JS varken tarayıcı doğrulaması kapatılır (noValidate), kendi mesajlarımız gösterilir. JS yokken
    required/type/pattern ile HTML5 doğrulaması çalışır. Doğrulama: alandan çıkınca (blur) ve gönderimde.
    Hatalı gönderimde hata özeti (role="alert") ve ilk hatalı alana odak. */
@@ -555,7 +555,7 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
     education: 'Lütfen eğitim durumunuzu seçin.',
     phone: 'Lütfen geçerli bir telefon numarası yazın.',
     email: 'Lütfen geçerli bir e-posta adresi yazın.',
-    program: 'Lütfen bir eğitim seçin.',
+    program: 'Lütfen bir atölye seçin.',
     consent: 'Devam etmek için aydınlatma metnini okuduğunuzu onaylayın.'
   };
   var BIRTHDATE_INVALID = 'Lütfen geçerli bir doğum tarihi seçin.';
@@ -848,7 +848,7 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
     if (submitLabel) { submitLabel.textContent = 'Gönderiliyor...'; }
   });
 
-  /* /on-basvuru?program=<program-id>: ilgili ana program seçili gelir. Geçersiz id'de seçim yapılmaz. */
+  /* /katilim-formu?program=<program-id>: ilgili ana program seçili gelir. Geçersiz id'de seçim yapılmaz. */
   var programId = new URLSearchParams(window.location.search).get('program');
   var select = form.querySelector('select[data-validate="program"]');
   if (programId && select && !select.value) {
