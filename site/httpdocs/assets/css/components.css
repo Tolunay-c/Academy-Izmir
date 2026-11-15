@@ -2570,6 +2570,15 @@ textarea.form-control {
   }
 }
 
+/* Geniş ekranda filtre butonları alt satıra sarılır (fare ile yatay kaydırma olmadığı için tüm yıllar görünür kalır).
+   Dar ekranda yatay kaydırma ve gradyan ipucu çalışır. */
+@media (min-width: 48em) {
+  .filters .fade-scroll-list {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}
+
 /* ---- Kazananlar sayfası kartı: mobilde kompakt yatay düzen (48em altı) ------------------------------ */
 .winner-card.is-grouped {
   grid-template-columns: var(--winner-avatar-compact) minmax(0, 1fr);
