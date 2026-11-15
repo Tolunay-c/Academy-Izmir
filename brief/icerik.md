@@ -395,6 +395,25 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 | Tunacan Tunç | Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Dramatik Yazarlık ve Dramaturji |
 | Deniz İhtiyaçoğlu | Süleyman Demirel Üniversitesi, Güzel Sanatlar Fakültesi, Dramatik Yazarlık ve Dramaturji |
 
+### 2017 — Üniversite ve Konservatuvar (14 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Eylül Eryiğit | Hacettepe Üniversitesi, Devlet Konservatuvarı, Oyunculuk |
+| Gözde Kırlangıçoğlu | Muğla Sıtkı Koçman Üniversitesi, Bodrum Güzel Sanatlar Fakültesi, Oyunculuk |
+| İlke Kurtgel | Anadolu Üniversitesi, Devlet Konservatuvarı, Oyunculuk |
+| Melike Pazarlar | Muğla Sıtkı Koçman Üniversitesi, Bodrum Güzel Sanatlar Fakültesi, Oyunculuk |
+| Merve Kamar | Süleyman Demirel Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Merve Kaytuka | Haliç Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Mislina Kurtuldu | Hacettepe Üniversitesi, Devlet Konservatuvarı, Oyunculuk · Mimar Sinan Güzel Sanatlar Üniversitesi, Oyunculuk |
+| Övgü Çatalpınarlar | Bahçeşehir Üniversitesi, İleri Oyunculuk (Yüksek Lisans) |
+| Öykü Eraslan | Kadir Has Üniversitesi, Güzel Sanatlar Fakültesi, Tiyatro |
+| Özge Törer | Muğla Sıtkı Koçman Üniversitesi, Bodrum Güzel Sanatlar Fakültesi, Oyunculuk |
+| Seda İğici | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Sedef Çalışır | Hacettepe Üniversitesi, Devlet Konservatuvarı, Oyunculuk |
+| Ayfun Cenk | Akdeniz Üniversitesi, Antalya Devlet Konservatuvarı, Oyunculuk · Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Zeynel Abidin Ali Berge | Muğla Sıtkı Koçman Üniversitesi, Bodrum Güzel Sanatlar Fakültesi, Oyunculuk |
+
 ### 2016 – 2017 — Üniversite ve Konservatuvar (11 öğrenci)
 
 | Öğrenci | Yerleşmeler |
@@ -559,7 +578,7 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 19. 2022 ve 2024 listelerindeki Nazlı Can aynı kişi mi? (yanıtlandı: iki farklı kişi, iki kayıt ayrı kalır.)
 20. İstanbul Bilgi Üniversitesi kayıtları nasıl yazılsın? (yanıtlandı: Üniversite "İstanbul Bilgi Üniversitesi", program "Sahne Sanatları", fakülte satırı boş.)
 21. 2024 öncesi kazananlar için fotoğraf gelecek mi? (yanıtlandı: müşteri ayrıca fotoğraf göndermeyecek. Posterlerde fotoğraf yok, bu yıllar baş harf dairesiyle kalır.)
-22. Eski sitede 2017 posteri (14 öğrenci; "2016 – 2017" listesinden farklı) ve sayfada hiç kullanılmayan "2019 Tiyatro Bölümü" posteri (12 öğrenci) var. Eklensin mi, hangi yıl etiketiyle?
+22. Eski sitede 2017 posteri (14 öğrenci; "2016 – 2017" listesinden farklı) ve sayfada hiç kullanılmayan "2019 Tiyatro Bölümü" posteri (12 öğrenci) var. Eklensin mi, hangi yıl etiketiyle? (karar: 2017 posteri ayrı grup olarak eklendi, 2019 Tiyatro posteri eklenmedi)
 
 ---
 

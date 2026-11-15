@@ -2009,9 +2009,245 @@
       ]
     },
     {
+      "id": "eylul-eryigit-2017",
+      "name": "Eylül Eryiğit",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Hacettepe Üniversitesi",
+          "faculty": "Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "gozde-kirlangicoglu",
+      "name": "Gözde Kırlangıçoğlu",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Bodrum Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ilke-kurtgel",
+      "name": "İlke Kurtgel",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Anadolu Üniversitesi",
+          "faculty": "Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "melike-pazarlar",
+      "name": "Melike Pazarlar",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Bodrum Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "merve-kamar",
+      "name": "Merve Kamar",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Süleyman Demirel Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "merve-kaytuka",
+      "name": "Merve Kaytuka",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Haliç Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "mislina-kurtuldu-2017",
+      "name": "Mislina Kurtuldu",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Hacettepe Üniversitesi",
+          "faculty": "Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        },
+        {
+          "university": "Mimar Sinan Güzel Sanatlar Üniversitesi",
+          "faculty": null,
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ovgu-catalpinarlar",
+      "name": "Övgü Çatalpınarlar",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Bahçeşehir Üniversitesi",
+          "faculty": null,
+          "program": "İleri Oyunculuk (Yüksek Lisans)",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "oyku-eraslan",
+      "name": "Öykü Eraslan",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Kadir Has Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Tiyatro",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ozge-torer",
+      "name": "Özge Törer",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Bodrum Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "seda-igici",
+      "name": "Seda İğici",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Kocaeli Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "sedef-calisir",
+      "name": "Sedef Çalışır",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Hacettepe Üniversitesi",
+          "faculty": "Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ayfun-cenk",
+      "name": "Ayfun Cenk",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Akdeniz Üniversitesi",
+          "faculty": "Antalya Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        },
+        {
+          "university": "Dokuz Eylül Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "zeynel-abidin-ali-berge",
+      "name": "Zeynel Abidin Ali Berge",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Bodrum Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
       "id": "ardahan-arda",
       "name": "Ardahan Arda",
-      "year": 2017,
+      "year": 2016,
       "category": "university",
       "image": null,
       "alt": null,
@@ -2028,7 +2264,7 @@
     {
       "id": "arya-ecem-ozdil",
       "name": "Arya Ecem Özdil",
-      "year": 2017,
+      "year": 2016,
       "category": "university",
       "image": null,
       "alt": null,
@@ -2051,7 +2287,7 @@
     {
       "id": "eylul-eryigit",
       "name": "Eylül Eryiğit",
-      "year": 2017,
+      "year": 2016,
       "category": "university",
       "image": null,
       "alt": null,
@@ -2068,7 +2304,7 @@
     {
       "id": "guluzar-camur",
       "name": "Gülüzar Çamur",
-      "year": 2017,
+      "year": 2016,
       "category": "university",
       "image": null,
       "alt": null,
@@ -2085,7 +2321,7 @@
     {
       "id": "kadir-berk-cal",
       "name": "Kadir Berk Çal",
-      "year": 2017,
+      "year": 2016,
       "category": "university",
       "image": null,
       "alt": null,
@@ -2102,7 +2338,7 @@
     {
       "id": "mislina-kurtuldu",
       "name": "Mislina Kurtuldu",
-      "year": 2017,
+      "year": 2016,
       "category": "university",
       "image": null,
       "alt": null,
@@ -2119,7 +2355,7 @@
     {
       "id": "onur-balli",
       "name": "Onur Ballı",
-      "year": 2017,
+      "year": 2016,
       "category": "university",
       "image": null,
       "alt": null,
@@ -2136,7 +2372,7 @@
     {
       "id": "omer-faruk-aran",
       "name": "Ömer Faruk Aran",
-      "year": 2017,
+      "year": 2016,
       "category": "university",
       "image": null,
       "alt": null,
@@ -2153,7 +2389,7 @@
     {
       "id": "selin-falay",
       "name": "Selin Falay",
-      "year": 2017,
+      "year": 2016,
       "category": "university",
       "image": null,
       "alt": null,
@@ -2170,7 +2406,7 @@
     {
       "id": "aylin-yilmaz",
       "name": "Aylin Yılmaz",
-      "year": 2017,
+      "year": 2016,
       "category": "university",
       "image": null,
       "alt": null,
@@ -2187,7 +2423,7 @@
     {
       "id": "alis-caliskan",
       "name": "Alis Çalışkan",
-      "year": 2017,
+      "year": 2016,
       "category": "university",
       "image": null,
       "alt": null,
