@@ -240,7 +240,7 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 - Bir öğrenci birden fazla okul kazanabilir. Veri yapısı: öğrenci → yerleşmeler listesi.
 - Ana sayfada ve Konservatuvar Hazırlık bölümünde kısa vitrin.
 - Mevcut kazanan görselleri "Tebrikler!" posterleri; site kendi kart tasarımını kullanır (fotoğraf + isim + okul/bölüm). Fotoğrafı olmayan kazananda fotoğraf yerine adın ve soyadın baş harfleri görünür (2023 ve öncesinin hepsi).
-- 2023 ve öncesi kaynağı: eski sitenin `kazananlar.html` (2021, 2022, 2023 tablosu) ve `kazanan-listesi.html` (2015 ve "2016 – 2017" listeleri). Okul adları mevcut kayıtlarla aynı biçime getirildi, bariz yazım hataları düzeltildi.
+- 2023 ve öncesi kaynağı: eski sitenin `kazananlar.html` (2021, 2022, 2023 tablosu ve sayfada gizli 2013, 2014, 2018-2019, 2020 posterleri) ve `kazanan-listesi.html` (2015 ve "2016 – 2017" listeleri). İki yıllı listeler sitede etiketiyle ("2016 – 2017", "2018 – 2019") görünür (veride `year_label`; sıralama ve filtre `year` değeriyle: 2017, 2019). "Burslu" yazanlarda burs oranı belli değil. Birincilik ve ikincilik de karta eklendi. Okul adları mevcut kayıtlarla aynı biçime getirildi, bariz yazım hataları düzeltildi.
 
 ### 2026 — Üniversite ve Konservatuvar (10 öğrenci)
 
@@ -326,7 +326,7 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 | Ilgın Özmen | Anadolu Üniversitesi, Devlet Konservatuvarı, Oyunculuk |
 | Akdora Kalyoncu | Anadolu Üniversitesi, Devlet Konservatuvarı, Oyunculuk |
 | Buket Tuncer | Çanakkale Onsekiz Mart Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
-| Ceylin Özdemir | Mimar Sinan Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Ceylin Özdemir | Mimar Sinan Güzel Sanatlar Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
 | Ada Turgut | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
 | Nisa Aygün | Kıbrıs Arkın Yaratıcı Sanatlar ve Tasarım Üniversitesi, Oyunculuk (%100 burs) |
 | Deniz Subaşı | İstanbul Nişantaşı Üniversitesi, Sanat ve Tasarım Fakültesi (%50 burs) |
@@ -350,7 +350,52 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 | Zeynep Nur Tolgay | Çanakkale Onsekiz Mart Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
 | Ece Nazire Tunca | Bahçeşehir Üniversitesi, Konservatuvar, Oyunculuk |
 
-### 2017 — Üniversite ve Konservatuvar (11 öğrenci) (liste başlığı "2016 – 2017")
+### 2020 — Üniversite ve Konservatuvar (18 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Ayşe Selin Yanar | Bahçeşehir Üniversitesi, Konservatuvar, Sahne Sanatları |
+| Burak Sezer | Bahçeşehir Üniversitesi, Konservatuvar, Sahne Sanatları |
+| Birdal Birdal | Bahçeşehir Üniversitesi, Konservatuvar, Sahne Sanatları |
+| Rana Erol | Çanakkale Onsekiz Mart Üniversitesi, Güzel Sanatlar Fakültesi, Tiyatro |
+| Murat Erkan Kuru | Akdeniz Üniversitesi, Antalya Devlet Konservatuvarı, Tiyatro |
+| Dilara Sarıgül | İstanbul Beykent Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Eşref Varol | İstanbul Beykent Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Ömer Boz | İstanbul Beykent Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Gülsü Salğar | İstanbul Beykent Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Ecem Akkuş | İstanbul Beykent Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Çiğdem Yıldırım | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Cansu Buluş | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Türkü Metin | Muğla Sıtkı Koçman Üniversitesi, Oyunculuk |
+| Ceyda Yaşar | İstanbul Doğuş Üniversitesi, Sanat ve Tasarım Fakültesi, Oyunculuk |
+| Türkü Çetik | Anadolu Üniversitesi, Devlet Konservatuvarı, Oyunculuk |
+| Talha Aydoğmuş | Zonguldak Bülent Ecevit Üniversitesi, Devlet Konservatuvarı, Oyunculuk |
+| Egemen Yıldız | Zonguldak Bülent Ecevit Üniversitesi, Devlet Konservatuvarı, Oyunculuk |
+| Taner Sözer | Malatya Turgut Özal Üniversitesi, Sanat, Tasarım ve Mimarlık Fakültesi, Sahne Sanatları |
+
+### 2018 – 2019 — Üniversite ve Konservatuvar (17 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Emre Yılmaz | Ankara Üniversitesi, Dil ve Tarih-Coğrafya Fakültesi, Oyunculuk |
+| Simay Baygın | Akdeniz Üniversitesi, Antalya Devlet Konservatuvarı, Oyunculuk |
+| Canberk Kayhan | Bursa Uludağ Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Nedim Anatça | Erzurum Atatürk Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Begüm Kendirli | Yeditepe Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Buse Elverir | İstanbul Bilgi Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Merve Elolen | Ordu Üniversitesi, Müzik ve Sahne Sanatları Fakültesi, Oyunculuk |
+| Laçin Bal | Süleyman Demirel Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Beyza Aksoy | Girne Amerikan Üniversitesi, Oyunculuk |
+| Gürkan Yüksel | Girne Amerikan Üniversitesi, Oyunculuk |
+| Cem Yücel | Girne Amerikan Üniversitesi, Oyunculuk |
+| Nehir Gündüz | Yeni Yüzyıl Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Emre Yılmaz | Bursa Uludağ Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Ozan Bayav | Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Dramatik Yazarlık ve Dramaturji |
+| Erencan Atmaca | Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Dramatik Yazarlık ve Dramaturji |
+| Tunacan Tunç | Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Dramatik Yazarlık ve Dramaturji |
+| Deniz İhtiyaçoğlu | Süleyman Demirel Üniversitesi, Güzel Sanatlar Fakültesi, Dramatik Yazarlık ve Dramaturji |
+
+### 2016 – 2017 — Üniversite ve Konservatuvar (11 öğrenci)
 
 | Öğrenci | Yerleşmeler |
 |---|---|
@@ -386,9 +431,68 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 | Elif Kale | Süleyman Demirel Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
 | Selin Dendeşer | Süleyman Demirel Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
 
+### 2014 — Üniversite ve Konservatuvar (14 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Ege Kesmeci | Bilkent Üniversitesi, Oyunculuk (Burslu) |
+| Ebru Bayam | Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Sergen Bölük | Bursa Uludağ Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Berfu Halisdemir | Süleyman Demirel Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Gönül Toplaklı | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Dündar Taşal | İstanbul Beykent Üniversitesi, Oyunculuk |
+| Hazal Halistoprak | Dokuz Eylül Üniversitesi, Sinema-TV (Film Tasarım), Yönetmenlik (Birincilik) |
+| Volkan Mutlu | Dokuz Eylül Üniversitesi, Sinema-TV (Film Tasarım), Görüntü Yönetmenliği (İkincilik) |
+| Teoman Cüneyt Acar | Dokuz Eylül Üniversitesi, Sinema-TV (Film Tasarım), Görüntü Yönetmenliği |
+| Uğurtan Kızıltan | Dokuz Eylül Üniversitesi, Sinema-TV (Film Tasarım), Görüntü Yönetmenliği |
+| Büşra Yıkgeç | Dokuz Eylül Üniversitesi, Sinema-TV (Film Tasarım), Senaryo |
+| Emre Can Acar | Dokuz Eylül Üniversitesi, Sinema-TV (Film Tasarım), Senaryo |
+| Esra Vatansever | Dokuz Eylül Üniversitesi, Sinema-TV (Film Tasarım), Senaryo |
+| Cengizhan Türkistan | Yaşar Üniversitesi, Radyo, Televizyon ve Sinema (Burslu) |
+
+### 2014 — Güzel Sanatlar Lisesi (1 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Damla Işık | Çamlaraltı Koleji Güzel Sanatlar Lisesi, Resim (İkincilik) |
+
+### 2013 — Üniversite ve Konservatuvar (24 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Eda Nur Tuzlacı | Ankara Üniversitesi, Dil ve Tarih-Coğrafya Fakültesi, Oyunculuk |
+| Çağlar Kocavardar | Bursa Uludağ Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Barış Halisdemir | Akdeniz Üniversitesi, Antalya Devlet Konservatuvarı, Oyunculuk |
+| Duygu Çağlı | Süleyman Demirel Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Sinem Elvermezyılmaz | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Gizem Karasu | Bursa Uludağ Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Okan Kam | Akdeniz Üniversitesi, Antalya Devlet Konservatuvarı, Oyunculuk |
+| Hakan Yasin Kirez | Bursa Uludağ Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Mert Doğan | Akdeniz Üniversitesi, Antalya Devlet Konservatuvarı, Oyunculuk |
+| Özge Öztaş | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Tuğberk Güneş | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Mustafa Koçbay | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Banu Benli | İstanbul Beykent Üniversitesi, Oyunculuk (Burslu) |
+| Lütfü Can Uçar | İstanbul Aydın Üniversitesi, Oyunculuk (Burslu) |
+| İpek Muslu | Yeditepe Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk (Burslu) |
+| Oğulcan Kızıltuğ | İstanbul Beykent Üniversitesi, Oyunculuk (Burslu) |
+| Merve Oduk | Bursa Uludağ Üniversitesi, Güzel Sanatlar Fakültesi, Dramatik Yazarlık |
+| Gülseren Aydın | Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Dramatik Yazarlık |
+| Basin Baysal | Dokuz Eylül Üniversitesi, Sinema Anasanat Dalı, Film Tasarım ve Yazarlık |
+| Sevilay A. Hızarcı | Dokuz Eylül Üniversitesi, Sinema Anasanat Dalı, Film Tasarım ve Yazarlık |
+| Serenad Şiir Kabar | Dokuz Eylül Üniversitesi, Sinema Anasanat Dalı, Film Tasarım ve Yazarlık |
+| Kardelen Eren | Dokuz Eylül Üniversitesi, Sinema Anasanat Dalı, Film Tasarım ve Yönetmenliği |
+| Sinan Okan | Dokuz Eylül Üniversitesi, Sinema Anasanat Dalı, Kurgu, Ses ve Görüntü Yönetimi |
+| Uygar Usluy | Dokuz Eylül Üniversitesi, Sinema Anasanat Dalı, Kurgu, Ses ve Görüntü Yönetimi |
+
+### 2013 — Güzel Sanatlar Lisesi (1 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Deniz Zindan | İzmir Işılay Saygın Güzel Sanatlar Lisesi, Müzik |
+
 ### Gelecek olanlar
-- Güzel Sanatlar Lisesi kazananları: 2022 ve 2023 eklendi (eski siteden). Diğer yıllar: `[İÇERİK GELECEK]`
-- 2016 ve öncesi, 2018-2020: eski sitenin sayfalarında liste yok (bkz. bölüm 11, madde 18).
+- Güzel Sanatlar Lisesi kazananları: 2013, 2014, 2022 ve 2023 eklendi (eski siteden). Diğer yıllar: `[İÇERİK GELECEK]`
 
 ---
 
@@ -451,7 +555,11 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 15. Başvuru formundaki Eğitim Durumu seçenekleri onaylanmalı (şu anki liste: Okul öncesi, İlkokul öğrencisi, Ortaokul öğrencisi, Lise öğrencisi, Lise mezunu, Üniversite öğrencisi, Üniversite mezunu, Diğer).
 16. Eski sitedeki 2023 ve önceki yılların kazanan listesi eklenecek. (yapıldı)
 17. Müşterinin bahsettiği kuruluş amacıyla ilgili metin bekleniyor.
-18. Eski sitenin sayfalarında 2013, 2014, 2016, 2018-2019 ve 2020 için liste görünmüyor (yalnızca kaynakta gizli poster görselleri var). Bu yıllar eklensin mi? "2016 – 2017" listesi 2017 olarak mı gösterilsin?
+18. Eski sitenin gizli posterlerindeki 2013, 2014, 2018-2019 ve 2020 listeleri eklensin mi? (yanıtlandı: eklendi. "2016 – 2017" listesi etiketiyle gösterilir. 2016 posteri bu listeyle aynıdır, ikinci kez eklenmedi.)
+19. 2022 ve 2024 listelerindeki Nazlı Can aynı kişi mi? (yanıtlandı: iki farklı kişi, iki kayıt ayrı kalır.)
+20. İstanbul Bilgi Üniversitesi kayıtları nasıl yazılsın? (yanıtlandı: Üniversite "İstanbul Bilgi Üniversitesi", program "Sahne Sanatları", fakülte satırı boş.)
+21. 2024 öncesi kazananlar için fotoğraf gelecek mi? (yanıtlandı: müşteri ayrıca fotoğraf göndermeyecek. Posterlerde fotoğraf yok, bu yıllar baş harf dairesiyle kalır.)
+22. Eski sitede 2017 posteri (14 öğrenci; "2016 – 2017" listesinden farklı) ve sayfada hiç kullanılmayan "2019 Tiyatro Bölümü" posteri (12 öğrenci) var. Eklensin mi, hangi yıl etiketiyle?
 
 ---
 

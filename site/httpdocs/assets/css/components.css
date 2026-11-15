@@ -2560,7 +2560,7 @@ textarea.form-control {
 
 @media (min-width: 64em) {
   .js .filters {
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: start;
     column-gap: var(--space-7);
   }

@@ -31,7 +31,7 @@ partial('mobile-menu');
               <div class="fade-scroll-list">
                 <button class="filter-button" type="button" aria-pressed="true" data-filter-year="all">Tümü</button>
 <?php foreach (winner_years() as $year): ?>
-                <button class="filter-button" type="button" aria-pressed="false" data-filter-year="<?= e($year) ?>"><?= e($year) ?></button>
+                <button class="filter-button" type="button" aria-pressed="false" data-filter-year="<?= e($year) ?>"><?= e(winner_year_label($year)) ?></button>
 <?php endforeach; ?>
               </div>
             </div>

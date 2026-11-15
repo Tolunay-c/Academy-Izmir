@@ -167,6 +167,7 @@ function winner_card(array $w, bool $grouped, bool $lazy = true): string
                 . ($details !== '' ? '
                 <p class="winner-card-program">' . rtrim($details) . '</p>' : '')
                 . (!empty($p['scholarship']) ? '<p class="winner-card-badge">' . e($p['scholarship']) . '</p>' : '')
+                . (!empty($p['note']) ? '<p class="winner-card-badge">' . e($p['note']) . '</p>' : '')
                 . '</li>';
         }
         $places .= '</ul>';
@@ -182,7 +183,7 @@ function winner_card(array $w, bool $grouped, bool $lazy = true): string
                 </div>';
     return '<article class="winner-card' . ($grouped ? ' is-grouped' : '') . '">
                 ' . $media . '
-                <p class="winner-card-year">' . e($w['year']) . '</p>
+                <p class="winner-card-year">' . e($w['year_label'] ?? $w['year']) . '</p>
                 <h3 class="winner-card-name">' . e($w['name']) . '</h3>
                 ' . $places . '
               </article>';
@@ -280,13 +281,24 @@ function winner_years(): array
     return $years;
 }
 
+/** Yıl etiketi: kayıtta isteğe bağlı year_label varsa o ("2018 – 2019"), yoksa yılın kendisi. Sıralama ve filtre year değerini kullanır. */
+function winner_year_label(int $year): string
+{
+    foreach (winners_of_year($year) as $w) {
+        if (!empty($w['year_label'])) {
+            return (string) $w['year_label'];
+        }
+    }
+    return (string) $year;
+}
+
 /** Kazananlar sayfası: yıl grupları (yeniden eskiye), her kart data-year / data-category taşır. */
 function winners_groups(): void
 {
     $count = 0;
     foreach (winner_years() as $year) {
         echo '<section class="winners-year" data-year-group="' . e($year) . '" aria-labelledby="winners-year-' . e($year) . '">
-          <h2 class="winners-year-title" id="winners-year-' . e($year) . '">' . e($year) . '</h2>
+          <h2 class="winners-year-title" id="winners-year-' . e($year) . '">' . e(winner_year_label($year)) . '</h2>
           <ul class="winner-grid">' . "\n";
         foreach (winners_of_year($year) as $w) {
             echo '<li class="winner-grid-item" data-year="' . e($w['year']) . '" data-category="' . e($w['category']) . '">'
