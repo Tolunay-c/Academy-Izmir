@@ -412,6 +412,28 @@
   object-fit: cover;
 }
 
+/* Fotoğrafı olmayan kazanan: baş harf dairesi (tasarım sistemindeki renkler) */
+.winner-card-media.is-initials {
+  display: grid;
+  place-items: center;
+  border: var(--line-width) solid var(--color-accent);
+}
+
+.winner-card-initials {
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-display-strong);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
+}
+
+@media (min-width: 48em) {
+  .winner-card-initials {
+    font-size: var(--text-3xl);
+  }
+}
+
 .winner-card.is-grouped .winner-card-year {
   display: none;
 }

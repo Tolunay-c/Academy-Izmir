@@ -22,7 +22,7 @@ partial('mobile-menu');
         <div class="application-form-area">
 <?php if ($form['view'] === 'success'): ?>
           <div class="form-result" role="status" tabindex="-1" data-application-success>
-            <h2 class="form-title">Ön başvurunuz bize ulaştı.</h2>
+            <h2 class="form-title">Formunuz bize ulaştı.</h2>
             <p class="section-lead">Teşekkür ederiz.</p>
             <div class="hero-actions">
               <a class="button button-primary" href="<?= e(url('home')) ?>">Ana Sayfa</a>
@@ -160,13 +160,13 @@ partial('mobile-menu');
             </div>
 
             <div class="form-actions">
-              <button class="button button-primary" type="submit" data-track="form"><span data-submit-label>Ön Başvurumu Gönder</span> <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+              <button class="button button-primary" type="submit" data-track="form"><span data-submit-label>Formu Gönder</span> <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
             </div>
           </form>
 <?php endif; ?>
         </div>
 
-        <aside class="application-aside" aria-labelledby="application-contact-title">
+        <div class="application-aside" role="group" aria-labelledby="application-contact-title">
           <h2 class="section-eyebrow" id="application-contact-title">İletişim</h2>
           <div class="hero-actions">
             <?= phone_link('button button-secondary') ?>
@@ -174,7 +174,7 @@ partial('mobile-menu');
             <?= whatsapp_link('button button-secondary') ?>
 
           </div>
-        </aside>
+        </div>
       </div>
     </section>
   </main>

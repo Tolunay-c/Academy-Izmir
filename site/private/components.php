@@ -140,16 +140,32 @@ function winners_of_year(int $year): array
     return array_values(array_filter(site()['winners'], static fn (array $w): bool => (int) $w['year'] === $year));
 }
 
-/** Kazanan kartı. $grouped: kazananlar sayfası (is-grouped). */
+/** Baş harfler: adın ve soyadın ilk harfleri (tek sözcüklü adda tek harf). */
+function winner_initials(string $name): string
+{
+    $parts = preg_split('/\s+/u', trim($name)) ?: [];
+    $first = mb_substr((string) reset($parts), 0, 1);
+    $last = count($parts) > 1 ? mb_substr((string) end($parts), 0, 1) : '';
+    return $first . $last;
+}
+
+/** Kazanan kartı. $grouped: kazananlar sayfası (is-grouped). Fotoğrafı yoksa baş harf dairesi (is-initials). */
 function winner_card(array $w, bool $grouped, bool $lazy = true): string
 {
     $places = '';
     if (count($w['placements']) > 0) {
         $places = '<ul class="winner-card-placements">';
         foreach ($w['placements'] as $p) {
+            $details = '';
+            foreach ([$p['faculty'] ?? null, $p['program'] ?? null] as $part) {
+                if (!empty($part)) {
+                    $details .= '<span>' . e($part) . '</span> ';
+                }
+            }
             $places .= '<li>
-                <p class="winner-card-school">' . e($p['university']) . '</p>
-                <p class="winner-card-program"><span>' . e($p['faculty']) . '</span> <span>' . e($p['program']) . '</span></p>'
+                <p class="winner-card-school">' . e($p['university']) . '</p>'
+                . ($details !== '' ? '
+                <p class="winner-card-program">' . rtrim($details) . '</p>' : '')
                 . (!empty($p['scholarship']) ? '<p class="winner-card-badge">' . e($p['scholarship']) . '</p>' : '')
                 . '</li>';
         }
@@ -157,10 +173,15 @@ function winner_card(array $w, bool $grouped, bool $lazy = true): string
     } else {
         $places = '<p class="winner-card-pending pending-note">[İÇERİK GELECEK]</p>';
     }
-    return '<article class="winner-card' . ($grouped ? ' is-grouped' : '') . '">
-                <div class="winner-card-media">
+    $media = !empty($w['image'])
+        ? '<div class="winner-card-media">
                   ' . img_tag($w['image'], $w['alt'], $lazy) . '
-                </div>
+                </div>'
+        : '<div class="winner-card-media is-initials">
+                  <span class="winner-card-initials" aria-hidden="true">' . e(winner_initials($w['name'])) . '</span>
+                </div>';
+    return '<article class="winner-card' . ($grouped ? ' is-grouped' : '') . '">
+                ' . $media . '
                 <p class="winner-card-year">' . e($w['year']) . '</p>
                 <h3 class="winner-card-name">' . e($w['name']) . '</h3>
                 ' . $places . '

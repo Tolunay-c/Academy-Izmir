@@ -94,7 +94,7 @@ Form aynı adrese POST eder (`application.php`), JS kapalıyken de sunucu taraf�
 
 1. `config.php` dolduruldu, `private/storage` yazılabilir.
 2. https://www.academyizmir.com/katilim-formu adresinde formu gerçek bilgilerle (kendi e-postanızı yazarak) doldurup gönderin. En az 3 saniye bekleyin, daha hızlı gönderimler sessizce yok sayılır.
-3. Başarı ekranı ("Ön başvurunuz bize ulaştı.") görünmeli, `info@academyizmir.com` ve `ocicaney@gmail.com` kutularına tek bir e-posta gelmeli. Konu: `Yeni Katılım Formu: <Ad Soyad> - <Atölye>`, Reply-To: yazdığınız e-posta.
+3. Başarı ekranı ("Formunuz bize ulaştı.") görünmeli, `info@academyizmir.com` ve `ocicaney@gmail.com` kutularına tek bir e-posta gelmeli. Konu: `Yeni Katılım Formu: <Ad Soyad> - <Atölye>`, Reply-To: yazdığınız e-posta.
 4. Gmail'e gelen test e-postasında **"Orijinali göster"** ile **SPF, DKIM ve DMARC** sonuçlarının **PASS** olduğunu kontrol edin. PASS değilse alan adının DNS kayıtlarını (SPF, DKIM, DMARC) düzeltin, yoksa başvurular spam'e düşer.
 5. E-posta gelmediyse önce spam klasörüne, sonra `private/storage/logs` dosyasına bakın.
 6. Hata ekranını denemek için geçici olarak `smtp_pass` değerini bozun, gönderin, sonra düzeltin: "Başvurunuz şu anda gönderilemedi" bildirimi ve dolu form görünmeli.

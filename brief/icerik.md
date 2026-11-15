@@ -6,11 +6,11 @@ Bu dosya müşterinin (Özlem Başkaya) maillerinden derlenmiştir. Çelişkiler
 
 ## 0. Genel
 
-- Kurum: Academy İzmir — İzmir'de sanat eğitim kurumu
+- Kurum: Academy İzmir — İzmir'de Sanat Atölyeleri ve Sahne Çalışmaları
 - Kuruluş: 2011
 - Kurucular: Özlem Başkaya ve Özgür Başkaya
 - Domain: academyizmir.com (aynı kalacak, site sıfırdan yenileniyor)
-- Hedef: Çağdaş, sanatsal, profesyonel görünüm. Öncelik: eğitimlerin kolay incelenmesi ve özellikle mobilden kolay iletişim (telefon, WhatsApp, başvuru formu).
+- Hedef: Çağdaş, sanatsal, profesyonel görünüm. Öncelik: atölyelerin kolay incelenmesi ve özellikle mobilden kolay iletişim (telefon, WhatsApp, başvuru formu).
 - Slogan: **Sanatla Keşfet, Sahneyle Büyü**
 - Kurumun sosyal medyada kullandığı ifadeler: "Sanat iyi gelir", "Sanatla daha fazlası"
 
@@ -34,14 +34,14 @@ Bu dosya müşterinin (Özlem Başkaya) maillerinden derlenmiştir. Çelişkiler
 **Başlık:** ACADEMY İZMİR
 **Slogan:** Sanatla Keşfet, Sahneyle Büyü
 **Tanıtım metni:**
-Çocuklardan gençlere, gençlerden yetişkinlere; yaratıcı dramadan tiyatroya, baleden dansa, oyunculuktan konservatuvar ve güzel sanatlar hazırlığına uzanan profesyonel sanat eğitimi.
+Çocuklardan gençlere, gençlerden yetişkinlere; yaratıcı dramadan tiyatroya, baleden dansa, oyunculuktan konservatuvar ve güzel sanatlar hazırlığına uzanan tiyatro, dans ve yaratıcı sanat çalışmaları.
 
 **Hero videosu:** `ACADEMYİZMİR_REELS.mp4` (dikey Reels videosu). Sessiz otomatik oynar, "sesi aç" butonu olur, poster görseli olur, sıkıştırılmış hâli kullanılır.
 
 **Ana sayfa yönlendirmeleri:** Atölyeler ve Sanat Grupları · Neden Academy İzmir? · Sanatçı Kadromuz · Güncel Kayıtlar · Başvuru · İletişim
 
 **Öne çıkan bilgiler:**
-- 2011'den beri sanat eğitimi
+- 2011'den Beri Sanatın ve Sahnenin İçinde
 - 15 yılı aşkın süredir konservatuvar ve güzel sanatlar fakültelerine hazırlık
 - Yaklaşık %80 yerleşme başarısı
 - Kısa kazananlar vitrini (Kazananlarımız sayfasına bağlanır)
@@ -72,7 +72,7 @@ Gelin, hayatın bize sunduğuyla yetinmeyelim; birlikte daha fazlasını hayal e
 
 Academy İzmir'de sanatın içinde, hayatın tam kalbinde buluşalım!
 
-**Kurucular fotoğrafı:** `[İÇERİK GELECEK]`
+**Kurucular fotoğrafı:** `[İÇERİK GELECEK]` (fotoğraf gelene kadar sitede bu alan hiç gösterilmez; yalnızca kurucu kartları vardır)
 
 ---
 
@@ -81,7 +81,7 @@ Academy İzmir'de sanatın içinde, hayatın tam kalbinde buluşalım!
 **Kasım 2026 güncellemesi:** Program başlıkları aşağıdaki gibi değişti. Her programın yeni atölye metni (alt başlıklarıyla) `brief/atolye-metinleri.md` bölüm 3'tedir ve sitede o metinle yayınlanır. Aşağıdaki "Ana metin" ve "Detay metni" alanları programların KENDİ bölümü için artık kullanılmaz; alt programların metinleri ve kart özetleri geçerlidir.
 
 
-Sıralama zorunlu. Her programda "kart özeti" (liste/kart görünümü için kısa metin) ve "detay metni" (eğitim sayfası için) var.
+Sıralama zorunlu. Her programda "kart özeti" (liste/kart görünümü için kısa metin) ve "detay metni" (atölye sayfası için) var.
 
 ### 4.1 Tiyatro Atölyeleri
 
@@ -162,7 +162,7 @@ Retorika, düşünmenin biçimiydi. Bugün, konuşma hâlâ var; fakat artık an
 
 Söyleyecek sözüm var ama nasıl söyleyeceğimi bilmiyorum diyorsanız, Retorika Atölyesinde buluşmalıyız.
 
-### 4.6 Eğitimlerle ilgili kurallar
+### 4.6 Atölyelerle ilgili kurallar
 
 - Şunlar AYRI BAŞLIK OLMAYACAK (içerikleri yukarıdaki programların içinde): Psikolog Destekli Yaratıcı Drama, Çocuk ve Genç Tiyatro Gösteri Grubu, Ses Eğitimi, Konuşma-Diksiyon.
 - Şunlar SİTEDE OLMAYACAK: Resim, Fotoğrafçılık, Jimnastik, Sinema-TV / Kamera Önü Oyunculuk, eski duyurular.
@@ -236,10 +236,11 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 ## 6. Kazananlarımız
 
 - Ayrı sayfa; yıl ve kategori filtresi olacak.
-- Kategoriler: "Üniversite ve Konservatuvar" ve "Güzel Sanatlar Lisesi".
+- Kategoriler: "Üniversite ve Konservatuvar" (`university`) ve "Güzel Sanatlar Lisesi" (`art-high-school`).
 - Bir öğrenci birden fazla okul kazanabilir. Veri yapısı: öğrenci → yerleşmeler listesi.
 - Ana sayfada ve Konservatuvar Hazırlık bölümünde kısa vitrin.
-- Mevcut kazanan görselleri "Tebrikler!" posterleri; site kendi kart tasarımını kullanır (fotoğraf + isim + okul/bölüm).
+- Mevcut kazanan görselleri "Tebrikler!" posterleri; site kendi kart tasarımını kullanır (fotoğraf + isim + okul/bölüm). Fotoğrafı olmayan kazananda fotoğraf yerine adın ve soyadın baş harfleri görünür (2023 ve öncesinin hepsi).
+- 2023 ve öncesi kaynağı: eski sitenin `kazananlar.html` (2021, 2022, 2023 tablosu) ve `kazanan-listesi.html` (2015 ve "2016 – 2017" listeleri). Okul adları mevcut kayıtlarla aynı biçime getirildi, bariz yazım hataları düzeltildi.
 
 ### 2026 — Üniversite ve Konservatuvar (10 öğrenci)
 
@@ -284,8 +285,110 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 | Nazlı Can | Ankara Üniversitesi, Dil ve Tarih-Coğrafya Fakültesi, Oyunculuk |
 | Yiğit Koçak | Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
 
+### 2023 — Üniversite ve Konservatuvar (16 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Aleyna Özkan | Haliç Üniversitesi, Konservatuvar, Oyunculuk (%50 burs) |
+| Müzeyyen Dural | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Emre Türközü | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Meriç Kamar | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Şima Saygın | Ankara Üniversitesi, Dil ve Tarih-Coğrafya Fakültesi, Oyunculuk |
+| İbrahim Furkan Alp | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Sude Uysal | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Kumsal Ecem Ece | İstanbul Aydın Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk (%50 burs) · İstanbul Nişantaşı Üniversitesi, Konservatuvar, Oyunculuk (%35 burs) |
+| Çağan Çıtak | Bahçeşehir Üniversitesi, Konservatuvar, Oyunculuk |
+| Sude Önder | Bilkent Üniversitesi, Müzik ve Sahne Sanatları Fakültesi, Oyunculuk (%90 burs) |
+| Gönül Aşırt | Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Erdal Kurun | Bahçeşehir Üniversitesi, Konservatuvar, Oyunculuk |
+| Sereney Ağanbaş | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Buket Fidanboy | Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Yağız Çakır | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Zeynep Zafar | Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+
+### 2023 — Güzel Sanatlar Lisesi (4 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| İpek Candaş | Işılay Saygın Güzel Sanatlar Lisesi, Tiyatro |
+| Asrın Kahraman | Işılay Saygın Güzel Sanatlar Lisesi, Tiyatro |
+| Naz Arabacı | Işılay Saygın Güzel Sanatlar Lisesi, Tiyatro |
+| Elif Akkuş | Işılay Saygın Güzel Sanatlar Lisesi, Tiyatro |
+
+### 2022 — Üniversite ve Konservatuvar (11 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Aleyna Şahin | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Nazlı Can | Çanakkale Onsekiz Mart Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Nil Ergen | Bahçeşehir Üniversitesi, Konservatuvar, Oyunculuk (%50 burs) · Çanakkale Onsekiz Mart Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Selen Erden | Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Drama Yazarlığı ve Dramaturji |
+| Ilgın Özmen | Anadolu Üniversitesi, Devlet Konservatuvarı, Oyunculuk |
+| Akdora Kalyoncu | Anadolu Üniversitesi, Devlet Konservatuvarı, Oyunculuk |
+| Buket Tuncer | Çanakkale Onsekiz Mart Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Ceylin Özdemir | Mimar Sinan Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Ada Turgut | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Nisa Aygün | Kıbrıs Arkın Yaratıcı Sanatlar ve Tasarım Üniversitesi, Oyunculuk (%100 burs) |
+| Deniz Subaşı | İstanbul Nişantaşı Üniversitesi, Sanat ve Tasarım Fakültesi (%50 burs) |
+
+### 2022 — Güzel Sanatlar Lisesi (1 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Demir İnal | Işılay Saygın Güzel Sanatlar Lisesi, Tiyatro |
+
+### 2021 — Üniversite ve Konservatuvar (8 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Düşlem Aydın | Haliç Üniversitesi, Konservatuvar, Oyunculuk |
+| Doğa Tüsüz | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Arif Bahadır | Malatya Turgut Özal Üniversitesi, Sanat, Tasarım ve Mimarlık Fakültesi, Oyunculuk |
+| Pınar Sayın | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Yaren Şahin | İstanbul Aydın Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Almina Durgan | Çanakkale Onsekiz Mart Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Zeynep Nur Tolgay | Çanakkale Onsekiz Mart Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Ece Nazire Tunca | Bahçeşehir Üniversitesi, Konservatuvar, Oyunculuk |
+
+### 2017 — Üniversite ve Konservatuvar (11 öğrenci) (liste başlığı "2016 – 2017")
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Ardahan Arda | Yeditepe Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Arya Ecem Özdil | Akdeniz Üniversitesi, Antalya Devlet Konservatuvarı, Oyunculuk · Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Eylül Eryiğit | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Gülüzar Çamur | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Kadir Berk Çal | Yeditepe Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Mislina Kurtuldu | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Onur Ballı | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Ömer Faruk Aran | Haliç Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Selin Falay | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Aylin Yılmaz | İstanbul Üniversitesi, Edebiyat Fakültesi, Tiyatro Eleştirmenliği ve Dramaturji |
+| Alis Çalışkan | İstanbul Üniversitesi, Edebiyat Fakültesi, Tiyatro Eleştirmenliği ve Dramaturji |
+
+### 2015 — Üniversite ve Konservatuvar (15 öğrenci)
+
+| Öğrenci | Yerleşmeler |
+|---|---|
+| Dilara Gülümser | İstanbul Bilgi Üniversitesi, Sahne Sanatları |
+| Buse Külekçi | Çukurova Üniversitesi, Adana Devlet Konservatuvarı, Oyunculuk · Dokuz Eylül Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Gülendam Yılmaz | Çukurova Üniversitesi, Adana Devlet Konservatuvarı, Oyunculuk |
+| Çağlar Kocavardar | Hacettepe Üniversitesi, Ankara Devlet Konservatuvarı, Oyunculuk |
+| Diğdem Kılıç | Anadolu Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Barış Şimşek | Akdeniz Üniversitesi, Antalya Devlet Konservatuvarı, Tiyatro |
+| Ceren Uğur | Ankara Üniversitesi, Dil ve Tarih-Coğrafya Fakültesi, Oyunculuk |
+| Begüm Bilge | Kocaeli Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Ege Seçkiner | Bursa Uludağ Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Evrim İpek | Bursa Uludağ Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Tunç Keleş | Muğla Sıtkı Koçman Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Okyanus Mutlutürk | İstanbul Bilgi Üniversitesi, Sahne Sanatları |
+| Anıl Özdemirci | Süleyman Demirel Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Elif Kale | Süleyman Demirel Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+| Selin Dendeşer | Süleyman Demirel Üniversitesi, Güzel Sanatlar Fakültesi, Oyunculuk |
+
 ### Gelecek olanlar
-- Güzel Sanatlar Lisesi kazananları (tüm yıllar): `[İÇERİK GELECEK]`
+- Güzel Sanatlar Lisesi kazananları: 2022 ve 2023 eklendi (eski siteden). Diğer yıllar: `[İÇERİK GELECEK]`
+- 2016 ve öncesi, 2018-2020: eski sitenin sayfalarında liste yok (bkz. bölüm 11, madde 18).
 
 ---
 
@@ -325,7 +428,7 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 - Google etiketleri ve Ads bağlantısı sonra kurulacak (bilgiler gelecek).
 - Temel SEO, mobil uyumluluk.
 - Fotoğraf ve videoların sayfa hızına etkisi kontrol edilecek (sıkıştırma, lazy-load, poster görselleri).
-- Eski sayfa adresleri yeni sayfalara 301 ile yönlendirilecek (yayına alma aşamasında).
+- Eski sayfa adresleri ve yeni sitenin ilk günlerindeki adresler (`/egitimler`, `/egitmen-kadromuz`, `/on-basvuru`) güncel adreslere (`/atolyeler`, `/sanatci-kadromuz`, `/katilim-formu` ...) 301 ile yönlendirilir (`site/private/redirects.php`).
 
 ---
 
@@ -346,8 +449,9 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 13. Başvuru formu gönderildiğinde başvurular hangi e-posta adresine gitsin? (yanıtlandı: info@academyizmir.com ve ocicaney@gmail.com)
 14. 2025 kazananlarının kazandıkları üniversite, fakülte ve bölüm bilgileri. Ayrıca Beren Özdemir 2024, İlay Kıngır ve Rasim Tuna Yılmaz 2026 listelerinde de var. Bu öğrenciler 2025'te de mi kazandı?
 15. Başvuru formundaki Eğitim Durumu seçenekleri onaylanmalı (şu anki liste: Okul öncesi, İlkokul öğrencisi, Ortaokul öğrencisi, Lise öğrencisi, Lise mezunu, Üniversite öğrencisi, Üniversite mezunu, Diğer).
-16. Eski sitedeki 2023 ve önceki yılların kazanan listesi eklenecek.
+16. Eski sitedeki 2023 ve önceki yılların kazanan listesi eklenecek. (yapıldı)
 17. Müşterinin bahsettiği kuruluş amacıyla ilgili metin bekleniyor.
+18. Eski sitenin sayfalarında 2013, 2014, 2016, 2018-2019 ve 2020 için liste görünmüyor (yalnızca kaynakta gizli poster görselleri var). Bu yıllar eklensin mi? "2016 – 2017" listesi 2017 olarak mı gösterilsin?
 
 ---
 
@@ -373,4 +477,6 @@ Metnin tamamı brief/kvkk.md dosyasındadır. Veri sorumlusu: Mayra Sanat Reklam
   8. Sanat Eğitimi Deneyiminiz (isteğe bağlı): Var, Yok (varsayılan: Yok)
   9. Eklemek İstedikleriniz (isteğe bağlı)
   10. KVKK Aydınlatma Metni onayı
-- Gönder butonu: "Ön Başvurumu Gönder"
+- Gönder butonu: "Formu Gönder" (gönderilirken "Gönderiliyor...")
+- Başarı ekranı başlığı: "Formunuz bize ulaştı."
+- Üst menü butonu: "Katılım ve Bilgi Formu" (dar ekranda kısa hâli: "Katılım Formu")

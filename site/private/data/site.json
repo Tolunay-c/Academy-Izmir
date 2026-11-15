@@ -778,6 +778,1086 @@
           "scholarship": null
         }
       ]
+    },
+    {
+      "id": "ipek-candas",
+      "name": "İpek Candaş",
+      "year": 2023,
+      "category": "art-high-school",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Işılay Saygın Güzel Sanatlar Lisesi",
+          "faculty": null,
+          "program": "Tiyatro",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "asrin-kahraman",
+      "name": "Asrın Kahraman",
+      "year": 2023,
+      "category": "art-high-school",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Işılay Saygın Güzel Sanatlar Lisesi",
+          "faculty": null,
+          "program": "Tiyatro",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "naz-arabaci",
+      "name": "Naz Arabacı",
+      "year": 2023,
+      "category": "art-high-school",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Işılay Saygın Güzel Sanatlar Lisesi",
+          "faculty": null,
+          "program": "Tiyatro",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "elif-akkus",
+      "name": "Elif Akkuş",
+      "year": 2023,
+      "category": "art-high-school",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Işılay Saygın Güzel Sanatlar Lisesi",
+          "faculty": null,
+          "program": "Tiyatro",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "aleyna-ozkan",
+      "name": "Aleyna Özkan",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Haliç Üniversitesi",
+          "faculty": "Konservatuvar",
+          "program": "Oyunculuk",
+          "scholarship": "%50 burs"
+        }
+      ]
+    },
+    {
+      "id": "muzeyyen-dural",
+      "name": "Müzeyyen Dural",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "emre-turkozu",
+      "name": "Emre Türközü",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "meric-kamar",
+      "name": "Meriç Kamar",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "sima-saygin",
+      "name": "Şima Saygın",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Ankara Üniversitesi",
+          "faculty": "Dil ve Tarih-Coğrafya Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ibrahim-furkan-alp",
+      "name": "İbrahim Furkan Alp",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "sude-uysal",
+      "name": "Sude Uysal",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "kumsal-ecem-ece",
+      "name": "Kumsal Ecem Ece",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "İstanbul Aydın Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": "%50 burs"
+        },
+        {
+          "university": "İstanbul Nişantaşı Üniversitesi",
+          "faculty": "Konservatuvar",
+          "program": "Oyunculuk",
+          "scholarship": "%35 burs"
+        }
+      ]
+    },
+    {
+      "id": "cagan-citak",
+      "name": "Çağan Çıtak",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Bahçeşehir Üniversitesi",
+          "faculty": "Konservatuvar",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "sude-onder",
+      "name": "Sude Önder",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Bilkent Üniversitesi",
+          "faculty": "Müzik ve Sahne Sanatları Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": "%90 burs"
+        }
+      ]
+    },
+    {
+      "id": "gonul-asirt",
+      "name": "Gönül Aşırt",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Dokuz Eylül Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "erdal-kurun",
+      "name": "Erdal Kurun",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Bahçeşehir Üniversitesi",
+          "faculty": "Konservatuvar",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "sereney-aganbas",
+      "name": "Sereney Ağanbaş",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "buket-fidanboy",
+      "name": "Buket Fidanboy",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Dokuz Eylül Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "yagiz-cakir",
+      "name": "Yağız Çakır",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "zeynep-zafar",
+      "name": "Zeynep Zafar",
+      "year": 2023,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Dokuz Eylül Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "demir-inal",
+      "name": "Demir İnal",
+      "year": 2022,
+      "category": "art-high-school",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Işılay Saygın Güzel Sanatlar Lisesi",
+          "faculty": null,
+          "program": "Tiyatro",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "aleyna-sahin",
+      "name": "Aleyna Şahin",
+      "year": 2022,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Kocaeli Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "nazli-can-2022",
+      "name": "Nazlı Can",
+      "year": 2022,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Çanakkale Onsekiz Mart Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "nil-ergen",
+      "name": "Nil Ergen",
+      "year": 2022,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Bahçeşehir Üniversitesi",
+          "faculty": "Konservatuvar",
+          "program": "Oyunculuk",
+          "scholarship": "%50 burs"
+        },
+        {
+          "university": "Çanakkale Onsekiz Mart Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "selen-erden",
+      "name": "Selen Erden",
+      "year": 2022,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Dokuz Eylül Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Drama Yazarlığı ve Dramaturji",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ilgin-ozmen",
+      "name": "Ilgın Özmen",
+      "year": 2022,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Anadolu Üniversitesi",
+          "faculty": "Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "akdora-kalyoncu",
+      "name": "Akdora Kalyoncu",
+      "year": 2022,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Anadolu Üniversitesi",
+          "faculty": "Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "buket-tuncer",
+      "name": "Buket Tuncer",
+      "year": 2022,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Çanakkale Onsekiz Mart Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ceylin-ozdemir",
+      "name": "Ceylin Özdemir",
+      "year": 2022,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Mimar Sinan Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ada-turgut",
+      "name": "Ada Turgut",
+      "year": 2022,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "nisa-aygun",
+      "name": "Nisa Aygün",
+      "year": 2022,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Kıbrıs Arkın Yaratıcı Sanatlar ve Tasarım Üniversitesi",
+          "faculty": null,
+          "program": "Oyunculuk",
+          "scholarship": "%100 burs"
+        }
+      ]
+    },
+    {
+      "id": "deniz-subasi",
+      "name": "Deniz Subaşı",
+      "year": 2022,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "İstanbul Nişantaşı Üniversitesi",
+          "faculty": "Sanat ve Tasarım Fakültesi",
+          "program": null,
+          "scholarship": "%50 burs"
+        }
+      ]
+    },
+    {
+      "id": "duslem-aydin",
+      "name": "Düşlem Aydın",
+      "year": 2021,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Haliç Üniversitesi",
+          "faculty": "Konservatuvar",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "doga-tusuz",
+      "name": "Doğa Tüsüz",
+      "year": 2021,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Kocaeli Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "arif-bahadir",
+      "name": "Arif Bahadır",
+      "year": 2021,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Malatya Turgut Özal Üniversitesi",
+          "faculty": "Sanat, Tasarım ve Mimarlık Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "pinar-sayin",
+      "name": "Pınar Sayın",
+      "year": 2021,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Kocaeli Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "yaren-sahin",
+      "name": "Yaren Şahin",
+      "year": 2021,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "İstanbul Aydın Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "almina-durgan",
+      "name": "Almina Durgan",
+      "year": 2021,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Çanakkale Onsekiz Mart Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "zeynep-nur-tolgay",
+      "name": "Zeynep Nur Tolgay",
+      "year": 2021,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Çanakkale Onsekiz Mart Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ece-nazire-tunca",
+      "name": "Ece Nazire Tunca",
+      "year": 2021,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Bahçeşehir Üniversitesi",
+          "faculty": "Konservatuvar",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ardahan-arda",
+      "name": "Ardahan Arda",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Yeditepe Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "arya-ecem-ozdil",
+      "name": "Arya Ecem Özdil",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Akdeniz Üniversitesi",
+          "faculty": "Antalya Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        },
+        {
+          "university": "Dokuz Eylül Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "eylul-eryigit",
+      "name": "Eylül Eryiğit",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Kocaeli Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "guluzar-camur",
+      "name": "Gülüzar Çamur",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "kadir-berk-cal",
+      "name": "Kadir Berk Çal",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Yeditepe Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "mislina-kurtuldu",
+      "name": "Mislina Kurtuldu",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "onur-balli",
+      "name": "Onur Ballı",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Kocaeli Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "omer-faruk-aran",
+      "name": "Ömer Faruk Aran",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Haliç Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "selin-falay",
+      "name": "Selin Falay",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Kocaeli Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "aylin-yilmaz",
+      "name": "Aylin Yılmaz",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "İstanbul Üniversitesi",
+          "faculty": "Edebiyat Fakültesi",
+          "program": "Tiyatro Eleştirmenliği ve Dramaturji",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "alis-caliskan",
+      "name": "Alis Çalışkan",
+      "year": 2017,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "İstanbul Üniversitesi",
+          "faculty": "Edebiyat Fakültesi",
+          "program": "Tiyatro Eleştirmenliği ve Dramaturji",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "dilara-gulumser",
+      "name": "Dilara Gülümser",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "İstanbul Bilgi Üniversitesi",
+          "faculty": null,
+          "program": "Sahne Sanatları",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "buse-kulekci",
+      "name": "Buse Külekçi",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Çukurova Üniversitesi",
+          "faculty": "Adana Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        },
+        {
+          "university": "Dokuz Eylül Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "gulendam-yilmaz",
+      "name": "Gülendam Yılmaz",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Çukurova Üniversitesi",
+          "faculty": "Adana Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "caglar-kocavardar",
+      "name": "Çağlar Kocavardar",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Hacettepe Üniversitesi",
+          "faculty": "Ankara Devlet Konservatuvarı",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "digdem-kilic",
+      "name": "Diğdem Kılıç",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Anadolu Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "baris-simsek",
+      "name": "Barış Şimşek",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Akdeniz Üniversitesi",
+          "faculty": "Antalya Devlet Konservatuvarı",
+          "program": "Tiyatro",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ceren-ugur",
+      "name": "Ceren Uğur",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Ankara Üniversitesi",
+          "faculty": "Dil ve Tarih-Coğrafya Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "begum-bilge",
+      "name": "Begüm Bilge",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Kocaeli Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "ege-seckiner",
+      "name": "Ege Seçkiner",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Bursa Uludağ Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "evrim-ipek",
+      "name": "Evrim İpek",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Bursa Uludağ Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "tunc-keles",
+      "name": "Tunç Keleş",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Muğla Sıtkı Koçman Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "okyanus-mutluturk",
+      "name": "Okyanus Mutlutürk",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "İstanbul Bilgi Üniversitesi",
+          "faculty": null,
+          "program": "Sahne Sanatları",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "anil-ozdemirci",
+      "name": "Anıl Özdemirci",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Süleyman Demirel Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "elif-kale",
+      "name": "Elif Kale",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Süleyman Demirel Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
+    },
+    {
+      "id": "selin-dendeser",
+      "name": "Selin Dendeşer",
+      "year": 2015,
+      "category": "university",
+      "image": null,
+      "alt": null,
+      "placements": [
+        {
+          "university": "Süleyman Demirel Üniversitesi",
+          "faculty": "Güzel Sanatlar Fakültesi",
+          "program": "Oyunculuk",
+          "scholarship": null
+        }
+      ]
     }
   ],
   "gallery": [
