@@ -11,7 +11,7 @@ Bu dosya müşterinin (Özlem Başkaya) maillerinden derlenmiştir. Çelişkiler
 - Kurucular: Özlem Başkaya ve Özgür Başkaya
 - Domain: academyizmir.com (aynı kalacak, site sıfırdan yenileniyor)
 - Hedef: Çağdaş, sanatsal, profesyonel görünüm. Öncelik: atölyelerin kolay incelenmesi ve özellikle mobilden kolay iletişim (telefon, WhatsApp, başvuru formu).
-- Slogan: **Sanatla Keşfet, Sahneyle Büyü**
+- Slogan: **Sanatla Keşfet, Sahneyle Parla**
 - Kurumun sosyal medyada kullandığı ifadeler: "Sanat iyi gelir", "Sanatla daha fazlası"
 
 ---
@@ -32,7 +32,7 @@ Bu dosya müşterinin (Özlem Başkaya) maillerinden derlenmiştir. Çelişkiler
 ## 2. Ana Sayfa
 
 **Başlık:** ACADEMY İZMİR
-**Slogan:** Sanatla Keşfet, Sahneyle Büyü
+**Slogan:** Sanatla Keşfet, Sahneyle Parla
 **Tanıtım metni:**
 Çocuklardan gençlere, gençlerden yetişkinlere; yaratıcı dramadan tiyatroya, baleden dansa, oyunculuktan konservatuvar ve güzel sanatlar hazırlığına uzanan tiyatro, dans ve yaratıcı sanat çalışmaları.
 
@@ -50,7 +50,7 @@ Bu dosya müşterinin (Özlem Başkaya) maillerinden derlenmiştir. Çelişkiler
 
 ## 3. Hakkımızda / Neden Academy İzmir?
 
-**Başlık:** ACADEMY İZMİR — Sanatla Keşfet, Sahneyle Büyü
+**Başlık:** ACADEMY İZMİR — Sanatla Keşfet, Sahneyle Parla
 
 Her insanın kendine özgü bir sesi, anlatacak bir hikâyesi ve keşfedilmeyi bekleyen bir potansiyeli vardır.
 
@@ -226,7 +226,9 @@ Sahne sanatları alanında uzun yıllara dayanan deneyime sahip olan Meltem Yoru
 ### 10. Ebru Parıltı
 **Unvan:** Yönetici
 
-Sadece fotoğraf, isim ve "Yönetici" unvanı. Özgeçmiş YOK.
+Özgeçmiş (Kasım 2026 güncellemesi):
+
+Tiyatro salonları ve özel tiyatrolarda uzun yıllara dayanan deneyimiyle; sanat yönetimi, organizasyon ve ekip koordinasyonundaki yetkinliği, güçlü iletişim becerileri ve çözüm odaklı liderlik anlayışıyla öne çıkan profesyonel bir yöneticidir.
 
 ### Kaldırılacak isimler (sitede yer almayacak)
 Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
@@ -517,7 +519,8 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 
 ## 7. Sanatsal Projelerimiz ve Galeri
 
-- Tiyatro yapımları, sahne çalışmaları ve **Academy İzmir Trio** için bir Sanatsal Projelerimiz bölümü düşünülüyor. Kapsam: `[İÇERİK GELECEK]`
+- Sanatsal Projelerimiz bölümü, müşterinin gönderdiği oyun afişleri ve sahne fotoğraflarıyla (`brief/projeler/`) oluşturuldu. Her oyun bir proje kartıdır (afiş + oyunun adı); oyunun sahne fotoğrafı varsa kart tıklanınca o oyunun bütün görselleri lightbox'ta açılır. Yazar, yönetmen, oyuncu listesi gibi bilgiler sitede YAZILMAZ (yalnızca oyun adı). Şu an 4 oyun: Aşk Olsun, Kadın Oyunları, Palaska, Blok A6.
+- Academy İzmir Trio ve diğer yapımlar için kapsam: `[İÇERİK GELECEK]`
 - Tek bir galeri, kategoriye göre filtrelenebilir.
 - Branş sayfalarında kısa videolar kullanılabilir.
 - Mevcut medya: Drive klasöründeki sahne fotoğrafları (`BVN...jpg`) ve kısa videolar (`ACADEMYİZMİR_KISA_3.mp4`, `ACADEMYİZMİR_KISA_9.mp4`, `ACADEMYİZMİR_KISA_10.mp4`).
@@ -530,6 +533,11 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 - Yeni gruplar, atölyeler ve etkinlikler için duyuru alanı.
 - Şimdilik yönetim paneli YOK; duyurular veri dosyasından beslenir, güncellemeleri geliştirici yapar.
 - Mevcut duyuru içeriği: `[İÇERİK GELECEK]` (boş durum tasarımı yapılmalı).
+- Sayfa giriş metni (başlığın altında, üç ayrı paragraf):
+  1. Sanatın, yaratıcılığın ve birlikte üretmenin heyecanını paylaşıyoruz.
+  2. Academy İzmir bünyesinde gerçekleşen atölyeler, sahne çalışmaları, sanatsal projeler ve etkinliklere ilişkin gelişmeleri bu sayfadan takip edebilirsiniz.
+  3. Sanatla buluşmaya devam ediyoruz.
+- Sayfanın meta description ve og açıklaması ikinci paragraftır.
 
 ---
 
@@ -548,7 +556,7 @@ Selda Uzunkaya, Yeşim Turgut, Özlem Gür, Dilek Kutsal, Fırat Halavut
 ## 10. Teknik ve Takip
 
 - Telefon, WhatsApp ve başvuru formu dönüşümleri ölçülecek. Bu bağlantılara takip için `data-track` gibi işaretler konulmalı (`data-track="phone"`, `data-track="whatsapp"`, `data-track="form"`).
-- Google etiketleri ve Ads bağlantısı sonra kurulacak (bilgiler gelecek).
+- Google etiketleri ve Ads bağlantısı sonra kurulacak (bilgiler gelecek). Standart GTM kodu iki parçalıdır: config `head_scripts` (head içinde, meta etiketlerinden hemen sonra) ve `body_scripts` (`<body>` açılışından hemen sonra, noscript parçası).
 - Temel SEO, mobil uyumluluk.
 - Fotoğraf ve videoların sayfa hızına etkisi kontrol edilecek (sıkıştırma, lazy-load, poster görselleri).
 - Eski sayfa adresleri ve yeni sitenin ilk günlerindeki adresler (`/egitimler`, `/egitmen-kadromuz`, `/on-basvuru`) güncel adreslere (`/atolyeler`, `/sanatci-kadromuz`, `/katilim-formu` ...) 301 ile yönlendirilir (`site/private/redirects.php`).
@@ -592,7 +600,7 @@ Metnin tamamı brief/kvkk.md dosyasındadır. Veri sorumlusu: Mayra Sanat Reklam
 
 - Sayfa başlığı: "Katılım ve Bilgi Formu" (adres: /katilim-formu)
 - Form başlığı: "Sanat Yolculuğuna İlk Adımı At!"
-- Açıklama: "Eğitim programlarımız hakkında bilgi almak ve ön başvurunuzu oluşturmak için aşağıdaki alanları doldurabilirsiniz."
+- Açıklama: "Atölye programlarımız hakkında bilgi almak ve ön başvurunuzu oluşturmak için aşağıdaki alanları doldurabilirsiniz."
 - Alanlar (bu sırayla):
   1. Ad Soyad (zorunlu)
   2. Doğum Tarihi (zorunlu)

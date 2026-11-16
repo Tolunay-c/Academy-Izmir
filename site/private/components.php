@@ -252,6 +252,37 @@ function gallery_mosaic(): void
     }
 }
 
+/**
+ * Sanatsal Projelerimiz kartları (site.json "projects"). Kart, oyunun ilk görselini (afiş) gösterir ve
+ * lightbox'ı o oyunun bütün görselleriyle açar. Aynı oyunun diğer görselleri gizli bağlantı olarak
+ * basılır (data-lightbox-group aynı), JS yokken yalnızca afiş bağlantısı çalışır.
+ */
+function project_cards(): void
+{
+    foreach (site()['projects'] as $n => $project) {
+        $group = 'project-' . $project['id'];
+        $count = count($project['images']);
+        $first = $project['images'][0];
+        [$bw, $bh] = image_size($first['src_1600']);
+        [$w, $h] = image_size($first['src_800']);
+        echo '<article class="project-card">
+            <a class="project-card-link" href="' . e(asset($first['src_1600'])) . '" data-lightbox-item data-lightbox-group="' . e($group) . '" data-w="' . $bw . '" data-h="' . $bh . '">
+              <span class="project-card-media">
+                <img src="' . e(asset($first['src_800'])) . '" width="' . $w . '" height="' . $h . '"' . ($n < 3 ? '' : ' loading="lazy"') . ' alt="' . e($first['alt']) . '">
+              </span>
+              <h3 class="project-card-title">' . e($project['title']) . '</h3>
+            </a>';
+        for ($i = 1; $i < $count; $i++) {
+            $extra = $project['images'][$i];
+            [$ebw, $ebh] = image_size($extra['src_1600']);
+            echo '
+            <a href="' . e(asset($extra['src_1600'])) . '" hidden data-lightbox-item data-lightbox-group="' . e($group) . '" data-w="' . $ebw . '" data-h="' . $ebh . '"><img src="' . e(asset($extra['src_800'])) . '" alt="' . e($extra['alt']) . '"></a>';
+        }
+        echo '
+          </article>' . "\n";
+    }
+}
+
 /** Başvuru formundaki seçenekler (site.json "application" nesnesi). */
 function select_options(array $options, string $placeholder, string $selected = ''): void
 {

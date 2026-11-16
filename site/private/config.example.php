@@ -22,8 +22,13 @@ return [
     // Zaman tuzağı imzası ve IP özeti için rastgele uzun anahtar (README'de nasıl üretileceği yazıyor).
     'app_secret' => '',
 
-    // <head> sonuna eklenecek ham HTML parçaları (Google Tag Manager, Analytics, Ads kodları). Boş dizi: hiçbir şey basılmaz.
+    // <head> içinde, charset ve viewport meta etiketlerinden hemen sonra basılacak ham HTML parçaları
+    // (Google Tag Manager'ın birinci parçası, Analytics, Ads kodları). Boş dizi: hiçbir şey basılmaz.
     'head_scripts' => [],
+
+    // <body> açılış etiketinin hemen ardından basılacak ham HTML parçaları (Google Tag Manager'ın
+    // ikinci parçası, noscript iframe). Boş dizi: hiçbir şey basılmaz.
+    'body_scripts' => [],
 
     // Google Search Console doğrulama kodu (meta content değeri). Boş: etiket basılmaz.
     'search_console_meta' => '',

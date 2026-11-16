@@ -14,7 +14,7 @@ partial('mobile-menu');
         <div class="hero-text">
           <p class="section-eyebrow">İzmir'de Sanat Atölyeleri ve Sahne Çalışmaları</p>
           <h1 class="hero-title">ACADEMY <em>İZMİR</em></h1>
-          <p class="hero-slogan">Sanatla Keşfet, Sahneyle Büyü</p>
+          <p class="hero-slogan">Sanatla Keşfet, Sahneyle Parla</p>
           <p class="hero-intro">Çocuklardan gençlere, gençlerden yetişkinlere; yaratıcı dramadan tiyatroya, baleden dansa, oyunculuktan konservatuvar ve güzel sanatlar hazırlığına uzanan tiyatro, dans ve yaratıcı sanat çalışmaları.</p>
           <div class="hero-actions">
             <a class="button button-secondary" href="<?= e(url('programs')) ?>">Atölyeleri Keşfet</a>

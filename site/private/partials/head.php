@@ -1,10 +1,12 @@
 <?php
-/** <!DOCTYPE> ile <body> açılışına kadar: title, meta, canonical, og, fontlar, CSS, JS. */
+/** <!DOCTYPE> ile <body> açılışına kadar: title, meta, canonical, og, fontlar, CSS, JS.
+ *  head_scripts charset ve viewport'tan hemen sonra, body_scripts <body> açılışının hemen ardından basılır. */
 $p = page();
 $canonical = absolute_url($p['path']);
 $ogImage = base_url() . '/assets/images/og-image.jpg';
 $searchConsole = trim((string) config('search_console_meta', ''));
-$headScripts = (array) config('head_scripts', []);
+$headScripts = array_filter((array) config('head_scripts', []), static fn ($s): bool => is_string($s) && trim($s) !== '');
+$bodyScripts = array_filter((array) config('body_scripts', []), static fn ($s): bool => is_string($s) && trim($s) !== '');
 $hidden = !empty($p['hidden']);
 ?>
 <!DOCTYPE html>
@@ -12,6 +14,10 @@ $hidden = !empty($p['hidden']);
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php foreach ($headScripts as $snippet): ?>
+  <?= $snippet ?>
+
+<?php endforeach; ?>
   <title><?= e($p['title']) ?></title>
   <meta name="description" content="<?= e($p['description']) ?>">
 <?php if ($hidden): ?>
@@ -52,9 +58,9 @@ $hidden = !empty($p['hidden']);
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/components.css">
   <script src="/assets/js/main.js" defer></script>
-<?php foreach ($headScripts as $snippet): ?>
-  <?= $snippet ?>
-
-<?php endforeach; ?>
 </head>
 <body class="site-body">
+<?php foreach ($bodyScripts as $snippet): ?>
+<?= $snippet ?>
+
+<?php endforeach; ?>

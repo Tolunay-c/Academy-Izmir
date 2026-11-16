@@ -44,7 +44,7 @@ partial('mobile-menu');
           <form class="form" id="application-form" action="<?= e(url('application')) ?>" method="post" aria-labelledby="application-title" data-application-form>
             <header class="form-header">
               <h2 class="form-title" id="application-title">Sanat Yolculuğuna İlk Adımı <em>At!</em></h2>
-              <p class="section-lead">Eğitim programlarımız hakkında bilgi almak ve ön başvurunuzu oluşturmak için aşağıdaki alanları doldurabilirsiniz.</p>
+              <p class="section-lead">Atölye programlarımız hakkında bilgi almak ve ön başvurunuzu oluşturmak için aşağıdaki alanları doldurabilirsiniz.</p>
             </header>
 
             <div class="form-summary" role="alert" tabindex="-1"<?= $errors ? '' : ' hidden' ?> data-form-summary>

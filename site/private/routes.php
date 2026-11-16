@@ -87,7 +87,7 @@ return [
         'path' => '/duyurular',
         'file' => 'announcements.php',
         'title' => 'Güncel Kayıtlar ve Duyurular | Academy İzmir',
-        'description' => 'Yeni gruplar, atölyeler ve etkinlikler için duyuru alanı.',
+        'description' => 'Academy İzmir bünyesinde gerçekleşen atölyeler, sahne çalışmaları, sanatsal projeler ve etkinliklere ilişkin gelişmeleri bu sayfadan takip edebilirsiniz.',
         'label' => 'Güncel Kayıtlar ve Duyurular',
         'nav' => 'Duyurular',
         'mobile' => true,

@@ -15,7 +15,7 @@ partial('mobile-menu');
     </header>
     <section class="section about-intro" aria-label="Giriş">
       <div class="container about-intro-grid">
-        <p class="about-slogan">Sanatla Keşfet, Sahneyle Büyü</p>
+        <p class="about-slogan">Sanatla Keşfet, Sahneyle Parla</p>
         <div class="about-intro-text">
           <p class="about-lead">Her insanın kendine özgü bir sesi, anlatacak bir hikâyesi ve keşfedilmeyi bekleyen bir potansiyeli vardır.</p>
           <p class="about-intro-body">Academy İzmir, bu seslere alan açmak, hikâyeleri birlikte büyütmek ve sanatın dönüştürücü gücünü hayatın bir parçası kılmak için var.</p>

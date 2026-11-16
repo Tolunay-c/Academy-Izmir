@@ -435,12 +435,16 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
 /* ---- Lightbox (galeri, native <dialog>) -----------------------------------------------------------
    Fotoğraf bağlantıları -1600 sürümüne gider (JS yokken normal bağlantı). JS varken dialog açılır:
    önceki/sonraki düğmeleri, ok tuşları, dokunmatikte kaydırma, sayaç. Esc native dialog ile kapatır,
-   kapanınca odak tıklanan fotoğrafa döner, arka plan kaymaz. */
+   kapanınca odak tıklanan fotoğrafa döner, arka plan kaymaz.
+   data-lightbox-group aynı olan görseller kendi aralarında bir küme olur (Sanatsal Projelerimiz: bir oyunun
+   afişi ve sahne fotoğrafları). Grupsuz görseller galeri kümesidir. Tek görsellik kümede gezinme gizlenir.
+   Gizli (hidden) bağlantılar yalnızca kümeye görsel ekler, odak ve kaydırma tıklanan bağlantıya döner. */
 (function () {
   'use strict';
 
   var dialog = document.querySelector('[data-lightbox]');
-  var tiles = Array.prototype.slice.call(document.querySelectorAll('[data-lightbox-item]'));
+  var allTiles = Array.prototype.slice.call(document.querySelectorAll('[data-lightbox-item]'));
+  var tiles = allTiles;
   if (!dialog || !tiles.length || typeof dialog.showModal !== 'function') { return; }
 
   var image = dialog.querySelector('[data-lightbox-image]');
@@ -462,6 +466,7 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
     image.alt = thumb.alt;
     image.src = tile.getAttribute('href');
     counter.textContent = (index + 1) + ' / ' + tiles.length;
+    dialog.classList.toggle('is-single', tiles.length === 1);
     previous.setAttribute('aria-disabled', index === 0 ? 'true' : 'false');
     next.setAttribute('aria-disabled', index === tiles.length - 1 ? 'true' : 'false');
     [index - 1, index + 1].forEach(function (i) {
@@ -475,11 +480,14 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
     show(target);
   }
 
-  tiles.forEach(function (tile, index) {
+  allTiles.forEach(function (tile) {
+    if (tile.hidden) { return; }
     tile.addEventListener('click', function (event) {
       event.preventDefault();
       trigger = tile;
-      show(index);
+      var group = tile.getAttribute('data-lightbox-group');
+      tiles = allTiles.filter(function (other) { return other.getAttribute('data-lightbox-group') === group; });
+      show(tiles.indexOf(tile));
       dialog.showModal();
       document.body.classList.add('is-lightbox-open');
     });
@@ -495,6 +503,7 @@ document.addEventListener('pointerdown', function () { lastInput = 'pointer'; },
     /* Odak, o an gösterilen fotoğrafa döner. Ekranda değilse görünür olacak şekilde kaydırılır
        (hareket azaltma tercihinde animasyonsuz). */
     var shown = tiles[current] || trigger;
+    if (shown && shown.hidden) { shown = trigger; }
     if (shown) {
       shown.focus({ preventScroll: true });
       var rect = shown.getBoundingClientRect();

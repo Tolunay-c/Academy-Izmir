@@ -15,6 +15,11 @@ partial('mobile-menu');
     </header>
     <section class="section" aria-label="Duyurular">
       <div class="container">
+        <div class="announcements-intro">
+          <p class="section-lead">Sanatın, yaratıcılığın ve birlikte üretmenin heyecanını paylaşıyoruz.</p>
+          <p class="section-lead">Academy İzmir bünyesinde gerçekleşen atölyeler, sahne çalışmaları, sanatsal projeler ve etkinliklere ilişkin gelişmeleri bu sayfadan takip edebilirsiniz.</p>
+          <p class="section-lead">Sanatla buluşmaya devam ediyoruz.</p>
+        </div>
 <?php $announcements = announcements_sorted(); if (count($announcements) === 0): ?>
         <p class="empty-state">Güncel duyurularımız yakında burada olacak.</p>
 <?php else: ?>

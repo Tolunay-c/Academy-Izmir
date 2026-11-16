@@ -62,7 +62,8 @@ Sunucuda `private/config.php` dosyasını oluşturup aşağıdaki değerleri dol
 | `mail_from`, `mail_from_name` | Gönderen adresi ve adı. SPF/DKIM için sunucunun alan adıyla aynı domain'den olmalı (`noreply@academyizmir.com`). |
 | `mail_to` | Alıcı adresler dizisi. Başvuru, hepsine tek e-posta olarak gider (hepsi To alanında): `info@academyizmir.com`, `ocicaney@gmail.com`. |
 | `app_secret` | Zaman tuzağı imzası ve IP özeti için rastgele uzun anahtar. Üretmek için: `php -r "echo bin2hex(random_bytes(32));"` (64 karakter). Gizli tutun, değiştirirseniz açık form sayfaları bir kez geçersiz olur. |
-| `head_scripts` | `<head>` sonuna eklenecek ham HTML parçaları dizisi (Google Tag Manager, Analytics, Ads). Boş dizi: hiçbir şey basılmaz. Parçalar kaçışlanmadan basılır, yalnızca güvenilir kod girin. |
+| `head_scripts` | `<head>` içinde, charset ve viewport meta etiketlerinden hemen sonra basılacak ham HTML parçaları dizisi (Google Tag Manager'ın birinci parçası, Analytics, Ads). Boş dizi: hiçbir şey basılmaz. Parçalar kaçışlanmadan basılır, yalnızca güvenilir kod girin. |
+| `body_scripts` | `<body>` açılış etiketinin hemen ardından basılacak ham HTML parçaları dizisi (Google Tag Manager'ın ikinci parçası, `<noscript><iframe ...>`). Boş dizi: hiçbir şey basılmaz. Aynı güvenlik notu geçerlidir. |
 | `search_console_meta` | Search Console doğrulama kodu (meta content değeri). Boşsa etiket basılmaz. |
 
 `config.php` yoksa ya da mail ayarları boşsa form hata vermez, "Başvurunuz şu anda gönderilemedi" ekranını gösterir ve nedeni loglar (`mail_not_configured`).

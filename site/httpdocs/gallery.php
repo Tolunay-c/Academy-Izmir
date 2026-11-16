@@ -18,9 +18,8 @@ partial('mobile-menu');
         <header class="section-header">
           <h2 class="section-title" id="gallery-projects-title">Sanatsal <em>Projelerimiz</em></h2>
         </header>
-        <div class="content-placeholder">
-          <p class="pending-note">[İÇERİK GELECEK]</p>
-          <p class="content-placeholder-text">Tiyatro yapımları, sahne çalışmaları ve Academy İzmir Trio</p>
+        <div class="project-grid">
+<?php project_cards(); ?>
         </div>
       </div>
     </section>
@@ -59,7 +58,7 @@ partial('mobile-menu');
       </div>
       <div class="lightbox-nav">
         <button class="lightbox-button" type="button" aria-label="Önceki fotoğraf" data-lightbox-prev><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></button>
-        <p class="lightbox-counter" data-lightbox-counter>1 / <?= count(site()['gallery']) ?></p>
+        <p class="lightbox-counter" data-lightbox-counter>1 / 1</p>
         <button class="lightbox-button" type="button" aria-label="Sonraki fotoğraf" data-lightbox-next><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
       </div>
     </dialog>

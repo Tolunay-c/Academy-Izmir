@@ -3,7 +3,7 @@
     "name": "Academy İzmir",
     "description": "İzmir'de Sanat Atölyeleri ve Sahne Çalışmaları",
     "home_title": "ACADEMY İZMİR",
-    "tagline": "Sanatla Keşfet, Sahneyle Büyü",
+    "tagline": "Sanatla Keşfet, Sahneyle Parla",
     "intro": "Çocuklardan gençlere, gençlerden yetişkinlere; yaratıcı dramadan tiyatroya, baleden dansa, oyunculuktan konservatuvar ve güzel sanatlar hazırlığına uzanan tiyatro, dans ve yaratıcı sanat çalışmaları.",
     "founded": 2011,
     "highlights": [
@@ -362,7 +362,7 @@
       "titles": [
         "Yönetici"
       ],
-      "bio": null,
+      "bio": "Tiyatro salonları ve özel tiyatrolarda uzun yıllara dayanan deneyimiyle; sanat yönetimi, organizasyon ve ekip koordinasyonundaki yetkinliği, güçlü iletişim becerileri ve çözüm odaklı liderlik anlayışıyla öne çıkan profesyonel bir yöneticidir.",
       "image": "assets/images/kadro/10-ebru-parilti.webp",
       "alt": "Ebru Parıltı portresi"
     }
@@ -3591,6 +3591,62 @@
       "orientation": "portrait",
       "alt": "Bale kostümlü bir grup belge tutuyor, ortada çiçek buketi tutan bir kişi diz çökmüş.",
       "category": null
+    }
+  ],
+  "projects": [
+    {
+      "id": "ask-olsun",
+      "title": "Aşk Olsun",
+      "images": [
+        {
+          "src_800": "assets/images/projeler/ask-olsun-afis-800.webp",
+          "src_1600": "assets/images/projeler/ask-olsun-afis-1600.webp",
+          "kind": "poster",
+          "alt": "Aşk Olsun oyun afişi"
+        }
+      ]
+    },
+    {
+      "id": "kadin-oyunlari",
+      "title": "Kadın Oyunları",
+      "images": [
+        {
+          "src_800": "assets/images/projeler/kadin-oyunlari-afis-800.webp",
+          "src_1600": "assets/images/projeler/kadin-oyunlari-afis-1600.webp",
+          "kind": "poster",
+          "alt": "Kadın Oyunları oyun afişi"
+        },
+        {
+          "src_800": "assets/images/projeler/kadin-oyunlari-sahne-800.webp",
+          "src_1600": "assets/images/projeler/kadin-oyunlari-sahne-1600.webp",
+          "kind": "scene",
+          "alt": "Kadın Oyunları oyunundan bir sahne"
+        }
+      ]
+    },
+    {
+      "id": "palaska",
+      "title": "Palaska",
+      "images": [
+        {
+          "src_800": "assets/images/projeler/palaska-afis-800.webp",
+          "src_1600": "assets/images/projeler/palaska-afis-1600.webp",
+          "kind": "poster",
+          "alt": "Palaska oyun afişi"
+        }
+      ]
+    },
+    {
+      "id": "blok-a6",
+      "title": "Blok A6",
+      "images": [
+        {
+          "src_800": "assets/images/projeler/blok-a6-afis-800.webp",
+          "src_1600": "assets/images/projeler/blok-a6-afis-1600.webp",
+          "kind": "poster",
+          "alt": "Blok A6 oyun afişi"
+        }
+      ]
     }
   ],
   "videos": [

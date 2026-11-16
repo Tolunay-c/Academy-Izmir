@@ -2654,6 +2654,63 @@ textarea.form-control {
   gap: var(--space-5);
 }
 
+/* Sanatsal Projelerimiz: mobilde 1, 48em'de 2, 64em'de 3 sütun. Afişler farklı oranlarda olduğu için
+   hepsi aynı yükseklikteki bir kutuda, kırpılmadan (contain) ve ortalanmış durur. */
+.project-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-7) var(--gutter);
+}
+
+.project-card-link {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+}
+
+.project-card-media {
+  display: block;
+  aspect-ratio: var(--ratio-portrait-tall);
+  background-color: var(--color-surface);
+  border: var(--line-width) solid var(--color-line);
+  transition: border-color var(--duration-base) var(--ease-out);
+}
+
+.project-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-card-title {
+  font-size: var(--text-xl);
+  line-height: var(--leading-heading);
+}
+
+@media (hover: hover) {
+  .project-card-link:hover .project-card-media {
+    border-color: var(--color-accent);
+  }
+}
+
+/* Duyurular sayfası giriş metni */
+.announcements-intro {
+  display: grid;
+  gap: var(--space-4);
+  max-width: var(--measure);
+  padding-bottom: var(--space-7);
+}
+
+.announcements-intro .section-lead {
+  max-width: none;
+}
+
+/* Tek görselli kümede (tek görsellik proje) önceki/sonraki ve sayaç gizlenir. */
+.lightbox.is-single .lightbox-nav {
+  display: none;
+}
+
 /* Galeri mozaiği: mobilde iki sütunlu sıkı akış (görüntü oranı korunur), 48em üstünde
    ana sayfadaki gibi her satırı dolduran justified satırlar. */
 .gallery-mosaic {
@@ -2783,6 +2840,10 @@ textarea.form-control {
   .video-pair {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--gutter);
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .gallery-mosaic {
@@ -3272,5 +3333,11 @@ textarea.form-control {
   .site-body.is-menu-open .whatsapp-float,
   .site-body.is-lightbox-open .whatsapp-float {
     display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
